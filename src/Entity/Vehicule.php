@@ -4,50 +4,26 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * Vehicule
- *
- * @ORM\Table(name="vehicule")
- * @ORM\Entity
- */
+#[ORM\Table(name: "vehicule")]
+#[ORM\Entity]
 class Vehicule
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id_vehicule", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idVehicule;
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "IDENTITY")]
+     #[ORM\Column ]
+     private?int $idVehicule = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="marque", type="string", length=255, nullable=false)
-     */
-    private $marque;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $marque;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="modele", type="string", length=255, nullable=false)
-     */
-    private $modele;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $modele;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="immatriculation", type="string", length=255, nullable=false)
-     */
-    private $immatriculation;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $immatriculation;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Disponibilite", type="string", length=255, nullable=false)
-     */
-    private $disponibilite;
+    #[ORM\Column(name: "Disponibilite", type: "string", length: 255)]
+    private string $disponibilite;
 
     public function getIdVehicule(): ?int
     {
@@ -101,6 +77,4 @@ class Vehicule
 
         return $this;
     }
-
-
 }

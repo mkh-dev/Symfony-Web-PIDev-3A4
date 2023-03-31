@@ -5,98 +5,52 @@ namespace App\Entity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * Evenement
- *
- * @ORM\Table(name="evenement", indexes={@ORM\Index(name="id_cat_event", columns={"id_cat_event"}), @ORM\Index(name="id_transport", columns={"id_transport"})})
- * @ORM\Entity
- */
+#[ORM\Table(name: 'evenement')]
+#[ORM\Index(name: 'id_cat_event', columns: ['id_cat_event'])]
+#[ORM\Index(name: 'id_transport', columns: ['id_transport'])]
+#[ORM\Entity]
 class Evenement
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id_event", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idEvent;
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: 'IDENTITY')]
+    #[ORM\Column(name: 'id_event', type: 'integer', nullable: false)]
+    private ?int $idEvent = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="nom_event", type="string", length=255, nullable=false)
-     */
-    private $nomEvent;
+    #[ORM\Column(name: 'nom_event', type: 'string', length: 255, nullable: false)]
+    private string $nomEvent;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="description_event", type="string", length=255, nullable=false)
-     */
-    private $descriptionEvent;
+    #[ORM\Column(name: 'description_event', type: 'string', length: 255, nullable: false)]
+    private string $descriptionEvent;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="date_debut_event", type="datetime", nullable=false, options={"default"="CURRENT_TIMESTAMP"})
-     */
-    private $dateDebutEvent = 'CURRENT_TIMESTAMP';
+    #[ORM\Column(name: 'date_debut_event', type: 'datetime', nullable: false, options: ['default' => 'CURRENT_TIMESTAMP'])]
+    private \DateTimeInterface $dateDebutEvent;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="date_fin_event", type="datetime", nullable=false, options={"default"="CURRENT_TIMESTAMP"})
-     */
-    private $dateFinEvent = 'CURRENT_TIMESTAMP';
+    #[ORM\Column(name: 'date_fin_event', type: 'datetime', nullable: false, options: ['default' => 'CURRENT_TIMESTAMP'])]
+    private \DateTimeInterface $dateFinEvent;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="lieu_event", type="string", length=255, nullable=false)
-     */
-    private $lieuEvent;
+    #[ORM\Column(name: 'lieu_event', type: 'string', length: 255, nullable: false)]
+    private string $lieuEvent;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="budget_event", type="integer", nullable=false)
-     */
-    private $budgetEvent;
+    #[ORM\Column(name: 'budget_event', type: 'integer', nullable: false)]
+    private int $budgetEvent;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="image", type="string", length=255, nullable=false)
-     */
-    private $image;
+    #[ORM\Column(name: 'image', type: 'string', length: 255, nullable: false)]
+    private string $image;
 
-    /**
-     * @var \CategorieEvent
-     *
-     * @ORM\ManyToOne(targetEntity="CategorieEvent")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_cat_event", referencedColumnName="id_cat_event")
-     * })
-     */
-    private $idCatEvent;
+    #[ORM\ManyToOne(targetEntity: 'CategorieEvent')]
+    #[ORM\JoinColumn(name: 'id_cat_event', referencedColumnName: 'id_cat_event')]
+    private ?CategorieEvent $idCatEvent = null;
 
-    /**
-     * @var \Transport
-     *
-     * @ORM\ManyToOne(targetEntity="Transport")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_transport", referencedColumnName="id_transport")
-     * })
-     */
-    private $idTransport;
+    #[ORM\ManyToOne(targetEntity: 'Transport')]
+    #[ORM\JoinColumn(name: 'id_transport', referencedColumnName: 'id_transport')]
+    private ?Transport $idTransport = null;
 
     public function getIdEvent(): ?int
     {
         return $this->idEvent;
     }
 
-    public function getNomEvent(): ?string
+    public function getNomEvent(): string
     {
         return $this->nomEvent;
     }
@@ -108,7 +62,7 @@ class Evenement
         return $this;
     }
 
-    public function getDescriptionEvent(): ?string
+    public function getDescriptionEvent(): string
     {
         return $this->descriptionEvent;
     }
@@ -120,7 +74,7 @@ class Evenement
         return $this;
     }
 
-    public function getDateDebutEvent(): ?\DateTimeInterface
+    public function getDateDebutEvent(): \DateTimeInterface
     {
         return $this->dateDebutEvent;
     }
@@ -132,7 +86,7 @@ class Evenement
         return $this;
     }
 
-    public function getDateFinEvent(): ?\DateTimeInterface
+    public function getDateFinEvent(): \DateTimeInterface
     {
         return $this->dateFinEvent;
     }
@@ -144,24 +98,24 @@ class Evenement
         return $this;
     }
 
-    public function getLieuEvent(): ?string
+    public function getLieuEvent(): string
     {
         return $this->lieuEvent;
     }
 
     public function setLieuEvent(string $lieuEvent): self
-    {
-        $this->lieuEvent = $lieuEvent;
+{
+$this->lieuEvent = $lieuEvent;
+return $this;
+}
 
-        return $this;
-    }
 
     public function getBudgetEvent(): ?int
     {
         return $this->budgetEvent;
     }
 
-    public function setBudgetEvent(int $budgetEvent): self
+    public function setBudgetEvent(?int $budgetEvent): self
     {
         $this->budgetEvent = $budgetEvent;
 
@@ -173,7 +127,7 @@ class Evenement
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    public function setImage(?string $image): self
     {
         $this->image = $image;
 
@@ -203,6 +157,5 @@ class Evenement
 
         return $this;
     }
-
-
 }
+   

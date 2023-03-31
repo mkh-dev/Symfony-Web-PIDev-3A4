@@ -4,49 +4,30 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * Reservation
- *
- * @ORM\Table(name="reservation", indexes={@ORM\Index(name="idUser", columns={"idUser"}), @ORM\Index(name="idEvent", columns={"idEvent"})})
- * @ORM\Entity
- */
+#[ORM\Table(name: "reservation")]
+#[ORM\Index(name: "idUser", columns: ["idUser"])]
+#[ORM\Index(name: "idEvent", columns: ["idEvent"])]
+
+#[ORM\Entity]
 class Reservation
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="numRes", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $numres;
+    #[ORM\Column(type: "integer")]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "IDENTITY")]
+    private ?int $numres = null;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="nbPlaces", type="integer", nullable=false)
-     */
-    private $nbplaces;
+    #[ORM\Column(type: "integer")]
+    private ?int $nbplaces = null;
 
-    /**
-     * @var \Evenement
-     *
-     * @ORM\ManyToOne(targetEntity="Evenement")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idEvent", referencedColumnName="id_event")
-     * })
-     */
-    private $idevent;
+    #[ORM\ManyToOne(targetEntity: "Evenement")]
+    #[ORM\JoinColumn(name: "idEvent", referencedColumnName: "id_event")]
 
-    /**
-     * @var \Users
-     *
-     * @ORM\ManyToOne(targetEntity="Users")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idUser", referencedColumnName="id")
-     * })
-     */
-    private $iduser;
+    private ?Evenement $idevent = null;
+
+    #[ORM\ManyToOne(targetEntity: "Users")]
+    #[ORM\JoinColumn(name: "idUser", referencedColumnName: "id")]
+    
+    private ?Users $iduser = null;
 
     public function getNumres(): ?int
     {
@@ -88,6 +69,4 @@ class Reservation
 
         return $this;
     }
-
-
 }

@@ -5,67 +5,38 @@ namespace App\Entity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * Reservation2
- *
- * @ORM\Table(name="reservation2", indexes={@ORM\Index(name="idEvent", columns={"idEvent"}), @ORM\Index(name="idUser", columns={"idUser"})})
- * @ORM\Entity
- */
+#[ORM\Table(name: "reservation2")]
+#[ORM\Index(name: "idEvent", columns: ["idEvent"])]
+#[ORM\Index(name: "idUser", columns: ["idUser"])]
+
+#[ORM\Entity]
 class Reservation2
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="numRes", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $numres;
+    #[ORM\Column(name: "numRes", type: "integer")]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "IDENTITY")]
+    private ?int $numres = null;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="idUser", type="integer", nullable=false)
-     */
-    private $iduser;
+    #[ORM\Column(name: "idUser", type: "integer")]
+    private ?int $iduser = null;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="nbPlaces", type="integer", nullable=false)
-     */
-    private $nbplaces;
+    #[ORM\Column(name: "nbPlaces", type: "integer")]
+    private ?int $nbplaces = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="nom_event", type="string", length=50, nullable=false)
-     */
-    private $nomEvent;
+    #[ORM\Column(name: "nom_event", type: "string", length: 50)]
+    private ?string $nomEvent = null;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="dateDebut", type="date", nullable=false)
-     */
-    private $datedebut;
+    #[ORM\Column(name: "dateDebut", type: "date")]
+    private ?\DateTimeInterface $datedebut = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="lieu", type="string", length=50, nullable=false)
-     */
-    private $lieu;
+    #[ORM\Column(name: "lieu", type: "string", length: 50)]
+    private ?string $lieu = null;
 
-    /**
-     * @var \Evenement
-     *
-     * @ORM\ManyToOne(targetEntity="Evenement")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idEvent", referencedColumnName="id_event")
-     * })
-     */
-    private $idevent;
+    #[ORM\ManyToOne(targetEntity: "Evenement")]
+   
+    #[ORM\JoinColumn(name: "idEvent", referencedColumnName: "id_event")]
+    
+    private ?Evenement $idevent = null;
 
     public function getNumres(): ?int
     {
@@ -143,6 +114,4 @@ class Reservation2
 
         return $this;
     }
-
-
 }

@@ -2,74 +2,37 @@
 
 namespace App\Entity;
 
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * Users
- *
- * @ORM\Table(name="users")
- * @ORM\Entity
- */
+#[ORM\Table(name: "users")]
+#[ORM\Entity]
 class Users
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $id;
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "IDENTITY")]
+    #[ORM\Column(type: "integer")]
+    private ?int $id = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="prenom", type="string", length=255, nullable=false)
-     */
-    private $prenom;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $prenom;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="nom", type="string", length=255, nullable=false)
-     */
-    private $nom;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $nom;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="email", type="string", length=255, nullable=false)
-     */
-    private $email;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $email;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="dateNaissance", type="date", nullable=false)
-     */
-    private $datenaissance;
+    #[ORM\Column(type: "date")]
+    private \DateTimeInterface $datenaissance;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="numTel", type="string", length=20, nullable=false)
-     */
-    private $numtel;
+    #[ORM\Column(type: "string", length: 20)]
+    private string $numtel;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="userRole", type="string", length=255, nullable=false)
-     */
-    private $userrole;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $userrole;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="password", type="string", length=255, nullable=false)
-     */
-    private $password;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $password;
 
     public function getId(): ?int
     {
@@ -159,6 +122,4 @@ class Users
 
         return $this;
     }
-
-
 }

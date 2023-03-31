@@ -4,90 +4,66 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * Facture
- *
- * @ORM\Table(name="facture", indexes={@ORM\Index(name="numRes", columns={"numRes"}), @ORM\Index(name="idUser", columns={"idUser"})})
- * @ORM\Entity
- */
+#[ORM\Table(name: "facture")]
+#[ORM\Index(name: "numRes", columns: ["numRes"])]
+#[ORM\Index(name: "idUser", columns: ["idUser"])]
+#[ORM\Entity]
 class Facture
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="idFacture", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idfacture;
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: "integer", name: "idFacture")]
+    private ?int $id = null;
 
-    /**
-     * @var float
-     *
-     * @ORM\Column(name="netApayer", type="float", precision=10, scale=0, nullable=false)
-     */
-    private $netapayer;
+    #[ORM\Column(type: "float", precision: 10, scale: 0, name: "netApayer")]
+    private float $netAPayer;
 
-    /**
-     * @var \Users
-     *
-     * @ORM\ManyToOne(targetEntity="Users")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idUser", referencedColumnName="id")
-     * })
-     */
-    private $iduser;
+    #[ORM\ManyToOne(targetEntity: Reservation::class)]
+    #[ORM\JoinColumn(name: "numRes", referencedColumnName: "numRes")]
+    private ?Reservation $reservation = null;
 
-    /**
-     * @var \Reservation
-     *
-     * @ORM\ManyToOne(targetEntity="Reservation")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="numRes", referencedColumnName="numRes")
-     * })
-     */
-    private $numres;
+    #[ORM\ManyToOne(targetEntity: Users::class)]
+    #[ORM\JoinColumn(name: "idUser", referencedColumnName: "id")]
+    private ?Users $user = null;
 
-    public function getIdfacture(): ?int
+    public function getId(): ?int
     {
-        return $this->idfacture;
+        return $this->id;
     }
 
-    public function getNetapayer(): ?float
+    public function getNetAPayer(): float
     {
-        return $this->netapayer;
+        return $this->netAPayer;
     }
 
-    public function setNetapayer(float $netapayer): self
+    public function setNetAPayer(float $netAPayer): self
     {
-        $this->netapayer = $netapayer;
+        $this->netAPayer = $netAPayer;
 
         return $this;
     }
 
-    public function getIduser(): ?Users
+    public function getReservation(): ?Reservation
     {
-        return $this->iduser;
+        return $this->reservation;
     }
 
-    public function setIduser(?Users $iduser): self
+    public function setReservation(?Reservation $reservation): self
     {
-        $this->iduser = $iduser;
+        $this->reservation = $reservation;
 
         return $this;
     }
 
-    public function getNumres(): ?Reservation
+    public function getUser(): ?Users
     {
-        return $this->numres;
+        return $this->user;
     }
 
-    public function setNumres(?Reservation $numres): self
+    public function setUser(?Users $user): self
     {
-        $this->numres = $numres;
+        $this->user = $user;
 
         return $this;
     }
-
-
 }

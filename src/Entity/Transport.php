@@ -5,71 +5,39 @@ namespace App\Entity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * Transport
- *
- * @ORM\Table(name="transport")
- * @ORM\Entity
- */
+#[ORM\Table(name: "transport")]
+#[ORM\Entity]
 class Transport
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id_transport", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idTransport;
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "IDENTITY")]
+    #[ORM\Column]
+    private ?int $idTransport = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="type_transport", type="string", length=255, nullable=false)
-     */
-    private $typeTransport;
+    #[ORM\Column(type: Types::STRING, length: 255, nullable: false)]
+    private string $typeTransport;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="date_depart", type="date", nullable=false)
-     */
-    private $dateDepart;
+    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: false)]
+    private \DateTimeInterface $dateDepart;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="heure_depart", type="time", nullable=false)
-     */
-    private $heureDepart;
+    #[ORM\Column(type: Types::TIME_MUTABLE, nullable: false)]
+    private \DateTimeInterface $heureDepart;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="lieu_depart", type="string", length=255, nullable=false)
-     */
-    private $lieuDepart;
+    #[ORM\Column(type: Types::STRING, length: 255, nullable: false)]
+    private string $lieuDepart;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="lieu_arriver", type="string", length=255, nullable=false)
-     */
-    private $lieuArriver;
+    #[ORM\Column(type: Types::STRING, length: 255, nullable: false)]
+    private string $lieuArriver;
 
-    /**
-     * @var float
-     *
-     * @ORM\Column(name="prix_transport", type="float", precision=10, scale=0, nullable=false)
-     */
-    private $prixTransport;
+    #[ORM\Column(type: Types::FLOAT, precision: 10, scale: 0, nullable: false)]
+    private float $prixTransport;
 
     public function getIdTransport(): ?int
     {
         return $this->idTransport;
     }
 
-    public function getTypeTransport(): ?string
+    public function getTypeTransport(): string
     {
         return $this->typeTransport;
     }
@@ -81,7 +49,7 @@ class Transport
         return $this;
     }
 
-    public function getDateDepart(): ?\DateTimeInterface
+    public function getDateDepart(): \DateTimeInterface
     {
         return $this->dateDepart;
     }
@@ -93,7 +61,7 @@ class Transport
         return $this;
     }
 
-    public function getHeureDepart(): ?\DateTimeInterface
+    public function getHeureDepart(): \DateTimeInterface
     {
         return $this->heureDepart;
     }
@@ -105,7 +73,7 @@ class Transport
         return $this;
     }
 
-    public function getLieuDepart(): ?string
+    public function getLieuDepart(): string
     {
         return $this->lieuDepart;
     }
@@ -117,7 +85,7 @@ class Transport
         return $this;
     }
 
-    public function getLieuArriver(): ?string
+    public function getLieuArriver(): string
     {
         return $this->lieuArriver;
     }
@@ -129,7 +97,7 @@ class Transport
         return $this;
     }
 
-    public function getPrixTransport(): ?float
+    public function getPrixTransport(): float
     {
         return $this->prixTransport;
     }
@@ -140,6 +108,4 @@ class Transport
 
         return $this;
     }
-
-
 }

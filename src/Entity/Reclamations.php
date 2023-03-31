@@ -4,50 +4,26 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * Reclamations
- *
- * @ORM\Table(name="reclamations")
- * @ORM\Entity
- */
+#[ORM\Table(name: "reclamations")]
+#[ORM\Entity]
 class Reclamations
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $id;
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: "integer")]
+    private ?int $id = null;
 
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(name="prenom", type="string", length=255, nullable=true)
-     */
-    private $prenom;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $prenom = null;
 
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(name="nom", type="string", length=255, nullable=true)
-     */
-    private $nom;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $nom = null;
 
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(name="email", type="string", length=255, nullable=true)
-     */
-    private $email;
+    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    private ?string $email = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="message", type="string", length=255, nullable=false)
-     */
-    private $message;
+    #[ORM\Column(type: "string", length: 255)]
+    private string $message;
 
     public function getId(): ?int
     {
@@ -90,7 +66,7 @@ class Reclamations
         return $this;
     }
 
-    public function getMessage(): ?string
+    public function getMessage(): string
     {
         return $this->message;
     }
@@ -101,6 +77,4 @@ class Reclamations
 
         return $this;
     }
-
-
 }

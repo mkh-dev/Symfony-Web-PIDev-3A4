@@ -4,74 +4,37 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * Produit
- *
- * @ORM\Table(name="produit", indexes={@ORM\Index(name="id_cat", columns={"id_cat"})})
- * @ORM\Entity
- */
+#[ORM\Table(name: "produit")]
+#[ORM\Index(name: "id_cat", columns: ["id_cat_prod"])]
+#[ORM\Entity]
 class Produit
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id_prod", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idProd;
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "IDENTITY")]
+    #[ORM\Column(type: "integer")]
+    private ?int $idProd = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="nom_prod", type="string", length=255, nullable=false)
-     */
-    private $nomProd;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $nomProd = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="description", type="string", length=255, nullable=false)
-     */
-    private $description;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $description = null;
 
-    /**
-     * @var float
-     *
-     * @ORM\Column(name="prix", type="float", precision=10, scale=0, nullable=false)
-     */
-    private $prix;
+    #[ORM\Column(type: "float", precision: 10, scale: 0)]
+    private ?float $prix = null;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="quantite", type="integer", nullable=false)
-     */
-    private $quantite;
+    #[ORM\Column(type: "integer")]
+    private ?int $quantite = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="nom_part", type="string", length=255, nullable=false)
-     */
-    private $nomPart;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $nomPart = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="image", type="string", length=255, nullable=false)
-     */
-    private $image;
+    #[ORM\Column(type: "string", length: 255)]
+    private ?string $image = null;
 
-    /**
-     * @var \CategorieProd
-     *
-     * @ORM\ManyToOne(targetEntity="CategorieProd")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_cat", referencedColumnName="id_cat_prod")
-     * })
-     */
-    private $idCat;
+    #[ORM\ManyToOne(targetEntity: "CategorieProd")]
+    #[ORM\JoinColumn(name: "id_cat_prod", referencedColumnName: "id_cat_prod")]
+    private ?CategorieProd $idCatProd = null;
 
     public function getIdProd(): ?int
     {
@@ -150,17 +113,15 @@ class Produit
         return $this;
     }
 
-    public function getIdCat(): ?CategorieProd
+    public function getIdCatProd(): ?CategorieProd
     {
-        return $this->idCat;
+        return $this->idCatProd;
     }
 
-    public function setIdCat(?CategorieProd $idCat): self
+    public function setIdCatProd(?CategorieProd $idCatProd): self
     {
-        $this->idCat = $idCat;
+        $this->idCatProd = $idCatProd;
 
         return $this;
     }
-
-
 }

@@ -4,29 +4,17 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * CategorieEvent
- *
- * @ORM\Table(name="categorie_event")
- * @ORM\Entity
- */
+#[ORM\Table(name: "categorie_event")]
+#[ORM\Entity]
 class CategorieEvent
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id_cat_event", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-     */
-    private $idCatEvent;
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: "integer", name: "id_cat_event")]
+    private ?int $idCatEvent = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="cat_event", type="string", length=255, nullable=false)
-     */
-    private $catEvent;
+    #[ORM\Column(type: "string", length: 255, name: "cat_event")]
+    private ?string $catEvent = null;
 
     public function getIdCatEvent(): ?int
     {
@@ -44,6 +32,4 @@ class CategorieEvent
 
         return $this;
     }
-
-
 }
