@@ -2,6 +2,9 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Table(name: "users")]
@@ -33,6 +36,14 @@ class Users
 
     #[ORM\Column(type: "string", length: 255)]
     private string $password;
+
+    #[ORM\OneToMany(mappedBy: 'idUser', targetEntity: Abonnement::class)]
+    private Collection $abonnements;
+
+    public function __construct()
+    {
+        $this->abonnements = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -119,6 +130,40 @@ class Users
     public function setPassword(string $password): self
     {
         $this->password = $password;
+
+        return $this;
+    }
+    public function __toString() 
+{
+    return (string) $this->id; 
+}
+
+    /**
+     * @return Collection<int, Abonnement>
+     */
+    public function getAbonnements(): Collection
+    {
+        return $this->abonnements;
+    }
+
+    public function addAbonnement(Abonnement $abonnement): self
+    {
+        if (!$this->abonnements->contains($abonnement)) {
+            $this->abonnements->add($abonnement);
+            $abonnement->setIdUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAbonnement(Abonnement $abonnement): self
+    {
+        if ($this->abonnements->removeElement($abonnement)) {
+            // set the owning side to null (unless already changed)
+            if ($abonnement->getIdUser() === $this) {
+                $abonnement->setIdUser(null);
+            }
+        }
 
         return $this;
     }

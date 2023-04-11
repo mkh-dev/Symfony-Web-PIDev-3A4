@@ -1,117 +1,9 @@
 {% extends 'back/back.html.twig' %}
 
 
-{% block stylesheets %}
-	{{ parent() }}
-	<style>
-		/* Style for the header */
-		header {
-			background-color: #1c1c1c;
-			color: #fff;
-			padding: 20px;
-		}
-
-		/* Style for the table */
-		.table {
-			border-collapse: collapse;
-			width: 100%;
-		}
-
-		/* Style for table headers */
-		.table th {
-			background-color: #f1c40f;
-			color: #000;
-			font-weight: bold;
-			padding: 10px;
-			text-align: left;
-			text-transform: uppercase;
-		}
-
-		/* Style for table rows */
-		.table tr {
-			border-bottom: 1px solid #ccc;
-		}
-
-		/* Style for table data cells */
-		.table td {
-			padding: 10px;
-			vertical-align: middle;
-		}
-
-		/* Style for the "Create new" button */
-		#create-new {
-			background-color: #f1c40f;
-			border-radius: 4px;
-			color: #000;
-			display: inline-block;
-			margin-top: 20px;
-			padding: 10px 20px;
-			text-decoration: none;
-			transition: background-color 0.3s ease;
-		}
-
-		#create-new:hover {
-			background-color: #f39c12;
-		}
-        /* Styles for the show button */
-a.show-button {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 1px solid #1abc9c;
-  border-radius: 3px;
-  background-color: #1abc9c;
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.2s ease-in-out;
-}
-
-a.show-button:hover {
-  background-color: #148f77;
-  border-color: #148f77;
-}
-
-/* Styles for the edit button */
-a.edit-button {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 1px solid #3498db;
-  border-radius: 3px;
-  background-color: #3498db;
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.2s ease-in-out;
-}
-
-a.edit-button:hover {
-  background-color: #217dbb;
-  border-color: #217dbb;
-}
-
-/* Styles for the create new button */
-a.create-new-button {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 1px solid #f1c40f;
-  border-radius: 3px;
-  background-color: #f1c40f;
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.2s ease-in-out;
-}
-
-a.create-new-button:hover {
-  background-color: #d4af37;
-  border-color: #d4af37;
-}
-
-	</style>
-{% endblock %}
-{% block title %}Reservation index{% endblock %}
-
+{% block title %}New Abonnement{% endblock %}
 
 {% block body %}
-
-
 <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
       
     <!-- Desktop sidebar -->
@@ -126,9 +18,11 @@ a.create-new-button:hover {
         </a>
         
         
-        <ul class="mt-6" >
-           <li class="relative px-6 py-3">
-            <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+        <ul class="mt-6">
+          <li class="relative px-6 py-3">
+            <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+              aria-hidden="true"></span>
+            <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
               href="{{ path('app_facture_index') }}">
               <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"
                 stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -140,11 +34,9 @@ a.create-new-button:hover {
             </a>
           </li>
         </ul>
-        <ul >
+        <ul>
           <li class="relative px-6 py-3">
-            <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-              aria-hidden="true"></span>
-            <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+            <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
               href="{{ path('app_reservation_index') }}">
               <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"
                 stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -152,7 +44,7 @@ a.create-new-button:hover {
                   d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
                 </path>
               </svg>
-              <span class="ml-4">Mes reservations </span>
+              <span class="ml-4">Mes réservations</span>
             </a>
           </li>
           <li class="relative px-6 py-3">
@@ -382,40 +274,9 @@ a.create-new-button:hover {
           </ul>
         </div>
       </header>
-    
+    <h1>Create new Abonnement</h1>
 
+    {{ include('abonnement/_form.html.twig') }}
 
-<header>
-    <h1> Mes réservations</h1>
-</header>
-<main class="h-full overflow-y-auto">
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Numres</th>
-                <th>Nbplaces</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for reservation in reservations %}
-            <tr>
-                <td>{{ reservation.numres }}</td>
-                <td>{{ reservation.nbplaces }}</td>
-                <td>
-                    <a href="{{ path('app_reservation_show', {'numres': reservation.numres}) }}" class="show-button">show</a>
-                    <a href="{{ path('app_reservation_edit', {'numres': reservation.numres}) }}" class="edit-button">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="3">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_reservation_new') }}" class="create-new-button">Create new</a>
-       </main>
+    <a href="{{ path('app_abonnement_index') }}">back to list</a>
 {% endblock %}

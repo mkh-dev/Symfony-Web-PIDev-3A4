@@ -5,44 +5,44 @@ namespace App\Entity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Table(name: 'evenement')]
-#[ORM\Index(name: 'id_cat_event', columns: ['id_cat_event'])]
-#[ORM\Index(name: 'id_transport', columns: ['id_transport'])]
+#[ORM\Table(name: "evenement")]
+#[ORM\Index(name: "id_cat_event", columns: ["id_cat_event"])]
+#[ORM\Index(name: "id_transport", columns: ["id_transport"])]
 #[ORM\Entity]
 class Evenement
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue(strategy: 'IDENTITY')]
-    #[ORM\Column(name: 'id_event', type: 'integer', nullable: false)]
+    #[ORM\GeneratedValue(strategy: "IDENTITY")]
+    #[ORM\Column(name: "id_event", type: "integer", nullable: false)]
     private ?int $idEvent = null;
 
-    #[ORM\Column(name: 'nom_event', type: 'string', length: 255, nullable: false)]
+    #[ORM\Column(name: "nom_event", type: "string", length: 255, nullable: false)]
     private string $nomEvent;
 
-    #[ORM\Column(name: 'description_event', type: 'string', length: 255, nullable: false)]
+    #[ORM\Column(name: "description_event", type: "string", length: 255, nullable: false)]
     private string $descriptionEvent;
 
-    #[ORM\Column(name: 'date_debut_event', type: 'datetime', nullable: false, options: ['default' => 'CURRENT_TIMESTAMP'])]
+    #[ORM\Column(name: "date_debut_event", type: "datetime", nullable: false, options: ["default" => "CURRENT_TIMESTAMP"])]
     private \DateTimeInterface $dateDebutEvent;
 
-    #[ORM\Column(name: 'date_fin_event', type: 'datetime', nullable: false, options: ['default' => 'CURRENT_TIMESTAMP'])]
+    #[ORM\Column(name: "date_fin_event", type: "datetime", nullable: false, options: ["default" => "CURRENT_TIMESTAMP"])]
     private \DateTimeInterface $dateFinEvent;
 
-    #[ORM\Column(name: 'lieu_event', type: 'string', length: 255, nullable: false)]
+    #[ORM\Column(name: "lieu_event", type: "string", length: 255, nullable: false)]
     private string $lieuEvent;
 
-    #[ORM\Column(name: 'budget_event', type: 'integer', nullable: false)]
+    #[ORM\Column(name: "budget_event", type: "integer", nullable: false)]
     private int $budgetEvent;
 
-    #[ORM\Column(name: 'image', type: 'string', length: 255, nullable: false)]
+    #[ORM\Column(name: "image", type: "string", length: 255, nullable: false)]
     private string $image;
 
-    #[ORM\ManyToOne(targetEntity: 'CategorieEvent')]
-    #[ORM\JoinColumn(name: 'id_cat_event', referencedColumnName: 'id_cat_event')]
+    #[ORM\ManyToOne(targetEntity: "CategorieEvent")]
+    #[ORM\JoinColumn(name: "id_cat_event", referencedColumnName: "id_cat_event")]
     private ?CategorieEvent $idCatEvent = null;
 
-    #[ORM\ManyToOne(targetEntity: 'Transport')]
-    #[ORM\JoinColumn(name: 'id_transport', referencedColumnName: 'id_transport')]
+    #[ORM\ManyToOne(targetEntity: "Transport")]
+    #[ORM\JoinColumn(name: "id_transport", referencedColumnName: "id_transport")]
     private ?Transport $idTransport = null;
 
     public function getIdEvent(): ?int
@@ -156,6 +156,10 @@ return $this;
         $this->idTransport = $idTransport;
 
         return $this;
+    }
+    public function __toString() 
+    {
+        return (string) $this->idEvent; 
     }
 }
    

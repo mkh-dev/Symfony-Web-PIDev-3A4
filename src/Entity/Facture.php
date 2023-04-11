@@ -1,29 +1,40 @@
 <?php
 
 namespace App\Entity;
-
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
+
+use App\Repository\FactureRepository;
+
 
 #[ORM\Table(name: "facture")]
 #[ORM\Index(name: "numRes", columns: ["numRes"])]
 #[ORM\Index(name: "idUser", columns: ["idUser"])]
-#[ORM\Entity]
+#[ORM\Entity(repositoryClass:FactureRepository::class)]
+
 class Facture
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: "integer", name: "idFacture")]
+   /* #[Assert\NotBlank(message:"Id is required")]*/
     private ?int $id = null;
 
     #[ORM\Column(type: "float", precision: 10, scale: 0, name: "netApayer")]
+    #[Assert\NotBlank(message:"Net a payer is required")]
+    #[Assert\Positive(message:"il faut une valeur positive")]
     private float $netAPayer;
 
     #[ORM\ManyToOne(targetEntity: Reservation::class)]
     #[ORM\JoinColumn(name: "numRes", referencedColumnName: "numRes")]
+    
+
     private ?Reservation $reservation = null;
 
     #[ORM\ManyToOne(targetEntity: Users::class)]
     #[ORM\JoinColumn(name: "idUser", referencedColumnName: "id")]
+   
+
     private ?Users $user = null;
 
     public function getId(): ?int
@@ -65,5 +76,9 @@ class Facture
         $this->user = $user;
 
         return $this;
+    }
+    public function __toString() 
+    {
+        return (string) $this->id; 
     }
 }
