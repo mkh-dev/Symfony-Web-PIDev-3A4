@@ -20,18 +20,26 @@ class Abonnement
     private ?bool $renouvellement = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
+    #[Assert\NotBlank(message:"Il faut indiquer la date ")]
+
     private ?\DateTimeInterface $dateExpire = null;
 
     #[ORM\ManyToOne(inversedBy: 'abonnements')]
     private ?Users $idUser = null;
 
     #[ORM\Column]
+    #[Assert\NotBlank(message:"Il faut indiquer le prix ")]
+    #[Assert\Positive(message:"Il faut une valeur positive ")]
+
     private ?float $prix = null;
 
     #[ORM\Column]
+    #[Assert\NotBlank(message:"Il faut indiquer le plafond ")]
+    #[Assert\Positive(message:"Il faut une valeur positive ")]
     private ?int $plafond = null;
 
     #[ORM\Column]
+    #[Assert\NotBlank(message:"Il faut indiquer le type  ")]
     #[Assert\Choice(choices:["annuel", "semestriel"])]
     private ?string $type = null;
     

@@ -385,11 +385,11 @@ a.create-new-button:hover {
     
 
 
+
+<main class="h-full overflow-y-auto">
 <header>
     <h1> Mes réservations</h1>
 </header>
-<main class="h-full overflow-y-auto">
-
     <table class="table">
         <thead>
             <tr>
@@ -404,8 +404,8 @@ a.create-new-button:hover {
                 <td>{{ reservation.numres }}</td>
                 <td>{{ reservation.nbplaces }}</td>
                 <td>
-                    <a href="{{ path('app_reservation_show', {'numres': reservation.numres}) }}" class="show-button">show</a>
-                    <a href="{{ path('app_reservation_edit', {'numres': reservation.numres}) }}" class="edit-button">edit</a>
+                    <a href="{{ path('app_reservation_show', {'numres': reservation.numres}) }}" class="show-button">Afficher</a>
+                    <a href="{{ path('app_reservation_edit', {'numres': reservation.numres}) }}" class="edit-button">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -416,6 +416,6 @@ a.create-new-button:hover {
         </tbody>
     </table>
 
-    <a href="{{ path('app_reservation_new') }}" class="create-new-button">Create new</a>
+    <a href="{{ path('app_reservation_new') }}" class="create-new-button">Ajouter une nouvelle réservation</a>
        </main>
 {% endblock %}

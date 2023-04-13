@@ -21,7 +21,7 @@ class Facture
     private ?int $id = null;
 
     #[ORM\Column(type: "float", precision: 10, scale: 0, name: "netApayer")]
-    #[Assert\NotBlank(message:"Net a payer is required")]
+    #[Assert\NotBlank(message:"Net a payer est obligatoire ")]
     #[Assert\Positive(message:"il faut une valeur positive")]
     private float $netAPayer;
 

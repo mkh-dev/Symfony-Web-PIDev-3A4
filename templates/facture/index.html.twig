@@ -400,8 +400,8 @@ a.create-new-button:hover {
                 <td>{{ facture.id }}</td>
                 <td>{{ facture.netAPayer }}</td>
                 <td>
-                    <a href="{{ path('app_facture_show', {'id': facture.id}) }}" class="show-button">show</a>
-                    <a href="{{ path('app_facture_edit', {'id': facture.id}) }}" class="edit-button">edit</a>
+                    <a href="{{ path('app_facture_show', {'id': facture.id}) }}" class="show-button">Afficher </a>
+                    <a href="{{ path('app_facture_edit', {'id': facture.id}) }}" class="edit-button">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -412,6 +412,6 @@ a.create-new-button:hover {
         </tbody>
     </table>
 
-    <a href="{{ path('app_facture_new') }}" class="create-new-button" >Create new</a>
+    <a href="{{ path('app_facture_new') }}" class="create-new-button" >Ajouter une facture </a>
     </main>
 {% endblock %}

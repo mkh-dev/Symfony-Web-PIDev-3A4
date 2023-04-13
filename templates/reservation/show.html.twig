@@ -279,9 +279,9 @@
     
 
 
-    <h1>Reservation</h1>
 
 <main class="form-container">
+
 <style>
     h1 {
         font-size: 2em;
@@ -323,6 +323,9 @@ margin-left: 45px;
         cursor: pointer;
     }
 </style>
+
+    <h1>Reservation</h1>
+
     <table class="table">
         <tbody>
             <tr>
@@ -336,9 +339,9 @@ margin-left: 45px;
         </tbody>
     </table>
 
-    <a href="{{ path('app_reservation_index') }}" class="btn"  >back to list</a>
+    <a href="{{ path('app_reservation_index') }}" class="btn"  >Retour à la liste principale</a>
 
-    <a href="{{ path('app_reservation_edit', {'numres': reservation.numres}) }}" class="btn" >edit</a>
+    <a href="{{ path('app_reservation_edit', {'numres': reservation.numres}) }}" class="btn" >Modifier </a>
 </main>
     {{ include('reservation/_delete_form.html.twig') }}
 {% endblock %}

@@ -280,7 +280,6 @@
 
 
 
-    <h1>Create new Reservation</h1>
     <main class="form-container">
 <style>
     h1 {
@@ -323,10 +322,12 @@ margin-left: 45px;
         cursor: pointer;
     }
 </style>
+    <h1>Créer une reservation</h1>
+
 <table class ="table">
     {{ include('reservation/_form.html.twig') }}
 </table>
-    <a href="{{ path('app_reservation_index') }}"  class ="btn"   >back to list</a>
+    <a href="{{ path('app_reservation_index') }}"  class ="btn"   >Retour à la liste principale</a>
     
     </main>
 {% endblock %}
