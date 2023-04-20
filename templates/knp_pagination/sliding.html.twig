@@ -1,0 +1,76 @@
+
+{% block stylesheets %}
+<style>
+/* Styles for the pagination control */
+.pagination {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.pagination span {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.pagination span.current {
+    background-color: #337ab7;
+    color: #fff;
+}
+
+.pagination span a {
+    color: #333;
+}
+
+.pagination span a:hover {
+    color: #fff;
+    background-color: #337ab7;
+}
+
+.pagination span.disabled {
+    color: #999;
+}
+	</style>
+{% endblock %}
+
+{# default Sliding pagination control implementation #}
+{% if pageCount > 1 %}
+    <div class="pagination">
+        {% if first is defined and current != first %}
+            <span class="first">
+                <a href="{{ path(route, query|merge({(pageParameterName): first})) }}">&lt;&lt;</a>
+            </span>
+        {% endif %}
+
+        {% if previous is defined %}
+            <span class="previous">
+                <a href="{{ path(route, query|merge({(pageParameterName): previous})) }}">&lt;</a>
+            </span>
+        {% endif %}
+
+        {% for page in pagesInRange %}
+            {% if page != current %}
+                <span class="page">
+                    <a href="{{ path(route, query|merge({(pageParameterName): page})) }}">{{ page }}</a>
+                </span>
+            {% else %}
+                <span class="current">{{ page }}</span>
+            {% endif %}
+        {% endfor %}
+
+        {% if next is defined %}
+            <span class="next">
+                <a href="{{ path(route, query|merge({(pageParameterName): next})) }}">&gt;</a>
+            </span>
+        {% endif %}
+
+        {% if last is defined and current != last %}
+            <span class="last">
+                <a href="{{ path(route, query|merge({(pageParameterName): last})) }}">&gt;&gt;</a>
+            </span>
+        {% endif %}
+    </div>
+{% endif %}

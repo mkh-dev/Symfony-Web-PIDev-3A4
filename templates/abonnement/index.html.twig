@@ -399,8 +399,10 @@ a.create-new-button:hover {
 					<td colspan="7">aucun abonnement</td>
 				</tr>
 			{% endfor %}
+
 			</tbody>
 		</table>
+      {{ knp_pagination_render(abonnements,'knp_pagination/sliding.html.twig') }}
 
 		<a href="{{ path('app_abonnement_new') }}"class="create-new-button">Ajouter un abonnement</a>
 	</main>

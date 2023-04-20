@@ -5,6 +5,7 @@ namespace App\Controller;
 
 
 
+use Knp\Component\Pager\PaginatorInterface;
 
 use Dompdf\Dompdf;
 use App\Entity\Abonnement;
@@ -19,11 +20,23 @@ use Symfony\Component\Routing\Annotation\Route;
 class AbonnementController extends AbstractController
 {
     #[Route('/', name: 'app_abonnement_index', methods: ['GET'])]
-    public function index(AbonnementRepository $abonnementRepository): Response
+    public function index(AbonnementRepository $abonnementRepository, PaginatorInterface $paginator, Request $request): Response
     {
-        return $this->render('abonnement/index.html.twig', [
-            'abonnements' => $abonnementRepository->findAll(),
-        ]);
+
+   
+    // Get all the abonnements from the repository
+    $abonnements = $abonnementRepository->findAll();
+    
+    // Paginate the results
+    $pagination = $paginator->paginate(
+        $abonnements, // Query results
+        $request->query->getInt('page', 1), // Current page number
+        3 // Number of results per page
+    );
+    
+    return $this->render('abonnement/index.html.twig', [
+        'abonnements' => $pagination,
+    ]);
     }
 
     #[Route('/new', name: 'app_abonnement_new', methods: ['GET', 'POST'])]

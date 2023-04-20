@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Form;
+use Gregwar\CaptchaBundle\Type\CaptchaType;
 
 use App\Entity\Reservation;
 use Symfony\Component\Form\AbstractType;
@@ -15,7 +16,10 @@ class ReservationType extends AbstractType
             ->add('nbplaces')
             ->add('idevent')
             ->add('iduser')
+            ->add('captcha', CaptchaType::class);
         ;
+      
+
     }
 
     public function configureOptions(OptionsResolver $resolver): void

@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 use Dompdf\Dompdf;
-
+use App\Repository\FactureRepository;
 use App\Entity\Facture;
 use App\Form\FactureType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -17,18 +17,28 @@ use Endroid\QrCode\Label\Font\NotoSans;
 use Endroid\QrCode\Encoding\Encoding;
 use Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin;
 use Endroid\QrCode\Writer\PngWriter;
+use Knp\Component\Pager\PaginatorInterface;
+
+
 #[Route('/facture')]
 class FactureController extends AbstractController
 {
     #[Route('/', name: 'app_facture_index', methods: ['GET'])]
-    public function index(EntityManagerInterface $entityManager): Response
-    {
-        $factures = $entityManager
-            ->getRepository(Facture::class)
-            ->findAll();
+    public function index( FactureRepository $FactureRepository , PaginatorInterface $paginator, Request $request): Response
 
+    { 
+        // Get all the abonnements from the repository
+        $factures = $FactureRepository->findAll();
+        
+        // Paginate the results
+        $pagination = $paginator->paginate(
+            $factures, // Query results
+            $request->query->getInt('page', 1), // Current page number
+            3 // Number of results per page
+        );
+        
         return $this->render('facture/index.html.twig', [
-            'factures' => $factures,
+            'factures' => $pagination,
         ]);
     }
 

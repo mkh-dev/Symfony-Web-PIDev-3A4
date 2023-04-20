@@ -22,19 +22,27 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+use Knp\Component\Pager\PaginatorInterface;
 #[Route('/reservation')]
 class ReservationController extends AbstractController
 {
     #[Route('/', name: 'app_reservation_index', methods: ['GET'])]
-    public function index(EntityManagerInterface $entityManager): Response
+    public function index(ReservationRepository $ReservationRepository, PaginatorInterface $paginator, Request $request): Response
     {
-        $reservations = $entityManager
-            ->getRepository(Reservation::class)
-            ->findAll();
-
-        return $this->render('reservation/index.html.twig', [
-            'reservations' => $reservations,
-        ]);
+           
+    // Get all the abonnements from the repository
+    $reservations = $ReservationRepository->findAll();
+    
+    // Paginate the results
+    $pagination = $paginator->paginate(
+        $reservations, // Query results
+        $request->query->getInt('page', 1), // Current page number
+        3 // Number of results per page
+    );
+    
+    return $this->render('reservation/index.html.twig', [
+        'reservations' => $pagination,
+    ]);
     }
 
     #[Route('/new', name: 'app_reservation_new', methods: ['GET', 'POST'])]

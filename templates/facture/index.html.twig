@@ -380,6 +380,7 @@ a.create-new-button:hover {
         {% endfor %}
         </tbody>
     </table>
+      {{ knp_pagination_render(factures,'knp_pagination/sliding.html.twig') }}
 
     <a href="{{ path('app_facture_new') }}" class="create-new-button" >Ajouter une facture </a>
     </main>
