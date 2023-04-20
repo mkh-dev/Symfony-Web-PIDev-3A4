@@ -10,6 +10,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CurrencyType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Gregwar\CaptchaBundle\Type\CaptchaType;
 
 class AbonnementType extends AbstractType
 {
@@ -23,6 +24,7 @@ class AbonnementType extends AbstractType
             ->add('currency')
             ->add('plafond')
             ->add('idUser')
+            ->add('captcha', CaptchaType::class);
         ;
         $builder->add('type', ChoiceType::class, [
             'choices' => [
