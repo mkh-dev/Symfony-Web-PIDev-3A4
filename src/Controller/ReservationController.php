@@ -1,9 +1,21 @@
 <?php
 
 namespace App\Controller;
+use Symfony\Component\HttpFoundation\File\File;
+use Endroid\QrCode\QrCode;
+use Endroid\QrCode\Response\QrCodeResponse;
 
+use Endroid\QrCode\Builder\Builder;
+use Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelHigh;
+use Endroid\QrCode\Label\Alignment\LabelAlignmentCenter;
+use Endroid\QrCode\Label\Font\NotoSans;
+use Endroid\QrCode\Encoding\Encoding;
+use Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin;
+use Endroid\QrCode\Writer\PngWriter;
 use App\Entity\Reservation;
 use App\Form\ReservationType;
+use App\Repository\ReservationRepository;
+
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -46,10 +58,34 @@ class ReservationController extends AbstractController
     }
 
     #[Route('/{numres}', name: 'app_reservation_show', methods: ['GET'])]
-    public function show(Reservation $reservation): Response
+    public function show(Reservation $reservation ,ReservationRepository $repository): Response
     {
+     
+        // Get car information
+        $resInfo = "Numero de reservation: " . $reservation->getNumres() . "\n" .
+            "Id user: " . $reservation->getIduser() . "\n" .
+            "Nombre de places: " . $reservation->getNbplaces() . "\n" .
+            "Evenement numero : " . $reservation->getIdevent() . "\n" ;
+
+        // Generate QR code with car information
+        $qrCode = Builder::create()
+            ->writer(new PngWriter())
+            ->writerOptions([])
+            ->data($resInfo)
+            ->encoding(new Encoding('UTF-8'))
+            ->errorCorrectionLevel(new ErrorCorrectionLevelHigh())
+            ->size(300)
+            ->margin(10)
+            ->roundBlockSizeMode(new RoundBlockSizeModeMargin())
+            ->labelText("")
+            ->labelFont(new NotoSans(20))
+            ->labelAlignment(new LabelAlignmentCenter())
+            ->build();
+
         return $this->render('reservation/show.html.twig', [
             'reservation' => $reservation,
+            'qr' => $qrCode->getDataUri(),
+
         ]);
     }
 
@@ -81,4 +117,7 @@ class ReservationController extends AbstractController
 
         return $this->redirectToRoute('app_reservation_index', [], Response::HTTP_SEE_OTHER);
     }
+   
+       
+    
 }

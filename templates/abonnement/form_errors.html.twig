@@ -1,0 +1,15 @@
+
+{% block style %}
+<style>
+
+
+</style>
+{% endblock%}
+
+{% if errors|length > 0 %}
+    <ul class="my-custom-class">
+        {% for error in errors %}
+            <li>{{ error.message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}

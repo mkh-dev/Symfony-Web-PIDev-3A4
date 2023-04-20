@@ -21,7 +21,8 @@ class Reservation
 
     #[ORM\Column(type: "integer")]
     #[Assert\NotBlank(message:"il faut indiquer le nombre de places")]
-
+    #[Assert\Positive(message:"il faut une valeur positive ")]
+    #[Assert\LessThanOrEqual(10,message:"il est interdit de réserver plus que 10 places ")]
     private ?int $nbplaces = null;
 
     #[ORM\ManyToOne(targetEntity: "Evenement")]

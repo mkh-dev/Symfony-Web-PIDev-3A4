@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Liste de réservations</title>
+    <style>
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ddd;
+        }
+        img {
+            filter: grayscale(100%);
+            width: 1px;
+            transition: .5s ease;
+            height : 1px;
+        }
+
+    </style>
+</head>
+<body>
+
+<h6>cité ghazela - Esprit</h6>
+<h6>+216 25 104 011</h6>
+
+<h2>Dear Customer ,</h2>
+<h5>I would like to thank you for your request to subscribe in our website </h5>
+<h5> for your art and culture events.</h5>
+<h5>We have received your subscribe request:</h5>
+
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>userid</th>
+        <th>type</th>
+        <th>renouvellement</th>
+        <th>dateExpire</th>
+        <th>prix</th>
+        <th>currency</th>
+        <th>plafond</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for row in tableData %}
+        <tr>
+            <td>{{ row.id }}</td>
+            <td>{{ row.idUser }}</td>
+            <td>{{ row.type }}</td>
+            <td>{{ row.renouvellement }}</td>
+            <td>{{ row.dateExpire }}</td>
+            <td>{{ row.prix }}</td>
+            <td>{{ row.currency }}</td>
+            <td>{{ row.plafond }}</td>
+
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<h5>If you have any questions or concerns regarding your subscribtion , please do not hesitate to contact us. We are always here to help and make your events experience as smooth and enjoyable as possible.</h5>
+<h4>Best regards,</h4>
+<h3>Evento</h3>
+</body>
+</html>

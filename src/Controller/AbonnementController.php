@@ -2,6 +2,11 @@
 
 namespace App\Controller;
 
+
+
+
+
+use Dompdf\Dompdf;
 use App\Entity\Abonnement;
 use App\Form\AbonnementType;
 use App\Repository\AbonnementRepository;
@@ -74,5 +79,46 @@ class AbonnementController extends AbstractController
         }
 
         return $this->redirectToRoute('app_abonnement_index', [], Response::HTTP_SEE_OTHER);
+    }
+    #[Route('/{id}/exportpdf', name: 'exportpdf')]
+    public function exportToPdf(AbonnementRepository $repository): Response
+    {
+      
+        $abonnements = $repository->findAll();
+
+        // Créer le tableau de données pour le PDF
+        $tableData = [];
+        foreach ($abonnements as $abonnement) {
+            $tableData[] = [
+                'id' => $abonnement->getId(),
+                'idUser' => $abonnement->getIdUser(),
+                'type' => $abonnement->getType(),
+                'renouvellement' => $abonnement->isRenouvellement(),
+                'dateExpire' => $abonnement->getDateExpire()->format('Y-m-d H:i:s'),
+                'prix' => $abonnement->getPrix(),
+                'currency' => $abonnement->getCurrency(),
+                'plafond' => $abonnement->getPlafond(),
+            ];
+        }
+
+        // Créer le PDF avec Dompdf
+        $html = $this->renderView('abonnement/export-pdf.html.twig', [
+            'tableData' => $tableData,
+        ]);
+       
+        $dompdf = new Dompdf();
+        $image = 'public\front\images\logo.png';
+        $options = ['png_quality' => 100];
+
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->render();
+
+        // Envoyer le PDF au navigateur
+        $response = new Response($dompdf->output(), 200, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'attachment; filename="abonnement.pdf"',
+        ]);
+        return $response;
     }
 }

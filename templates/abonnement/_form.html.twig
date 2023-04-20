@@ -70,11 +70,15 @@ margin-left: 45px;  }
         background-color: #E6B90F;
         cursor: pointer;
     }
+
+
 </style>
 
 
 
 {{ form_start(form, {'attr': {'class': 'my-form', 'novalidate': 'novalidate'}}) }}
+
     {{ form_widget(form) }}
+
     <button class="btnd">{{ button_label|default('Enregistrer') }}</button>
 {{ form_end(form) }}

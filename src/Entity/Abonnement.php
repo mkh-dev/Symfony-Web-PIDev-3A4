@@ -21,27 +21,36 @@ class Abonnement
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     #[Assert\NotBlank(message:"Il faut indiquer la date ")]
-
+    #[Assert\GreaterThanOrEqual('+4320 hours ',message:"Il faut un minimum de 6 mois ")]
     private ?\DateTimeInterface $dateExpire = null;
 
     #[ORM\ManyToOne(inversedBy: 'abonnements')]
+    
+
     private ?Users $idUser = null;
 
     #[ORM\Column]
     #[Assert\NotBlank(message:"Il faut indiquer le prix ")]
     #[Assert\Positive(message:"Il faut une valeur positive ")]
+    
 
     private ?float $prix = null;
 
     #[ORM\Column]
     #[Assert\NotBlank(message:"Il faut indiquer le plafond ")]
     #[Assert\Positive(message:"Il faut une valeur positive ")]
+    #[Assert\LessThanOrEqual(20,message:"Il faut pas dépasser un plafond de 20 réservation")]
+    #[Assert\GreaterThanOrEqual(5,message:"Il faut un minimum de 5 réservations")]
+
     private ?int $plafond = null;
 
     #[ORM\Column]
     #[Assert\NotBlank(message:"Il faut indiquer le type  ")]
-    #[Assert\Choice(choices:["annuel", "semestriel"])]
     private ?string $type = null;
+
+    #[ORM\Column(length: 255)]
+    #[Assert\Currency()]
+    private ?string $currency = null;
     
 
     public function getId(): ?int
@@ -119,6 +128,18 @@ class Abonnement
     public function setType(string $type): self
     {
         $this->type = $type;
+
+        return $this;
+    }
+
+    public function getCurrency(): ?string
+    {
+        return $this->currency;
+    }
+
+    public function setCurrency(string $currency): self
+    {
+        $this->currency = $currency;
 
         return $this;
     }
