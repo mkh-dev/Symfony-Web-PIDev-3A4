@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Transport index{% endblock %}
+
+{% block body %}
+    <h1>Transport index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdTransport</th>
+                <th>TypeTransport</th>
+                <th>DateDepart</th>
+                <th>HeureDepart</th>
+                <th>LieuDepart</th>
+                <th>LieuArriver</th>
+                <th>PrixTransport</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for transport in transports %}
+            <tr>
+                <td>{{ transport.idTransport }}</td>
+                <td>{{ transport.typeTransport }}</td>
+                <td>{{ transport.dateDepart ? transport.dateDepart|date('Y-m-d') : '' }}</td>
+                <td>{{ transport.heureDepart ? transport.heureDepart|date('H:i:s') : '' }}</td>
+                <td>{{ transport.lieuDepart }}</td>
+                <td>{{ transport.lieuArriver }}</td>
+                <td>{{ transport.prixTransport }}</td>
+                <td>
+                    <a href="{{ path('app_transport_show', {'idTransport': transport.idTransport}) }}">show</a>
+                    <a href="{{ path('app_transport_edit', {'idTransport': transport.idTransport}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_transport_new') }}">Create new</a>
+{% endblock %}

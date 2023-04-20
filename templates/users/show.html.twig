@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Users{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+
+        <table class="table" >
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ user.id }}</td>
+                </tr>
+                <tr>
+                    <th>Prénom</th>
+                    <td>{{ user.prenom }}</td>
+                </tr>
+                <tr>
+                    <th>Nom</th>
+                    <td>{{ user.nom }}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{ user.email }}</td>
+                </tr>
+                <tr>
+                    <th>Date de naissance</th>
+                    <td>{{ user.datenaissance ? user.datenaissance|date('Y-m-d') : '' }}</td>
+                </tr>
+                <tr>
+                    <th>Numéro de téléphone</th>
+                    <td>{{ user.numtel }}</td>
+                </tr>
+                <tr>
+                    <th>Rôle</th>
+                    <td>{{ user.userrole }}</td>
+                </tr>
+                <tr>
+                    <th>Mot de passe</th>
+                    <td>{{ user.password }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="{{ path('app_users_index') }}" class="btn btn-secondary">Retour à la liste</a>
+
+
+</form>
+
+    </div>
+{% endblock %}

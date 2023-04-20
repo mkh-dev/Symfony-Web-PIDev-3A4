@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réclamations{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+{% endblock %}
+
+
+{% block body %}
+   
+
+      <div class="container">
+
+
+        <table class="table" >
+            <tbody>
+                <tr>
+                    <th scope="row">Id</th>
+                    <td>{{ reclamation.id }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Prenom</th>
+                    <td>{{ reclamation.prenom }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Nom</th>
+                    <td>{{ reclamation.nom }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Email</th>
+                    <td>{{ reclamation.email }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Message</th>
+                    <td>{{ reclamation.message }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn-group" role="group" aria-label="Basic example">
+        <a href="{{ path('app_reclamations_index') }}" class="btn btn-secondary">Retour à la liste</a>
+          
+    </div>
+    </div>
+
+    
+
+{% endblock %}
+
