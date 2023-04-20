@@ -38,7 +38,7 @@ class RegistrationController extends AbstractController
             $user->setPassword(
                 $userPasswordHasher->hashPassword(
                     $user,
-                    $form->get('plainPassword')->getData()
+                    $form->get('password')->getData()
                 )
             );
 
@@ -82,7 +82,7 @@ class RegistrationController extends AbstractController
 
     $this->addFlash('success', 'Your email address has been verified.');
 
-    return $this->redirectToRoute('app_homepage');
+    return $this->redirectToRoute('app_front');
 }
 
 }
