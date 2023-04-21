@@ -2,14 +2,15 @@
 
 namespace App\Entity;
 
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
+use App\Repository\UsersRepository;
 
-
+#[ORM\Entity(repositoryClass: UsersRepository::class)]
 #[ORM\Table(name: "users")]
-#[ORM\Entity]
 #[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
 class Users implements UserInterface
 {
@@ -208,5 +209,13 @@ class Users implements UserInterface
     {
         return (string) $this->getEmail();
     }
+
+    public function isIsVerified(): ?bool
+    {
+        return $this->isVerified;
+    }
+
+
+    
     
 }

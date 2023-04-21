@@ -1,11 +1,16 @@
 <?php
 
 namespace App\Controller;
-
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
+use App\Repository\UsersRepository;
+
+
 
 class SecurityController extends AbstractController
 {
@@ -29,4 +34,130 @@ class SecurityController extends AbstractController
     {
         throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
     }
+
+
+/**
+ * @Route("/forgot-password", name="app_forgot_password")
+ */
+public function forgotPassword(Request $request, MailerInterface $mailer, UsersRepository $usersRepository): Response
+{
+    if ($request->isMethod('POST')) {
+        // Get the submitted email address
+        $email = $request->request->get('email');
+
+        // Check if the email address exists in the database
+        $user = $usersRepository->findOneBy(['email' => $email]);
+        if (!$user) {
+            $this->addFlash('danger', 'Adresse e-mail inconnue.');
+
+            return $this->redirectToRoute('app_forgot_password');
+        }
+
+        // Generate a random code
+        $code = bin2hex(random_bytes(5));
+
+        // Save the code to the session
+        $this->get('session')->set('reset_code', $code);
+
+        // Send an email with the code
+        $message = (new \Symfony\Component\Mime\Email())
+            ->from('pidevento@gmail.com')
+            ->to($email)
+            ->subject('Réinitialisation de mot de passe')
+            ->text("Votre code de réinitialisation de mot de passe est: $code");
+        $mailer->send($message);
+
+        return $this->redirectToRoute('app_code_password', ['email' => $email]);
+    }
+
+    return $this->render('security/forgot_password.html.twig');
+}
+
+/**
+ * @Route("/reset-password", name="app_code_password")
+ */
+public function codePassword(Request $request): Response
+{
+    $email = $request->query->get('email');
+    $session = $request->getSession();
+    $code = $session->get('reset_code');
+
+    if ($code === null) {
+        $this->addFlash('danger', 'Code de réinitialisation invalide ou expiré.');
+
+        return $this->redirectToRoute('app_forgot_password');
+    }
+
+    if ($request->isMethod('POST')) {
+        $user_code = $request->request->get('code');
+        if ($user_code !== $code) {
+            $this->addFlash('danger', 'Le code saisi est incorrect.');
+
+            return $this->redirectToRoute('app_code_password', ['email' => $email]);
+        }
+
+        // If the code is correct, remove it from the session
+        $session->set('reset_code', null);
+
+        // Redirect to the new password page
+        return $this->redirectToRoute('app_new_password', ['email' => $email]);
+    }
+
+    return $this->render('security/code_password.html.twig', [
+        'email' => $email,
+        'code' => $code,
+    ]);
+}
+
+
+/**
+ * @Route("/new-password", name="app_new_password")
+ */
+public function newPassword(Request $request, UsersRepository $usersRepository, UserPasswordEncoderInterface $passwordEncoder): Response
+{
+    $email = $request->query->get('email');
+    $session = $request->getSession();
+    $code = $session->get('reset_code');
+
+    if ($code === null) {
+        $this->addFlash('danger', 'Code de réinitialisation invalide ou expiré.');
+
+        return $this->redirectToRoute('app_forgot_password');
+    }
+
+    if ($request->isMethod('POST')) {
+        $submittedCode = $request->request->get('code');
+        $password = $request->request->get('password');
+        $confirmPassword = $request->request->get('confirm_password');
+
+        if ($submittedCode === $code) {
+            $user = $usersRepository->findOneBy(['email' => $email]);
+            if (!$user) {
+                throw $this->createNotFoundException('Utilisateur non trouvé.');
+            }
+
+            if ($password !== $confirmPassword) {
+                $this->addFlash('danger', 'Les deux mots de passe ne correspondent pas.');
+
+                return $this->redirectToRoute('app_new_password', ['email' => $email]);
+            }
+
+            $encodedPassword = $passwordEncoder->encodePassword($user, $password);
+            $user->setPassword($encodedPassword);
+            $this->getDoctrine()->getManager()->flush();
+
+            $this->addFlash('success', 'Votre mot de passe a été réinitialisé.');
+
+            return $this->redirectToRoute('app_login');
+        } else {
+            $this->addFlash('danger', 'Code de réinitialisation incorrect.');
+
+            return $this->redirectToRoute('app_code_password', ['email' => $email]);
+        }
+    }
+    return $this->render('security/new_password.html.twig', [
+        'email' => $email,
+    ]);
+}
+
 }

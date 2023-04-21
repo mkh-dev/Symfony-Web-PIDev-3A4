@@ -228,17 +228,20 @@ https://templatemo.com/tm-583-festava-live
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 137, $this->source); })()), "userrole", [], "any", false, false, false, 137), 'widget', ["attr" => ["class" => "form-control", "required" => "required"]]);
         echo "
                 </div>
-                <div class=\"form-group\">
-                    <label for=\"password\">Mot de passe:</label>
-                    ";
+ <div class=\"form-group\">
+    <label for=\"password\">Mot de passe:</label>
+    ";
         // line 141
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 141, $this->source); })()), "password", [], "any", false, false, false, 141), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrez votre mot de passe", "required" => "required"]]);
         echo "
-                </div>
+</div>
+
+
+
                 <div class=\"form-group form-check\">
                     ";
-        // line 144
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 144, $this->source); })()), "agreeTerms", [], "any", false, false, false, 144), 'widget', ["attr" => ["class" => "form-check-input", "required" => "required"]]);
+        // line 147
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 147, $this->source); })()), "agreeTerms", [], "any", false, false, false, 147), 'widget', ["attr" => ["class" => "form-check-input", "required" => "required"]]);
         echo "
                     <label class=\"form-check-label\" for=\"agreeTerms\">J'accepte les conditions d'utilisation.</label>
                 </div>
@@ -246,8 +249,8 @@ https://templatemo.com/tm-583-festava-live
                     <button type=\"submit\" class=\"btn btn-primary\">S'inscrire</button>
                 </div>
                 ";
-        // line 150
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 150, $this->source); })()), 'form_end');
+        // line 153
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 153, $this->source); })()), 'form_end');
         echo "
             </form>
         </div>
@@ -385,19 +388,19 @@ T e m p l a t e M o
 -->
     <!-- JAVASCRIPT FILES -->
     <script src=\"";
-        // line 286
+        // line 289
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.min.js"), "html", null, true);
         echo "\" ></script>
     <script src=\"";
-        // line 287
+        // line 290
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 288
+        // line 291
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.sticky.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 289
+        // line 292
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -424,7 +427,7 @@ T e m p l a t e M o
 
     public function getDebugInfo()
     {
-        return array (  401 => 289,  397 => 288,  393 => 287,  389 => 286,  250 => 150,  241 => 144,  235 => 141,  228 => 137,  221 => 133,  214 => 129,  207 => 125,  200 => 121,  193 => 117,  186 => 113,  181 => 112,  172 => 110,  168 => 109,  153 => 97,  112 => 59,  76 => 26,  71 => 24,  66 => 22,  57 => 16,  40 => 1,);
+        return array (  404 => 292,  400 => 291,  396 => 290,  392 => 289,  253 => 153,  244 => 147,  235 => 141,  228 => 137,  221 => 133,  214 => 129,  207 => 125,  200 => 121,  193 => 117,  186 => 113,  181 => 112,  172 => 110,  168 => 109,  153 => 97,  112 => 59,  76 => 26,  71 => 24,  66 => 22,  57 => 16,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -567,10 +570,13 @@ https://templatemo.com/tm-583-festava-live
                     <label for=\"userrole\">Role:</label>
                     {{ form_widget(registrationForm.userrole, {'attr': {'class': 'form-control', 'required': 'required'}}) }}
                 </div>
-                <div class=\"form-group\">
-                    <label for=\"password\">Mot de passe:</label>
-                    {{ form_widget(registrationForm.password, {'attr': {'class': 'form-control', 'placeholder': 'Entrez votre mot de passe', 'required': 'required'}}) }}
-                </div>
+ <div class=\"form-group\">
+    <label for=\"password\">Mot de passe:</label>
+    {{ form_widget(registrationForm.password, {'attr': {'class': 'form-control', 'placeholder': 'Entrez votre mot de passe', 'required': 'required'}}) }}
+</div>
+
+
+
                 <div class=\"form-group form-check\">
                     {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'form-check-input', 'required': 'required'}}) }}
                     <label class=\"form-check-label\" for=\"agreeTerms\">J'accepte les conditions d'utilisation.</label>
