@@ -321,13 +321,34 @@ class __TwigTemplate_d308df08c40f0fc58ba7cfb52eff5902 extends Template
                   <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
                       href=\"#\">
+                      
+                         ";
+        // line 228
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 228, $this->source); })()), "user", [], "any", false, false, false, 228)) {
+            echo "              
+                          Vous êtes connecté en tant que ";
+            // line 229
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 229, $this->source); })()), "user", [], "any", false, false, false, 229), "userIdentifier", [], "any", false, false, false, 229), "html", null, true);
+            echo "
+                    ";
+        }
+        // line 230
+        echo " 
+                    </a>
+                  </li> 
+                     <li class=\"flex\">
+                    <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
+                      href=\"";
+        // line 235
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+        echo "\">
                       <svg class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
                         stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
                         <path
                           d=\"M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1\">
                         </path>
                       </svg>
-                      <span>Log out</span>
+                        <span>Logout</span>
                     </a>
                   </li>
                 </ul>
@@ -359,9 +380,9 @@ class __TwigTemplate_d308df08c40f0fc58ba7cfb52eff5902 extends Template
         </thead>
         <tbody>
         ";
-        // line 264
+        // line 273
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 264, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 273, $this->source); })()));
         $context['_iterated'] = false;
         $context['loop'] = [
           'parent' => $context['_parent'],
@@ -377,58 +398,58 @@ class __TwigTemplate_d308df08c40f0fc58ba7cfb52eff5902 extends Template
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 265
+            // line 274
             echo "            <tr>
                 <td>";
-            // line 266
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "prenom", [], "any", false, false, false, 266), "html", null, true);
+            // line 275
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "prenom", [], "any", false, false, false, 275), "html", null, true);
             echo "</td>
                 <td>";
-            // line 267
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nom", [], "any", false, false, false, 267), "html", null, true);
+            // line 276
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nom", [], "any", false, false, false, 276), "html", null, true);
             echo "</td>
                 <td>";
-            // line 268
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 268), "html", null, true);
+            // line 277
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 277), "html", null, true);
             echo "</td>
                 <td>";
-            // line 269
-            ((twig_get_attribute($this->env, $this->source, $context["user"], "datenaissance", [], "any", false, false, false, 269)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "datenaissance", [], "any", false, false, false, 269), "Y-m-d"), "html", null, true))) : (print ("")));
+            // line 278
+            ((twig_get_attribute($this->env, $this->source, $context["user"], "datenaissance", [], "any", false, false, false, 278)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "datenaissance", [], "any", false, false, false, 278), "Y-m-d"), "html", null, true))) : (print ("")));
             echo "</td>
                 <td>";
-            // line 270
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "numtel", [], "any", false, false, false, 270), "html", null, true);
+            // line 279
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "numtel", [], "any", false, false, false, 279), "html", null, true);
             echo "</td>
                 <td>";
-            // line 271
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "userrole", [], "any", false, false, false, 271), "html", null, true);
+            // line 280
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "userrole", [], "any", false, false, false, 280), "html", null, true);
             echo "</td>
                 <td>";
-            // line 272
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "password", [], "any", false, false, false, 272), "html", null, true);
+            // line 281
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "password", [], "any", false, false, false, 281), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 274
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_show", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 274)]), "html", null, true);
+            // line 283
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_show", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 283)]), "html", null, true);
             echo "\">Montrer</a>
                     <a href=\"";
-            // line 275
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 275)]), "html", null, true);
+            // line 284
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 284)]), "html", null, true);
             echo "\">Editer</a>
                     <form method=\"post\" action=\"";
-            // line 276
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 276)]), "html", null, true);
+            // line 285
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 285)]), "html", null, true);
             echo "\" onsubmit=\"return confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?');\">
     <input type=\"hidden\" name=\"_token\" value=\"";
-            // line 277
-            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 277))), "html", null, true);
+            // line 286
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 286))), "html", null, true);
             echo "\">
     <button class=\"btn\" type=\"submit\">
         ";
-            // line 279
-            $this->loadTemplate("users/_delete_form.html.twig", "users/index.html.twig", 279)->display($context);
-            // line 280
+            // line 288
+            $this->loadTemplate("users/_delete_form.html.twig", "users/index.html.twig", 288)->display($context);
+            // line 289
             echo "    </button>
 </form>
 
@@ -447,7 +468,7 @@ class __TwigTemplate_d308df08c40f0fc58ba7cfb52eff5902 extends Template
             }
         }
         if (!$context['_iterated']) {
-            // line 287
+            // line 296
             echo "            <tr>
                 <td colspan=\"9\">Aucun enregistrement trouvé</td>
             </tr>
@@ -456,12 +477,12 @@ class __TwigTemplate_d308df08c40f0fc58ba7cfb52eff5902 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 291
+        // line 300
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 294
+        // line 303
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_new");
         echo "\" class=\"button\"> Ajouter</a>
 
@@ -487,7 +508,7 @@ class __TwigTemplate_d308df08c40f0fc58ba7cfb52eff5902 extends Template
 
     public function getDebugInfo()
     {
-        return array (  465 => 294,  460 => 291,  451 => 287,  432 => 280,  430 => 279,  425 => 277,  421 => 276,  417 => 275,  413 => 274,  408 => 272,  404 => 271,  400 => 270,  396 => 269,  392 => 268,  388 => 267,  384 => 266,  381 => 265,  363 => 264,  196 => 100,  179 => 86,  138 => 48,  121 => 34,  106 => 22,  95 => 13,  88 => 12,  79 => 8,  74 => 7,  67 => 6,  54 => 3,  37 => 1,);
+        return array (  486 => 303,  481 => 300,  472 => 296,  453 => 289,  451 => 288,  446 => 286,  442 => 285,  438 => 284,  434 => 283,  429 => 281,  425 => 280,  421 => 279,  417 => 278,  413 => 277,  409 => 276,  405 => 275,  402 => 274,  384 => 273,  343 => 235,  336 => 230,  331 => 229,  327 => 228,  196 => 100,  179 => 86,  138 => 48,  121 => 34,  106 => 22,  95 => 13,  88 => 12,  79 => 8,  74 => 7,  67 => 6,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -718,13 +739,22 @@ class __TwigTemplate_d308df08c40f0fc58ba7cfb52eff5902 extends Template
                   <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
                       href=\"#\">
+                      
+                         {% if app.user %}              
+                          Vous êtes connecté en tant que {{ app.user.userIdentifier }}
+                    {% endif %} 
+                    </a>
+                  </li> 
+                     <li class=\"flex\">
+                    <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
+                      href=\"{{ path('app_logout') }}\">
                       <svg class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
                         stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
                         <path
                           d=\"M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1\">
                         </path>
                       </svg>
-                      <span>Log out</span>
+                        <span>Logout</span>
                     </a>
                   </li>
                 </ul>

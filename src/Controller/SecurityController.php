@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+use App\Entity\Users;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
@@ -8,12 +9,23 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Repository\UsersRepository;
 
 
 
 class SecurityController extends AbstractController
 {
+
+
+    private $session;
+
+    public function __construct(SessionInterface $session)
+    {
+        $this->session = $session;
+    }
+
+
     #[Route(path: '/login', name: 'app_login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
@@ -25,7 +37,18 @@ class SecurityController extends AbstractController
         $error = $authenticationUtils->getLastAuthenticationError();
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
-
+        if ($this->getUser()) {
+            $userrole = $this->getUser()->getUserrole();
+            if ($userrole == 'administrateur') {
+                return $this->redirectToRoute('app_users_index');
+            } elseif ($userrole == 'organisateur') {
+                return $this->redirectToRoute('organisateur_homepage');
+            } elseif ($userrole == 'transporteur') {
+                return $this->redirectToRoute('transporteur_homepage');
+            } elseif ($userrole == 'partenaire') {
+                return $this->redirectToRoute('partenaire_homepage');
+            }
+        }
         return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
     }
 
@@ -57,7 +80,7 @@ public function forgotPassword(Request $request, MailerInterface $mailer, UsersR
         $code = bin2hex(random_bytes(5));
 
         // Save the code to the session
-        $this->get('session')->set('reset_code', $code);
+        $this->session->set('reset_code', $code);
 
         // Send an email with the code
         $message = (new \Symfony\Component\Mime\Email())
@@ -97,7 +120,7 @@ public function codePassword(Request $request): Response
         }
 
         // If the code is correct, remove it from the session
-        $session->set('reset_code', null);
+        $session->remove('reset_code');
 
         // Redirect to the new password page
         return $this->redirectToRoute('app_new_password', ['email' => $email]);
@@ -108,6 +131,7 @@ public function codePassword(Request $request): Response
         'code' => $code,
     ]);
 }
+
 
 
 /**
