@@ -24,16 +24,10 @@ class __TwigTemplate_cc4f2250530cfbf38f4639a96e881ca5 extends Template
 
         $this->source = $this->getSourceContext();
 
-        $this->blocks = [
-            'title' => [$this, 'block_title'],
-            'body' => [$this, 'block_body'],
-        ];
-    }
+        $this->parent = false;
 
-    protected function doGetParent(array $context)
-    {
-        // line 1
-        return "base.html.twig";
+        $this->blocks = [
+        ];
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -42,86 +36,333 @@ class __TwigTemplate_cc4f2250530cfbf38f4639a96e881ca5 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "security/login.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "security/login.html.twig", 1);
-        $this->parent->display($context, array_merge($this->blocks, $blocks));
-        
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+        // line 1
+        echo "<!doctype html>
+<html lang=\"en\">
 
-    }
+<head>
+    <meta charset=\"utf-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 
-    // line 3
-    public function block_title($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+    <meta name=\"description\" content=\"\">
+    <meta name=\"author\" content=\"\">
 
-        echo "Log in!";
-        
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+    <title>Evento</title>
 
-    }
+    <!-- CSS FILES -->
+    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+     <link rel=\"icon\" href=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/tab.png"), "html", null, true);
+        echo "\">
 
-    // line 5
-    public function block_body($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
 
-        // line 6
-        echo "<form method=\"post\">
-    ";
-        // line 7
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 7, $this->source); })())) {
-            // line 8
-            echo "        <div class=\"alert alert-danger\">";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 8, $this->source); })()), "messageKey", [], "any", false, false, false, 8), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 8, $this->source); })()), "messageData", [], "any", false, false, false, 8), "security"), "html", null, true);
+    <link href=\"https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap\" rel=\"stylesheet\">
+
+    <link href=\"";
+        // line 21
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/css/bootstrap.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+
+    <link href=\"";
+        // line 23
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/css/bootstrap-icons.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+
+    <link href=\"";
+        // line 25
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/css/templatemo-festava-live.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+    <!--
+
+TemplateMo 583 Festava Live
+
+https://templatemo.com/tm-583-festava-live
+
+-->
+
+</head>
+
+<body>
+
+    <main>
+
+        <header class=\"site-header\">
+            <div class=\"container\">
+                <div class=\"row\">
+
+                    <div class=\"col-lg-12 col-12 d-flex flex-wrap\">
+                        <p class=\"d-flex me-4 mb-0\">
+                            <i class=\"bi-person custom-icon me-2\" style=\"color: black;\"></i>
+                            <strong class=\"text-dark\">Bienvenue dans Evento</strong>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <nav class=\"navbar navbar-expand-lg\">
+            <div class=\"container\">
+                <a class=\"navbar-brand\" href=\"index.html\">
+                    <img src=\"";
+        // line 58
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/logo.png"), "html", null, true);
+        echo "\" alt=\"Logo de Evento\" style=\"width: 13%; margin-top: -5px;\">
+                    Evento
+                </a>
+
+                <a href=\"ticket.html\" class=\"btn custom-btn d-lg-none ms-auto me-4\">Se Connecter</a>
+
+                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\"
+                    aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                    <span class=\"navbar-toggler-icon\"></span>
+                </button>
+
+                <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+                    <ul class=\"navbar-nav align-items-lg-center ms-auto me-lg-5\">
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"index.html#section_1\">Accueil</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"index.html#section_2\">À propos</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"index.html#section_3\">Artistes</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"index.html#section_4\">Événement</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"index.html#section_5\">Abonnement</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"index.html#section_6\">Contact</a>
+                        </li>
+                    </ul>
+
+                    <a href=\"";
+        // line 96
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+        echo "\" class=\"btn custom-btn d-lg-block d-none\">S'inscrire</a>
+                </div>
+            </div>
+        </nav>
+
+
+ <section class=\"ticket-section section-padding\">
+    <div class=\"section-overlay\"></div>
+    <div class=\"container\">
+        <div class=\"row\">
+            <div class=\"col-lg-6 col-10 mx-auto\">
+                <form class=\"custom-form ticket-form mb-5 mb-lg-0\" action=\"";
+        // line 107
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+        echo "\" method=\"post\" role=\"form\">
+                    <h2 class=\"text-center mb-4\">Connexion</h2>
+                    ";
+        // line 109
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 109, $this->source); })())) {
+            // line 110
+            echo "                        <div class=\"alert alert-danger\">";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 110, $this->source); })()), "messageKey", [], "any", false, false, false, 110), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 110, $this->source); })()), "messageData", [], "any", false, false, false, 110), "security"), "html", null, true);
             echo "</div>
-    ";
+                    ";
         }
-        // line 10
-        echo "
-    ";
-        // line 11
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "user", [], "any", false, false, false, 11)) {
-            // line 12
-            echo "        <div class=\"mb-3\">
-            You are logged in as ";
-            // line 13
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "user", [], "any", false, false, false, 13), "userIdentifier", [], "any", false, false, false, 13), "html", null, true);
+        // line 112
+        echo "                    ";
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 112, $this->source); })()), "user", [], "any", false, false, false, 112)) {
+            // line 113
+            echo "                        <div class=\"mb-3\">
+                            You are logged in as ";
+            // line 114
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 114, $this->source); })()), "user", [], "any", false, false, false, 114), "userIdentifier", [], "any", false, false, false, 114), "html", null, true);
             echo ", <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Logout</a>
-        </div>
-    ";
+                        </div>
+                    ";
         }
-        // line 16
-        echo "
-    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-    <label for=\"inputEmail\">Email</label>
-    <input type=\"email\" value=\"";
-        // line 19
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 19, $this->source); })()), "html", null, true);
+        // line 117
+        echo "                    <div class=\"ticket-form-body\">
+                        <label for=\"inputEmail\">Email</label>
+                        <input type=\"email\" value=\"";
+        // line 119
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 119, $this->source); })()), "html", null, true);
         echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
-    <label for=\"inputPassword\">Password</label>
-    <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
-
-    <input type=\"hidden\" name=\"_csrf_token\"
-           value=\"";
-        // line 24
+                        <label for=\"inputPassword\">Password</label>
+                        <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
+                                            <input type=\"hidden\" name=\"_csrf_token\"
+                           value=\"";
+        // line 123
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\"
-    >
+                    >
 
-    ";
-        // line 37
+                    ";
+        // line 136
         echo "
-    <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Sign in
-    </button>
-</form>
-";
+                    <button type=\"submit\" class=\"btn btn-primary form-control\">Se connecter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+
+    </main>
+
+
+  <footer class=\"site-footer\">
+        <div class=\"site-footer-top\">
+            <div class=\"container\">
+                <div class=\"row\">
+
+                    <div class=\"col-lg-6 col-12\">
+                        <h2 class=\"text-white mb-lg-0\">Evento</h2>
+                    </div>
+
+                    <div class=\"col-lg-6 col-12 d-flex justify-content-lg-end align-items-center\">
+                        <ul class=\"social-icon d-flex justify-content-lg-end\">
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-twitter\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-apple\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-instagram\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-youtube\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-pinterest\"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=\"container\">
+            <div class=\"row\">
+
+                <div class=\"col-lg-6 col-12 mb-4 pb-2\">
+                    <h5 class=\"site-footer-title mb-3\">Liens</h5>
+
+                    <ul class=\"site-footer-links\">
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Accueil</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">À propos</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Artistes</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Événement</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Abonnement</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class=\"col-lg-3 col-md-6 col-12 mb-4 mb-lg-0\">
+                    <h5 class=\"site-footer-title mb-3\">Tu as une question ?</h5>
+
+                    <p class=\"text-white d-flex mb-1\">
+                        <a href=\"tel: 090-080-0760\" class=\"site-footer-link\">
+                            090-080-0760
+                        </a>
+                    </p>
+
+                    <p class=\"text-white d-flex\">
+                        <a href=\"mailto:pidevtestapp@gmail.com\" class=\"site-footer-link\">
+                            pidevtestapp@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class=\"col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0\">
+                    <h5 class=\"site-footer-title mb-3\">Location</h5>
+
+                    <p class=\"text-white d-flex mt-3 mb-2\">
+                       18, rue de l'Usine - ZI Aéroport Charguia II 2035 Ariana</p>
+
+                    <a class=\"link-fx-1 color-contrast-higher mt-3\" href=\"#\">
+                        <span>Notre Carte</span>
+                        <svg class=\"icon\" viewBox=\"0 0 32 32\" aria-hidden=\"true\">
+                            <g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                <circle cx=\"16\" cy=\"16\" r=\"15.5\"></circle>
+                                <line x1=\"10\" y1=\"18\" x2=\"16\" y2=\"12\"></line>
+                                <line x1=\"16\" y1=\"12\" x2=\"22\" y2=\"18\"></line>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+      
+    </footer>
+
+    <!--
+
+T e m p l a t e M o
+
+-->
+    <!-- JAVASCRIPT FILES -->
+    <script src=\"";
+        // line 272
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.min.js"), "html", null, true);
+        echo "\" ></script>
+    <script src=\"";
+        // line 273
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/bootstrap.min.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 274
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.sticky.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 275
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/custom.js"), "html", null, true);
+        echo "\"></script>
+
+</body>
+
+</html>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -139,53 +380,289 @@ class __TwigTemplate_cc4f2250530cfbf38f4639a96e881ca5 extends Template
 
     public function getDebugInfo()
     {
-        return array (  119 => 37,  113 => 24,  105 => 19,  100 => 16,  92 => 13,  89 => 12,  87 => 11,  84 => 10,  78 => 8,  76 => 7,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  360 => 275,  356 => 274,  352 => 273,  348 => 272,  210 => 136,  204 => 123,  197 => 119,  193 => 117,  185 => 114,  182 => 113,  179 => 112,  173 => 110,  171 => 109,  166 => 107,  152 => 96,  111 => 58,  75 => 25,  70 => 23,  65 => 21,  56 => 15,  40 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("<!doctype html>
+<html lang=\"en\">
 
-{% block title %}Log in!{% endblock %}
+<head>
+    <meta charset=\"utf-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 
-{% block body %}
-<form method=\"post\">
-    {% if error %}
-        <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+    <meta name=\"description\" content=\"\">
+    <meta name=\"author\" content=\"\">
 
-    {% if app.user %}
-        <div class=\"mb-3\">
-            You are logged in as {{ app.user.userIdentifier }}, <a href=\"{{ path('app_logout') }}\">Logout</a>
+    <title>Evento</title>
+
+    <!-- CSS FILES -->
+    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
+     <link rel=\"icon\" href=\"{{asset('front/images/tab.png')}}\">
+
+    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
+
+    <link href=\"https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap\" rel=\"stylesheet\">
+
+    <link href=\"{{asset('front/css/bootstrap.min.css')}}\" rel=\"stylesheet\">
+
+    <link href=\"{{asset('front/css/bootstrap-icons.css')}}\" rel=\"stylesheet\">
+
+    <link href=\"{{asset('front/css/templatemo-festava-live.css')}}\" rel=\"stylesheet\">
+    <!--
+
+TemplateMo 583 Festava Live
+
+https://templatemo.com/tm-583-festava-live
+
+-->
+
+</head>
+
+<body>
+
+    <main>
+
+        <header class=\"site-header\">
+            <div class=\"container\">
+                <div class=\"row\">
+
+                    <div class=\"col-lg-12 col-12 d-flex flex-wrap\">
+                        <p class=\"d-flex me-4 mb-0\">
+                            <i class=\"bi-person custom-icon me-2\" style=\"color: black;\"></i>
+                            <strong class=\"text-dark\">Bienvenue dans Evento</strong>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <nav class=\"navbar navbar-expand-lg\">
+            <div class=\"container\">
+                <a class=\"navbar-brand\" href=\"index.html\">
+                    <img src=\"{{asset('front/images/logo.png')}}\" alt=\"Logo de Evento\" style=\"width: 13%; margin-top: -5px;\">
+                    Evento
+                </a>
+
+                <a href=\"ticket.html\" class=\"btn custom-btn d-lg-none ms-auto me-4\">Se Connecter</a>
+
+                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\"
+                    aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                    <span class=\"navbar-toggler-icon\"></span>
+                </button>
+
+                <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+                    <ul class=\"navbar-nav align-items-lg-center ms-auto me-lg-5\">
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"index.html#section_1\">Accueil</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"index.html#section_2\">À propos</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"index.html#section_3\">Artistes</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"index.html#section_4\">Événement</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"index.html#section_5\">Abonnement</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"index.html#section_6\">Contact</a>
+                        </li>
+                    </ul>
+
+                    <a href=\"{{ path('app_register') }}\" class=\"btn custom-btn d-lg-block d-none\">S'inscrire</a>
+                </div>
+            </div>
+        </nav>
+
+
+ <section class=\"ticket-section section-padding\">
+    <div class=\"section-overlay\"></div>
+    <div class=\"container\">
+        <div class=\"row\">
+            <div class=\"col-lg-6 col-10 mx-auto\">
+                <form class=\"custom-form ticket-form mb-5 mb-lg-0\" action=\"{{ path('app_login') }}\" method=\"post\" role=\"form\">
+                    <h2 class=\"text-center mb-4\">Connexion</h2>
+                    {% if error %}
+                        <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+                    {% if app.user %}
+                        <div class=\"mb-3\">
+                            You are logged in as {{ app.user.userIdentifier }}, <a href=\"{{ path('app_logout') }}\">Logout</a>
+                        </div>
+                    {% endif %}
+                    <div class=\"ticket-form-body\">
+                        <label for=\"inputEmail\">Email</label>
+                        <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
+                        <label for=\"inputPassword\">Password</label>
+                        <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
+                                            <input type=\"hidden\" name=\"_csrf_token\"
+                           value=\"{{ csrf_token('authenticate') }}\"
+                    >
+
+                    {#
+                        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                        See https://symfony.com/doc/current/security/remember_me.html
+
+                        <div class=\"checkbox mb-3\">
+                            <label>
+                                <input type=\"checkbox\" name=\"_remember_me\"> Remember me
+                            </label>
+                        </div>
+                    #}
+
+                    <button type=\"submit\" class=\"btn btn-primary form-control\">Se connecter</button>
+                </div>
+            </form>
         </div>
-    {% endif %}
+    </div>
+</div>
+</section>
 
-    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-    <label for=\"inputEmail\">Email</label>
-    <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
-    <label for=\"inputPassword\">Password</label>
-    <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
+    </main>
 
-    <input type=\"hidden\" name=\"_csrf_token\"
-           value=\"{{ csrf_token('authenticate') }}\"
-    >
 
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
+  <footer class=\"site-footer\">
+        <div class=\"site-footer-top\">
+            <div class=\"container\">
+                <div class=\"row\">
 
-        <div class=\"checkbox mb-3\">
-            <label>
-                <input type=\"checkbox\" name=\"_remember_me\"> Remember me
-            </label>
+                    <div class=\"col-lg-6 col-12\">
+                        <h2 class=\"text-white mb-lg-0\">Evento</h2>
+                    </div>
+
+                    <div class=\"col-lg-6 col-12 d-flex justify-content-lg-end align-items-center\">
+                        <ul class=\"social-icon d-flex justify-content-lg-end\">
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-twitter\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-apple\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-instagram\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-youtube\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-pinterest\"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    #}
 
-    <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Sign in
-    </button>
-</form>
-{% endblock %}
-", "security/login.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\security\\login.html.twig");
+        <div class=\"container\">
+            <div class=\"row\">
+
+                <div class=\"col-lg-6 col-12 mb-4 pb-2\">
+                    <h5 class=\"site-footer-title mb-3\">Liens</h5>
+
+                    <ul class=\"site-footer-links\">
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Accueil</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">À propos</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Artistes</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Événement</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Abonnement</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class=\"col-lg-3 col-md-6 col-12 mb-4 mb-lg-0\">
+                    <h5 class=\"site-footer-title mb-3\">Tu as une question ?</h5>
+
+                    <p class=\"text-white d-flex mb-1\">
+                        <a href=\"tel: 090-080-0760\" class=\"site-footer-link\">
+                            090-080-0760
+                        </a>
+                    </p>
+
+                    <p class=\"text-white d-flex\">
+                        <a href=\"mailto:pidevtestapp@gmail.com\" class=\"site-footer-link\">
+                            pidevtestapp@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class=\"col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0\">
+                    <h5 class=\"site-footer-title mb-3\">Location</h5>
+
+                    <p class=\"text-white d-flex mt-3 mb-2\">
+                       18, rue de l'Usine - ZI Aéroport Charguia II 2035 Ariana</p>
+
+                    <a class=\"link-fx-1 color-contrast-higher mt-3\" href=\"#\">
+                        <span>Notre Carte</span>
+                        <svg class=\"icon\" viewBox=\"0 0 32 32\" aria-hidden=\"true\">
+                            <g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                <circle cx=\"16\" cy=\"16\" r=\"15.5\"></circle>
+                                <line x1=\"10\" y1=\"18\" x2=\"16\" y2=\"12\"></line>
+                                <line x1=\"16\" y1=\"12\" x2=\"22\" y2=\"18\"></line>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+      
+    </footer>
+
+    <!--
+
+T e m p l a t e M o
+
+-->
+    <!-- JAVASCRIPT FILES -->
+    <script src=\"{{asset('front/js/jquery.min.js')}}\" ></script>
+    <script src=\"{{asset('front/js/bootstrap.min.js')}}\"></script>
+    <script src=\"{{asset('front/js/jquery.sticky.js')}}\"></script>
+    <script src=\"{{asset('front/js/custom.js')}}\"></script>
+
+</body>
+
+</html>", "security/login.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\security\\login.html.twig");
     }
 }

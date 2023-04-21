@@ -150,7 +150,7 @@ https://templatemo.com/tm-583-festava-live
 
                     <a href=\"";
         // line 97
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_new_page");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo "\" class=\"btn custom-btn d-lg-block d-none\">Se Connecter</a>
                 </div>
             </div>
@@ -160,79 +160,17 @@ https://templatemo.com/tm-583-festava-live
       <section class=\"ticket-section section-padding\">
     <div class=\"section-overlay\"></div>
 
-<div class=\"container\">
+
+        <div class=\"container\">
     <div class=\"row\">
-
         <div class=\"col-lg-6 col-10 mx-auto\">
-            <form class=\"custom-form ticket-form mb-5 mb-lg-0\" action=\"#\" method=\"post\" role=\"form\">
-                <h2 class=\"text-center mb-4\">Inscription</h2>
-
-                <div class=\"ticket-form-body\">
-                    <div class=\"row\">
-                        <div class=\"col-lg-6 col-md-6 col-12\">
-                            <label for=\"ticket-form-firstname\">Prénom:</label>
-                            <input type=\"text\" name=\"ticket-form-firstname\" id=\"ticket-form-firstname\"
-                                class=\"form-control\" placeholder=\"Entrez votre prénom\" required>
-                        </div>
-
-                        <div class=\"col-lg-6 col-md-6 col-12\">
-                            <label for=\"ticket-form-lastname\">Nom:</label>
-                            <input type=\"text\" name=\"ticket-form-lastname\" id=\"ticket-form-lastname\"
-                                class=\"form-control\" placeholder=\"Entrez votre nom\" required>
-                        </div>
-                    </div>
-
-                    <div class=\"row\">
-                        <div class=\"col-lg-6 col-md-6 col-12\">
-                            <label for=\"ticket-form-email\">Email:</label>
-                            <input type=\"email\" name=\"ticket-form-email\" id=\"ticket-form-email\"
-                                pattern=\"[^ @]*@[^ @]*\" class=\"form-control\" placeholder=\"Entrez votre email\" required>
-                        </div>
-
-                        <div class=\"col-lg-6 col-md-6 col-12\">
-                            <label for=\"ticket-form-dob\">Date de naissance:</label>
-                            <input type=\"date\" name=\"ticket-form-dob\" id=\"ticket-form-dob\" class=\"form-control\"
-                                placeholder=\"Entrez votre date de naissance\" required>
-                        </div>
-                    </div>
-
-                    <label for=\"ticket-form-phone\">Numéro de téléphone:</label>
-                    <input type=\"tel\" class=\"form-control\" name=\"ticket-form-phone\"
-                        placeholder=\"Entrez votre numéro de téléphone\" pattern=\"[0-9]{10}\" required>
-
-                    <div class=\"form-group\">
-                        <label for=\"ticket-form-role\">Choisir un rôle</label>
-                        <select class=\"form-control\" id=\"ticket-form-role\" name=\"ticket-form-role\" required>
-                            <option value=\"\">Sélectionner un rôle</option>
-                            <option value=\"transporter\">Transporteur</option>
-                            <option value=\"organizer\">Organisateur</option>
-                            <option value=\"partner\">Partenaire</option>
-                        </select>
-                    </div>
-
-                    <div class=\"row\">
-                        <div class=\"col-lg-6 col-md-6 col-12\">
-                            <label for=\"ticket-form-password\">Mot de passe:</label>
-                            <input type=\"password\" name=\"ticket-form-password\" id=\"ticket-form-password\"
-                                class=\"form-control\" placeholder=\"Entrez votre mot de passe\" required>
-                        </div>
-
-                        <div class=\"col-lg-6 col-md-6 col-12\">
-                            <label for=\"ticket-form-password-confirm\">Confirmer mot de passe:</label>
-                            <input type=\"password\" name=\"ticket-form-password-confirm\"
-                                id=\"ticket-form-password-confirm\" class=\"form-control\"
-                                placeholder=\"Confirmez votre mot de passe\" required>
-                        </div>
-                    </div>
-
-                    <div class=\"col-lg-4 col-md-10 col-8 mx-auto\">
-                        <button type=\"submit\" class=\"form-control\">Valider</button>
-                    </div>
-                </div>
-            </form>
-            </div>
-        </div>
+            ";
+        // line 110
+        $this->loadTemplate("register.html.twig", "register/index.html.twig", 110)->display($context);
+        // line 111
+        echo "        </div>
     </div>
+
 </section>
 
     </main>
@@ -363,19 +301,19 @@ T e m p l a t e M o
 -->
     <!-- JAVASCRIPT FILES -->
     <script src=\"";
-        // line 308
+        // line 243
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.min.js"), "html", null, true);
         echo "\" ></script>
     <script src=\"";
-        // line 309
+        // line 244
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 310
+        // line 245
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.sticky.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 311
+        // line 246
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -399,7 +337,7 @@ T e m p l a t e M o
 
     public function getDebugInfo()
     {
-        return array (  379 => 311,  375 => 310,  371 => 309,  367 => 308,  153 => 97,  112 => 59,  76 => 26,  71 => 24,  66 => 22,  57 => 16,  40 => 1,);
+        return array (  317 => 246,  313 => 245,  309 => 244,  305 => 243,  171 => 111,  169 => 110,  153 => 97,  112 => 59,  76 => 26,  71 => 24,  66 => 22,  57 => 16,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -500,7 +438,7 @@ https://templatemo.com/tm-583-festava-live
                         </li>
                     </ul>
 
-                    <a href=\"{{ path('app_new_page') }}\" class=\"btn custom-btn d-lg-block d-none\">Se Connecter</a>
+                    <a href=\"{{ path('app_login') }}\" class=\"btn custom-btn d-lg-block d-none\">Se Connecter</a>
                 </div>
             </div>
         </nav>
@@ -509,79 +447,14 @@ https://templatemo.com/tm-583-festava-live
       <section class=\"ticket-section section-padding\">
     <div class=\"section-overlay\"></div>
 
-<div class=\"container\">
+
+        <div class=\"container\">
     <div class=\"row\">
-
         <div class=\"col-lg-6 col-10 mx-auto\">
-            <form class=\"custom-form ticket-form mb-5 mb-lg-0\" action=\"#\" method=\"post\" role=\"form\">
-                <h2 class=\"text-center mb-4\">Inscription</h2>
-
-                <div class=\"ticket-form-body\">
-                    <div class=\"row\">
-                        <div class=\"col-lg-6 col-md-6 col-12\">
-                            <label for=\"ticket-form-firstname\">Prénom:</label>
-                            <input type=\"text\" name=\"ticket-form-firstname\" id=\"ticket-form-firstname\"
-                                class=\"form-control\" placeholder=\"Entrez votre prénom\" required>
-                        </div>
-
-                        <div class=\"col-lg-6 col-md-6 col-12\">
-                            <label for=\"ticket-form-lastname\">Nom:</label>
-                            <input type=\"text\" name=\"ticket-form-lastname\" id=\"ticket-form-lastname\"
-                                class=\"form-control\" placeholder=\"Entrez votre nom\" required>
-                        </div>
-                    </div>
-
-                    <div class=\"row\">
-                        <div class=\"col-lg-6 col-md-6 col-12\">
-                            <label for=\"ticket-form-email\">Email:</label>
-                            <input type=\"email\" name=\"ticket-form-email\" id=\"ticket-form-email\"
-                                pattern=\"[^ @]*@[^ @]*\" class=\"form-control\" placeholder=\"Entrez votre email\" required>
-                        </div>
-
-                        <div class=\"col-lg-6 col-md-6 col-12\">
-                            <label for=\"ticket-form-dob\">Date de naissance:</label>
-                            <input type=\"date\" name=\"ticket-form-dob\" id=\"ticket-form-dob\" class=\"form-control\"
-                                placeholder=\"Entrez votre date de naissance\" required>
-                        </div>
-                    </div>
-
-                    <label for=\"ticket-form-phone\">Numéro de téléphone:</label>
-                    <input type=\"tel\" class=\"form-control\" name=\"ticket-form-phone\"
-                        placeholder=\"Entrez votre numéro de téléphone\" pattern=\"[0-9]{10}\" required>
-
-                    <div class=\"form-group\">
-                        <label for=\"ticket-form-role\">Choisir un rôle</label>
-                        <select class=\"form-control\" id=\"ticket-form-role\" name=\"ticket-form-role\" required>
-                            <option value=\"\">Sélectionner un rôle</option>
-                            <option value=\"transporter\">Transporteur</option>
-                            <option value=\"organizer\">Organisateur</option>
-                            <option value=\"partner\">Partenaire</option>
-                        </select>
-                    </div>
-
-                    <div class=\"row\">
-                        <div class=\"col-lg-6 col-md-6 col-12\">
-                            <label for=\"ticket-form-password\">Mot de passe:</label>
-                            <input type=\"password\" name=\"ticket-form-password\" id=\"ticket-form-password\"
-                                class=\"form-control\" placeholder=\"Entrez votre mot de passe\" required>
-                        </div>
-
-                        <div class=\"col-lg-6 col-md-6 col-12\">
-                            <label for=\"ticket-form-password-confirm\">Confirmer mot de passe:</label>
-                            <input type=\"password\" name=\"ticket-form-password-confirm\"
-                                id=\"ticket-form-password-confirm\" class=\"form-control\"
-                                placeholder=\"Confirmez votre mot de passe\" required>
-                        </div>
-                    </div>
-
-                    <div class=\"col-lg-4 col-md-10 col-8 mx-auto\">
-                        <button type=\"submit\" class=\"form-control\">Valider</button>
-                    </div>
-                </div>
-            </form>
-            </div>
+            {% include 'register.html.twig' %}
         </div>
     </div>
+
 </section>
 
     </main>

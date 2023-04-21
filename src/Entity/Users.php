@@ -203,4 +203,10 @@ class Users implements UserInterface
     {
         return (string) $this->id; 
     }
+
+    public function getUserIdentifier(): string
+    {
+        return (string) $this->getEmail();
+    }
+    
 }
