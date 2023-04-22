@@ -23,4 +23,12 @@ class FrontController extends AbstractController
             'controller_name' => 'FrontController',
         ]);
     }
+
+    #[Route('/utilisateur', name: 'login_utilisateur')]
+    public function utilisateur(): Response
+    {
+        return $this->render('front/utilisateur.html.twig', [
+            'controller_name' => 'FrontController',
+        ]);
+    }
 }

@@ -52,6 +52,7 @@ class RegistrationFormType extends AbstractType
                     'Organisateur' => 'Organisateur',
                     'Partenaire' => 'Partenaire',
                     'Transporteur' => 'Transporteur',
+                    'Utilisateur' => 'Utilisateur',
                 ],
             ])
             

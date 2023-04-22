@@ -39,14 +39,17 @@ class SecurityController extends AbstractController
         $lastUsername = $authenticationUtils->getLastUsername();
         if ($this->getUser()) {
             $userrole = $this->getUser()->getUserrole();
-            if ($userrole == 'administrateur') {
+            if ($userrole == 'Administrateur') {
                 return $this->redirectToRoute('app_users_index');
-            } elseif ($userrole == 'organisateur') {
+            } elseif ($userrole == 'Organisateur') {
                 return $this->redirectToRoute('organisateur_homepage');
-            } elseif ($userrole == 'transporteur') {
+            } elseif ($userrole == 'Transporteur') {
                 return $this->redirectToRoute('transporteur_homepage');
-            } elseif ($userrole == 'partenaire') {
+            } elseif ($userrole == 'Partenaire') {
                 return $this->redirectToRoute('partenaire_homepage');
+            }
+            elseif ($userrole == 'Utilisateur') {
+                return $this->redirectToRoute('login_utilisateur');
             }
         }
         return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);

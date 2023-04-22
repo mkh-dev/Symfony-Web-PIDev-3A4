@@ -25,6 +25,7 @@ return [
     'app_facture_delete' => [['id'], ['_controller' => 'App\\Controller\\FactureController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/facture']], [], [], []],
     'app_front' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/']], [], [], []],
     'login_home' => [[], ['_controller' => 'App\\Controller\\FrontController::home'], [], [['text', '/home']], [], [], []],
+    'login_utilisateur' => [[], ['_controller' => 'App\\Controller\\FrontController::utilisateur'], [], [['text', '/utilisateur']], [], [], []],
     'app_produit_index' => [[], ['_controller' => 'App\\Controller\\ProduitController::index'], [], [['text', '/produit/']], [], [], []],
     'app_produit_new' => [[], ['_controller' => 'App\\Controller\\ProduitController::new'], [], [['text', '/produit/new']], [], [], []],
     'app_produit_show' => [['idProd'], ['_controller' => 'App\\Controller\\ProduitController::show'], [], [['variable', '/', '[^/]++', 'idProd', true], ['text', '/produit']], [], [], []],
