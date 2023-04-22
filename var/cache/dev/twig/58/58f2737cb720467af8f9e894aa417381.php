@@ -115,6 +115,6 @@ class __TwigTemplate_d90cd814e94c0af02ea0f3fbb7ffb605 extends Template
 
     <a href=\"{{ path('app_produit_index') }}\">back to list</a>
 {% endblock %}
-", "produit/new.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\produit\\new.html.twig");
+", "produit/new.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\produit\\new.html.twig");
     }
 }

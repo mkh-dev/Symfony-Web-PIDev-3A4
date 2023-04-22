@@ -115,6 +115,6 @@ class __TwigTemplate_81f939acc0df36292eab5cb9837b534d extends Template
 
     <a href=\"{{ path('app_facture_index') }}\">back to list</a>
 {% endblock %}
-", "facture/new.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\facture\\new.html.twig");
+", "facture/new.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\facture\\new.html.twig");
     }
 }

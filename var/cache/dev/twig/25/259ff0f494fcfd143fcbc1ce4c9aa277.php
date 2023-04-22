@@ -122,6 +122,6 @@ class __TwigTemplate_4b52a43de579b254bfcc6e2ac3b6ac0c extends Template
 
     {{ include('produit/_delete_form.html.twig') }}
 {% endblock %}
-", "produit/edit.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\produit\\edit.html.twig");
+", "produit/edit.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\produit\\edit.html.twig");
     }
 }

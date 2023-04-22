@@ -187,6 +187,6 @@ class __TwigTemplate_e9c9970e70da09c774e2bf17af470811 extends Template
 
     <a href=\"{{ path('app_categorie_prod_new') }}\">Create new</a>
 {% endblock %}
-", "categorie_prod/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\categorie_prod\\index.html.twig");
+", "categorie_prod/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\categorie_prod\\index.html.twig");
     }
 }

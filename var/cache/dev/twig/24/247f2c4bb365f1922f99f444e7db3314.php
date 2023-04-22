@@ -729,6 +729,6 @@ class __TwigTemplate_7687955f0758a09e541f144f46fce075 extends Template
   </div>
 {% endblock %}
         
-", "reclamations/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\reclamations\\index.html.twig");
+", "reclamations/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\reclamations\\index.html.twig");
     }
 }

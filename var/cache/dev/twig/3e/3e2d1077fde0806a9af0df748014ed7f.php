@@ -78,6 +78,6 @@ class __TwigTemplate_255917e9770e04be4fde51ed0a0f62d5 extends Template
     {{ form_widget(form) }}
     <button class=\"btn\">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
-", "categorie_prod/_form.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\categorie_prod\\_form.html.twig");
+", "categorie_prod/_form.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\categorie_prod\\_form.html.twig");
     }
 }

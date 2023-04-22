@@ -154,6 +154,6 @@ class __TwigTemplate_ca6948c974532d5b395969e052b50d78 extends Template
 
     {{ include('facture/_delete_form.html.twig') }}
 {% endblock %}
-", "facture/show.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\facture\\show.html.twig");
+", "facture/show.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\facture\\show.html.twig");
     }
 }

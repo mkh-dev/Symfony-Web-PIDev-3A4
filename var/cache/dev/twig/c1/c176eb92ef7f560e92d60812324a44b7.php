@@ -78,6 +78,6 @@ class __TwigTemplate_82012e2b4424838ce0b94b2a2ca63032 extends Template
     {{ form_widget(form) }}
     <button class=\"btn\">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
-", "facture/_form.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\facture\\_form.html.twig");
+", "facture/_form.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\facture\\_form.html.twig");
     }
 }

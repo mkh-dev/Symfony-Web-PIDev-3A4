@@ -187,6 +187,6 @@ class __TwigTemplate_faa5b2ec96555f5559da77fc22ea2129 extends Template
 
     {{ include('vehicule/_delete_form.html.twig') }}
 {% endblock %}
-", "vehicule/show.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\vehicule\\show.html.twig");
+", "vehicule/show.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\vehicule\\show.html.twig");
     }
 }

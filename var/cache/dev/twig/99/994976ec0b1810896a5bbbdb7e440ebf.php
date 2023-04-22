@@ -73,6 +73,6 @@ class __TwigTemplate_11b3a1e7e0bf3913be2eac6756bfc2ba extends Template
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ categorie_prod.idCatProd) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "categorie_prod/_delete_form.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\categorie_prod\\_delete_form.html.twig");
+", "categorie_prod/_delete_form.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\categorie_prod\\_delete_form.html.twig");
     }
 }

@@ -222,6 +222,6 @@ class __TwigTemplate_57a32912d42caab4dbced8bd22b21de8 extends Template
 
     <a href=\"{{ path('app_produit_new') }}\">Create new</a>
 {% endblock %}
-", "produit/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\produit\\index.html.twig");
+", "produit/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\produit\\index.html.twig");
     }
 }

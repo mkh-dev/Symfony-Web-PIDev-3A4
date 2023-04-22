@@ -88,6 +88,6 @@ class __TwigTemplate_bd690a2fb467cb008de19fc68d64b602 extends Template
 <p>
     Cheers!
 </p>
-", "registration/confirmation_email.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\registration\\confirmation_email.html.twig");
+", "registration/confirmation_email.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\registration\\confirmation_email.html.twig");
     }
 }

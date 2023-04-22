@@ -1398,6 +1398,6 @@ table.table .avatar {
 </div>
 </main>
 {% endblock %}
-", "users/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\users\\index.html.twig");
+", "users/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\users\\index.html.twig");
     }
 }
