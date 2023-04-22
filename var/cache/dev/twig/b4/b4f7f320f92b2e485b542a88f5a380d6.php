@@ -187,6 +187,6 @@ class __TwigTemplate_8d59a59523446297f336b2a39a177c6a extends Template
 
     <a href=\"{{ path('app_categorie_event_new') }}\">Create new</a>
 {% endblock %}
-", "categorie_event/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\categorie_event\\index.html.twig");
+", "categorie_event/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\categorie_event\\index.html.twig");
     }
 }

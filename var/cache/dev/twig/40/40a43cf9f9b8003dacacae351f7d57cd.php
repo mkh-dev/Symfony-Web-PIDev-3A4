@@ -73,6 +73,6 @@ class __TwigTemplate_c6520b6d6717942f44aab967afb3e506 extends Template
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ reservation.numres) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "reservation/_delete_form.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\reservation\\_delete_form.html.twig");
+", "reservation/_delete_form.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\reservation\\_delete_form.html.twig");
     }
 }

@@ -145,6 +145,6 @@ class __TwigTemplate_d2ea80619b35c6857506374ddf28fdac extends Template
 
 {% endblock %}
 
-", "users/new.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\users\\new.html.twig");
+", "users/new.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\users\\new.html.twig");
     }
 }

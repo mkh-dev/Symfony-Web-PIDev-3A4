@@ -115,6 +115,6 @@ class __TwigTemplate_aad0509cb6b915186e56494dd57336ec extends Template
 
     <a href=\"{{ path('app_reservation2_index') }}\">back to list</a>
 {% endblock %}
-", "reservation2/new.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\reservation2\\new.html.twig");
+", "reservation2/new.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\reservation2\\new.html.twig");
     }
 }

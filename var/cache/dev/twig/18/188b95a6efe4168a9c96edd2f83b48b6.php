@@ -217,6 +217,6 @@ class __TwigTemplate_cbe70684b355c76436ab07f8e45f14cb extends Template
     <a href=\"{{ path('app_users_index') }}\" class=\"btn btn-secondary\">Retour à la liste</a>
 </div>
 {{ form_end(form) }}
-", "users/_form.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\users\\_form.html.twig");
+", "users/_form.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\users\\_form.html.twig");
     }
 }

@@ -73,6 +73,6 @@ class __TwigTemplate_090da93277f9a734c312b49cbf02cff7 extends Template
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ facture.id) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "facture/_delete_form.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\facture\\_delete_form.html.twig");
+", "facture/_delete_form.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\facture\\_delete_form.html.twig");
     }
 }

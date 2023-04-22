@@ -718,6 +718,6 @@ T e m p l a t e M o
 
 </body>
 
-</html>", "register/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\register\\index.html.twig");
+</html>", "register/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\register\\index.html.twig");
     }
 }

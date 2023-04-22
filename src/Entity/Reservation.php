@@ -14,7 +14,7 @@ class Reservation
     #[ORM\Column(type: "integer")]
     #[ORM\Id]
     #[ORM\GeneratedValue(strategy: "IDENTITY")]
-    private ?int $numres = null;
+    private ?int $numRes = null;
 
     #[ORM\Column(type: "integer")]
     private ?int $nbplaces = null;
@@ -29,9 +29,9 @@ class Reservation
     
     private ?Users $iduser = null;
 
-    public function getNumres(): ?int
+    public function getNumRes(): ?int
     {
-        return $this->numres;
+        return $this->numRes;
     }
 
     public function getNbplaces(): ?int

@@ -142,6 +142,6 @@ class __TwigTemplate_47ccf5f7fe1423726fda85b760d9ba1a extends Template
         <a href=\"{{ path('app_reclamations_index') }}\" class=\"btn btn-secondary my-3\">Retour à la liste</a>
     </div>
 {% endblock %}
-", "reclamations/new.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\reclamations\\new.html.twig");
+", "reclamations/new.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\reclamations\\new.html.twig");
     }
 }

@@ -187,6 +187,6 @@ class __TwigTemplate_4136452234bfc78afb6e1df8afca46db extends Template
 
     <a href=\"{{ path('app_reservation_new') }}\">Create new</a>
 {% endblock %}
-", "reservation/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\reservation\\index.html.twig");
+", "reservation/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\reservation\\index.html.twig");
     }
 }

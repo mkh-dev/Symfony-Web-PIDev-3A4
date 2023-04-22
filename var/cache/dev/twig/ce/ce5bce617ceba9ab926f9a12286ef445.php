@@ -167,6 +167,6 @@ class __TwigTemplate_bbbd92b36cb4f9a8d3731f71d212c4c3 extends Template
 
 
 
-", "registration/register.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\registration\\register.html.twig");
+", "registration/register.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\registration\\register.html.twig");
     }
 }
