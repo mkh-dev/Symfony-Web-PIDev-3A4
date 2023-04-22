@@ -9,22 +9,31 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Knp\Component\Pager\PaginatorInterface;
+
 
 #[Route('/users')]
 class UsersController extends AbstractController
 {
+    
     #[Route('/', name: 'app_users_index', methods: ['GET'])]
-    public function index(EntityManagerInterface $entityManager): Response
+    public function index(EntityManagerInterface $entityManager, PaginatorInterface $paginator, Request $request): Response
     {
         $users = $entityManager
             ->getRepository(Users::class)
             ->findAll();
-
+    
+        $pagination = $paginator->paginate(
+            $users,
+            $request->query->getInt('page', 1),
+            5 // Nombre d'éléments par page
+        );
+    
         return $this->render('users/index.html.twig', [
-            'users' => $users,
+            'pagination' => $pagination,
         ]);
     }
-
+    
     #[Route('/new', name: 'app_users_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
@@ -82,6 +91,4 @@ class UsersController extends AbstractController
         return $this->redirectToRoute('app_users_index', [], Response::HTTP_SEE_OTHER);
     }
 
-
-    
 }

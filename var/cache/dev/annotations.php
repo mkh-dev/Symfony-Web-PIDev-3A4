@@ -174,6 +174,8 @@ return [[
 '[C]App%5CController%5CReservationController%23delete' => 1,
 'App%5CController%5CSecurityController' => 0,
 '[C]App%5CController%5CSecurityController' => 1,
+'App%5CController%5CSecurityController%23__construct' => 0,
+'[C]App%5CController%5CSecurityController%23__construct' => 1,
 'App%5CController%5CSecurityController%23login' => 0,
 '[C]App%5CController%5CSecurityController%23login' => 1,
 'App%5CController%5CSecurityController%23logout' => 0,
@@ -184,6 +186,8 @@ return [[
 '[C]App%5CController%5CSecurityController%23codePassword' => 1,
 'App%5CController%5CSecurityController%23newPassword' => 4,
 '[C]App%5CController%5CSecurityController%23newPassword' => 1,
+'App%5CController%5CSecurityController%24session' => 0,
+'[C]App%5CController%5CSecurityController%24session' => 1,
 'App%5CController%5CTransportController' => 0,
 '[C]App%5CController%5CTransportController' => 1,
 'App%5CController%5CTransportController%23index' => 0,
@@ -1088,7 +1092,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1682095502,
+1 => 1682165080,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [

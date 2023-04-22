@@ -15,4 +15,12 @@ class FrontController extends AbstractController
             'controller_name' => 'FrontController',
         ]);
     }
+
+    #[Route('/home', name: 'login_home')]
+    public function home(): Response
+    {
+        return $this->render('front/home.html.twig', [
+            'controller_name' => 'FrontController',
+        ]);
+    }
 }
