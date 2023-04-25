@@ -17,6 +17,7 @@ use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Regex;
 use Symfony\Component\Validator\Constraints\LessThan;
+use Gregwar\CaptchaBundle\Type\CaptchaType;
 
 class RegistrationFormType extends AbstractType
 {
@@ -57,8 +58,7 @@ class RegistrationFormType extends AbstractType
             ])
             
             ->add('password', PasswordType::class)
-                
-            
+
         ;
     }
 

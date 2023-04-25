@@ -50,10 +50,18 @@ class __TwigTemplate_9134320ffab56dc27b7779d567f63054 extends Template
 
     <title>Evento</title>
 
+   
+<script type=\"text/javascript\" src=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/gregwarcaptchabundle/js/captcha.js"), "html", null, true);
+        echo "\"></script>
+
+
+
     <!-- CSS FILES -->
     <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
      <link rel=\"icon\" href=\"";
-        // line 16
+        // line 21
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/tab.png"), "html", null, true);
         echo "\">
 
@@ -62,17 +70,17 @@ class __TwigTemplate_9134320ffab56dc27b7779d567f63054 extends Template
     <link href=\"https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap\" rel=\"stylesheet\">
 
     <link href=\"";
-        // line 22
+        // line 27
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/css/bootstrap.min.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
 
     <link href=\"";
-        // line 24
+        // line 29
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/css/bootstrap-icons.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
 
     <link href=\"";
-        // line 26
+        // line 31
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/css/templatemo-festava-live.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
     <!--
@@ -106,9 +114,12 @@ https://templatemo.com/tm-583-festava-live
 
         <nav class=\"navbar navbar-expand-lg\">
             <div class=\"container\">
-                <a class=\"navbar-brand\" href=\"index.html\">
+                <a class=\"navbar-brand\" href=\"";
+        // line 63
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_front");
+        echo "\">
                     <img src=\"";
-        // line 59
+        // line 64
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/logo.png"), "html", null, true);
         echo "\" alt=\"Logo de Evento\" style=\"width: 13%; margin-top: -5px;\">
                     Evento
@@ -124,32 +135,50 @@ https://templatemo.com/tm-583-festava-live
                 <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
                     <ul class=\"navbar-nav align-items-lg-center ms-auto me-lg-5\">
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_1\">Accueil</a>
+                            <a class=\"nav-link click-scroll\" href=\"";
+        // line 78
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_front");
+        echo "\">Accueil</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_2\">À propos</a>
+                            <a class=\"nav-link click-scroll\" href=\"";
+        // line 82
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_front");
+        echo "\">À propos</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_3\">Artistes</a>
+                            <a class=\"nav-link click-scroll\" href=\"";
+        // line 86
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_front");
+        echo "\">Artistes</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_4\">Événement</a>
+                            <a class=\"nav-link click-scroll\" href=\"";
+        // line 90
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_front");
+        echo "\">Événement</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_5\">Abonnement</a>
+                            <a class=\"nav-link click-scroll\" href=\"";
+        // line 94
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_front");
+        echo "\">Abonnement</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_6\">Contact</a>
+                            <a class=\"nav-link click-scroll\" href=\"";
+        // line 98
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_front");
+        echo "\">Contact</a>
                         </li>
                     </ul>
 
                     <a href=\"";
-        // line 97
+        // line 102
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo "\" class=\"btn custom-btn d-lg-block d-none\">Se Connecter</a>
                 </div>
@@ -164,11 +193,11 @@ https://templatemo.com/tm-583-festava-live
     <div class=\"row justify-content-center\">
         <div class=\"col-lg-8 col-md-10\">
             ";
-        // line 109
+        // line 114
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 109, $this->source); })()), "flashes", [0 => "verify_email_error"], "method", false, false, false, 109));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 114, $this->source); })()), "flashes", [0 => "verify_email_error"], "method", false, false, false, 114));
         foreach ($context['_seq'] as $context["_key"] => $context["flash_error"]) {
-            // line 110
+            // line 115
             echo "            <div class=\"alert alert-danger\" role=\"alert\">";
             echo twig_escape_filter($this->env, $context["flash_error"], "html", null, true);
             echo "</div>
@@ -177,62 +206,62 @@ https://templatemo.com/tm-583-festava-live
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flash_error'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 112
+        // line 117
         echo "            <form class=\"custom-form ticket-form mb-5 mb-lg-0\" method=\"POST\" action=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
         echo "\">
             ";
-        // line 113
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 113, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate"]]);
+        // line 118
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 118, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate"]]);
         echo "
-                <h2 class=\"text-center mb-4\">Inscription</h2>
+                <h3 class=\"text-center mb-4\">Rejoignez Evento</h3>
                 <div class=\"form-group\">
-                    <label for=\"prenom\">Prenom:</label>
+                    <label for=\"prenom\">Prénom:</label>
                     ";
-        // line 117
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 117, $this->source); })()), "prenom", [], "any", false, false, false, 117), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrez votre prénom", "required" => "required"]]);
+        // line 122
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 122, $this->source); })()), "prenom", [], "any", false, false, false, 122), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrez votre prénom", "required" => "required"]]);
         echo "
                 </div>
                 <div class=\"form-group\">
                     <label for=\"nom\">Nom:</label>
                     ";
-        // line 121
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 121, $this->source); })()), "nom", [], "any", false, false, false, 121), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrez votre nom", "required" => "required"]]);
+        // line 126
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 126, $this->source); })()), "nom", [], "any", false, false, false, 126), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrez votre nom", "required" => "required"]]);
         echo "
                 </div>
                 <div class=\"form-group\">
                     <label for=\"email\">Email:</label>
                     ";
-        // line 125
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 125, $this->source); })()), "email", [], "any", false, false, false, 125), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrez votre email", "required" => "required", "pattern" => "[^@]+@[^@]+.[a-zA-Z]{2,6}"]]);
+        // line 130
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 130, $this->source); })()), "email", [], "any", false, false, false, 130), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrez votre email", "required" => "required", "pattern" => "[^@]+@[^@]+.[a-zA-Z]{2,6}"]]);
         echo "
                 </div>
                 <div class=\"form-group\">
                     <label for=\"datenaissance\">Date de Naissance:</label>
                     ";
-        // line 129
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 129, $this->source); })()), "datenaissance", [], "any", false, false, false, 129), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrez votre date de naissance", "required" => "required"]]);
+        // line 134
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 134, $this->source); })()), "datenaissance", [], "any", false, false, false, 134), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrez votre date de naissance", "required" => "required"]]);
         echo "
                 </div>
                 <div class=\"form-group\">
                     <label for=\"numtel\">Numéro de téléphone:</label>
                     ";
-        // line 133
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 133, $this->source); })()), "numtel", [], "any", false, false, false, 133), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrez votre numéro de téléphone", "required" => "required"]]);
+        // line 138
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 138, $this->source); })()), "numtel", [], "any", false, false, false, 138), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrez votre numéro de téléphone", "required" => "required"]]);
         echo "
                 </div>
                 <div class=\"form-group\">
-                    <label for=\"userrole\">Role:</label>
+                    <label for=\"userrole\">Rôle:</label>
                     ";
-        // line 137
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 137, $this->source); })()), "userrole", [], "any", false, false, false, 137), 'widget', ["attr" => ["class" => "form-control", "required" => "required"]]);
+        // line 142
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 142, $this->source); })()), "userrole", [], "any", false, false, false, 142), 'widget', ["attr" => ["class" => "form-control", "required" => "required"]]);
         echo "
                 </div>
  <div class=\"form-group\">
     <label for=\"password\">Mot de passe:</label>
     ";
-        // line 141
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 141, $this->source); })()), "password", [], "any", false, false, false, 141), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrez votre mot de passe", "required" => "required"]]);
+        // line 146
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 146, $this->source); })()), "password", [], "any", false, false, false, 146), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Entrez votre mot de passe", "required" => "required"]]);
         echo "
 </div>
 
@@ -240,17 +269,26 @@ https://templatemo.com/tm-583-festava-live
 
                 <div class=\"form-group form-check\">
                     ";
-        // line 147
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 147, $this->source); })()), "agreeTerms", [], "any", false, false, false, 147), 'widget', ["attr" => ["class" => "form-check-input", "required" => "required"]]);
+        // line 152
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 152, $this->source); })()), "agreeTerms", [], "any", false, false, false, 152), 'widget', ["attr" => ["class" => "form-check-input", "required" => "required"]]);
         echo "
-                    <label class=\"form-check-label\" for=\"agreeTerms\">J'accepte les conditions d'utilisation.</label>
+                    <label class=\"form-check-label\"for=\"agreeTerms\" style=\"margin-top: -0.5px;\">J'accepte les conditions d'utilisation.</label>
                 </div>
+
                 <div class=\"text-center\">
                     <button type=\"submit\" class=\"btn btn-primary\">S'inscrire</button>
+                    <br><br>
+
+   Vous avez déjà un compte ? <a href=\"";
+        // line 160
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+        echo "\"> Connectez-vous</a>
+</div>
                 </div>
+                
                 ";
-        // line 153
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 153, $this->source); })()), 'form_end');
+        // line 164
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 164, $this->source); })()), 'form_end');
         echo "
             </form>
         </div>
@@ -388,19 +426,19 @@ T e m p l a t e M o
 -->
     <!-- JAVASCRIPT FILES -->
     <script src=\"";
-        // line 289
+        // line 300
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.min.js"), "html", null, true);
         echo "\" ></script>
     <script src=\"";
-        // line 290
+        // line 301
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 291
+        // line 302
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.sticky.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 292
+        // line 303
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -427,7 +465,7 @@ T e m p l a t e M o
 
     public function getDebugInfo()
     {
-        return array (  404 => 292,  400 => 291,  396 => 290,  392 => 289,  253 => 153,  244 => 147,  235 => 141,  228 => 137,  221 => 133,  214 => 129,  207 => 125,  200 => 121,  193 => 117,  186 => 113,  181 => 112,  172 => 110,  168 => 109,  153 => 97,  112 => 59,  76 => 26,  71 => 24,  66 => 22,  57 => 16,  40 => 1,);
+        return array (  442 => 303,  438 => 302,  434 => 301,  430 => 300,  291 => 164,  284 => 160,  273 => 152,  264 => 146,  257 => 142,  250 => 138,  243 => 134,  236 => 130,  229 => 126,  222 => 122,  215 => 118,  210 => 117,  201 => 115,  197 => 114,  182 => 102,  175 => 98,  168 => 94,  161 => 90,  154 => 86,  147 => 82,  140 => 78,  123 => 64,  119 => 63,  84 => 31,  79 => 29,  74 => 27,  65 => 21,  56 => 15,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -444,6 +482,11 @@ T e m p l a t e M o
     <meta name=\"author\" content=\"\">
 
     <title>Evento</title>
+
+   
+<script type=\"text/javascript\" src=\"{{ asset('bundles/gregwarcaptchabundle/js/captcha.js') }}\"></script>
+
+
 
     <!-- CSS FILES -->
     <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
@@ -489,7 +532,7 @@ https://templatemo.com/tm-583-festava-live
 
         <nav class=\"navbar navbar-expand-lg\">
             <div class=\"container\">
-                <a class=\"navbar-brand\" href=\"index.html\">
+                <a class=\"navbar-brand\" href=\"{{ path('app_front') }}\">
                     <img src=\"{{asset('front/images/logo.png')}}\" alt=\"Logo de Evento\" style=\"width: 13%; margin-top: -5px;\">
                     Evento
                 </a>
@@ -504,27 +547,27 @@ https://templatemo.com/tm-583-festava-live
                 <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
                     <ul class=\"navbar-nav align-items-lg-center ms-auto me-lg-5\">
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_1\">Accueil</a>
+                            <a class=\"nav-link click-scroll\" href=\"{{ path('app_front') }}\">Accueil</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_2\">À propos</a>
+                            <a class=\"nav-link click-scroll\" href=\"{{ path('app_front') }}\">À propos</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_3\">Artistes</a>
+                            <a class=\"nav-link click-scroll\" href=\"{{ path('app_front') }}\">Artistes</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_4\">Événement</a>
+                            <a class=\"nav-link click-scroll\" href=\"{{ path('app_front') }}\">Événement</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_5\">Abonnement</a>
+                            <a class=\"nav-link click-scroll\" href=\"{{ path('app_front') }}\">Abonnement</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_6\">Contact</a>
+                            <a class=\"nav-link click-scroll\" href=\"{{ path('app_front') }}\">Contact</a>
                         </li>
                     </ul>
 
@@ -545,9 +588,9 @@ https://templatemo.com/tm-583-festava-live
             {% endfor %}
             <form class=\"custom-form ticket-form mb-5 mb-lg-0\" method=\"POST\" action=\"{{ path('app_register') }}\">
             {{ form_start(registrationForm,{'attr': {'novalidate': 'novalidate'}} ) }}
-                <h2 class=\"text-center mb-4\">Inscription</h2>
+                <h3 class=\"text-center mb-4\">Rejoignez Evento</h3>
                 <div class=\"form-group\">
-                    <label for=\"prenom\">Prenom:</label>
+                    <label for=\"prenom\">Prénom:</label>
                     {{ form_widget(registrationForm.prenom, {'attr': {'class': 'form-control', 'placeholder': 'Entrez votre prénom', 'required': 'required'}}) }}
                 </div>
                 <div class=\"form-group\">
@@ -567,7 +610,7 @@ https://templatemo.com/tm-583-festava-live
                     {{ form_widget(registrationForm.numtel, {'attr': {'class': 'form-control', 'placeholder': 'Entrez votre numéro de téléphone', 'required': 'required'}}) }}
                 </div>
                 <div class=\"form-group\">
-                    <label for=\"userrole\">Role:</label>
+                    <label for=\"userrole\">Rôle:</label>
                     {{ form_widget(registrationForm.userrole, {'attr': {'class': 'form-control', 'required': 'required'}}) }}
                 </div>
  <div class=\"form-group\">
@@ -579,11 +622,17 @@ https://templatemo.com/tm-583-festava-live
 
                 <div class=\"form-group form-check\">
                     {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'form-check-input', 'required': 'required'}}) }}
-                    <label class=\"form-check-label\" for=\"agreeTerms\">J'accepte les conditions d'utilisation.</label>
+                    <label class=\"form-check-label\"for=\"agreeTerms\" style=\"margin-top: -0.5px;\">J'accepte les conditions d'utilisation.</label>
                 </div>
+
                 <div class=\"text-center\">
                     <button type=\"submit\" class=\"btn btn-primary\">S'inscrire</button>
+                    <br><br>
+
+   Vous avez déjà un compte ? <a href=\"{{ path('app_login') }}\"> Connectez-vous</a>
+</div>
                 </div>
+                
                 {{ form_end(registrationForm) }}
             </form>
         </div>

@@ -75,11 +75,8 @@ class __TwigTemplate_55ba6078747084e0c21a9841fdd69fb5 extends Template
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/css/templatemo-festava-live.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
     <!--
-
 TemplateMo 583 Festava Live
-
 https://templatemo.com/tm-583-festava-live
-
 -->
 
 </head>
@@ -105,9 +102,12 @@ https://templatemo.com/tm-583-festava-live
 
         <nav class=\"navbar navbar-expand-lg\">
             <div class=\"container\">
-                <a class=\"navbar-brand\" href=\"index.html\">
+                <a class=\"navbar-brand\" href=\"";
+        // line 54
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_front");
+        echo "\">
                     <img src=\"";
-        // line 58
+        // line 55
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/logo.png"), "html", null, true);
         echo "\" alt=\"Logo de Evento\" style=\"width: 13%; margin-top: -5px;\">
                     Evento
@@ -123,32 +123,50 @@ https://templatemo.com/tm-583-festava-live
                 <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
                     <ul class=\"navbar-nav align-items-lg-center ms-auto me-lg-5\">
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_1\">Accueil</a>
+                            <a class=\"nav-link click-scroll\" href=\"";
+        // line 69
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_front");
+        echo "\">Accueil</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_2\">À propos</a>
+                            <a class=\"nav-link click-scroll\" href=\"";
+        // line 73
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_front");
+        echo "\">À propos</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_3\">Artistes</a>
+                            <a class=\"nav-link click-scroll\" href=\"";
+        // line 77
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_front");
+        echo "\">Artistes</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_4\">Événement</a>
+                            <a class=\"nav-link click-scroll\" href=\"";
+        // line 81
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_front");
+        echo "\">Événement</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_5\">Abonnement</a>
+                            <a class=\"nav-link click-scroll\" href=\"";
+        // line 85
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_front");
+        echo "\">Abonnement</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_6\">Contact</a>
+                            <a class=\"nav-link click-scroll\" href=\"";
+        // line 89
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_front");
+        echo "\">Contact</a>
                         </li>
                     </ul>
 
                     <a href=\"";
-        // line 96
+        // line 93
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
         echo "\" class=\"btn custom-btn d-lg-block d-none\">S'inscrire</a>
                 </div>
@@ -162,45 +180,51 @@ https://templatemo.com/tm-583-festava-live
         <div class=\"row\">
             <div class=\"col-lg-6 col-10 mx-auto\">
                 <form class=\"custom-form ticket-form mb-5 mb-lg-0\" action=\"";
-        // line 107
+        // line 104
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo "\" method=\"post\" role=\"form\">
-                    <h2 class=\"text-center mb-4\">Connexion</h2>
+                    <h3 class=\"text-center mb-4\">Connectez-vous à Evento</h3>
                     ";
-        // line 109
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 109, $this->source); })())) {
-            // line 110
+        // line 106
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 106, $this->source); })())) {
+            // line 107
             echo "                        <div class=\"alert alert-danger\">";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 110, $this->source); })()), "messageKey", [], "any", false, false, false, 110), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 110, $this->source); })()), "messageData", [], "any", false, false, false, 110), "security"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 107, $this->source); })()), "messageKey", [], "any", false, false, false, 107), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 107, $this->source); })()), "messageData", [], "any", false, false, false, 107), "security"), "html", null, true);
             echo "</div>
                     ";
         }
-        // line 112
+        // line 109
         echo "
                     <div class=\"ticket-form-body\">
                         <label for=\"inputEmail\">Email</label>
                         <input type=\"email\" value=\"";
-        // line 115
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 115, $this->source); })()), "html", null, true);
+        // line 112
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 112, $this->source); })()), "html", null, true);
         echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
                         <label for=\"inputPassword\">Mot de passe</label>
                         <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
                                             <input type=\"hidden\" name=\"_csrf_token\"
                            value=\"";
-        // line 119
+        // line 116
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\"
                     >
 
                     ";
-        // line 132
+        // line 128
         echo "
                     <button type=\"submit\" class=\"btn btn-primary form-control\">Se connecter</button>
                     <div class=\"text-center mt-3\">
     <a href=\"";
-        // line 135
+        // line 131
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forgot_password");
         echo "\" style=\"color: black;\">Mot de passe oublié ?</a>
+     <br><br>
+
+   Vous n'avez pas de compte ? <a href=\"";
+        // line 134
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+        echo "\"> Inscrivez-vous</a>
 </div>
 
 
@@ -334,25 +358,23 @@ https://templatemo.com/tm-583-festava-live
     </footer>
 
     <!--
-
 T e m p l a t e M o
-
 -->
     <!-- JAVASCRIPT FILES -->
     <script src=\"";
-        // line 274
+        // line 271
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.min.js"), "html", null, true);
         echo "\" ></script>
     <script src=\"";
-        // line 275
+        // line 272
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 276
+        // line 273
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.sticky.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 277
+        // line 274
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -376,7 +398,7 @@ T e m p l a t e M o
 
     public function getDebugInfo()
     {
-        return array (  356 => 277,  352 => 276,  348 => 275,  344 => 274,  202 => 135,  197 => 132,  191 => 119,  184 => 115,  179 => 112,  173 => 110,  171 => 109,  166 => 107,  152 => 96,  111 => 58,  75 => 25,  70 => 23,  65 => 21,  56 => 15,  40 => 1,);
+        return array (  378 => 274,  374 => 273,  370 => 272,  366 => 271,  226 => 134,  220 => 131,  215 => 128,  209 => 116,  202 => 112,  197 => 109,  191 => 107,  189 => 106,  184 => 104,  170 => 93,  163 => 89,  156 => 85,  149 => 81,  142 => 77,  135 => 73,  128 => 69,  111 => 55,  107 => 54,  75 => 25,  70 => 23,  65 => 21,  56 => 15,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -407,11 +429,8 @@ T e m p l a t e M o
 
     <link href=\"{{asset('front/css/templatemo-festava-live.css')}}\" rel=\"stylesheet\">
     <!--
-
 TemplateMo 583 Festava Live
-
 https://templatemo.com/tm-583-festava-live
-
 -->
 
 </head>
@@ -437,7 +456,7 @@ https://templatemo.com/tm-583-festava-live
 
         <nav class=\"navbar navbar-expand-lg\">
             <div class=\"container\">
-                <a class=\"navbar-brand\" href=\"index.html\">
+                <a class=\"navbar-brand\" href=\"{{ path('app_front') }}\">
                     <img src=\"{{asset('front/images/logo.png')}}\" alt=\"Logo de Evento\" style=\"width: 13%; margin-top: -5px;\">
                     Evento
                 </a>
@@ -452,27 +471,27 @@ https://templatemo.com/tm-583-festava-live
                 <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
                     <ul class=\"navbar-nav align-items-lg-center ms-auto me-lg-5\">
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_1\">Accueil</a>
+                            <a class=\"nav-link click-scroll\" href=\"{{ path('app_front') }}\">Accueil</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_2\">À propos</a>
+                            <a class=\"nav-link click-scroll\" href=\"{{ path('app_front') }}\">À propos</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_3\">Artistes</a>
+                            <a class=\"nav-link click-scroll\" href=\"{{ path('app_front') }}\">Artistes</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_4\">Événement</a>
+                            <a class=\"nav-link click-scroll\" href=\"{{ path('app_front') }}\">Événement</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_5\">Abonnement</a>
+                            <a class=\"nav-link click-scroll\" href=\"{{ path('app_front') }}\">Abonnement</a>
                         </li>
 
                         <li class=\"nav-item\">
-                            <a class=\"nav-link click-scroll\" href=\"index.html#section_6\">Contact</a>
+                            <a class=\"nav-link click-scroll\" href=\"{{ path('app_front') }}\">Contact</a>
                         </li>
                     </ul>
 
@@ -488,7 +507,7 @@ https://templatemo.com/tm-583-festava-live
         <div class=\"row\">
             <div class=\"col-lg-6 col-10 mx-auto\">
                 <form class=\"custom-form ticket-form mb-5 mb-lg-0\" action=\"{{ path('app_login') }}\" method=\"post\" role=\"form\">
-                    <h2 class=\"text-center mb-4\">Connexion</h2>
+                    <h3 class=\"text-center mb-4\">Connectez-vous à Evento</h3>
                     {% if error %}
                         <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                     {% endif %}
@@ -505,7 +524,6 @@ https://templatemo.com/tm-583-festava-live
                     {#
                         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
                         See https://symfony.com/doc/current/security/remember_me.html
-
                         <div class=\"checkbox mb-3\">
                             <label>
                                 <input type=\"checkbox\" name=\"_remember_me\"> Remember me
@@ -516,6 +534,9 @@ https://templatemo.com/tm-583-festava-live
                     <button type=\"submit\" class=\"btn btn-primary form-control\">Se connecter</button>
                     <div class=\"text-center mt-3\">
     <a href=\"{{ path('app_forgot_password') }}\" style=\"color: black;\">Mot de passe oublié ?</a>
+     <br><br>
+
+   Vous n'avez pas de compte ? <a href=\"{{ path('app_register') }}\"> Inscrivez-vous</a>
 </div>
 
 
@@ -649,9 +670,7 @@ https://templatemo.com/tm-583-festava-live
     </footer>
 
     <!--
-
 T e m p l a t e M o
-
 -->
     <!-- JAVASCRIPT FILES -->
     <script src=\"{{asset('front/js/jquery.min.js')}}\" ></script>
