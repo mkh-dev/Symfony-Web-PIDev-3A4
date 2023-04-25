@@ -40,8 +40,10 @@ class Users implements UserInterface
     #[Assert\Email(message: "L'email '{{ value }}' n'est pas valide.")]
     private string $email;
 
+    
     #[ORM\Column(type: "date")]
-    #[Assert\NotBlank(message: "La date de naissance est obligatoire")]
+    #[Assert\NotNull(message: "La date de naissance ne doit pas être vide.")]
+    #[Assert\NotBlank(message: "La date de naissance est obligatoire.")]
     #[Assert\LessThanOrEqual("today", message: "La date de naissance ne peut pas être dans le futur.")]
     #[LessThan("-18 years", message: "Vous devez avoir au moins 18 ans pour vous inscrire.")]
     private \DateTimeInterface $datenaissance;
@@ -214,10 +216,4 @@ class Users implements UserInterface
     {
         return $this->isVerified;
     }
-
-
-    
-
-    
-    
 }

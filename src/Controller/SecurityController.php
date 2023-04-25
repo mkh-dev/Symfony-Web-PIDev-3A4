@@ -136,55 +136,31 @@ public function codePassword(Request $request): Response
 }
 
 
-
-/**
- * @Route("/new-password", name="app_new_password")
- */
-public function newPassword(Request $request, UsersRepository $usersRepository, UserPasswordEncoderInterface $passwordEncoder): Response
+#[Route('/new-password', name: 'app_new_password')]
+public function newPassword(Request $request, UserPasswordEncoderInterface $passwordEncoder, UsersRepository $usersRepository): Response
 {
     $email = $request->query->get('email');
-    $session = $request->getSession();
-    $code = $session->get('reset_code');
-
-    if ($code === null) {
-        $this->addFlash('danger', 'Code de réinitialisation invalide ou expiré.');
-
-        return $this->redirectToRoute('app_forgot_password');
-    }
+    $user = $usersRepository->findOneBy(['email' => $email]);
 
     if ($request->isMethod('POST')) {
-        $submittedCode = $request->request->get('code');
+        // Get the submitted password
         $password = $request->request->get('password');
-        $confirmPassword = $request->request->get('confirm_password');
 
-        if ($submittedCode === $code) {
-            $user = $usersRepository->findOneBy(['email' => $email]);
-            if (!$user) {
-                throw $this->createNotFoundException('Utilisateur non trouvé.');
-            }
+        // Encode the password
+        $encodedPassword = $passwordEncoder->encodePassword($user, $password);
 
-            if ($password !== $confirmPassword) {
-                $this->addFlash('danger', 'Les deux mots de passe ne correspondent pas.');
+        // Set the new password
+        $user->setPassword($encodedPassword);
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($user);
+        $entityManager->flush();
 
-                return $this->redirectToRoute('app_new_password', ['email' => $email]);
-            }
-
-            $encodedPassword = $passwordEncoder->encodePassword($user, $password);
-            $user->setPassword($encodedPassword);
-            $this->getDoctrine()->getManager()->flush();
-
-            $this->addFlash('success', 'Votre mot de passe a été réinitialisé.');
-
-            return $this->redirectToRoute('app_login');
-        } else {
-            $this->addFlash('danger', 'Code de réinitialisation incorrect.');
-
-            return $this->redirectToRoute('app_code_password', ['email' => $email]);
-        }
+        // Redirect to the login page
+        return $this->redirectToRoute('app_login');
     }
+
     return $this->render('security/new_password.html.twig', [
         'email' => $email,
     ]);
 }
-
 }

@@ -113,7 +113,7 @@ https://templatemo.com/tm-583-festava-live
                     <div class="ticket-form-body">
                         <label for="inputEmail">Email</label>
                         <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-                        <label for="inputPassword">Password</label>
+                        <label for="inputPassword">Mot de passe</label>
                         <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
                                             <input type="hidden" name="_csrf_token"
                            value="{{ csrf_token('authenticate') }}"
@@ -131,6 +131,12 @@ https://templatemo.com/tm-583-festava-live
                     #}
 
                     <button type="submit" class="btn btn-primary form-control">Se connecter</button>
+                    <div class="text-center mt-3">
+    <a href="{{ path('app_forgot_password') }}" style="color: black;">Mot de passe oublié ?</a>
+</div>
+
+
+                   
                 </div>
             </form>
         </div>

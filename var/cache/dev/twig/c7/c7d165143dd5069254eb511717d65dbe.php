@@ -74,7 +74,7 @@ class __TwigTemplate_e956dfa4b926e2dd63a10994009c46e9 extends Template
         echo "    ";
         $this->displayParentBlock("stylesheets", $context, $blocks);
         echo "
-    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">
+    
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -89,21 +89,15 @@ class __TwigTemplate_e956dfa4b926e2dd63a10994009c46e9 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 11
-        echo "    <div class=\"container\">
-        <h1><center>Modifier Reclamations</center></h1>
-
+        echo "  <div class=\"row justify-content-center\">
+    <div class=\"col-md-6\">
         ";
-        // line 14
+        // line 13
         echo twig_include($this->env, $context, "reclamations/_form.html.twig", ["button_label" => "Valider"]);
         echo "
 
-        <a href=\"";
-        // line 16
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_index");
-        echo "\" class=\"btn btn-secondary my-3\">Retour à la liste</a>
-
-     
-    </div>
+        </div>
+</div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -122,7 +116,7 @@ class __TwigTemplate_e956dfa4b926e2dd63a10994009c46e9 extends Template
 
     public function getDebugInfo()
     {
-        return array (  102 => 16,  97 => 14,  92 => 11,  85 => 10,  74 => 6,  67 => 5,  54 => 3,  37 => 1,);
+        return array (  96 => 13,  92 => 11,  85 => 10,  74 => 6,  67 => 5,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -133,19 +127,16 @@ class __TwigTemplate_e956dfa4b926e2dd63a10994009c46e9 extends Template
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">
+    
 {% endblock %}
 
 {% block body %}
-    <div class=\"container\">
-        <h1><center>Modifier Reclamations</center></h1>
-
+  <div class=\"row justify-content-center\">
+    <div class=\"col-md-6\">
         {{ include('reclamations/_form.html.twig', {'button_label': 'Valider'}) }}
 
-        <a href=\"{{ path('app_reclamations_index') }}\" class=\"btn btn-secondary my-3\">Retour à la liste</a>
-
-     
-    </div>
+        </div>
+</div>
 {% endblock %}
 
 ", "reclamations/edit.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\reclamations\\edit.html.twig");

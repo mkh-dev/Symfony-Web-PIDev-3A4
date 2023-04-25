@@ -74,7 +74,7 @@ class __TwigTemplate_59211ede7416881ff6ae117d43d91644 extends Template
         echo "    ";
         $this->displayParentBlock("stylesheets", $context, $blocks);
         echo "
-    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">
+   
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -89,19 +89,14 @@ class __TwigTemplate_59211ede7416881ff6ae117d43d91644 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 10
-        echo "    <div class=\"container\">
-        <h1>Ajouter une nouvelle réclamations</h1>
-
+        echo "<div class=\"row justify-content-center\">
+    <div class=\"col-md-6\">
         ";
-        // line 13
+        // line 12
         echo twig_include($this->env, $context, "reclamations/_form.html.twig");
         echo "
-
-        <a href=\"";
-        // line 15
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_index");
-        echo "\" class=\"btn btn-secondary my-3\">Retour à la liste</a>
-    </div>
+</div>
+</div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -120,7 +115,7 @@ class __TwigTemplate_59211ede7416881ff6ae117d43d91644 extends Template
 
     public function getDebugInfo()
     {
-        return array (  102 => 15,  97 => 13,  92 => 10,  85 => 9,  74 => 5,  67 => 4,  54 => 3,  37 => 1,);
+        return array (  96 => 12,  92 => 10,  85 => 9,  74 => 5,  67 => 4,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -130,17 +125,15 @@ class __TwigTemplate_59211ede7416881ff6ae117d43d91644 extends Template
 {% block title %}New Reclamations{% endblock %}
 {% block stylesheets %}
     {{ parent() }}
-    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\">
+   
 {% endblock %}
 
 {% block body %}
-    <div class=\"container\">
-        <h1>Ajouter une nouvelle réclamations</h1>
-
+<div class=\"row justify-content-center\">
+    <div class=\"col-md-6\">
         {{ include('reclamations/_form.html.twig') }}
-
-        <a href=\"{{ path('app_reclamations_index') }}\" class=\"btn btn-secondary my-3\">Retour à la liste</a>
-    </div>
+</div>
+</div>
 {% endblock %}
 ", "reclamations/new.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\reclamations\\new.html.twig");
     }
