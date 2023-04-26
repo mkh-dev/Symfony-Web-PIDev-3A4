@@ -26,6 +26,10 @@ return [
     'app_front' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/']], [], [], []],
     'login_home' => [[], ['_controller' => 'App\\Controller\\FrontController::home'], [], [['text', '/home']], [], [], []],
     'login_utilisateur' => [[], ['_controller' => 'App\\Controller\\FrontController::utilisateur'], [], [['text', '/utilisateur']], [], [], []],
+    'produit_front' => [[], ['_controller' => 'App\\Controller\\FrontController::produit'], [], [['text', '/produit_front']], [], [], []],
+    'rechercherParNom' => [[], ['_controller' => 'App\\Controller\\FrontController::rechercherParNom'], [], [['text', '/produits/recherche']], [], [], []],
+    'rechercherParPrix' => [[], ['_controller' => 'App\\Controller\\FrontController::rechercherParPrix'], [], [['text', '/produits/rechercher-par-prix']], [], [], []],
+    'rechercherParPrixEtNom' => [[], ['_controller' => 'App\\Controller\\FrontController::rechercherParPrixEtNom'], [], [['text', '/produits/rechercher-par-prix-et-nom']], [], [], []],
     'app_produit_index' => [[], ['_controller' => 'App\\Controller\\ProduitController::index'], [], [['text', '/produit/']], [], [], []],
     'app_produit_new' => [[], ['_controller' => 'App\\Controller\\ProduitController::new'], [], [['text', '/produit/new']], [], [], []],
     'app_produit_show' => [['idProd'], ['_controller' => 'App\\Controller\\ProduitController::show'], [], [['variable', '/', '[^/]++', 'idProd', true], ['text', '/produit']], [], [], []],
@@ -74,4 +78,5 @@ return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
     'app_users_list' => [[], ['_controller' => 'App\\Controller\\UsersController::index'], [], [['text', '/users']], [], [], []],
+    'app_produits_tri' => [[], ['_controller' => 'App\\Controller\\ProduitsController::triProd'], [], [['text', '/produits/tri']], [], [], []],
 ];

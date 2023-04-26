@@ -133,6 +133,6 @@ class __TwigTemplate_546076e64e8f459d3ebd924073e82375 extends Template
 
 </body>
 </html>
-", "@ApiPlatform/Graphiql/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\vendor\\api-platform\\core\\src\\Symfony\\Bundle\\Resources\\views\\Graphiql\\index.html.twig");
+", "@ApiPlatform/Graphiql/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\vendor\\api-platform\\core\\src\\Symfony\\Bundle\\Resources\\views\\Graphiql\\index.html.twig");
     }
 }

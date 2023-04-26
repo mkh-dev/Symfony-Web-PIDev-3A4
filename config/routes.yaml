@@ -12,3 +12,5 @@ app_login:
 app_users_list:
   path: /users
   controller: App\Controller\UsersController::index
+
+Route::get('/produits/tri', 'App\Http\Controllers\ProduitsController@triProd')->name('triProd');

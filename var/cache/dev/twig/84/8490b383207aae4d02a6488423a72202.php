@@ -641,6 +641,6 @@ T e m p l a t e M o
 
 </body>
 
-</html>", "security/new_password.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\security\\new_password.html.twig");
+</html>", "security/new_password.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\security\\new_password.html.twig");
     }
 }

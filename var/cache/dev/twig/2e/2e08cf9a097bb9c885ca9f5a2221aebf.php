@@ -115,6 +115,6 @@ class __TwigTemplate_b9c461610800b22bfc5728f3d7388df8 extends Template
 
     <a href=\"{{ path('app_categorie_event_index') }}\">back to list</a>
 {% endblock %}
-", "categorie_event/new.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\categorie_event\\new.html.twig");
+", "categorie_event/new.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\categorie_event\\new.html.twig");
     }
 }

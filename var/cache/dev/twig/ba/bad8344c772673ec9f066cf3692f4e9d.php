@@ -49,23 +49,25 @@ class __TwigTemplate_b695465f9ae9b634bff7690ad99a73fd extends Template
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
+        
         <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
+        <script src=\"https://kit.fontawesome.com/0d93719b77.js\" crossorigin=\"anonymous\"></script>
         ";
-        // line 8
+        // line 10
         echo "        ";
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 11
+        // line 13
         echo "
         ";
-        // line 12
+        // line 14
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 15
+        // line 17
         echo "    </head>
     <body>
         ";
-        // line 17
+        // line 19
         $this->displayBlock('body', $context, $blocks);
-        // line 18
+        // line 20
         echo "    </body>
 </html>
 ";
@@ -87,14 +89,14 @@ class __TwigTemplate_b695465f9ae9b634bff7690ad99a73fd extends Template
 
     }
 
-    // line 8
+    // line 10
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 9
+        // line 11
         echo "            ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_link_tags')->getCallable()("app"), "html", null, true);
         echo "
@@ -104,14 +106,14 @@ class __TwigTemplate_b695465f9ae9b634bff7690ad99a73fd extends Template
 
     }
 
-    // line 12
+    // line 14
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 13
+        // line 15
         echo "            ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_script_tags')->getCallable()("app"), "html", null, true);
         echo "
@@ -121,7 +123,7 @@ class __TwigTemplate_b695465f9ae9b634bff7690ad99a73fd extends Template
 
     }
 
-    // line 17
+    // line 19
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -140,7 +142,7 @@ class __TwigTemplate_b695465f9ae9b634bff7690ad99a73fd extends Template
 
     public function getDebugInfo()
     {
-        return array (  125 => 17,  115 => 13,  108 => 12,  98 => 9,  91 => 8,  78 => 5,  69 => 18,  67 => 17,  63 => 15,  61 => 12,  58 => 11,  55 => 8,  50 => 5,  44 => 1,);
+        return array (  127 => 19,  117 => 15,  110 => 14,  100 => 11,  93 => 10,  80 => 5,  71 => 20,  69 => 19,  65 => 17,  63 => 14,  60 => 13,  57 => 10,  50 => 5,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -150,7 +152,9 @@ class __TwigTemplate_b695465f9ae9b634bff7690ad99a73fd extends Template
     <head>
         <meta charset=\"UTF-8\">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        
         <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
+        <script src=\"https://kit.fontawesome.com/0d93719b77.js\" crossorigin=\"anonymous\"></script>
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
@@ -164,6 +168,6 @@ class __TwigTemplate_b695465f9ae9b634bff7690ad99a73fd extends Template
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\base.html.twig");
     }
 }

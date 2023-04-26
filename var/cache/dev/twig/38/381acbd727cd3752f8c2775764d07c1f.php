@@ -187,6 +187,6 @@ class __TwigTemplate_84cf9d681c0a67ca63dd1c2a46d263b2 extends Template
 
     <a href=\"{{ path('app_facture_new') }}\">Create new</a>
 {% endblock %}
-", "facture/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\facture\\index.html.twig");
+", "facture/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\facture\\index.html.twig");
     }
 }

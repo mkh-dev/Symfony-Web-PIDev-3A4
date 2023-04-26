@@ -118,6 +118,16 @@ return [[
 '[C]App%5CController%5CFrontController%23home' => 1,
 'App%5CController%5CFrontController%23utilisateur' => 0,
 '[C]App%5CController%5CFrontController%23utilisateur' => 1,
+'App%5CController%5CFrontController%23produit' => 0,
+'[C]App%5CController%5CFrontController%23produit' => 1,
+'App%5CController%5CFrontController%23rechercherParNom' => 0,
+'[C]App%5CController%5CFrontController%23rechercherParNom' => 1,
+'App%5CController%5CFrontController%23rechercherParPrix' => 2,
+'[C]App%5CController%5CFrontController%23rechercherParPrix' => 1,
+'App%5CController%5CFrontController%23rechercherParPrixEtNom' => 3,
+'[C]App%5CController%5CFrontController%23rechercherParPrixEtNom' => 1,
+'App%5CController%5CFrontController%23triProd' => 4,
+'[C]App%5CController%5CFrontController%23triProd' => 1,
 'App%5CController%5CProduitController' => 0,
 '[C]App%5CController%5CProduitController' => 1,
 'App%5CController%5CProduitController%23index' => 0,
@@ -184,11 +194,11 @@ return [[
 '[C]App%5CController%5CSecurityController%23login' => 1,
 'App%5CController%5CSecurityController%23logout' => 0,
 '[C]App%5CController%5CSecurityController%23logout' => 1,
-'App%5CController%5CSecurityController%23forgotPassword' => 2,
+'App%5CController%5CSecurityController%23forgotPassword' => 5,
 '[C]App%5CController%5CSecurityController%23forgotPassword' => 1,
-'App%5CController%5CSecurityController%23codePassword' => 3,
+'App%5CController%5CSecurityController%23codePassword' => 6,
 '[C]App%5CController%5CSecurityController%23codePassword' => 1,
-'App%5CController%5CSecurityController%23newPassword' => 4,
+'App%5CController%5CSecurityController%23newPassword' => 7,
 '[C]App%5CController%5CSecurityController%23newPassword' => 1,
 'App%5CController%5CSecurityController%24session' => 0,
 '[C]App%5CController%5CSecurityController%24session' => 1,
@@ -248,6 +258,8 @@ return [[
 '[C]App%5CEntity%5CCategorieProd%23getCatProd' => 1,
 'App%5CEntity%5CCategorieProd%23setCatProd' => 0,
 '[C]App%5CEntity%5CCategorieProd%23setCatProd' => 1,
+'App%5CEntity%5CCategorieProd%23__toString' => 0,
+'[C]App%5CEntity%5CCategorieProd%23__toString' => 1,
 'App%5CEntity%5CCategorieProd%24idCatProd' => 0,
 '[C]App%5CEntity%5CCategorieProd%24idCatProd' => 1,
 'App%5CEntity%5CCategorieProd%24catProd' => 0,
@@ -336,8 +348,28 @@ return [[
 '[C]App%5CEntity%5CFacture%24reservation' => 1,
 'App%5CEntity%5CFacture%24user' => 0,
 '[C]App%5CEntity%5CFacture%24user' => 1,
+'App%5CEntity%5CProdLike' => 0,
+'[C]App%5CEntity%5CProdLike' => 1,
+'App%5CEntity%5CProdLike%23getId' => 0,
+'[C]App%5CEntity%5CProdLike%23getId' => 1,
+'App%5CEntity%5CProdLike%23getProduit' => 0,
+'[C]App%5CEntity%5CProdLike%23getProduit' => 1,
+'App%5CEntity%5CProdLike%23setProduit' => 0,
+'[C]App%5CEntity%5CProdLike%23setProduit' => 1,
+'App%5CEntity%5CProdLike%23getUser' => 0,
+'[C]App%5CEntity%5CProdLike%23getUser' => 1,
+'App%5CEntity%5CProdLike%23setUser' => 0,
+'[C]App%5CEntity%5CProdLike%23setUser' => 1,
+'App%5CEntity%5CProdLike%24id' => 0,
+'[C]App%5CEntity%5CProdLike%24id' => 1,
+'App%5CEntity%5CProdLike%24produit' => 0,
+'[C]App%5CEntity%5CProdLike%24produit' => 1,
+'App%5CEntity%5CProdLike%24user' => 0,
+'[C]App%5CEntity%5CProdLike%24user' => 1,
 'App%5CEntity%5CProduit' => 0,
 '[C]App%5CEntity%5CProduit' => 1,
+'App%5CEntity%5CProduit%23__construct' => 0,
+'[C]App%5CEntity%5CProduit%23__construct' => 1,
 'App%5CEntity%5CProduit%23getIdProd' => 0,
 '[C]App%5CEntity%5CProduit%23getIdProd' => 1,
 'App%5CEntity%5CProduit%23getNomProd' => 0,
@@ -368,6 +400,22 @@ return [[
 '[C]App%5CEntity%5CProduit%23getIdCatProd' => 1,
 'App%5CEntity%5CProduit%23setIdCatProd' => 0,
 '[C]App%5CEntity%5CProduit%23setIdCatProd' => 1,
+'App%5CEntity%5CProduit%23getNbLikes' => 0,
+'[C]App%5CEntity%5CProduit%23getNbLikes' => 1,
+'App%5CEntity%5CProduit%23setNbLikes' => 0,
+'[C]App%5CEntity%5CProduit%23setNbLikes' => 1,
+'App%5CEntity%5CProduit%23getNbDislikes' => 0,
+'[C]App%5CEntity%5CProduit%23getNbDislikes' => 1,
+'App%5CEntity%5CProduit%23setNbDislikes' => 0,
+'[C]App%5CEntity%5CProduit%23setNbDislikes' => 1,
+'App%5CEntity%5CProduit%23getLikes' => 0,
+'[C]App%5CEntity%5CProduit%23getLikes' => 1,
+'App%5CEntity%5CProduit%23addLike' => 0,
+'[C]App%5CEntity%5CProduit%23addLike' => 1,
+'App%5CEntity%5CProduit%23removeLike' => 0,
+'[C]App%5CEntity%5CProduit%23removeLike' => 1,
+'App%5CEntity%5CProduit%23isLikedByUser' => 0,
+'[C]App%5CEntity%5CProduit%23isLikedByUser' => 1,
 'App%5CEntity%5CProduit%24idProd' => 0,
 '[C]App%5CEntity%5CProduit%24idProd' => 1,
 'App%5CEntity%5CProduit%24nomProd' => 0,
@@ -384,6 +432,12 @@ return [[
 '[C]App%5CEntity%5CProduit%24image' => 1,
 'App%5CEntity%5CProduit%24idCatProd' => 0,
 '[C]App%5CEntity%5CProduit%24idCatProd' => 1,
+'App%5CEntity%5CProduit%24nbLikes' => 0,
+'[C]App%5CEntity%5CProduit%24nbLikes' => 1,
+'App%5CEntity%5CProduit%24nbDislikes' => 0,
+'[C]App%5CEntity%5CProduit%24nbDislikes' => 1,
+'App%5CEntity%5CProduit%24likes' => 0,
+'[C]App%5CEntity%5CProduit%24likes' => 1,
 'App%5CEntity%5CReclamations' => 0,
 '[C]App%5CEntity%5CReclamations' => 1,
 'App%5CEntity%5CReclamations%23getId' => 0,
@@ -416,8 +470,8 @@ return [[
 '[C]App%5CEntity%5CReclamations%24message' => 1,
 'App%5CEntity%5CReservation' => 0,
 '[C]App%5CEntity%5CReservation' => 1,
-'App%5CEntity%5CReservation%23getNumres' => 0,
-'[C]App%5CEntity%5CReservation%23getNumres' => 1,
+'App%5CEntity%5CReservation%23getNumRes' => 0,
+'[C]App%5CEntity%5CReservation%23getNumRes' => 1,
 'App%5CEntity%5CReservation%23getNbplaces' => 0,
 '[C]App%5CEntity%5CReservation%23getNbplaces' => 1,
 'App%5CEntity%5CReservation%23setNbplaces' => 0,
@@ -430,8 +484,8 @@ return [[
 '[C]App%5CEntity%5CReservation%23getIduser' => 1,
 'App%5CEntity%5CReservation%23setIduser' => 0,
 '[C]App%5CEntity%5CReservation%23setIduser' => 1,
-'App%5CEntity%5CReservation%24numres' => 0,
-'[C]App%5CEntity%5CReservation%24numres' => 1,
+'App%5CEntity%5CReservation%24numRes' => 0,
+'[C]App%5CEntity%5CReservation%24numRes' => 1,
 'App%5CEntity%5CReservation%24nbplaces' => 0,
 '[C]App%5CEntity%5CReservation%24nbplaces' => 1,
 'App%5CEntity%5CReservation%24idevent' => 0,
@@ -524,6 +578,8 @@ return [[
 '[C]App%5CEntity%5CTransport%24prixTransport' => 1,
 'App%5CEntity%5CUsers' => 0,
 '[C]App%5CEntity%5CUsers' => 1,
+'App%5CEntity%5CUsers%23__construct' => 0,
+'[C]App%5CEntity%5CUsers%23__construct' => 1,
 'App%5CEntity%5CUsers%23getId' => 0,
 '[C]App%5CEntity%5CUsers%23getId' => 1,
 'App%5CEntity%5CUsers%23getPrenom' => 0,
@@ -572,6 +628,12 @@ return [[
 '[C]App%5CEntity%5CUsers%23getUserIdentifier' => 1,
 'App%5CEntity%5CUsers%23isIsVerified' => 0,
 '[C]App%5CEntity%5CUsers%23isIsVerified' => 1,
+'App%5CEntity%5CUsers%23getLikes' => 0,
+'[C]App%5CEntity%5CUsers%23getLikes' => 1,
+'App%5CEntity%5CUsers%23addLike' => 0,
+'[C]App%5CEntity%5CUsers%23addLike' => 1,
+'App%5CEntity%5CUsers%23removeLike' => 0,
+'[C]App%5CEntity%5CUsers%23removeLike' => 1,
 'App%5CEntity%5CUsers%24id' => 0,
 '[C]App%5CEntity%5CUsers%24id' => 1,
 'App%5CEntity%5CUsers%24prenom' => 0,
@@ -590,6 +652,8 @@ return [[
 '[C]App%5CEntity%5CUsers%24password' => 1,
 'App%5CEntity%5CUsers%24isVerified' => 0,
 '[C]App%5CEntity%5CUsers%24isVerified' => 1,
+'App%5CEntity%5CUsers%24likes' => 0,
+'[C]App%5CEntity%5CUsers%24likes' => 1,
 'App%5CEntity%5CVehicule' => 0,
 '[C]App%5CEntity%5CVehicule' => 1,
 'App%5CEntity%5CVehicule%23getIdVehicule' => 0,
@@ -1096,8 +1160,74 @@ return [[
 ], [
 
 0 => [],
-1 => 1682177296,
+1 => 1682470120,
 2 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/produits/rechercher-par-prix',
+                ],
+                'name' => [
+                    'rechercherParPrix',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+3 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/produits/rechercher-par-prix-et-nom',
+                ],
+                'name' => [
+                    'rechercherParPrixEtNom',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+4 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/produits/tri-produits',
+                ],
+                'name' => [
+                    'produits.tri',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+5 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -1119,7 +1249,7 @@ return [[
         []
     );
 },
-3 => static function () {
+6 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -1141,7 +1271,7 @@ return [[
         []
     );
 },
-4 => static function () {
+7 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),

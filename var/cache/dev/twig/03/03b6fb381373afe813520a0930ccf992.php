@@ -115,6 +115,6 @@ class __TwigTemplate_7755a1019a384ab679ed8e6f7f76bab5 extends Template
 
     <a href=\"{{ path('app_vehicule_index') }}\">back to list</a>
 {% endblock %}
-", "vehicule/new.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\vehicule\\new.html.twig");
+", "vehicule/new.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\vehicule\\new.html.twig");
     }
 }

@@ -20,6 +20,7 @@
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="SymfonyCastsVerifyEmailBundle">SymfonyCasts\Bundle\VerifyEmail\SymfonyCastsVerifyEmailBundle</parameter>
       <parameter key="KnpPaginatorBundle">Knp\Bundle\PaginatorBundle\KnpPaginatorBundle</parameter>
+      <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
@@ -66,9 +67,14 @@
         <parameter key="path">C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle</parameter>
         <parameter key="namespace">Knp\Bundle\PaginatorBundle</parameter>
       </parameter>
+      <parameter key="DoctrineFixturesBundle" type="collection">
+        <parameter key="path">C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\doctrine\doctrine-fixtures-bundle</parameter>
+        <parameter key="namespace">Doctrine\Bundle\FixturesBundle</parameter>
+      </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">App_KernelDevDebugContainer</parameter>
+    <parameter key="produits_directory">C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4/public/uploads/produits</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -478,6 +484,10 @@
         <argument type="service" id=".service_locator.mx0UMmY.App\Controller\VehiculeController"/>
       </call>
     </service>
+    <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
+      <tag name="doctrine.fixture.orm"/>
+      <argument type="service" id="security.user_password_encoder.generic"/>
+    </service>
     <service id="App\Form\CategorieEventType" class="App\Form\CategorieEventType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -513,6 +523,14 @@
     </service>
     <service id="App\Form\VehiculeType" class="App\Form\VehiculeType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
+    </service>
+    <service id="App\Repository\ProdLikeRepository" class="App\Repository\ProdLikeRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ProduitRepository" class="App\Repository\ProduitRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\UsersRepository" class="App\Repository\UsersRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
@@ -2037,6 +2055,7 @@
           <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\api-platform\core\src\Symfony\Bundle/translations</argument>
           <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\maker-bundle\src/translations</argument>
           <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\sensio\framework-extra-bundle\src/translations</argument>
+          <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\doctrine\doctrine-fixtures-bundle/translations</argument>
         </argument>
         <argument key="cache_vary" type="collection">
           <argument key="scanned_directories" type="collection">
@@ -2055,6 +2074,7 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\api-platform\core\src\Symfony\Bundle/translations</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\maker-bundle\src/translations</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\sensio\framework-extra-bundle\src/translations</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\doctrine\doctrine-fixtures-bundle/translations</argument>
           </argument>
         </argument>
       </argument>
@@ -4927,7 +4947,7 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true"/>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.6_XyAor"/>
+      <argument type="service" id=".service_locator.IgNMgZK"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -6671,6 +6691,32 @@
       <tag name="twig.extension"/>
       <argument type="service" id="knp_paginator.helper.processor"/>
     </service>
+    <service id="doctrine.fixtures_load_command" class="Doctrine\Bundle\FixturesBundle\Command\LoadDataFixturesDoctrineCommand">
+      <tag name="console.command" command="doctrine:fixtures:load"/>
+      <tag name="container.no_preload"/>
+      <argument type="service" id="doctrine.fixtures.loader"/>
+      <argument type="service" id="doctrine"/>
+      <argument type="collection">
+        <argument key="default" type="service" id="doctrine.fixtures.purger.orm_purger_factory"/>
+      </argument>
+      <call method="setName">
+        <argument>doctrine:fixtures:load</argument>
+      </call>
+    </service>
+    <service id="doctrine.fixtures.loader" class="Doctrine\Bundle\FixturesBundle\Loader\SymfonyFixturesLoader">
+      <argument type="service" id="service_container"/>
+      <call method="addFixtures">
+        <argument type="collection">
+          <argument type="collection">
+            <argument key="fixture" type="service" id="App\DataFixtures\AppFixtures"/>
+            <argument key="groups" type="collection"/>
+          </argument>
+        </argument>
+      </call>
+    </service>
+    <service id="doctrine.fixtures.purger.orm_purger_factory" class="Doctrine\Bundle\FixturesBundle\Purger\ORMPurgerFactory">
+      <tag name="doctrine.fixtures.purger_factory" alias="default"/>
+    </service>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CategorieEventController" class="App\Controller\CategorieEventController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CategorieEventController" class="App\Controller\CategorieEventController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\CategorieEventController" class="App\Controller\CategorieEventController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6713,6 +6759,8 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\VehiculeController" class="App\Controller\VehiculeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\VehiculeController" class="App\Controller\VehiculeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\VehiculeController" class="App\Controller\VehiculeController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CategorieEventType" class="App\Form\CategorieEventType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\CategorieEventType" class="App\Form\CategorieEventType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CategorieProdType" class="App\Form\CategorieProdType" autowire="true" abstract="true"/>
@@ -6737,6 +6785,10 @@
     <service id=".abstract.instanceof.App\Form\UsersType" class="App\Form\UsersType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\VehiculeType" class="App\Form\VehiculeType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\VehiculeType" class="App\Form\VehiculeType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProdLikeRepository" class="App\Repository\ProdLikeRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ProdLikeRepository" class="App\Repository\ProdLikeRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProduitRepository" class="App\Repository\ProduitRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ProduitRepository" class="App\Repository\ProduitRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UsersRepository" class="App\Repository\UsersRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\UsersRepository" class="App\Repository\UsersRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.gSv9zYw" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -7184,6 +7236,19 @@
         <argument key="facture" type="service_closure" id=".errored..service_locator.njvUyPK.App\Entity\Facture"/>
       </argument>
     </service>
+    <service id=".service_locator.ONtZwya" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="produitRepository" type="service_closure" id="App\Repository\ProduitRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.Hjz3HR0" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="slugger" type="service_closure" id="slugger"/>
+      </argument>
+    </service>
     <service id=".service_locator.iGUm1r8" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -7311,7 +7376,7 @@
         <argument key="vehicule" type="service_closure" id=".errored..service_locator.iVJ8gI9.App\Entity\Vehicule"/>
       </argument>
     </service>
-    <service id=".service_locator.vLZzYNH" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.8eDvWRs" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\CategorieEventController::delete" type="service_closure" id=".service_locator.T_GcY.G"/>
@@ -7334,10 +7399,12 @@
         <argument key="App\Controller\FactureController::index" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\FactureController::new" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\FactureController::show" type="service_closure" id=".service_locator.XVjfyza"/>
+        <argument key="App\Controller\FrontController::produit" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\FrontController::rechercherParNom" type="service_closure" id=".service_locator.ONtZwya"/>
         <argument key="App\Controller\ProduitController::delete" type="service_closure" id=".service_locator.HkHf8J3"/>
         <argument key="App\Controller\ProduitController::edit" type="service_closure" id=".service_locator.HkHf8J3"/>
         <argument key="App\Controller\ProduitController::index" type="service_closure" id=".service_locator.aKM6MDa"/>
-        <argument key="App\Controller\ProduitController::new" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\ProduitController::new" type="service_closure" id=".service_locator.Hjz3HR0"/>
         <argument key="App\Controller\ProduitController::show" type="service_closure" id=".service_locator.iGUm1r8"/>
         <argument key="App\Controller\ReclamationsController::delete" type="service_closure" id=".service_locator.MHm6mei"/>
         <argument key="App\Controller\ReclamationsController::edit" type="service_closure" id=".service_locator.MHm6mei"/>
@@ -7397,10 +7464,12 @@
         <argument key="App\Controller\FactureController:index" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\FactureController:new" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\FactureController:show" type="service_closure" id=".service_locator.XVjfyza"/>
+        <argument key="App\Controller\FrontController:produit" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\FrontController:rechercherParNom" type="service_closure" id=".service_locator.ONtZwya"/>
         <argument key="App\Controller\ProduitController:delete" type="service_closure" id=".service_locator.HkHf8J3"/>
         <argument key="App\Controller\ProduitController:edit" type="service_closure" id=".service_locator.HkHf8J3"/>
         <argument key="App\Controller\ProduitController:index" type="service_closure" id=".service_locator.aKM6MDa"/>
-        <argument key="App\Controller\ProduitController:new" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\ProduitController:new" type="service_closure" id=".service_locator.Hjz3HR0"/>
         <argument key="App\Controller\ProduitController:show" type="service_closure" id=".service_locator.iGUm1r8"/>
         <argument key="App\Controller\ReclamationsController:delete" type="service_closure" id=".service_locator.MHm6mei"/>
         <argument key="App\Controller\ReclamationsController:edit" type="service_closure" id=".service_locator.MHm6mei"/>
@@ -7553,9 +7622,11 @@
         <argument key="doctrine.orm.listeners.pdo_cache_adapter_doctrine_schema_subscriber" type="service_closure" id="doctrine.orm.listeners.pdo_cache_adapter_doctrine_schema_subscriber"/>
       </argument>
     </service>
-    <service id=".service_locator.6_XyAor" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.IgNMgZK" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Repository\ProdLikeRepository" type="service_closure" id="App\Repository\ProdLikeRepository"/>
+        <argument key="App\Repository\ProduitRepository" type="service_closure" id="App\Repository\ProduitRepository"/>
         <argument key="App\Repository\UsersRepository" type="service_closure" id="App\Repository\UsersRepository"/>
       </argument>
     </service>
@@ -7890,12 +7961,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.vLZzYNH"/>
+      <argument type="service" id=".service_locator.8eDvWRs"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.vLZzYNH"/>
+      <argument type="service" id=".service_locator.8eDvWRs"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -8426,7 +8497,7 @@
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <tag name="container.no_preload"/>
-      <argument type="service" id=".service_locator.UMoyAkO"/>
+      <argument type="service" id=".service_locator.AQPdrof"/>
       <argument type="collection">
         <argument key="about">console.command.about</argument>
         <argument key="assets:install">console.command.assets_install</argument>
@@ -8501,6 +8572,7 @@
         <argument key="api:openapi:export">api_platform.openapi.command</argument>
         <argument key="api:swagger:export">api_platform.swagger.command.swagger_command</argument>
         <argument key="api:upgrade-resource">api_platform.upgrade_resource.command</argument>
+        <argument key="doctrine:fixtures:load">doctrine.fixtures_load_command</argument>
         <argument key="make:data-provider">maker.auto_command.make_data_provider</argument>
         <argument key="make:data-persister">maker.auto_command.make_data_persister</argument>
         <argument key="make:state-processor">maker.auto_command.make_state_processor</argument>
@@ -8532,7 +8604,7 @@
         <argument key="make:stimulus-controller">maker.auto_command.make_stimulus_controller</argument>
       </argument>
     </service>
-    <service id=".service_locator.UMoyAkO" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.AQPdrof" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="console.command.about" type="service_closure" id=".console.command.about.lazy"/>
@@ -8607,6 +8679,7 @@
         <argument key="api_platform.openapi.command" type="service_closure" id="api_platform.openapi.command"/>
         <argument key="api_platform.swagger.command.swagger_command" type="service_closure" id="api_platform.swagger.command.swagger_command"/>
         <argument key="api_platform.upgrade_resource.command" type="service_closure" id="api_platform.upgrade_resource.command"/>
+        <argument key="doctrine.fixtures_load_command" type="service_closure" id="doctrine.fixtures_load_command"/>
         <argument key="maker.auto_command.make_data_provider" type="service_closure" id=".maker.auto_command.make_data_provider.lazy"/>
         <argument key="maker.auto_command.make_data_persister" type="service_closure" id=".maker.auto_command.make_data_persister.lazy"/>
         <argument key="maker.auto_command.make_state_processor" type="service_closure" id=".maker.auto_command.make_state_processor.lazy"/>
@@ -8893,7 +8966,7 @@
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.vLZzYNH"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.8eDvWRs"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -8915,7 +8988,7 @@
     <service id=".service_locator.DMl9e1Q" alias=".service_locator.CoH4_pD"/>
     <service id=".service_locator.Ar0Pu3O" alias=".service_locator.cyg1ViB"/>
     <service id=".service_locator.gPjNq68" alias=".service_locator.iVJ8gI9"/>
-    <service id=".service_locator.7VB0rUa" alias=".service_locator.vLZzYNH"/>
+    <service id=".service_locator.ONN6KFG" alias=".service_locator.8eDvWRs"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.l6ELYLY"/>
     <service id=".service_locator.zSOfuvX" alias=".service_locator.p1LGeUF"/>
     <service id=".service_locator.4hi2aOY" alias=".service_locator.bBRwv06"/>
@@ -8984,6 +9057,8 @@
     <service id=".service_locator.uxu15HO" alias=".service_locator.wXSRjZL"/>
     <service id=".service_locator.LOMQOkV" alias=".service_locator.XVjfyza"/>
     <service id=".service_locator.7p.GyA6" alias=".service_locator.njvUyPK"/>
+    <service id=".service_locator.VI9Z9zn" alias=".service_locator.ONtZwya"/>
+    <service id=".service_locator.S4cuAZB" alias=".service_locator.Hjz3HR0"/>
     <service id=".service_locator.vYpYubR" alias=".service_locator.iGUm1r8"/>
     <service id=".service_locator.Vst8F9m" alias=".service_locator.HkHf8J3"/>
     <service id=".service_locator.rGX4QRF" alias=".service_locator.oEfCGgo"/>

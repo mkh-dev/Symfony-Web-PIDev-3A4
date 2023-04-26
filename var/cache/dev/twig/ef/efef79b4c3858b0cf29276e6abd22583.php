@@ -1481,6 +1481,6 @@ T e m p l a t e M o
 
 </body>
 
-</html>", "front/home.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\front\\home.html.twig");
+</html>", "front/home.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\front\\home.html.twig");
     }
 }
