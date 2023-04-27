@@ -35,6 +35,8 @@ return [
     'app_produit_show' => [['idProd'], ['_controller' => 'App\\Controller\\ProduitController::show'], [], [['variable', '/', '[^/]++', 'idProd', true], ['text', '/produit']], [], [], []],
     'app_produit_edit' => [['idProd'], ['_controller' => 'App\\Controller\\ProduitController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'idProd', true], ['text', '/produit']], [], [], []],
     'app_produit_delete' => [['idProd'], ['_controller' => 'App\\Controller\\ProduitController::delete'], [], [['variable', '/', '[^/]++', 'idProd', true], ['text', '/produit']], [], [], []],
+    'app_produit_like' => [['idProd'], ['_controller' => 'App\\Controller\\ProduitController::like'], [], [['text', '/like'], ['variable', '/', '[^/]++', 'idProd', true], ['text', '/produit']], [], [], []],
+    'app_produit_dislike' => [['idProd'], ['_controller' => 'App\\Controller\\ProduitController::dislike'], [], [['text', '/dislike'], ['variable', '/', '[^/]++', 'idProd', true], ['text', '/produit']], [], [], []],
     'app_reclamations_index' => [[], ['_controller' => 'App\\Controller\\ReclamationsController::index'], [], [['text', '/reclamations/']], [], [], []],
     'app_reclamations_new' => [[], ['_controller' => 'App\\Controller\\ReclamationsController::new'], [], [['text', '/reclamations/new']], [], [], []],
     'app_reclamations_show' => [['id'], ['_controller' => 'App\\Controller\\ReclamationsController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/reclamations']], [], [], []],
@@ -78,5 +80,5 @@ return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
     'app_users_list' => [[], ['_controller' => 'App\\Controller\\UsersController::index'], [], [['text', '/users']], [], [], []],
-    'app_produits_tri' => [[], ['_controller' => 'App\\Controller\\ProduitsController::triProd'], [], [['text', '/produits/tri']], [], [], []],
+    'triProd' => [[], ['_controller' => 'App\\Http\\Controllers\\ProduitsController@triProd'], [], [['text', '/produits/tri']], [], [], []],
 ];

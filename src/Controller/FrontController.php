@@ -141,37 +141,4 @@ public function rechercherParPrixEtNom(Request $request): JsonResponse
 
 
 
-    public function triProd(Request $request)
-    {
-        $tri = $request->triProd('tri', 'nb_likes_desc');
-    
-        switch ($tri) {
-            case 'nb_likes_asc':
-                $produits = $this->produitRepository->trierParNbLikesAsc();
-                break;
-            case 'nb_dislikes_desc':
-                $produits = $this->produitRepository->trierParNbDislikesDesc();
-                break;
-            case 'prix_asc':
-                $produits = $this->produitRepository->trierParPrixAsc();
-                break;
-            case 'prix_desc':
-                $produits = $this->produitRepository->trierParPrixDesc();
-                break;
-            case 'quantite_asc':
-                $produits = $this->produitRepository->trierParQuantiteAsc();
-                break;
-            case 'quantite_desc':
-                $produits = $this->produitRepository->trierParQuantiteDesc();
-                break;
-            default:
-                $produits = $this->produitRepository->getAll();
-                break;
-        }
-    
-        return view('produits.index', compact('produits'));
-    }
-
-
-
 }

@@ -13,4 +13,7 @@ app_users_list:
   path: /users
   controller: App\Controller\UsersController::index
 
-Route::get('/produits/tri', 'App\Http\Controllers\ProduitsController@triProd')->name('triProd');
+triProd:
+    path: /produits/tri
+    controller: 'App\Http\Controllers\ProduitsController@triProd'
+    methods: GET

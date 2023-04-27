@@ -26,6 +26,7 @@
     <link href="{{asset('front/css/bootstrap-icons.css')}}" rel="stylesheet">
 
     <link href="{{asset('front/css/templatemo-festava-live.css')}}" rel="stylesheet">
+
      
 
     <!--
@@ -116,7 +117,7 @@ https://templatemo.com/tm-583-festava-live
  
   .card {
     width: 250px;
-    
+    height: 500px;
     margin: 10px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -132,67 +133,119 @@ https://templatemo.com/tm-583-festava-live
     -webkit-line-clamp: 6; /* Nombre de lignes de texte maximum */
   }
 
-  
-  
+  .prix-label {
+  display: inline-block; /* pour que le label s'affiche sur la même ligne */
+  width: 200px; /* pour définir la largeur du label */
+  text-align: left; /* pour aligner le texte à gauche */
+  color: white; /* pour changer la couleur du texte */
+  margin-right: 10px; /* pour ajouter un espace entre le label et l'élément suivant */
+}
+    .like-dislike-buttons {
+        display: flex;
+        align-items: center;
+          display: inline-block;
+
+    }
+
+    .like-image,
+    .dislike-image {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .like-image img,
+    .dislike-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
 </style>
+
 <section class="schedule-section section-padding" id="section_4">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="text-white mb-4">Nos produits</h2>
-                            <form id="recherche-produits-form">
-                <div class="form-group">
-                    <label for="recherche-produits-input">Recherche</label>
-                    <input type="text" class="form-control" id="recherche-produits-input" placeholder="Nom du produit">
-                    <button type="submit" class="btn btn-primary">Rechercher</button>
-
-                </div>
-<form action="{{ route('triProd') }}" method="get">
-    <label for="tri-produits-select">Trier par:</label>
-    <select class="form-select" id="tri-produits-select" name="tri">
-        <option value="nb_likes_desc">NbLikes décroissant</option>
-        <option value="nb_dislikes_desc">NbDislikes décroissant</option>
-        <option value="prix_asc">Prix croissant</option>
-        <option value="prix_desc">Prix décroissant</option>
-        <option value="quantite_asc">Quantité croissante</option>
-        <option value="quantite_desc">Quantité décroissante</option>
-    </select>
-    <button type="submit">Trier</button>
-</form>
-
-
-            </form>
-<label for="prix-produits-input">Filtrer par prix (DT):</label>
-<input type="range" class="form-range" min="0" max="10" step="0.1" id="prix-produits-input" oninput="afficherPrix(this.value);">
-            <div class="table-responsive">
-                <div class="carousel-container">
-                    <div class="carousel" id="produits-carousel">
-                        {% for produit in produits %}
-                        <div class="card-container">
-                            <div tabindex="0" class="card">
-                                <div style="text-align:center;">
-                                    <img src="{{ asset('uploads/produits/' ~ produit.image) }}" alt="{{ produit.nomProd }}" style="width:200px;">
-                                </div>
-                                <div class="card-content">
-                                    <h3 style="font-size: 20px;">{{ produit.getNomProd() }}</h3>
-                                    <p>{{ produit.getDescription() }}</p>
-                                    <p>Prix: {{ produit.getPrix() }} DT</p>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="text-white mb-4">Nos produits</h2>
+        <form id="recherche-produits-form">
+          <div class="form-group">
+            <label for="recherche-produits-input">Recherche</label>
+            <input type="text" class="form-control" id="recherche-produits-input" placeholder="Nom du produit">
+            <br>
+            <button type="submit" class="btn btn-primary">Rechercher</button>
+          </div>
+        </form>
+        <br>
+        <label for="prix-produits-input" class="prix-label">Filtrer par prix (DT):</label>
+        <input type="range" class="form-range" min="0" max="10" step="0.1" id="prix-produits-input" oninput="afficherPrix(this.value);">
+        <div class="table-responsive">
+          <div class="carousel-container">
+            <div class="carousel" id="produits-carousel">
+              {% for produit in produits %}
+              <div class="card-container">
+                <div tabindex="0" class="card">
+                  <div style="text-align:center;">
+                    <img src="{{ asset('uploads/produits/' ~ produit.image) }}" alt="{{ produit.nomProd }}" style="width:200px;">
+                  </div>
+                  <div class="card-content">
+                    <h3 style="font-size: 20px;">{{ produit.getNomProd() }}</h3>
+                    <p>{{ produit.getDescription() }}</p>
+                    <p>Prix: {{ produit.getPrix() }} DT</p>
+                    <div class="like-dislike-buttons" align:center>
+                      <a href="{{ path('app_produit_like', {'idProd': produit.idProd}) }}" class="like-image"><img src="front/images/like.png" alt="Like"></a>
+                      <span class="like-count">{{ produit.nbLikes }}</span>
+                      <a href="{{ path('app_produit_dislike', {'idProd': produit.idProd}) }}" class="dislike-image"><img src="front/images/dislike.png" alt="Dislike"></a>
+                      <span class="dislike-count">{{ produit.nbDislikes }}</span>
                     </div>
-                    <br>
-                    <div class="buttons-container">
-                        <button id="prev-btn" class="btn">Prev</button>
-                        <button id="next-btn" class="btn">Next</button>
-                    </div>
+                  </div>
                 </div>
+              </div>
+              {% endfor %}
             </div>
+            <br>
+            <div class="buttons-container">
+              <button id="prev-btn" class="btn">Prev</button>
+              <button id="next-btn" class="btn">Next</button>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 </section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+ $(document).ready(function() {
+  $('.like-image, .dislike-image').on('click', function(event) {
+    event.preventDefault();
+    var button = $(this);
+    var url = button.attr('href');
+    var type = button.hasClass('like-image') ? 'like' : 'dislike';
+    $.ajax({
+      url: url,
+      method: 'POST',
+      dataType: 'json',
+      data: {type: type}
+    }).done(function(data) {
+      button.siblings('.like-count').text(data.likes);
+      button.siblings('.dislike-count').text(data.dislikes);
+      if(type === 'like'){
+          button.siblings('.dislike-image').find('.dislike-count').text(data.dislikes);
+      } else {
+          button.siblings('.like-image').find('.like-count').text(data.likes);
+      }
+    });
+  });
+});
+
+</script>
+
 
 <!-- JavaScript code to trigger AJAX request on slider movement -->
 <script>
@@ -342,13 +395,14 @@ https://templatemo.com/tm-583-festava-live
         };
         xhr.open('GET', "{{ path('rechercherParNom') }}?term=" + searchTerm);
         xhr.send();
-    });
-});
+        });
+        });
 
 
-        
+    </script>
 
-    </main>
+
+ </main>
 
 
     <footer class="site-footer">

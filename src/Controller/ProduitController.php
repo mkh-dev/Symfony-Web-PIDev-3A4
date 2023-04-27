@@ -79,6 +79,7 @@ class ProduitController extends AbstractController
             'form' => $form,
         ]);
     }
+    
     #[Route('/{idProd}', name: 'app_produit_show', methods: ['GET'])]
     public function show(Produit $produit): Response
     {
@@ -116,7 +117,36 @@ class ProduitController extends AbstractController
         return $this->redirectToRoute('app_produit_index', [], Response::HTTP_SEE_OTHER);
     }
     
-
-
+    #[Route('/{idProd}/like', name: 'app_produit_like', methods: ['POST'])]
+    public function like(Request $request, Produit $produit): JsonResponse
+    {
+        $produit->setNbLikes($produit->getNbLikes() + 1);
+        if($produit->getNbDislikes() > 0) {
+            $produit->setNbDislikes($produit->getNbDislikes() - 1);
+        }
+        $produit->setNbDislikes(max($produit->getNbDislikes(), 0));
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($produit);
+        $entityManager->flush();
+    
+        return $this->json(['likes' => $produit->getNbLikes(), 'dislikes' => $produit->getNbDislikes()]);
+    }
+    
+    #[Route('/{idProd}/dislike', name: 'app_produit_dislike', methods: ['POST'])]
+    public function dislike(Request $request, Produit $produit): JsonResponse
+    {
+        $produit->setNbDislikes($produit->getNbDislikes() + 1);
+        if($produit->getNbLikes() > 0) {
+            $produit->setNbLikes($produit->getNbLikes() - 1);
+        }
+        $produit->setNbLikes(max($produit->getNbLikes(), 0));
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($produit);
+        $entityManager->flush();
+    
+        return $this->json(['dislikes' => $produit->getNbDislikes(), 'likes' => $produit->getNbLikes()]);
+    }
+    
+    
 }
 
