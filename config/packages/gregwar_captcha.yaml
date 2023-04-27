@@ -1,4 +1,5 @@
 gregwar_captcha:
-    length: 6
     width: 200
     height: 50
+        
+

@@ -275,20 +275,28 @@ https://templatemo.com/tm-583-festava-live
                     <label class=\"form-check-label\"for=\"agreeTerms\" style=\"margin-top: -0.5px;\">J'accepte les conditions d'utilisation.</label>
                 </div>
 
+                <div class=\"form-group\" style=\"margin-left:12px;\">
+    ";
+        // line 157
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 157, $this->source); })()), "captcha", [], "any", false, false, false, 157), 'widget');
+        echo "
+</div>
+<br><br>
+
                 <div class=\"text-center\">
                     <button type=\"submit\" class=\"btn btn-primary\">S'inscrire</button>
                     <br><br>
 
    Vous avez déjà un compte ? <a href=\"";
-        // line 160
+        // line 165
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo "\"> Connectez-vous</a>
 </div>
                 </div>
                 
                 ";
-        // line 164
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 164, $this->source); })()), 'form_end');
+        // line 169
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 169, $this->source); })()), 'form_end');
         echo "
             </form>
         </div>
@@ -426,19 +434,19 @@ T e m p l a t e M o
 -->
     <!-- JAVASCRIPT FILES -->
     <script src=\"";
-        // line 300
+        // line 305
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.min.js"), "html", null, true);
         echo "\" ></script>
     <script src=\"";
-        // line 301
+        // line 306
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 302
+        // line 307
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.sticky.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 303
+        // line 308
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -465,7 +473,7 @@ T e m p l a t e M o
 
     public function getDebugInfo()
     {
-        return array (  442 => 303,  438 => 302,  434 => 301,  430 => 300,  291 => 164,  284 => 160,  273 => 152,  264 => 146,  257 => 142,  250 => 138,  243 => 134,  236 => 130,  229 => 126,  222 => 122,  215 => 118,  210 => 117,  201 => 115,  197 => 114,  182 => 102,  175 => 98,  168 => 94,  161 => 90,  154 => 86,  147 => 82,  140 => 78,  123 => 64,  119 => 63,  84 => 31,  79 => 29,  74 => 27,  65 => 21,  56 => 15,  40 => 1,);
+        return array (  450 => 308,  446 => 307,  442 => 306,  438 => 305,  299 => 169,  292 => 165,  281 => 157,  273 => 152,  264 => 146,  257 => 142,  250 => 138,  243 => 134,  236 => 130,  229 => 126,  222 => 122,  215 => 118,  210 => 117,  201 => 115,  197 => 114,  182 => 102,  175 => 98,  168 => 94,  161 => 90,  154 => 86,  147 => 82,  140 => 78,  123 => 64,  119 => 63,  84 => 31,  79 => 29,  74 => 27,  65 => 21,  56 => 15,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -624,6 +632,11 @@ https://templatemo.com/tm-583-festava-live
                     {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'form-check-input', 'required': 'required'}}) }}
                     <label class=\"form-check-label\"for=\"agreeTerms\" style=\"margin-top: -0.5px;\">J'accepte les conditions d'utilisation.</label>
                 </div>
+
+                <div class=\"form-group\" style=\"margin-left:12px;\">
+    {{ form_widget(registrationForm.captcha) }}
+</div>
+<br><br>
 
                 <div class=\"text-center\">
                     <button type=\"submit\" class=\"btn btn-primary\">S'inscrire</button>

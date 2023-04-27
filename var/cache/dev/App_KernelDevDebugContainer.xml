@@ -383,9 +383,9 @@
     <parameter key="gregwar_captcha.captcha_builder.class">Gregwar\Captcha\CaptchaBuilder</parameter>
     <parameter key="gregwar_captcha.phrase_builder.class">Gregwar\Captcha\PhraseBuilder</parameter>
     <parameter key="gregwar_captcha.config" type="collection">
-      <parameter key="length">6</parameter>
       <parameter key="width">200</parameter>
       <parameter key="height">50</parameter>
+      <parameter key="length">5</parameter>
       <parameter key="font">C:\Users\MALEK-ADMIN\Documents\NetBeansProjects\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle\DependencyInjection/../Generator/Font/captcha.ttf</parameter>
       <parameter key="keep_value">false</parameter>
       <parameter key="charset">abcdefhjkmnprstuvwxyz23456789</parameter>

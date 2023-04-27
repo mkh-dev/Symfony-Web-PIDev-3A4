@@ -200,9 +200,9 @@ https://templatemo.com/tm-583-festava-live
                         <input type=\"email\" value=\"";
         // line 112
         echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 112, $this->source); })()), "html", null, true);
-        echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
+        echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" placeholder= 'Entrez votre email' required autofocus>
                         <label for=\"inputPassword\">Mot de passe</label>
-                        <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
+                        <input type=\"password\" name=\"password\" id=\"inputPassword\" placeholder= 'Entrez votre mot de passe' class=\"form-control\" autocomplete=\"current-password\" required>
                                             <input type=\"hidden\" name=\"_csrf_token\"
                            value=\"";
         // line 116
@@ -215,14 +215,15 @@ https://templatemo.com/tm-583-festava-live
         echo "
                     <button type=\"submit\" class=\"btn btn-primary form-control\">Se connecter</button>
                     <div class=\"text-center mt-3\">
+                    <br>
     <a href=\"";
-        // line 131
+        // line 132
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forgot_password");
         echo "\" style=\"color: black;\">Mot de passe oublié ?</a>
      <br><br>
 
    Vous n'avez pas de compte ? <a href=\"";
-        // line 134
+        // line 135
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
         echo "\"> Inscrivez-vous</a>
 </div>
@@ -362,19 +363,19 @@ T e m p l a t e M o
 -->
     <!-- JAVASCRIPT FILES -->
     <script src=\"";
-        // line 271
+        // line 272
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.min.js"), "html", null, true);
         echo "\" ></script>
     <script src=\"";
-        // line 272
+        // line 273
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 273
+        // line 274
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.sticky.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 274
+        // line 275
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -398,7 +399,7 @@ T e m p l a t e M o
 
     public function getDebugInfo()
     {
-        return array (  378 => 274,  374 => 273,  370 => 272,  366 => 271,  226 => 134,  220 => 131,  215 => 128,  209 => 116,  202 => 112,  197 => 109,  191 => 107,  189 => 106,  184 => 104,  170 => 93,  163 => 89,  156 => 85,  149 => 81,  142 => 77,  135 => 73,  128 => 69,  111 => 55,  107 => 54,  75 => 25,  70 => 23,  65 => 21,  56 => 15,  40 => 1,);
+        return array (  379 => 275,  375 => 274,  371 => 273,  367 => 272,  227 => 135,  221 => 132,  215 => 128,  209 => 116,  202 => 112,  197 => 109,  191 => 107,  189 => 106,  184 => 104,  170 => 93,  163 => 89,  156 => 85,  149 => 81,  142 => 77,  135 => 73,  128 => 69,  111 => 55,  107 => 54,  75 => 25,  70 => 23,  65 => 21,  56 => 15,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -514,9 +515,9 @@ https://templatemo.com/tm-583-festava-live
 
                     <div class=\"ticket-form-body\">
                         <label for=\"inputEmail\">Email</label>
-                        <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
+                        <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" placeholder= 'Entrez votre email' required autofocus>
                         <label for=\"inputPassword\">Mot de passe</label>
-                        <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
+                        <input type=\"password\" name=\"password\" id=\"inputPassword\" placeholder= 'Entrez votre mot de passe' class=\"form-control\" autocomplete=\"current-password\" required>
                                             <input type=\"hidden\" name=\"_csrf_token\"
                            value=\"{{ csrf_token('authenticate') }}\"
                     >
@@ -533,6 +534,7 @@ https://templatemo.com/tm-583-festava-live
 
                     <button type=\"submit\" class=\"btn btn-primary form-control\">Se connecter</button>
                     <div class=\"text-center mt-3\">
+                    <br>
     <a href=\"{{ path('app_forgot_password') }}\" style=\"color: black;\">Mot de passe oublié ?</a>
      <br><br>
 

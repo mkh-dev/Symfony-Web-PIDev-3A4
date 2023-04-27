@@ -59,6 +59,8 @@ class RegistrationFormType extends AbstractType
             
             ->add('password', PasswordType::class)
 
+            ->add('captcha', CaptchaType::class)
+
         ;
     }
 

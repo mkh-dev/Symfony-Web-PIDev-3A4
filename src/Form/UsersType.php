@@ -20,6 +20,7 @@ use Symfony\Component\Validator\Constraints\LessThan;
 
 
 
+
 class UsersType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
@@ -46,6 +47,7 @@ class UsersType extends AbstractType
             
             ->add('password', PasswordType::class)
 
+         
         ;
     }
 
