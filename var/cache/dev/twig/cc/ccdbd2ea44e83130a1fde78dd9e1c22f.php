@@ -86,6 +86,13 @@ class __TwigTemplate_f0bca3b576611aa5b37ce16130bef3c1 extends Template
         // line 16
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/css/users/show.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
+<script src=\"";
+        // line 17
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/css/users/show.js"), "html", null, true);
+        echo "\"></script>
+
+<link href=\"https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700\" rel=\"stylesheet\">
+
 
 <style>
 
@@ -354,14 +361,14 @@ table.table .avatar {
 
     }
 
-    // line 282
+    // line 286
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 283
+        // line 287
         echo "
 
 <div class=\"flex h-screen bg-gray-50 dark:bg-gray-900\" :class=\"{ 'overflow-hidden': isSideMenuOpen }\">
@@ -371,16 +378,16 @@ table.table .avatar {
       <div class=\"py-4 text-gray-500 dark:text-gray-400\">
         
         <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"";
-        // line 291
+        // line 295
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login_home");
         echo "\">
           <img src=\"";
-        // line 292
+        // line 296
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/evento.png"), "html", null, true);
         echo "\" alt=\"Evento\" width=\"30\" height=\"40\" style=\"position: absolute; top: 0; left: 3%; transform: translateY(10%);\">
         </a>
         <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"";
-        // line 294
+        // line 298
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login_home");
         echo "\" style=\"position: absolute; top: 15px; left: 4%;\">
           EVENTO
@@ -391,7 +398,7 @@ table.table .avatar {
   <li class=\"relative px-6 py-3\">
     <span class=\"absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg\" aria-hidden=\"true\"></span>
     <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\" href=\"";
-        // line 302
+        // line 306
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
         echo "\">
       <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
@@ -402,7 +409,7 @@ table.table .avatar {
   </li>
   <li class=\"relative px-6 py-3\" style=\"padding-top: 5px;\">
     <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\" href=\"";
-        // line 310
+        // line 314
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_index");
         echo "\">
       <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" style=\"color: black;\">
@@ -443,7 +450,7 @@ table.table .avatar {
 
             <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\"
               href=\"";
-        // line 348
+        // line 352
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -460,7 +467,7 @@ table.table .avatar {
           <li class=\"relative px-6 py-3\">
             <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
               href=\"";
-        // line 362
+        // line 366
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -579,7 +586,7 @@ table.table .avatar {
                 @click=\"toggleProfileMenu\" @keydown.escape=\"closeProfileMenu\" aria-label=\"Account\" aria-haspopup=\"true\">
                 <img class=\"object-cover w-8 h-8 rounded-full\"
                   src=\"";
-        // line 478
+        // line 482
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/user.png"), "html", null, true);
         echo "\"
                   alt=\"\" aria-hidden=\"true\" />
@@ -592,16 +599,16 @@ table.table .avatar {
                   <li class=\"flex\">
                    <span class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\" style=\"color: black;\">
     ";
-        // line 488
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 488, $this->source); })()), "user", [], "any", false, false, false, 488)) {
+        // line 492
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 492, $this->source); })()), "user", [], "any", false, false, false, 492)) {
             echo "              
         Vous êtes actuellement connecté en tant que ";
-            // line 489
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 489, $this->source); })()), "user", [], "any", false, false, false, 489), "userIdentifier", [], "any", false, false, false, 489), "html", null, true);
+            // line 493
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 493, $this->source); })()), "user", [], "any", false, false, false, 493), "userIdentifier", [], "any", false, false, false, 493), "html", null, true);
             echo "
     ";
         }
-        // line 490
+        // line 494
         echo " 
 </span>
 
@@ -609,7 +616,7 @@ table.table .avatar {
                      <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
                       href=\"";
-        // line 496
+        // line 500
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\">
                       <svg style=\"color: black;\" class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
@@ -635,68 +642,89 @@ table.table .avatar {
 
       
 
-<div class=\"page-content page-container\" id=\"page-content\">
-    <div class=\"padding\">
-        <div class=\"row container d-flex justify-content-center\">
-<div class=\"col-xl-6 col-md-12\">
-                                                <div class=\"card user-card-full\">
-                                                    <div class=\"row m-l-0 m-r-0\">
-                                                        <div class=\"col-sm-4 bg-c-lite-green user-profile\">
-                                                            <div class=\"card-block text-center text-white\">
-                                                                <div class=\"m-b-25\">
-                                                                    <img src=\"https://img.icons8.com/bubbles/100/000000/user.png\" class=\"img-radius\" alt=\"User-Profile-Image\">
-                                                                </div>
-                                                                <h6 class=\"f-w-600\">";
-        // line 531
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 531, $this->source); })()), "prenom", [], "any", false, false, false, 531), "html", null, true);
-        echo " ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 531, $this->source); })()), "nom", [], "any", false, false, false, 531), "html", null, true);
-        echo "</h6>
-                                                                <p>";
-        // line 532
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 532, $this->source); })()), "userrole", [], "any", false, false, false, 532), "html", null, true);
-        echo "</p>
-                                                                <i class=\" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16\"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class=\"col-sm-8\">
-                                                            <div class=\"card-block\">
-                                                                <h6 class=\"m-b-20 p-b-5 b-b-default f-w-600\">Information</h6>
-                                                                <div class=\"row\">
-                                                                    <div class=\"col-sm-6\">
-                                                                        <p class=\"m-b-10 f-w-600\">Email</p>
-                                                                        <h6 class=\"text-muted f-w-400\">";
+ <div class=\"main-content\" style=\"top:-10px; margin-bottom:10px; \">
+    <div class=\"container mt-7\" >
+      <!-- Table -->
+     
+      <div class=\"row\">
+        <div class=\"col-xl-8 m-auto order-xl-2 mb-5 mb-xl-0\">
+          <div class=\"card card-profile shadow\">
+            <div class=\"row justify-content-center\">
+              <div class=\"col-lg-3 order-lg-2\">
+                <div class=\"card-profile-image\">
+                  <a href=\"#\">
+                    <img src=\"";
+        // line 535
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/girl.png"), "html", null, true);
+        echo "\" class=\"rounded-circle\">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class=\"card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4\">
+              <div class=\"d-flex justify-content-between\">
+                <a href=\"";
         // line 542
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 542, $this->source); })()), "email", [], "any", false, false, false, 542), "html", null, true);
-        echo "</h6>
-                                                                    </div>
-                                                                    <div class=\"col-sm-6\">
-                                                                        <p class=\"m-b-10 f-w-600\">Phone</p>
-                                                                        <h6 class=\"text-muted f-w-400\">";
-        // line 546
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 546, $this->source); })()), "numtel", [], "any", false, false, false, 546), "html", null, true);
-        echo "</h6>
-                                                                    </div>
-                                                                        
-                                                                    <div class=\"col-sm-6\">
-                                                                        <p class=\"m-b-10 f-w-600\">Recent</p>
-                                                                        <h6 class=\"text-muted f-w-400\">";
-        // line 551
-        ((twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 551, $this->source); })()), "datenaissance", [], "any", false, false, false, 551)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 551, $this->source); })()), "datenaissance", [], "any", false, false, false, 551), "Y-m-d"), "html", null, true))) : (print ("")));
-        echo "</h6>
-                                                                         
-                                                                    </div>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
+        echo "\" class=\"btn btn-sm btn-info mr-4\" style=\"font-size: 16px; background-color:#e9ad19;  border-color: #e9ad19;\">Retour</a>
+                
+              </div>
+            </div>
 
-                                                                </div>
-                                                               
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                             </div>
-                                                </div>
-                                            </div>
+              <div class=\"text-center\" >
+<h3 style=\"color:black;\" >
+  ";
+        // line 549
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 549, $this->source); })()), "prenom", [], "any", false, false, false, 549), "html", null, true);
+        echo "    ";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 549, $this->source); })()), "nom", [], "any", false, false, false, 549), "html", null, true);
+        echo "
+</h3>
+
+                <div class=\"h5 font-weight-300\" style=\"font-size: 16px; color:black;\">
+                  <i class=\"ni location_pin mr-2\"></i>";
+        // line 553
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 553, $this->source); })()), "userrole", [], "any", false, false, false, 553), "html", null, true);
+        echo "
+                </div>
+                <div class=\"h5 mt-4\" style=\"font-size: 16px; color:black;\">
+                  <i class=\"ni business_briefcase-24 mr-2\" ></i>Email
+                </div>
+                <div style=\"font-size: 16px; color:#323233;\">
+                  <i class=\"ni education_hat mr-2\"></i>";
+        // line 559
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 559, $this->source); })()), "email", [], "any", false, false, false, 559), "html", null, true);
+        echo "
+                </div>
+                                <div class=\"h5 mt-4\" style=\"font-size: 16px; color:black;\">
+                  <i class=\"ni business_briefcase-24 mr-2\"></i>Numéro de téléphone
+                </div>
+                <div style=\"font-size: 16px; color:#323233;\">
+                  <i class=\"ni education_hat mr-2\"></i>";
+        // line 565
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 565, $this->source); })()), "numtel", [], "any", false, false, false, 565), "html", null, true);
+        echo "
+                </div>
+
+                                                          <div class=\"h5 mt-4\" style=\"font-size: 16px; color:black;\">
+                  <i class=\"ni business_briefcase-24 mr-2\"></i>Date de naissance
+                </div>
+                <div style=\"font-size: 16px;color:#323233;\">
+                  <i class=\"ni education_hat mr-2\"></i> ";
+        // line 572
+        ((twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 572, $this->source); })()), "datenaissance", [], "any", false, false, false, 572)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 572, $this->source); })()), "datenaissance", [], "any", false, false, false, 572), "Y-m-d"), "html", null, true))) : (print ("")));
+        echo "
+                </div>    
+               
+            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
 
 
 </main>
@@ -735,7 +763,7 @@ s0.parentNode.insertBefore(s1,s0);
 
     public function getDebugInfo()
     {
-        return array (  685 => 551,  677 => 546,  670 => 542,  657 => 532,  651 => 531,  613 => 496,  605 => 490,  600 => 489,  596 => 488,  583 => 478,  464 => 362,  447 => 348,  406 => 310,  395 => 302,  384 => 294,  379 => 292,  375 => 291,  365 => 283,  358 => 282,  87 => 16,  74 => 7,  67 => 6,  54 => 3,  37 => 1,);
+        return array (  715 => 572,  705 => 565,  696 => 559,  687 => 553,  678 => 549,  668 => 542,  658 => 535,  620 => 500,  612 => 494,  607 => 493,  603 => 492,  590 => 482,  471 => 366,  454 => 352,  413 => 314,  402 => 306,  391 => 298,  386 => 296,  382 => 295,  372 => 287,  365 => 286,  91 => 17,  87 => 16,  74 => 7,  67 => 6,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -756,6 +784,10 @@ s0.parentNode.insertBefore(s1,s0);
 <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\"></script>
 <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js\"></script>
 <link href=\"{{asset('back/css/users/show.css')}}\" rel=\"stylesheet\">
+<script src=\"{{asset('back/css/users/show.js')}}\"></script>
+
+<link href=\"https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700\" rel=\"stylesheet\">
+
 
 <style>
 
@@ -1259,51 +1291,66 @@ table.table .avatar {
 
       
 
-<div class=\"page-content page-container\" id=\"page-content\">
-    <div class=\"padding\">
-        <div class=\"row container d-flex justify-content-center\">
-<div class=\"col-xl-6 col-md-12\">
-                                                <div class=\"card user-card-full\">
-                                                    <div class=\"row m-l-0 m-r-0\">
-                                                        <div class=\"col-sm-4 bg-c-lite-green user-profile\">
-                                                            <div class=\"card-block text-center text-white\">
-                                                                <div class=\"m-b-25\">
-                                                                    <img src=\"https://img.icons8.com/bubbles/100/000000/user.png\" class=\"img-radius\" alt=\"User-Profile-Image\">
-                                                                </div>
-                                                                <h6 class=\"f-w-600\">{{ user.prenom }} {{ user.nom }}</h6>
-                                                                <p>{{ user.userrole }}</p>
-                                                                <i class=\" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16\"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class=\"col-sm-8\">
-                                                            <div class=\"card-block\">
-                                                                <h6 class=\"m-b-20 p-b-5 b-b-default f-w-600\">Information</h6>
-                                                                <div class=\"row\">
-                                                                    <div class=\"col-sm-6\">
-                                                                        <p class=\"m-b-10 f-w-600\">Email</p>
-                                                                        <h6 class=\"text-muted f-w-400\">{{ user.email }}</h6>
-                                                                    </div>
-                                                                    <div class=\"col-sm-6\">
-                                                                        <p class=\"m-b-10 f-w-600\">Phone</p>
-                                                                        <h6 class=\"text-muted f-w-400\">{{ user.numtel }}</h6>
-                                                                    </div>
-                                                                        
-                                                                    <div class=\"col-sm-6\">
-                                                                        <p class=\"m-b-10 f-w-600\">Recent</p>
-                                                                        <h6 class=\"text-muted f-w-400\">{{ user.datenaissance ? user.datenaissance|date('Y-m-d') : '' }}</h6>
-                                                                         
-                                                                    </div>
+ <div class=\"main-content\" style=\"top:-10px; margin-bottom:10px; \">
+    <div class=\"container mt-7\" >
+      <!-- Table -->
+     
+      <div class=\"row\">
+        <div class=\"col-xl-8 m-auto order-xl-2 mb-5 mb-xl-0\">
+          <div class=\"card card-profile shadow\">
+            <div class=\"row justify-content-center\">
+              <div class=\"col-lg-3 order-lg-2\">
+                <div class=\"card-profile-image\">
+                  <a href=\"#\">
+                    <img src=\"{{asset('back/img/girl.png')}}\" class=\"rounded-circle\">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class=\"card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4\">
+              <div class=\"d-flex justify-content-between\">
+                <a href=\"{{ path('app_users_index') }}\" class=\"btn btn-sm btn-info mr-4\" style=\"font-size: 16px; background-color:#e9ad19;  border-color: #e9ad19;\">Retour</a>
+                
+              </div>
+            </div>
 
-                                                                </div>
-                                                               
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                             </div>
-                                                </div>
-                                            </div>
+              <div class=\"text-center\" >
+<h3 style=\"color:black;\" >
+  {{ user.prenom }}    {{ user.nom }}
+</h3>
+
+                <div class=\"h5 font-weight-300\" style=\"font-size: 16px; color:black;\">
+                  <i class=\"ni location_pin mr-2\"></i>{{ user.userrole }}
+                </div>
+                <div class=\"h5 mt-4\" style=\"font-size: 16px; color:black;\">
+                  <i class=\"ni business_briefcase-24 mr-2\" ></i>Email
+                </div>
+                <div style=\"font-size: 16px; color:#323233;\">
+                  <i class=\"ni education_hat mr-2\"></i>{{ user.email }}
+                </div>
+                                <div class=\"h5 mt-4\" style=\"font-size: 16px; color:black;\">
+                  <i class=\"ni business_briefcase-24 mr-2\"></i>Numéro de téléphone
+                </div>
+                <div style=\"font-size: 16px; color:#323233;\">
+                  <i class=\"ni education_hat mr-2\"></i>{{ user.numtel }}
+                </div>
+
+                                                          <div class=\"h5 mt-4\" style=\"font-size: 16px; color:black;\">
+                  <i class=\"ni business_briefcase-24 mr-2\"></i>Date de naissance
+                </div>
+                <div style=\"font-size: 16px;color:#323233;\">
+                  <i class=\"ni education_hat mr-2\"></i> {{ user.datenaissance ? user.datenaissance|date('Y-m-d') : '' }}
+                </div>    
+               
+            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
 
 
 </main>

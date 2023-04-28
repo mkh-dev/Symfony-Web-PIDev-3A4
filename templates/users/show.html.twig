@@ -14,6 +14,10 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <link href="{{asset('back/css/users/show.css')}}" rel="stylesheet">
+<script src="{{asset('back/css/users/show.js')}}"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
 
 <style>
 
@@ -517,51 +521,66 @@ $(document).ready(function(){
 
       
 
-<div class="page-content page-container" id="page-content">
-    <div class="padding">
-        <div class="row container d-flex justify-content-center">
-<div class="col-xl-6 col-md-12">
-                                                <div class="card user-card-full">
-                                                    <div class="row m-l-0 m-r-0">
-                                                        <div class="col-sm-4 bg-c-lite-green user-profile">
-                                                            <div class="card-block text-center text-white">
-                                                                <div class="m-b-25">
-                                                                    <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image">
-                                                                </div>
-                                                                <h6 class="f-w-600">{{ user.prenom }} {{ user.nom }}</h6>
-                                                                <p>{{ user.userrole }}</p>
-                                                                <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-8">
-                                                            <div class="card-block">
-                                                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
-                                                                <div class="row">
-                                                                    <div class="col-sm-6">
-                                                                        <p class="m-b-10 f-w-600">Email</p>
-                                                                        <h6 class="text-muted f-w-400">{{ user.email }}</h6>
-                                                                    </div>
-                                                                    <div class="col-sm-6">
-                                                                        <p class="m-b-10 f-w-600">Phone</p>
-                                                                        <h6 class="text-muted f-w-400">{{ user.numtel }}</h6>
-                                                                    </div>
-                                                                        
-                                                                    <div class="col-sm-6">
-                                                                        <p class="m-b-10 f-w-600">Recent</p>
-                                                                        <h6 class="text-muted f-w-400">{{ user.datenaissance ? user.datenaissance|date('Y-m-d') : '' }}</h6>
-                                                                         
-                                                                    </div>
+ <div class="main-content" style="top:-10px; margin-bottom:10px; ">
+    <div class="container mt-7" >
+      <!-- Table -->
+     
+      <div class="row">
+        <div class="col-xl-8 m-auto order-xl-2 mb-5 mb-xl-0">
+          <div class="card card-profile shadow">
+            <div class="row justify-content-center">
+              <div class="col-lg-3 order-lg-2">
+                <div class="card-profile-image">
+                  <a href="#">
+                    <img src="{{asset('back/img/girl.png')}}" class="rounded-circle">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+              <div class="d-flex justify-content-between">
+                <a href="{{ path('app_users_index') }}" class="btn btn-sm btn-info mr-4" style="font-size: 16px; background-color:#e9ad19;  border-color: #e9ad19;">Retour</a>
+                
+              </div>
+            </div>
 
-                                                                </div>
-                                                               
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                             </div>
-                                                </div>
-                                            </div>
+              <div class="text-center" >
+<h3 style="color:black;" >
+  {{ user.prenom }}    {{ user.nom }}
+</h3>
+
+                <div class="h5 font-weight-300" style="font-size: 16px; color:black;">
+                  <i class="ni location_pin mr-2"></i>{{ user.userrole }}
+                </div>
+                <div class="h5 mt-4" style="font-size: 16px; color:black;">
+                  <i class="ni business_briefcase-24 mr-2" ></i>Email
+                </div>
+                <div style="font-size: 16px; color:#323233;">
+                  <i class="ni education_hat mr-2"></i>{{ user.email }}
+                </div>
+                                <div class="h5 mt-4" style="font-size: 16px; color:black;">
+                  <i class="ni business_briefcase-24 mr-2"></i>Numéro de téléphone
+                </div>
+                <div style="font-size: 16px; color:#323233;">
+                  <i class="ni education_hat mr-2"></i>{{ user.numtel }}
+                </div>
+
+                                                          <div class="h5 mt-4" style="font-size: 16px; color:black;">
+                  <i class="ni business_briefcase-24 mr-2"></i>Date de naissance
+                </div>
+                <div style="font-size: 16px;color:#323233;">
+                  <i class="ni education_hat mr-2"></i> {{ user.datenaissance ? user.datenaissance|date('Y-m-d') : '' }}
+                </div>    
+               
+            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
 
 
 </main>

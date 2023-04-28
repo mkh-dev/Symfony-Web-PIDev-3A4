@@ -42,7 +42,6 @@ class Users implements UserInterface
 
     
     #[ORM\Column(type: "date")]
-    #[Assert\NotNull(message: "La date de naissance ne doit pas être vide.")]
     #[Assert\NotBlank(message: "La date de naissance est obligatoire.")]
     #[Assert\LessThanOrEqual("today", message: "La date de naissance ne peut pas être dans le futur.")]
     #[LessThan("-18 years", message: "Vous devez avoir au moins 18 ans pour vous inscrire.")]

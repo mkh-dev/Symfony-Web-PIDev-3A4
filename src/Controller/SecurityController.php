@@ -136,7 +136,9 @@ public function codePassword(Request $request): Response
 }
 
 
-#[Route('/new-password', name: 'app_new_password')]
+/**
+ * @Route("/new-password", name="app_new_password")
+ */
 public function newPassword(Request $request, UserPasswordEncoderInterface $passwordEncoder, UsersRepository $usersRepository): Response
 {
     $email = $request->query->get('email');
@@ -145,6 +147,14 @@ public function newPassword(Request $request, UserPasswordEncoderInterface $pass
     if ($request->isMethod('POST')) {
         // Get the submitted password
         $password = $request->request->get('password');
+        $passwordConfirm = $request->request->get('password_confirm');
+
+        if ($password !== $passwordConfirm) {
+            // Les deux mots de passe ne correspondent pas, retourner une erreur
+            $this->addFlash('error', 'Les mots de passe ne correspondent pas.');
+
+            return $this->redirectToRoute('app_new_password', ['email' => $email]);
+        }
 
         // Encode the password
         $encodedPassword = $passwordEncoder->encodePassword($user, $password);
@@ -163,4 +173,5 @@ public function newPassword(Request $request, UserPasswordEncoderInterface $pass
         'email' => $email,
     ]);
 }
+
 }

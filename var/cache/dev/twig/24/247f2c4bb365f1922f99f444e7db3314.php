@@ -178,6 +178,10 @@ table.table td a:hover {
 table.table td a.edit {
 \tcolor: #FFC107;
 }
+
+table.table td a.show {
+\tcolor: black;
+}
 table.table td a.delete {
 \tcolor: #F44336;
 }
@@ -345,16 +349,15 @@ table.table .avatar {
 
     }
 
-    // line 276
+    // line 280
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 277
+        // line 281
         echo "
-
 <div class=\"flex h-screen bg-gray-50 dark:bg-gray-900\" :class=\"{ 'overflow-hidden': isSideMenuOpen }\">
       
     <!-- Desktop sidebar -->
@@ -362,16 +365,16 @@ table.table .avatar {
       <div class=\"py-4 text-gray-500 dark:text-gray-400\">
         
         <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"";
-        // line 285
+        // line 288
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login_home");
         echo "\">
           <img src=\"";
-        // line 286
+        // line 289
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/evento.png"), "html", null, true);
         echo "\" alt=\"Evento\" width=\"30\" height=\"40\" style=\"position: absolute; top: 0; left: 3%; transform: translateY(10%);\">
         </a>
         <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"";
-        // line 288
+        // line 291
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login_home");
         echo "\" style=\"position: absolute; top: 15px; left: 4%;\">
           EVENTO
@@ -380,7 +383,7 @@ table.table .avatar {
     <ul class=\"mt-6\">
   <li class=\"relative px-6 py-3 \">
     <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\" href=\"";
-        // line 294
+        // line 297
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
         echo "\">
       <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" style=\"color: black;\">
@@ -392,7 +395,7 @@ table.table .avatar {
   <li class=\"relative px-6 py-3 \">
     <span class=\"absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg\" aria-hidden=\"true\"></span>
     <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\" href=\"";
-        // line 303
+        // line 306
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_index");
         echo "\">
       <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
@@ -433,7 +436,7 @@ table.table .avatar {
 
             <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\"
               href=\"";
-        // line 341
+        // line 344
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -450,7 +453,7 @@ table.table .avatar {
           <li class=\"relative px-6 py-3\">
             <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
               href=\"";
-        // line 355
+        // line 358
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -569,7 +572,7 @@ table.table .avatar {
                 @click=\"toggleProfileMenu\" @keydown.escape=\"closeProfileMenu\" aria-label=\"Account\" aria-haspopup=\"true\">
                 <img class=\"object-cover w-8 h-8 rounded-full\"
                   src=\"";
-        // line 471
+        // line 474
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/user.png"), "html", null, true);
         echo "\"
                   alt=\"\" aria-hidden=\"true\" />
@@ -582,16 +585,16 @@ table.table .avatar {
                   <li class=\"flex\">
                    <span class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\" style=\"color: black;\">
     ";
-        // line 481
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 481, $this->source); })()), "user", [], "any", false, false, false, 481)) {
+        // line 484
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 484, $this->source); })()), "user", [], "any", false, false, false, 484)) {
             echo "              
         Vous êtes actuellement connecté en tant que ";
-            // line 482
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 482, $this->source); })()), "user", [], "any", false, false, false, 482), "userIdentifier", [], "any", false, false, false, 482), "html", null, true);
+            // line 485
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 485, $this->source); })()), "user", [], "any", false, false, false, 485), "userIdentifier", [], "any", false, false, false, 485), "html", null, true);
             echo "
     ";
         }
-        // line 483
+        // line 486
         echo " 
 </span>
 
@@ -599,7 +602,7 @@ table.table .avatar {
                      <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
                       href=\"";
-        // line 489
+        // line 492
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\">
                       <svg style=\"color: black;\" class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
@@ -631,11 +634,11 @@ table.table .avatar {
 \t\t\t<div class=\"table-title\">
 \t\t\t\t<div class=\"row\">
 \t\t\t\t\t<div class=\"col-sm-6\">
-\t\t\t\t\t\t<h2> <b>Liste des Utilisateurs</b></h2>
+\t\t\t\t\t\t<h2> <b>Liste des Réclamations</b></h2>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"col-sm-6\">
 \t\t\t\t\t\t<a href=\"";
-        // line 522
+        // line 525
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_new");
         echo "\" class=\"btn btn-warning\" ><i class=\"material-icons\">&#xE147;</i> <span>Ajouter Une Nouvelle Réclamation</span></a>
 \t\t\t\t\t\t
@@ -655,14 +658,14 @@ table.table .avatar {
 \t\t\t\t\t\t<th>Nom</th>
 \t\t\t\t\t\t<th>Email</th>
 \t\t\t\t\t\t<th>Message</th>
-            <th>Actions</th>
+            <th style=\"width:140px;\">Actions</th>
 \t\t\t\t\t</tr>
 \t\t\t\t</thead>
-\t\t\t\t<tbody>
+\t\t\t\t\t<tbody>
            ";
-        // line 544
+        // line 547
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 544, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 547, $this->source); })()));
         $context['_iterated'] = false;
         $context['loop'] = [
           'parent' => $context['_parent'],
@@ -678,7 +681,7 @@ table.table .avatar {
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["reclamation"]) {
-            // line 545
+            // line 548
             echo "\t\t\t\t\t<tr>
 \t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t<span class=\"custom-checkbox\">
@@ -687,42 +690,47 @@ table.table .avatar {
 \t\t\t\t\t\t\t</span>
 \t\t\t\t\t\t</td>
                 <td>";
-            // line 552
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reclamation"], "prenom", [], "any", false, false, false, 552), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 553
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reclamation"], "nom", [], "any", false, false, false, 553), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 554
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reclamation"], "email", [], "any", false, false, false, 554), "html", null, true);
-            echo "</td>
-        <td>";
             // line 555
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reclamation"], "message", [], "any", false, false, false, 555), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reclamation"], "prenom", [], "any", false, false, false, 555), "html", null, true);
             echo "</td>
-\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t<a href=\"";
+                <td>";
+            // line 556
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reclamation"], "nom", [], "any", false, false, false, 556), "html", null, true);
+            echo "</td>
+                <td>";
             // line 557
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 557)]), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reclamation"], "email", [], "any", false, false, false, 557), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 558
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reclamation"], "message", [], "any", false, false, false, 558), "html", null, true);
+            echo "</td>
+           
+\t\t\t\t\t\t<td>
+              <a href=\"";
+            // line 561
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_show", ["id" => twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 561)]), "html", null, true);
+            echo "\" class=\"show\"><i class=\"material-icons title=\"Show\">&#xE8F4;</i></a>
+\t\t\t\t\t\t\t<a href=\"";
+            // line 562
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 562)]), "html", null, true);
             echo "\" class=\"edit\"><i class=\"material-icons\"  title=\"Edit\">&#xE254;</i></a>
 \t\t\t\t\t\t\t<a href=\"";
-            // line 558
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 558)]), "html", null, true);
+            // line 563
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 563)]), "html", null, true);
             echo "\" class=\"delete\" onclick=\"event.preventDefault(); if(confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?')){document.getElementById('delete-form-";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 558), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 563), "html", null, true);
             echo "').submit();}\">
     <i class=\"material-icons\" title=\"Delete\">&#xE872;</i>
 </a>
 <form id=\"delete-form-";
-            // line 561
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 561), "html", null, true);
+            // line 566
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 566), "html", null, true);
             echo "\" method=\"post\" action=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 561)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 566)]), "html", null, true);
             echo "\" style=\"display: none;\">
     ";
-            // line 562
+            // line 567
             echo twig_include($this->env, $context, "reclamations/_delete_form.html.twig");
             echo "
 </form>
@@ -741,7 +749,7 @@ table.table .avatar {
             }
         }
         if (!$context['_iterated']) {
-            // line 568
+            // line 573
             echo "            <tr>
                 <td>Aucun enregistrement trouvé</td>
             </tr>
@@ -750,14 +758,14 @@ table.table .avatar {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['reclamation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 572
+        // line 577
         echo "\t\t\t\t</tbody>
 \t\t\t</table>
 \t\t\t<div class=\"clearfix\">
 \t\t\t\t<div class=\"pagination\">
     ";
-        // line 576
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 576, $this->source); })()));
+        // line 581
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 581, $this->source); })()));
         echo "
 </div>
 \t\t</div>
@@ -801,7 +809,7 @@ s0.parentNode.insertBefore(s1,s0);
 
     public function getDebugInfo()
     {
-        return array (  760 => 576,  754 => 572,  745 => 568,  726 => 562,  720 => 561,  712 => 558,  708 => 557,  703 => 555,  699 => 554,  695 => 553,  691 => 552,  682 => 545,  664 => 544,  639 => 522,  603 => 489,  595 => 483,  590 => 482,  586 => 481,  573 => 471,  454 => 355,  437 => 341,  396 => 303,  384 => 294,  375 => 288,  370 => 286,  366 => 285,  356 => 277,  349 => 276,  74 => 7,  67 => 6,  54 => 3,  37 => 1,);
+        return array (  768 => 581,  762 => 577,  753 => 573,  734 => 567,  728 => 566,  720 => 563,  716 => 562,  712 => 561,  706 => 558,  702 => 557,  698 => 556,  694 => 555,  685 => 548,  667 => 547,  642 => 525,  606 => 492,  598 => 486,  593 => 485,  589 => 484,  576 => 474,  457 => 358,  440 => 344,  399 => 306,  387 => 297,  378 => 291,  373 => 289,  369 => 288,  360 => 281,  353 => 280,  74 => 7,  67 => 6,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -916,6 +924,10 @@ table.table td a:hover {
 }
 table.table td a.edit {
 \tcolor: #FFC107;
+}
+
+table.table td a.show {
+\tcolor: black;
 }
 table.table td a.delete {
 \tcolor: #F44336;
@@ -1082,7 +1094,6 @@ table.table .avatar {
 
 
 {% block body %}
-
 
 <div class=\"flex h-screen bg-gray-50 dark:bg-gray-900\" :class=\"{ 'overflow-hidden': isSideMenuOpen }\">
       
@@ -1324,7 +1335,7 @@ table.table .avatar {
 \t\t\t<div class=\"table-title\">
 \t\t\t\t<div class=\"row\">
 \t\t\t\t\t<div class=\"col-sm-6\">
-\t\t\t\t\t\t<h2> <b>Liste des Utilisateurs</b></h2>
+\t\t\t\t\t\t<h2> <b>Liste des Réclamations</b></h2>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"col-sm-6\">
 \t\t\t\t\t\t<a href=\"{{ path('app_reclamations_new') }}\" class=\"btn btn-warning\" ><i class=\"material-icons\">&#xE147;</i> <span>Ajouter Une Nouvelle Réclamation</span></a>
@@ -1345,10 +1356,10 @@ table.table .avatar {
 \t\t\t\t\t\t<th>Nom</th>
 \t\t\t\t\t\t<th>Email</th>
 \t\t\t\t\t\t<th>Message</th>
-            <th>Actions</th>
+            <th style=\"width:140px;\">Actions</th>
 \t\t\t\t\t</tr>
 \t\t\t\t</thead>
-\t\t\t\t<tbody>
+\t\t\t\t\t<tbody>
            {% for reclamation in pagination %}
 \t\t\t\t\t<tr>
 \t\t\t\t\t\t<td>
@@ -1360,9 +1371,11 @@ table.table .avatar {
                 <td>{{ reclamation.prenom }}</td>
                 <td>{{ reclamation.nom }}</td>
                 <td>{{ reclamation.email }}</td>
-        <td>{{ reclamation.message }}</td>
+                <td>{{ reclamation.message }}</td>
+           
 \t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t<a href=\"{{ path('app_reclamations_edit', {'id': reclamation.id}) }}\" class=\"edit\"><i class=\"material-icons\"  title=\"Edit\">&#xE254;</i></a>
+              <a href=\"{{ path('app_reclamations_show', {'id': reclamation.id}) }}\" class=\"show\"><i class=\"material-icons title=\"Show\">&#xE8F4;</i></a>
+\t\t\t\t\t\t\t<a href=\"{{ path('app_reclamations_edit', {'id':  reclamation.id}) }}\" class=\"edit\"><i class=\"material-icons\"  title=\"Edit\">&#xE254;</i></a>
 \t\t\t\t\t\t\t<a href=\"{{ path('app_reclamations_delete', {'id': reclamation.id}) }}\" class=\"delete\" onclick=\"event.preventDefault(); if(confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?')){document.getElementById('delete-form-{{ reclamation.id }}').submit();}\">
     <i class=\"material-icons\" title=\"Delete\">&#xE872;</i>
 </a>

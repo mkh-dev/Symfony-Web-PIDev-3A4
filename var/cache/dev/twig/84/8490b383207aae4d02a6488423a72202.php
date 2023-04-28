@@ -162,14 +162,15 @@ https://templatemo.com/tm-583-festava-live
         <div class=\"row\">
             <div class=\"col-md-6 mx-auto\">
                 <form method=\"post\" class=\"custom-form ticket-form mb-5 mb-lg-0\">
-                
+                    <center><h3 class=\"mb-4\">Nouveau mot de passe</h3></center>
                     <div class=\"form-group\">
-                        <form method=\"post\" class=\"custom-form ticket-form mb-5 mb-lg-0\">
-                <center><h3 class=\"mb-4\">Nouveau mot de passe</h3></center>
-            <label for=\"password\">Nouveau mot de passe</label>
-            <input type=\"password\" id=\"password\" name=\"password\" class=\"form-control\" required>
-        </div>
-
+                        <label for=\"password\">Nouveau mot de passe</label>
+                        <input type=\"password\" id=\"password\" name=\"password\" class=\"form-control\" required>
+                    </div>
+                    <div class=\"form-group\">
+                        <label for=\"password_confirm\">Confirmer le mot de passe</label>
+                        <input type=\"password\" id=\"password_confirm\" name=\"password_confirm\" class=\"form-control\" required>
+                    </div>
                     <center><button type=\"submit\" class=\"btn btn-primary\">Valider</button></center>
                 </form>
             </div>
@@ -306,19 +307,19 @@ T e m p l a t e M o
 -->
     <!-- JAVASCRIPT FILES -->
     <script src=\"";
-        // line 251
+        // line 252
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.min.js"), "html", null, true);
         echo "\" ></script>
     <script src=\"";
-        // line 252
+        // line 253
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 253
+        // line 254
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.sticky.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 254
+        // line 255
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -342,7 +343,7 @@ T e m p l a t e M o
 
     public function getDebugInfo()
     {
-        return array (  322 => 254,  318 => 253,  314 => 252,  310 => 251,  152 => 96,  111 => 58,  75 => 25,  70 => 23,  65 => 21,  56 => 15,  40 => 1,);
+        return array (  323 => 255,  319 => 254,  315 => 253,  311 => 252,  152 => 96,  111 => 58,  75 => 25,  70 => 23,  65 => 21,  56 => 15,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -454,14 +455,15 @@ https://templatemo.com/tm-583-festava-live
         <div class=\"row\">
             <div class=\"col-md-6 mx-auto\">
                 <form method=\"post\" class=\"custom-form ticket-form mb-5 mb-lg-0\">
-                
+                    <center><h3 class=\"mb-4\">Nouveau mot de passe</h3></center>
                     <div class=\"form-group\">
-                        <form method=\"post\" class=\"custom-form ticket-form mb-5 mb-lg-0\">
-                <center><h3 class=\"mb-4\">Nouveau mot de passe</h3></center>
-            <label for=\"password\">Nouveau mot de passe</label>
-            <input type=\"password\" id=\"password\" name=\"password\" class=\"form-control\" required>
-        </div>
-
+                        <label for=\"password\">Nouveau mot de passe</label>
+                        <input type=\"password\" id=\"password\" name=\"password\" class=\"form-control\" required>
+                    </div>
+                    <div class=\"form-group\">
+                        <label for=\"password_confirm\">Confirmer le mot de passe</label>
+                        <input type=\"password\" id=\"password_confirm\" name=\"password_confirm\" class=\"form-control\" required>
+                    </div>
                     <center><button type=\"submit\" class=\"btn btn-primary\">Valider</button></center>
                 </form>
             </div>

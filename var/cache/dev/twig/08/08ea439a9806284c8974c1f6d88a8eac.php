@@ -108,52 +108,49 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
     <aside class=\"z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0\">
       <div class=\"py-4 text-gray-500 dark:text-gray-400\">
         
-        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\">
+        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"";
+        // line 23
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login_home");
+        echo "\">
           <img src=\"";
         // line 24
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/evento.png"), "html", null, true);
         echo "\" alt=\"Evento\" width=\"30\" height=\"40\" style=\"position: absolute; top: 0; left: 3%; transform: translateY(10%);\">
         </a>
-        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\" style=\"position: absolute; top: 15px; left: 4%;\">
+        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"";
+        // line 26
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login_home");
+        echo "\" style=\"position: absolute; top: 15px; left: 4%;\">
           EVENTO
         </a>
         
-        
-         <ul class=\"mt-6\">
-          <li class=\"relative px-6 py-3\">
-            <span class=\"absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg\"
-              aria-hidden=\"true\"></span>
-            <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\"
-              href=\"";
-        // line 36
+    <ul class=\"mt-6\">
+  <li class=\"relative px-6 py-3 \">
+    <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\" href=\"";
+        // line 32
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
         echo "\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                <path
-                  d=\"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\">
-                </path>
-              </svg>
-              <span class=\"ml-4\">Utilisateurs</span>
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <li class=\"relative px-6 py-3\">
-            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
-              href=\"";
-        // line 50
+      <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" style=\"color: black;\">
+        <path d=\"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\"></path>
+      </svg>
+      <span class=\"ml-4\" style=\"color: black;\">Utilisateurs</span>
+    </a>
+  </li>
+  <li class=\"relative px-6 py-3 \">
+    <span class=\"absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg\" aria-hidden=\"true\"></span>
+    <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\" href=\"";
+        // line 41
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_index");
         echo "\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                <path
-                  d=\"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01\">
-                </path>
-              </svg>
-              <span class=\"ml-4\">Réclamations</span>
-            </a>
-          </li>
+      <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
+        <path d=\"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01\"></path>
+      </svg>
+      <span class=\"ml-4\" style=\"color: black;\">Réclamations</span>
+    </a>
+  </li>
+</ul>
+
+
  
   
 
@@ -175,7 +172,7 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
       x-transition:leave-end=\"opacity-0 transform -translate-x-20\" @click.away=\"closeSideMenu\"
       @keydown.escape=\"closeSideMenu\">
       <div class=\"py-4 text-gray-500 dark:text-gray-400\">
-        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\">
+        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\" style=\"color: black;\">
           Evento
         </a>
         <ul class=\"mt-6\">
@@ -183,7 +180,7 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
 
             <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\"
               href=\"";
-        // line 88
+        // line 79
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -200,7 +197,7 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
           <li class=\"relative px-6 py-3\">
             <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
               href=\"";
-        // line 102
+        // line 93
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -243,7 +240,7 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
               </div>
               <input
                 class=\"w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input\"
-                type=\"text\" placeholder=\"Search for projects\" aria-label=\"Search\" />
+                type=\"text\" placeholder=\"Rechercher\" aria-label=\"Search\" />
             </div>
           </div>
           <ul class=\"flex items-center flex-shrink-0 space-x-6\">
@@ -318,7 +315,10 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
               <button class=\"align-middle rounded-full focus:shadow-outline-purple focus:outline-none\"
                 @click=\"toggleProfileMenu\" @keydown.escape=\"closeProfileMenu\" aria-label=\"Account\" aria-haspopup=\"true\">
                 <img class=\"object-cover w-8 h-8 rounded-full\"
-                  src=\"https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82\"
+                  src=\"";
+        // line 209
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/user.png"), "html", null, true);
+        echo "\"
                   alt=\"\" aria-hidden=\"true\" />
               </button>
               <template x-if=\"isProfileMenuOpen\">
@@ -327,36 +327,35 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
                   class=\"absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700\"
                   aria-label=\"submenu\">
                   <li class=\"flex\">
-                    <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
-                      href=\"#\">
-                      
-                         ";
-        // line 230
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 230, $this->source); })()), "user", [], "any", false, false, false, 230)) {
+                   <span class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\" style=\"color: black;\">
+    ";
+        // line 219
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 219, $this->source); })()), "user", [], "any", false, false, false, 219)) {
             echo "              
-                          Vous êtes connecté en tant que ";
-            // line 231
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 231, $this->source); })()), "user", [], "any", false, false, false, 231), "userIdentifier", [], "any", false, false, false, 231), "html", null, true);
+        Vous êtes actuellement connecté en tant que ";
+            // line 220
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 220, $this->source); })()), "user", [], "any", false, false, false, 220), "userIdentifier", [], "any", false, false, false, 220), "html", null, true);
             echo "
-                    ";
+    ";
         }
-        // line 232
+        // line 221
         echo " 
-                    </a>
+</span>
+
                   </li> 
                      <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
                       href=\"";
-        // line 237
+        // line 227
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\">
-                      <svg class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
+                      <svg style=\"color: black;\" class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
                         stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
                         <path
                           d=\"M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1\">
                         </path>
                       </svg>
-                        <span>Logout</span>
+                        <span style=\"color: black;\">Logout</span>
                     </a>
                   </li>
                 </ul>
@@ -374,66 +373,66 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
 <div class=\"fields\">
     <div class=\"input-field\">
         ";
-        // line 261
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 261, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate"]]);
+        // line 251
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 251, $this->source); })()), 'form_start', ["attr" => ["novalidate" => "novalidate"]]);
         echo "
         <div class=\"form-group\">
             <div style=\"display:inline-block; width: 45%;   padding-left: 60px;\">
                 ";
-        // line 264
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 264, $this->source); })()), "prenom", [], "any", false, false, false, 264), 'label', ["label" => "Prénom"]);
+        // line 254
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 254, $this->source); })()), "prenom", [], "any", false, false, false, 254), 'label', ["label" => "Prénom"]);
         echo "
                 ";
-        // line 265
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 265, $this->source); })()), "prenom", [], "any", false, false, false, 265), 'widget', ["attr" => ["class" => "form-control"]]);
+        // line 255
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 255, $this->source); })()), "prenom", [], "any", false, false, false, 255), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Votre prénom"]]);
         echo "
                 ";
-        // line 266
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 266, $this->source); })()), "prenom", [], "any", false, false, false, 266), 'errors');
+        // line 256
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 256, $this->source); })()), "prenom", [], "any", false, false, false, 256), 'errors');
         echo "
             </div>
             <div style=\"display:inline-block; width: 45%; float:right; \">
                 ";
-        // line 269
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 269, $this->source); })()), "nom", [], "any", false, false, false, 269), 'label', ["label" => "Nom"]);
+        // line 259
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 259, $this->source); })()), "nom", [], "any", false, false, false, 259), 'label', ["label" => "Nom"]);
         echo "
                 ";
-        // line 270
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 270, $this->source); })()), "nom", [], "any", false, false, false, 270), 'widget', ["attr" => ["class" => "form-control"]]);
+        // line 260
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 260, $this->source); })()), "nom", [], "any", false, false, false, 260), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Votre nom"]]);
         echo "
                 ";
-        // line 271
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 271, $this->source); })()), "nom", [], "any", false, false, false, 271), 'errors');
+        // line 261
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 261, $this->source); })()), "nom", [], "any", false, false, false, 261), 'errors');
         echo "
             </div>
         </div>
         <div class=\"form-group\">
             <div style=\"display:inline-block; width: 45%;    padding-left: 60px;\">
                 ";
-        // line 276
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 276, $this->source); })()), "email", [], "any", false, false, false, 276), 'label', ["label" => "Email"]);
+        // line 266
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 266, $this->source); })()), "email", [], "any", false, false, false, 266), 'label', ["label" => "Email"]);
         echo "
                 ";
-        // line 277
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 277, $this->source); })()), "email", [], "any", false, false, false, 277), 'widget', ["attr" => ["class" => "form-control"]]);
+        // line 267
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 267, $this->source); })()), "email", [], "any", false, false, false, 267), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Votre email"]]);
         echo "
                 ";
-        // line 278
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 278, $this->source); })()), "email", [], "any", false, false, false, 278), 'errors');
+        // line 268
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 268, $this->source); })()), "email", [], "any", false, false, false, 268), 'errors');
         echo "
             </div>
             <div style=\"display:inline-block; width: 45%; float:right;\">
                 ";
-        // line 281
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 281, $this->source); })()), "message", [], "any", false, false, false, 281), 'label', ["label" => "Message"]);
+        // line 271
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 271, $this->source); })()), "message", [], "any", false, false, false, 271), 'label', ["label" => "Message"]);
         echo "
                 ";
-        // line 282
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 282, $this->source); })()), "message", [], "any", false, false, false, 282), 'widget', ["attr" => ["class" => "form-control"]]);
+        // line 272
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 272, $this->source); })()), "message", [], "any", false, false, false, 272), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Votre message"]]);
         echo "
                 ";
-        // line 283
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 283, $this->source); })()), "message", [], "any", false, false, false, 283), 'errors');
+        // line 273
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 273, $this->source); })()), "message", [], "any", false, false, false, 273), 'errors');
         echo "
             </div>
         </div>
@@ -441,7 +440,7 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
 
                     <div class=\"buttons\" style=\"display: flex; justify-content: space-between;\">
                 <a href=\"";
-        // line 289
+        // line 279
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_index");
         echo "\" class=\"backBtn\">
                     <i class=\"uil uil-navigator\"></i>
@@ -449,15 +448,15 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
                 </a>
                 <button class=\"submit\">
                     <span class=\"btnText\">";
-        // line 294
-        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 294, $this->source); })()), "Valider")) : ("Valider")), "html", null, true);
+        // line 284
+        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 284, $this->source); })()), "Valider")) : ("Valider")), "html", null, true);
         echo "</span>
                     <i class=\"uil uil-navigator\"></i>
                 </button>
             </div>
             ";
-        // line 298
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 298, $this->source); })()), 'form_end');
+        // line 288
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 288, $this->source); })()), 'form_end');
         echo "
 
        </div>
@@ -485,7 +484,7 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
 
     public function getDebugInfo()
     {
-        return array (  460 => 298,  453 => 294,  445 => 289,  436 => 283,  432 => 282,  428 => 281,  422 => 278,  418 => 277,  414 => 276,  406 => 271,  402 => 270,  398 => 269,  392 => 266,  388 => 265,  384 => 264,  378 => 261,  351 => 237,  344 => 232,  339 => 231,  335 => 230,  204 => 102,  187 => 88,  146 => 50,  129 => 36,  114 => 24,  104 => 16,  97 => 15,  83 => 8,  79 => 7,  74 => 6,  67 => 5,  54 => 2,  37 => 1,);
+        return array (  459 => 288,  452 => 284,  444 => 279,  435 => 273,  431 => 272,  427 => 271,  421 => 268,  417 => 267,  413 => 266,  405 => 261,  401 => 260,  397 => 259,  391 => 256,  387 => 255,  383 => 254,  377 => 251,  350 => 227,  342 => 221,  337 => 220,  333 => 219,  320 => 209,  201 => 93,  184 => 79,  143 => 41,  131 => 32,  122 => 26,  117 => 24,  113 => 23,  104 => 16,  97 => 15,  83 => 8,  79 => 7,  74 => 6,  67 => 5,  54 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -512,43 +511,34 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
     <aside class=\"z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0\">
       <div class=\"py-4 text-gray-500 dark:text-gray-400\">
         
-        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\">
+        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"{{ path('login_home') }}\">
           <img src=\"{{asset('back/img/evento.png')}}\" alt=\"Evento\" width=\"30\" height=\"40\" style=\"position: absolute; top: 0; left: 3%; transform: translateY(10%);\">
         </a>
-        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\" style=\"position: absolute; top: 15px; left: 4%;\">
+        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"{{ path('login_home') }}\" style=\"position: absolute; top: 15px; left: 4%;\">
           EVENTO
         </a>
         
-        
-         <ul class=\"mt-6\">
-          <li class=\"relative px-6 py-3\">
-            <span class=\"absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg\"
-              aria-hidden=\"true\"></span>
-            <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\"
-              href=\"{{ path('app_users_index') }}\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                <path
-                  d=\"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\">
-                </path>
-              </svg>
-              <span class=\"ml-4\">Utilisateurs</span>
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <li class=\"relative px-6 py-3\">
-            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
-              href=\"{{ path('app_reclamations_index') }}\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                <path
-                  d=\"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01\">
-                </path>
-              </svg>
-              <span class=\"ml-4\">Réclamations</span>
-            </a>
-          </li>
+    <ul class=\"mt-6\">
+  <li class=\"relative px-6 py-3 \">
+    <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\" href=\"{{ path('app_users_index') }}\">
+      <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" style=\"color: black;\">
+        <path d=\"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\"></path>
+      </svg>
+      <span class=\"ml-4\" style=\"color: black;\">Utilisateurs</span>
+    </a>
+  </li>
+  <li class=\"relative px-6 py-3 \">
+    <span class=\"absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg\" aria-hidden=\"true\"></span>
+    <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\" href=\"{{ path('app_reclamations_index') }}\">
+      <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
+        <path d=\"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01\"></path>
+      </svg>
+      <span class=\"ml-4\" style=\"color: black;\">Réclamations</span>
+    </a>
+  </li>
+</ul>
+
+
  
   
 
@@ -570,7 +560,7 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
       x-transition:leave-end=\"opacity-0 transform -translate-x-20\" @click.away=\"closeSideMenu\"
       @keydown.escape=\"closeSideMenu\">
       <div class=\"py-4 text-gray-500 dark:text-gray-400\">
-        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\">
+        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\" style=\"color: black;\">
           Evento
         </a>
         <ul class=\"mt-6\">
@@ -632,7 +622,7 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
               </div>
               <input
                 class=\"w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input\"
-                type=\"text\" placeholder=\"Search for projects\" aria-label=\"Search\" />
+                type=\"text\" placeholder=\"Rechercher\" aria-label=\"Search\" />
             </div>
           </div>
           <ul class=\"flex items-center flex-shrink-0 space-x-6\">
@@ -707,7 +697,7 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
               <button class=\"align-middle rounded-full focus:shadow-outline-purple focus:outline-none\"
                 @click=\"toggleProfileMenu\" @keydown.escape=\"closeProfileMenu\" aria-label=\"Account\" aria-haspopup=\"true\">
                 <img class=\"object-cover w-8 h-8 rounded-full\"
-                  src=\"https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82\"
+                  src=\"{{asset('back/img/user.png')}}\"
                   alt=\"\" aria-hidden=\"true\" />
               </button>
               <template x-if=\"isProfileMenuOpen\">
@@ -716,24 +706,23 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
                   class=\"absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700\"
                   aria-label=\"submenu\">
                   <li class=\"flex\">
-                    <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
-                      href=\"#\">
-                      
-                         {% if app.user %}              
-                          Vous êtes connecté en tant que {{ app.user.userIdentifier }}
-                    {% endif %} 
-                    </a>
+                   <span class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\" style=\"color: black;\">
+    {% if app.user %}              
+        Vous êtes actuellement connecté en tant que {{ app.user.userIdentifier }}
+    {% endif %} 
+</span>
+
                   </li> 
                      <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
                       href=\"{{ path('app_logout') }}\">
-                      <svg class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
+                      <svg style=\"color: black;\" class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
                         stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
                         <path
                           d=\"M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1\">
                         </path>
                       </svg>
-                        <span>Logout</span>
+                        <span style=\"color: black;\">Logout</span>
                     </a>
                   </li>
                 </ul>
@@ -754,24 +743,24 @@ class __TwigTemplate_a813f67fbf69f7d59ce6baaa78947229 extends Template
         <div class=\"form-group\">
             <div style=\"display:inline-block; width: 45%;   padding-left: 60px;\">
                 {{ form_label(form.prenom, 'Prénom') }}
-                {{ form_widget(form.prenom, {'attr': {'class': 'form-control'}}) }}
+                {{ form_widget(form.prenom, {'attr': {'class': 'form-control','placeholder': 'Votre prénom'}}) }}
                 {{ form_errors(form.prenom) }}
             </div>
             <div style=\"display:inline-block; width: 45%; float:right; \">
                 {{ form_label(form.nom, 'Nom') }}
-                {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+                {{ form_widget(form.nom, {'attr': {'class': 'form-control','placeholder': 'Votre nom'}}) }}
                 {{ form_errors(form.nom) }}
             </div>
         </div>
         <div class=\"form-group\">
             <div style=\"display:inline-block; width: 45%;    padding-left: 60px;\">
                 {{ form_label(form.email, 'Email') }}
-                {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                {{ form_widget(form.email, {'attr': {'class': 'form-control','placeholder': 'Votre email'}}) }}
                 {{ form_errors(form.email) }}
             </div>
             <div style=\"display:inline-block; width: 45%; float:right;\">
                 {{ form_label(form.message, 'Message') }}
-                {{ form_widget(form.message, {'attr': {'class': 'form-control'}}) }}
+                {{ form_widget(form.message, {'attr': {'class': 'form-control','placeholder': 'Votre message'}}) }}
                 {{ form_errors(form.message) }}
             </div>
         </div>

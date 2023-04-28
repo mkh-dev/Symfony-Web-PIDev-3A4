@@ -37,22 +37,30 @@ class __TwigTemplate_bd690a2fb467cb008de19fc68d64b602 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "registration/confirmation_email.html.twig"));
 
         // line 1
-        echo "<h1>Hi! Please confirm your email!</h1>
+        echo "<h3>Bonjour,</h3>
 
 <p>
-    Please confirm your email address by clicking the following link: <br><br>
+Nous vous remercions de vous être inscrit à Evento ! Votre compte a été créé avec succès.
+<br>
+Veuillez cliquer sur le lien ci-dessous pour confirmer votre adresse e-mail et activer votre compte :<br><br>
     <a href=\"";
-        // line 5
-        echo (isset($context["signedUrl"]) || array_key_exists("signedUrl", $context) ? $context["signedUrl"] : (function () { throw new RuntimeError('Variable "signedUrl" does not exist.', 5, $this->source); })());
-        echo "\">Confirm my Email</a>.
-    This link will expire in ";
-        // line 6
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans((isset($context["expiresAtMessageKey"]) || array_key_exists("expiresAtMessageKey", $context) ? $context["expiresAtMessageKey"] : (function () { throw new RuntimeError('Variable "expiresAtMessageKey" does not exist.', 6, $this->source); })()), (isset($context["expiresAtMessageData"]) || array_key_exists("expiresAtMessageData", $context) ? $context["expiresAtMessageData"] : (function () { throw new RuntimeError('Variable "expiresAtMessageData" does not exist.', 6, $this->source); })()), "VerifyEmailBundle"), "html", null, true);
+        // line 7
+        echo (isset($context["signedUrl"]) || array_key_exists("signedUrl", $context) ? $context["signedUrl"] : (function () { throw new RuntimeError('Variable "signedUrl" does not exist.', 7, $this->source); })());
+        echo "\">Confirmer mon e-mail</a>.
+    Ce lien expirera dans ";
+        // line 8
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans((isset($context["expiresAtMessageKey"]) || array_key_exists("expiresAtMessageKey", $context) ? $context["expiresAtMessageKey"] : (function () { throw new RuntimeError('Variable "expiresAtMessageKey" does not exist.', 8, $this->source); })()), (isset($context["expiresAtMessageData"]) || array_key_exists("expiresAtMessageData", $context) ? $context["expiresAtMessageData"] : (function () { throw new RuntimeError('Variable "expiresAtMessageData" does not exist.', 8, $this->source); })()), "VerifyEmailBundle"), "html", null, true);
         echo ".
-</p>
+   
 
+</p>
+<br>
+<p>  Si vous avez des questions ou des préoccupations, n'hésitez pas à nous contacter. </p>
+<br>
 <p>
-    Cheers!
+    Cordialement,
+<br><br>
+L'équipe Evento
 </p>
 ";
         
@@ -72,21 +80,29 @@ class __TwigTemplate_bd690a2fb467cb008de19fc68d64b602 extends Template
 
     public function getDebugInfo()
     {
-        return array (  50 => 6,  46 => 5,  40 => 1,);
+        return array (  52 => 8,  48 => 7,  40 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<h1>Hi! Please confirm your email!</h1>
+        return new Source("<h3>Bonjour,</h3>
 
 <p>
-    Please confirm your email address by clicking the following link: <br><br>
-    <a href=\"{{ signedUrl|raw }}\">Confirm my Email</a>.
-    This link will expire in {{ expiresAtMessageKey|trans(expiresAtMessageData, 'VerifyEmailBundle') }}.
+Nous vous remercions de vous être inscrit à Evento ! Votre compte a été créé avec succès.
+<br>
+Veuillez cliquer sur le lien ci-dessous pour confirmer votre adresse e-mail et activer votre compte :<br><br>
+    <a href=\"{{ signedUrl|raw }}\">Confirmer mon e-mail</a>.
+    Ce lien expirera dans {{ expiresAtMessageKey|trans(expiresAtMessageData, 'VerifyEmailBundle') }}.
+   
+
 </p>
-
+<br>
+<p>  Si vous avez des questions ou des préoccupations, n'hésitez pas à nous contacter. </p>
+<br>
 <p>
-    Cheers!
+    Cordialement,
+<br><br>
+L'équipe Evento
 </p>
 ", "registration/confirmation_email.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\registration\\confirmation_email.html.twig");
     }
