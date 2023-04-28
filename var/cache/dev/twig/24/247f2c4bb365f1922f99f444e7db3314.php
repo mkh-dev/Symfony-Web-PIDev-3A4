@@ -772,24 +772,16 @@ table.table .avatar {
 \t</div>        
 </div>
 
+<a href=\"https://dashboard.tawk.to/#/chat\" target=\"_blank\">
+    <img src=\"";
+        // line 588
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/live-chat.png"), "html", null, true);
+        echo "\" alt=\"Logo de Evento\" style=\"width:55px; position:fixed; bottom:20px; right:40px;\">
+</a>
 
 </main>
 
 
-
-<!--Start of Tawk.to Script-->
-<script type=\"text/javascript\">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement(\"script\"),s0=document.getElementsByTagName(\"script\")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6444190231ebfa0fe7f9cfee/1gupcdjg4';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 
 ";
         
@@ -809,7 +801,7 @@ s0.parentNode.insertBefore(s1,s0);
 
     public function getDebugInfo()
     {
-        return array (  768 => 581,  762 => 577,  753 => 573,  734 => 567,  728 => 566,  720 => 563,  716 => 562,  712 => 561,  706 => 558,  702 => 557,  698 => 556,  694 => 555,  685 => 548,  667 => 547,  642 => 525,  606 => 492,  598 => 486,  593 => 485,  589 => 484,  576 => 474,  457 => 358,  440 => 344,  399 => 306,  387 => 297,  378 => 291,  373 => 289,  369 => 288,  360 => 281,  353 => 280,  74 => 7,  67 => 6,  54 => 3,  37 => 1,);
+        return array (  778 => 588,  768 => 581,  762 => 577,  753 => 573,  734 => 567,  728 => 566,  720 => 563,  716 => 562,  712 => 561,  706 => 558,  702 => 557,  698 => 556,  694 => 555,  685 => 548,  667 => 547,  642 => 525,  606 => 492,  598 => 486,  593 => 485,  589 => 484,  576 => 474,  457 => 358,  440 => 344,  399 => 306,  387 => 297,  378 => 291,  373 => 289,  369 => 288,  360 => 281,  353 => 280,  74 => 7,  67 => 6,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -1400,24 +1392,13 @@ table.table .avatar {
 \t</div>        
 </div>
 
+<a href=\"https://dashboard.tawk.to/#/chat\" target=\"_blank\">
+    <img src=\"{{asset('back/img/live-chat.png')}}\" alt=\"Logo de Evento\" style=\"width:55px; position:fixed; bottom:20px; right:40px;\">
+</a>
 
 </main>
 
 
-
-<!--Start of Tawk.to Script-->
-<script type=\"text/javascript\">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement(\"script\"),s0=document.getElementsByTagName(\"script\")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6444190231ebfa0fe7f9cfee/1gupcdjg4';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 
 {% endblock %}
 
