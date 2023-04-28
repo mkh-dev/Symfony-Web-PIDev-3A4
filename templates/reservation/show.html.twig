@@ -261,7 +261,7 @@
 
 
 
-<main class="form-container">
+
 
 <style>
     h1 {
@@ -312,8 +312,23 @@ margin-left: 45px;
   margin-right: auto;
 
     }
-</style>
+    .message{
+            display: block;
+        margin-top:30px;
+                margin-bottom:40px;
 
+ background-color: #B2BABB ; /* couleur de fond */
+  color: #333; /* couleur du texte */
+  padding: 10px; /* ajout de padding pour espacer le contenu du bord */
+  border-radius: 5px; /* ajout de coins arrondis */
+  text-align: center; /* centrer le texte */
+  font-size: 18px; /* taille de police */
+  margin-left: 30px;
+
+
+    }
+</style>
+<main class="form-container">
     <h1>Reservation</h1>
 
     <table class="table">
@@ -334,7 +349,9 @@ margin-left: 45px;
     <a href="{{ path('app_reservation_edit', {'numres': reservation.numres}) }}" class="btn" >Modifier </a>
 
     <img src="{{ qr }}" alt="QR code" style="height:50%;width:50%"  class="center" />
-
+    <div class ="message">
+Merci de prendre une capture de votre code QR
+     </div>
 </main>
     {{ include('reservation/_delete_form.html.twig') }}
 {% endblock %}
