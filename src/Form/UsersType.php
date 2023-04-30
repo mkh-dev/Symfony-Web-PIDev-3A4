@@ -38,10 +38,10 @@ class UsersType extends AbstractType
             ->add('numtel')
             ->add('userrole', ChoiceType::class, [
                 'choices' => [
-                    'Organisateur' => 'Organisateur',
-                    'Partenaire' => 'Partenaire',
-                    'Transporteur' => 'Transporteur',
-                    'Utilisateur' => 'Utilisateur',
+                    'Organisateur' => 'ROLE_ORGANISATEUR',
+                    'Partenaire' => 'ROLE_PARTENAIRE',
+                    'Transporteur' => 'ROLE_TRANSPORTEUR',
+                    'Utilisateur' => 'ROLE_UTILISATEUR',
                 ],
             ])
             

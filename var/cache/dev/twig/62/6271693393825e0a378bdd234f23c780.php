@@ -95,8 +95,10 @@ class __TwigTemplate_59211ede7416881ff6ae117d43d91644 extends Template
         // line 12
         echo twig_include($this->env, $context, "reclamations/_form.html.twig");
         echo "
+        
 </div>
 </div>
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -132,8 +134,10 @@ class __TwigTemplate_59211ede7416881ff6ae117d43d91644 extends Template
 <div class=\"row justify-content-center\">
     <div class=\"col-md-6\">
         {{ include('reclamations/_form.html.twig') }}
+        
 </div>
 </div>
+
 {% endblock %}
 ", "reclamations/new.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\reclamations\\new.html.twig");
     }

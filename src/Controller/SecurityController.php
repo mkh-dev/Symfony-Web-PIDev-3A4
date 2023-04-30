@@ -39,16 +39,16 @@ class SecurityController extends AbstractController
         $lastUsername = $authenticationUtils->getLastUsername();
         if ($this->getUser()) {
             $userrole = $this->getUser()->getUserrole();
-            if ($userrole == 'Administrateur') {
+            if ($userrole == 'ROLE_ADMINISTRATEUR') {
                 return $this->redirectToRoute('app_users_index');
-            } elseif ($userrole == 'Organisateur') {
+            } elseif ($userrole == 'ROLE_ORGANISATEUR') {
                 return $this->redirectToRoute('organisateur_homepage');
-            } elseif ($userrole == 'Transporteur') {
+            } elseif ($userrole == 'ROLE_TRANSPORTEUR') {
                 return $this->redirectToRoute('transporteur_homepage');
-            } elseif ($userrole == 'Partenaire') {
+            } elseif ($userrole == 'ROLE_PARTENAIRE') {
                 return $this->redirectToRoute('partenaire_homepage');
             }
-            elseif ($userrole == 'Utilisateur') {
+            elseif ($userrole == 'ROLE_UTILISATEUR') {
                 return $this->redirectToRoute('login_utilisateur');
             }
         }

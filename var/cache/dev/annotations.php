@@ -188,7 +188,7 @@ return [[
 '[C]App%5CController%5CSecurityController%23forgotPassword' => 1,
 'App%5CController%5CSecurityController%23codePassword' => 3,
 '[C]App%5CController%5CSecurityController%23codePassword' => 1,
-'App%5CController%5CSecurityController%23newPassword' => 0,
+'App%5CController%5CSecurityController%23newPassword' => 4,
 '[C]App%5CController%5CSecurityController%23newPassword' => 1,
 'App%5CController%5CSecurityController%24session' => 0,
 '[C]App%5CController%5CSecurityController%24session' => 1,
@@ -1108,7 +1108,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1682415826,
+1 => 1682838918,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -1144,6 +1144,28 @@ return [[
                 ],
                 'name' => [
                     'app_code_password',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+4 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/new-password',
+                ],
+                'name' => [
+                    'app_new_password',
                 ],
             ],
         ],

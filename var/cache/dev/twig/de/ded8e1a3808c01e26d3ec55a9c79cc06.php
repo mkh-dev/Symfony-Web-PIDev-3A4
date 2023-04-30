@@ -781,14 +781,12 @@ table.table .avatar {
 \t\t</div>
 \t</div>        
 </div>
-
 <a href=\"https://dashboard.tawk.to/#/chat\" target=\"_blank\">
-  <img src=\"";
-        // line 592
+    <img src=\"";
+        // line 591
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/live-chat.png"), "html", null, true);
-        echo "\" alt=\"Logo de Evento\" style=\"width:55px; margin-left:1100px;\">
+        echo "\" alt=\"Logo de Evento\" style=\"width:55px; position:fixed; bottom:20px; right:30px;\">
 </a>
-
 
 
 </main>
@@ -814,7 +812,7 @@ table.table .avatar {
 
     public function getDebugInfo()
     {
-        return array (  788 => 592,  778 => 585,  772 => 581,  763 => 577,  744 => 571,  738 => 570,  730 => 567,  726 => 566,  722 => 565,  717 => 563,  713 => 562,  709 => 561,  705 => 560,  701 => 559,  697 => 558,  688 => 551,  670 => 550,  643 => 526,  608 => 494,  600 => 488,  595 => 487,  591 => 486,  578 => 476,  459 => 360,  442 => 346,  401 => 308,  390 => 300,  379 => 292,  374 => 290,  370 => 289,  360 => 281,  353 => 280,  74 => 7,  67 => 6,  54 => 3,  37 => 1,);
+        return array (  787 => 591,  778 => 585,  772 => 581,  763 => 577,  744 => 571,  738 => 570,  730 => 567,  726 => 566,  722 => 565,  717 => 563,  713 => 562,  709 => 561,  705 => 560,  701 => 559,  697 => 558,  688 => 551,  670 => 550,  643 => 526,  608 => 494,  600 => 488,  595 => 487,  591 => 486,  578 => 476,  459 => 360,  442 => 346,  401 => 308,  390 => 300,  379 => 292,  374 => 290,  370 => 289,  360 => 281,  353 => 280,  74 => 7,  67 => 6,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -1408,11 +1406,9 @@ table.table .avatar {
 \t\t</div>
 \t</div>        
 </div>
-
 <a href=\"https://dashboard.tawk.to/#/chat\" target=\"_blank\">
-  <img src=\"{{asset('back/img/live-chat.png')}}\" alt=\"Logo de Evento\" style=\"width:55px; margin-left:1100px;\">
+    <img src=\"{{asset('back/img/live-chat.png')}}\" alt=\"Logo de Evento\" style=\"width:55px; position:fixed; bottom:20px; right:30px;\">
 </a>
-
 
 
 </main>
