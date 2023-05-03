@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ProduitRepository;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Constraints\Regex;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 
 #[ORM\Table(name: "produit")]
@@ -19,6 +20,7 @@ class Produit
 {  #[ORM\Id]
     #[ORM\GeneratedValue(strategy: "IDENTITY")]
     #[ORM\Column(type: "integer")]
+    #[Groups("produits")]
     private ?int $idProd = null;
      
     #[ORM\Column(type: "string", length: 255)]
@@ -27,7 +29,7 @@ class Produit
         max: 255,
         maxMessage: "The product name should not exceed {{ limit }} characters"
     )]
-    
+    #[Groups("produits")]
     private ?string $nomProd = null;
 
     #[ORM\Column(type: "text")]
@@ -36,17 +38,19 @@ class Produit
         max: 255,
         maxMessage: "The description should not exceed {{ limit }} characters"
     )]
-    
+    #[Groups("produits")]
     private ?string $description = null;
 
     #[ORM\Column(type: "float", precision: 10, scale: 2)]
     #[Assert\NotBlank(message: "The price is required.")]
     #[Assert\PositiveOrZero(message: "The price must be a positive number ")]
+    #[Groups("produits")]
     private ?float $prix = null;
 
     #[ORM\Column(type: "integer")]
     #[Assert\NotBlank(message: "The quantity is required.")]
     #[Assert\PositiveOrZero(message: "The quantity must be a positive number ")]
+    #[Groups("produits")]
     private ?int $quantite = null;
 
     #[ORM\Column(type: "string", length: 255)]
@@ -59,20 +63,25 @@ class Produit
         pattern: '/^[a-zA-ZÀ-ÖØ-öø-ÿ\-\s]+$/',
         message: "The partner name should only contain letters, spaces or hyphens"
     )]
+    #[Groups("produits")]
     private ?string $nomPart = null;
 
     #[ORM\Column(type: "string", length: 255)]
     #[Assert\NotBlank(message: "Please upload the product image.")]
+    #[Groups("produits")]
     private ?string $image = null;
 
     #[ORM\ManyToOne(targetEntity: "CategorieProd")]
     #[ORM\JoinColumn(name: "id_cat_prod", referencedColumnName: "id_cat_prod")]
+    #[Groups("produits")]
     private ?CategorieProd $idCatProd = null;
 
     #[ORM\Column(nullable: true)]
+    #[Groups("produits")]
     private ?int $nbLikes = null;
 
     #[ORM\Column(nullable: true)]
+    #[Groups("produits")]
     private ?int $nbDislikes = null;
 
     #[ORM\OneToMany(mappedBy: 'produit', targetEntity: ProdLike::class)]

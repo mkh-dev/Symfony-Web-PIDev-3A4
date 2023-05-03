@@ -151,4 +151,36 @@ public function trierParQuantiteDesc()
 //            ->getOneOrNullResult()
 //        ;
 //    }
+
+
+
+
+
+public function statistique_produit()
+{
+
+    return $this->getEntityManager()
+        ->createQuery(
+            'SELECT V.nomProd , V.prix
+            FROM App\Entity\Produit V
+            '
+        )
+        ->getResult();
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

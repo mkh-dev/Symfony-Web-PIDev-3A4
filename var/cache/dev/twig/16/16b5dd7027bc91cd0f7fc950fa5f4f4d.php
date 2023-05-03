@@ -312,6 +312,7 @@ https://templatemo.com/tm-583-festava-live
         // line 208
         echo "            </div>
             <br>
+            
             <div class=\"buttons-container\">
               <button id=\"prev-btn\" class=\"btn\">Prev</button>
               <button id=\"next-btn\" class=\"btn\">Next</button>
@@ -321,6 +322,9 @@ https://templatemo.com/tm-583-festava-live
       </div>
     </div>
   </div>
+
+
+ 
 </section>
 
 <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>
@@ -393,7 +397,7 @@ https://templatemo.com/tm-583-festava-live
                                 imageDiv.style.textAlign = 'center';
                                 var image = document.createElement('img');
                                 image.setAttribute('src', \"";
-        // line 290
+        // line 294
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/produits/"), "html", null, true);
         echo "\" + produit.image);
                                 image.setAttribute('alt', produit.nomProd);
@@ -428,7 +432,7 @@ https://templatemo.com/tm-583-festava-live
                 }
             };
             xhr.open('GET', \"";
-        // line 322
+        // line 326
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rechercherParPrix");
         echo "?prixMin=\" + 0 + \"&prixMax=\" + priceFilter);
             xhr.send();
@@ -474,7 +478,7 @@ https://templatemo.com/tm-583-festava-live
                         imageDiv.style.textAlign = 'center';
                         var image = document.createElement('img');
                         image.setAttribute('src', \"";
-        // line 365
+        // line 369
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/produits/"), "html", null, true);
         echo "\" + produit.image);
                         image.setAttribute('alt', produit.nomProd);
@@ -508,7 +512,7 @@ https://templatemo.com/tm-583-festava-live
             }
         };
         xhr.open('GET', \"";
-        // line 396
+        // line 400
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rechercherParNom");
         echo "?term=\" + searchTerm);
         xhr.send();
@@ -647,27 +651,27 @@ T e m p l a t e M o
 
     <!-- JAVASCRIPT FILES -->
     <script src=\"";
-        // line 532
+        // line 536
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 533
+        // line 537
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/carousel.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 534
+        // line 538
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 535
+        // line 539
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.sticky.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 536
+        // line 540
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/click-scroll.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 537
+        // line 541
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -691,7 +695,7 @@ T e m p l a t e M o
 
     public function getDebugInfo()
     {
-        return array (  671 => 537,  667 => 536,  663 => 535,  659 => 534,  655 => 533,  651 => 532,  512 => 396,  478 => 365,  432 => 322,  397 => 290,  313 => 208,  301 => 202,  297 => 201,  293 => 200,  289 => 199,  284 => 197,  280 => 196,  276 => 195,  268 => 192,  263 => 189,  259 => 188,  176 => 108,  160 => 95,  155 => 93,  127 => 68,  120 => 64,  81 => 28,  76 => 26,  71 => 24,  66 => 22,  56 => 15,  40 => 1,);
+        return array (  675 => 541,  671 => 540,  667 => 539,  663 => 538,  659 => 537,  655 => 536,  516 => 400,  482 => 369,  436 => 326,  401 => 294,  313 => 208,  301 => 202,  297 => 201,  293 => 200,  289 => 199,  284 => 197,  280 => 196,  276 => 195,  268 => 192,  263 => 189,  259 => 188,  176 => 108,  160 => 95,  155 => 93,  127 => 68,  120 => 64,  81 => 28,  76 => 26,  71 => 24,  66 => 22,  56 => 15,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -905,6 +909,7 @@ https://templatemo.com/tm-583-festava-live
               {% endfor %}
             </div>
             <br>
+            
             <div class=\"buttons-container\">
               <button id=\"prev-btn\" class=\"btn\">Prev</button>
               <button id=\"next-btn\" class=\"btn\">Next</button>
@@ -914,6 +919,9 @@ https://templatemo.com/tm-583-festava-live
       </div>
     </div>
   </div>
+
+
+ 
 </section>
 
 <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script>
