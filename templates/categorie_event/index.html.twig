@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CategorieEvent index{% endblock %}
+
+{% block body %}
+    <h1>CategorieEvent index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdCatEvent</th>
+                <th>CatEvent</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for categorie_event in categorie_events %}
+            <tr>
+                <td>{{ categorie_event.idCatEvent }}</td>
+                <td>{{ categorie_event.catEvent }}</td>
+                <td>
+                    <a href="{{ path('app_categorie_event_show', {'idCatEvent': categorie_event.idCatEvent}) }}">show</a>
+                    <a href="{{ path('app_categorie_event_edit', {'idCatEvent': categorie_event.idCatEvent}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_categorie_event_new') }}">Create new</a>
+{% endblock %}

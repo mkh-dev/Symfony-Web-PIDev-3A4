@@ -1,0 +1,82 @@
+{% extends 'front.html.twig' %}
+
+{% block title %}Transport index{% endblock %}
+
+{% block body %}
+   <h1>Transport index</h1>
+
+    <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+th {
+  background-color: #e9ad19;
+  color: white;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+
+.link-as-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: orange;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Effet hover */
+.link-as-button:hover {
+  background-color: #0062cc;
+  color: #fff;
+}
+
+</style>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdTransport</th>
+                <th>TypeTransport</th>
+                <th>DateDepart</th>
+                <th>HeureDepart</th>
+                <th>LieuDepart</th>
+                <th>LieuArriver</th>
+                <th>PrixTransport</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for transport in transports %}
+            <tr>
+                <td>{{ transport.idTransport }}</td>
+                <td>{{ transport.typeTransport }}</td>
+                <td>{{ transport.dateDepart ? transport.dateDepart|date('Y-m-d') : '' }}</td>
+                <td>{{ transport.heureDepart ? transport.heureDepart|date('H:i:s') : '' }}</td>
+                <td>{{ transport.lieuDepart }}</td>
+                <td>{{ transport.lieuArriver }}</td>
+                <td>{{ transport.prixTransport }}</td>
+                <td>
+                    <a href="{{ path('app_transport_show', {'idTransport': transport.idTransport}) }}">show</a>
+                    <a href="{{ path('app_transport_edit', {'idTransport': transport.idTransport}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+<br> <br>
+    <a href="{{ path('app_transport_new') }}" class="link-as-button" >Create new</a>
+{% endblock %}

@@ -1,0 +1,31 @@
+
+
+<style>
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: orange;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Effet hover */
+.button:hover {
+  background-color: #0062cc;
+  color: #fff;
+}
+
+</style>
+
+
+{{ form_start(form,{'attr': {'novalidate': 'novalidate'}})}}
+    {{ form_widget(form) }}
+    {# {{ form_widget(form.save) }} #}
+    <button class="button">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

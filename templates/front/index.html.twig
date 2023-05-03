@@ -1,0 +1,296 @@
+{# {% extends 'front.html.twig' %} #}
+
+{# {% block title %}Transport index{% endblock %} #}
+
+{# {% block body %} #}
+ 
+
+
+
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Evento</title>
+
+ {% block stylesheets %}
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="{{asset('https://fonts.googleapis.com')}}">
+    <link rel="icon" href="{{asset('front/images/tab.png')}}">
+
+
+    <link rel="preconnect" href="{{asset('https://fonts.gstatic.com')}}" crossorigin>
+
+    <link href="{{asset('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap')}}" rel="stylesheet">
+
+    <link href="{{asset('front/css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <link href="{{asset('front/css/carousel.css')}}" rel="stylesheet">
+
+    <link href="{{asset('front/css/bootstrap-icons.css')}}" rel="stylesheet">
+
+    <link href="{{asset('front/css/templatemo-festava-live.css')}}" rel="stylesheet">
+  {% endblock %}
+
+  {% block javascript %}
+    <!-- JAVASCRIPT FILES -->
+    <script src="{{asset('front/js/jquery.min.js')}}"></script>
+    <script src="{{asset('front/js/carousel.js')}}"></script>
+    <script src="{{asset('front/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('front/js/jquery.sticky.js')}}"></script>
+    <script src="{{asset('front/js/click-scroll.js')}}"></script>
+    <script src="{{asset('front/js/custom.js')}}"></script>
+      
+
+    <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+th {
+  background-color: #e9ad19;
+  color: white;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+
+.link-as-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: orange;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Effet hover */
+.link-as-button:hover {
+  background-color: #0062cc;
+  color: #fff;
+}
+
+</style>
+     {% endblock %}
+
+    <!--
+
+TemplateMo 583 Festava Live
+
+https://templatemo.com/tm-583-festava-live
+
+-->
+</head>
+
+<body>
+{% block body %}
+
+    <main>
+
+        <header class="site-header">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 d-flex flex-wrap">
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-person custom-icon me-2" style="color: black;"></i>
+                            <strong class="text-dark">Bienvenue dans Evento</strong>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="{{asset('app_transport_index')}}">
+                    <img src="{{asset('front/images/logo.png')}}" alt="Logo de Evento" style="width: 13%; margin-top: -5px;">
+                    Evento
+                </a>
+
+                <a href="{{ path('app_login') }}" class="btn custom-btn d-lg-none ms-auto me-4">Se Connecter</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_1">Accueil</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_2">À propos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_3">Artistes</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="{{path('app_transport_index')}}">Événement</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_5">Abonnement</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_6">Contact</a>
+                        </li>
+                    </ul>
+
+                    <a href="{{asset('front/login.html.twig')}}" class="btn custom-btn d-lg-block d-none">Se Connecter</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <section class="schedule-section section-padding" id="section_4">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12 text-center">
+                        <h2 class="text-white mb-4">Nos événements</h1>
+
+                         <div class="table-responsive">
+
+
+                     </div>
+                    </div>
+                </div>
+          
+          
+            </div>
+        </section>
+
+
+ </main>
+
+
+    <footer class="site-footer">
+        <div class="site-footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12">
+                        <h2 class="text-white mb-lg-0">Evento</h2>
+                    </div>
+
+                    <div class="col-lg-6 col-12 d-flex justify-content-lg-end align-items-center">
+                        <ul class="social-icon d-flex justify-content-lg-end">
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-twitter"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-apple"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-instagram"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-youtube"></span>
+                                </a>
+                            </li>
+
+                            <li class="social-icon-item">
+                                <a href="#" class="social-icon-link">
+                                    <span class="bi-pinterest"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12 mb-4 pb-2">
+                    <h5 class="site-footer-title mb-3">Liens</h5>
+
+                    <ul class="site-footer-links">
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Accueil</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">À propos</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Artistes</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href=" {{path('app_transport_index')}}" class="site-footer-link">Événement</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Abonnement</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+               
+
+                <div class="col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0">
+                    <h5 class="site-footer-title mb-3">Location</h5>
+
+                    <p class="text-white d-flex mt-3 mb-2">
+                        18, rue de l'Usine - ZI Aéroport Charguia II 2035 Ariana </p>
+
+                    <a class="link-fx-1 color-contrast-higher mt-3" href="#">
+                        <span>Notre carte</span>
+                        <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="16" cy="16" r="15.5"></circle>
+                                <line x1="10" y1="18" x2="16" y2="12"></line>
+                                <line x1="16" y1="12" x2="22" y2="18"></line>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!--
+
+T e m p l a t e M o
+
+-->
+{% endblock %}

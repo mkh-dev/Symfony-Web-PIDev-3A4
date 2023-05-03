@@ -1,0 +1,100 @@
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    padding-top: 8%;
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .card-container {
+    scroll-snap-align: start;
+    margin-right: 1rem;
+    
+  }
+  
+  .card {
+    width: 360px;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card-content h3 {
+    margin-top: 0;
+  }
+  
+  .btn-container {
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .btn {
+    background-color: #e9ad19;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    margin: 0 0.5rem;
+  }
+  
+  .btn:hover {
+    background-color: #be8903
+  }
+  
+  .carousel::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .carousel::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  .carousel::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 5px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .card {
+      width: 250px;
+      height: 350px;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .card {
+      width: 200px;
+      height: 300px;
+    }
+  
+    .card img {
+      height: 150px;
+    }
+  }
+  
