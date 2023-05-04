@@ -69,6 +69,7 @@ class UsersController extends AbstractController
         return $this->render('users/show.html.twig', [
             'user' => $user,
         ]);
+        
     }
 
     #[Route('/{id}/edit', name: 'app_users_edit', methods: ['GET', 'POST'])]

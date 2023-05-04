@@ -518,6 +518,13 @@
         <argument type="service" id=".service_locator.mx0UMmY.App\Controller\UsersController"/>
       </call>
     </service>
+    <service id="App\Controller\UsersMobileController" class="App\Controller\UsersMobileController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\UsersMobileController"/>
+      </call>
+    </service>
     <service id="App\Controller\VehiculeController" class="App\Controller\VehiculeController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -6857,6 +6864,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UsersMobileController" class="App\Controller\UsersMobileController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UsersMobileController" class="App\Controller\UsersMobileController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\UsersMobileController" class="App\Controller\UsersMobileController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\VehiculeController" class="App\Controller\VehiculeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\VehiculeController" class="App\Controller\VehiculeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\VehiculeController" class="App\Controller\VehiculeController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -7460,6 +7470,12 @@
         <argument key="user" type="service_closure" id=".errored..service_locator.cyg1ViB.App\Entity\Users"/>
       </argument>
     </service>
+    <service id=".service_locator.wr9s5g4" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="normalizer" type="service_closure" id="serializer"/>
+      </argument>
+    </service>
     <service id=".service_locator.pB20uqv" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -7473,7 +7489,7 @@
         <argument key="vehicule" type="service_closure" id=".errored..service_locator.iVJ8gI9.App\Entity\Vehicule"/>
       </argument>
     </service>
-    <service id=".service_locator.crbz6Dh" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.nAJawYY" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\CategorieEventController::delete" type="service_closure" id=".service_locator.T_GcY.G"/>
@@ -7530,6 +7546,8 @@
         <argument key="App\Controller\UsersController::index" type="service_closure" id=".service_locator.Zhsi5nT"/>
         <argument key="App\Controller\UsersController::new" type="service_closure" id=".service_locator.riGN6sa"/>
         <argument key="App\Controller\UsersController::show" type="service_closure" id=".service_locator.Sgq.tmb"/>
+        <argument key="App\Controller\UsersMobileController::newusers" type="service_closure" id=".service_locator.wr9s5g4"/>
+        <argument key="App\Controller\UsersMobileController::usersmobile" type="service_closure" id=".service_locator.wr9s5g4"/>
         <argument key="App\Controller\VehiculeController::delete" type="service_closure" id=".service_locator.iVJ8gI9"/>
         <argument key="App\Controller\VehiculeController::edit" type="service_closure" id=".service_locator.iVJ8gI9"/>
         <argument key="App\Controller\VehiculeController::index" type="service_closure" id=".service_locator.aKM6MDa"/>
@@ -7593,6 +7611,8 @@
         <argument key="App\Controller\UsersController:index" type="service_closure" id=".service_locator.Zhsi5nT"/>
         <argument key="App\Controller\UsersController:new" type="service_closure" id=".service_locator.riGN6sa"/>
         <argument key="App\Controller\UsersController:show" type="service_closure" id=".service_locator.Sgq.tmb"/>
+        <argument key="App\Controller\UsersMobileController:newusers" type="service_closure" id=".service_locator.wr9s5g4"/>
+        <argument key="App\Controller\UsersMobileController:usersmobile" type="service_closure" id=".service_locator.wr9s5g4"/>
         <argument key="App\Controller\VehiculeController:delete" type="service_closure" id=".service_locator.iVJ8gI9"/>
         <argument key="App\Controller\VehiculeController:edit" type="service_closure" id=".service_locator.iVJ8gI9"/>
         <argument key="App\Controller\VehiculeController:index" type="service_closure" id=".service_locator.aKM6MDa"/>
@@ -7852,6 +7872,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.mx0UMmY" method="withContext"/>
     </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\UsersMobileController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\UsersMobileController"/>
+      <argument>App\Controller\UsersMobileController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
     <service id=".service_locator.mx0UMmY.App\Controller\VehiculeController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\VehiculeController"/>
       <argument>App\Controller\VehiculeController</argument>
@@ -8053,12 +8079,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.crbz6Dh"/>
+      <argument type="service" id=".service_locator.nAJawYY"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.crbz6Dh"/>
+      <argument type="service" id=".service_locator.nAJawYY"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -9058,7 +9084,7 @@
     <service id="Gregwar\CaptchaBundle\Controller\CaptchaController" alias="gregwar_captcha.controller" public="true"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.crbz6Dh"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.nAJawYY"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -9080,7 +9106,7 @@
     <service id=".service_locator..WQRx6E" alias=".service_locator.yRRNQrI"/>
     <service id=".service_locator.Ar0Pu3O" alias=".service_locator.cyg1ViB"/>
     <service id=".service_locator.gPjNq68" alias=".service_locator.iVJ8gI9"/>
-    <service id=".service_locator.360Ig6G" alias=".service_locator.crbz6Dh"/>
+    <service id=".service_locator.13mwsHM" alias=".service_locator.nAJawYY"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.l6ELYLY"/>
     <service id=".service_locator.jeCJN.8" alias=".service_locator.XmdMnLq"/>
     <service id=".service_locator.4hi2aOY" alias=".service_locator.bBRwv06"/>
@@ -9168,6 +9194,7 @@
     <service id=".service_locator.TdsUmlH" alias=".service_locator.Sgq.tmb"/>
     <service id=".service_locator.O3DxOFX" alias=".service_locator.yRRNQrI"/>
     <service id=".service_locator.XuSPMDq" alias=".service_locator.cyg1ViB"/>
+    <service id=".service_locator.R192xRJ" alias=".service_locator.wr9s5g4"/>
     <service id=".service_locator.9bJ6zHz" alias=".service_locator.pB20uqv"/>
     <service id=".service_locator.yYnJCZj" alias=".service_locator.iVJ8gI9"/>
     <service id=".service_locator.JmHnXRx" alias=".service_locator.mx0UMmY"/>

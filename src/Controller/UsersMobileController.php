@@ -10,18 +10,14 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
-use App\Entity\Produit;
+use App\Entity\Users;
 
 
 class UsersMobileController extends AbstractController
 {
- 
 
 
-          
-
-
-  /**
+    /**
      * @Route("/users_mobile", name="users_mobile")
      */    public function usersmobile( NormalizerInterface  $normalizer)
     {
@@ -32,18 +28,6 @@ class UsersMobileController extends AbstractController
     }
 
    
-
-
-
-
-
-
-
-
-
-
- 
-    
      /**
      * @Route("/newusers_mobile/{prenom}/{nom}/{email}/{datenaissance}/{numtel}/{userrole}/{password}", name="newusers_mobile", methods={"GET","POST"})
      */
@@ -53,13 +37,10 @@ class UsersMobileController extends AbstractController
         $user = new Users();
         
         $user->setPrenom($prenom);
-        $user->setNomn($nom);
+        $user->setNom($nom);
         $user->setEmail($email);
-
         $user->setDatenaissance($datenaissance);
-
         $user->setNumtel($numtel);
-
         $user->setUserrole($userrole);
         $user->setPassword($password);
 
@@ -73,13 +54,6 @@ class UsersMobileController extends AbstractController
         return new JsonResponse($json);
 
     }
-
-
-
-
-
-
-
 
 
      
@@ -104,17 +78,6 @@ class UsersMobileController extends AbstractController
     }
 
 
-
-
-
-
-
-
-
-    
-
-
-
        /**
      * @Route("/updateUsers", name="updateUsers")
      */
@@ -123,21 +86,28 @@ class UsersMobileController extends AbstractController
         $Hotel = $this->getDoctrine()->getManager()->getRepository(Users::class)->find($request->get("id"));
 
 
-        $Hotel->setNomProd($request->get("nomProd"));
-        $Hotel->setDescription($request->get("description"));
-        $Hotel->setNomPart($request->get("nomPart"));
+
+                
+        $Hotel->setPrenom($request->get("prenom"));
+        $Hotel->setNom($request->get("nom"));
+        $Hotel->setEmail($request->get("email"));
+
+        $Hotel->setDatenaissance($request->get("datenaissance"));
+
+        $Hotel->setNumtel($request->get("numtel"));
+
+        $Hotel->setUserrole($request->get("userrole"));
+        $Hotel->setPassword($request->get("password"));
+
 
 
         $em->persist($Hotel);
         $em->flush();
         $serializer = new Serializer([new ObjectNormalizer()]);
         $formatted = $serializer->normalize($Hotel);
-        return new JsonResponse("Produit a ete modifiee avec success.");
+        return new JsonResponse("Utilisateur a été modifiée avec success.");
 
     }
-
-
-
 
 
 }

@@ -192,18 +192,6 @@ return [[
 '[C]App%5CController%5CSecurityController%23newPassword' => 1,
 'App%5CController%5CSecurityController%24session' => 0,
 '[C]App%5CController%5CSecurityController%24session' => 1,
-'App%5CController%5CSerializerController' => 0,
-'[C]App%5CController%5CSerializerController' => 1,
-'App%5CController%5CSerializerController%23allColis' => 0,
-'[C]App%5CController%5CSerializerController%23allColis' => 1,
-'App%5CController%5CSerializerController%23ColisID' => 0,
-'[C]App%5CController%5CSerializerController%23ColisID' => 1,
-'App%5CController%5CSerializerController%23Add' => 0,
-'[C]App%5CController%5CSerializerController%23Add' => 1,
-'App%5CController%5CSerializerController%23updateJson' => 0,
-'[C]App%5CController%5CSerializerController%23updateJson' => 1,
-'App%5CController%5CSerializerController%23delete' => 0,
-'[C]App%5CController%5CSerializerController%23delete' => 1,
 'App%5CController%5CTransportController' => 0,
 '[C]App%5CController%5CTransportController' => 1,
 'App%5CController%5CTransportController%23index' => 0,
@@ -228,6 +216,16 @@ return [[
 '[C]App%5CController%5CUsersController%23edit' => 1,
 'App%5CController%5CUsersController%23delete' => 0,
 '[C]App%5CController%5CUsersController%23delete' => 1,
+'App%5CController%5CUsersMobileController' => 0,
+'[C]App%5CController%5CUsersMobileController' => 1,
+'App%5CController%5CUsersMobileController%23usersmobile' => 5,
+'[C]App%5CController%5CUsersMobileController%23usersmobile' => 1,
+'App%5CController%5CUsersMobileController%23newusers' => 6,
+'[C]App%5CController%5CUsersMobileController%23newusers' => 1,
+'App%5CController%5CUsersMobileController%23SupprimerUsers' => 7,
+'[C]App%5CController%5CUsersMobileController%23SupprimerUsers' => 1,
+'App%5CController%5CUsersMobileController%23updateUsers' => 8,
+'[C]App%5CController%5CUsersMobileController%23updateUsers' => 1,
 'App%5CController%5CVehiculeController' => 0,
 '[C]App%5CController%5CVehiculeController' => 1,
 'App%5CController%5CVehiculeController%23index' => 0,
@@ -1120,7 +1118,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1683187269,
+1 => 1683194349,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -1178,6 +1176,100 @@ return [[
                 ],
                 'name' => [
                     'app_new_password',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+5 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/users_mobile',
+                ],
+                'name' => [
+                    'users_mobile',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+6 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/newusers_mobile/{prenom}/{nom}/{email}/{datenaissance}/{numtel}/{userrole}/{password}',
+                ],
+                'name' => [
+                    'newusers_mobile',
+                ],
+                'methods' => [
+                    [
+                        'GET',
+                        'POST',
+                    ],
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+7 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/SupprimerUsers',
+                ],
+                'name' => [
+                    'SupprimerUsers',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+8 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/updateUsers',
+                ],
+                'name' => [
+                    'updateUsers',
                 ],
             ],
         ],
