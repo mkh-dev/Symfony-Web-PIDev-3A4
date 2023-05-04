@@ -504,6 +504,13 @@
         <argument type="service" id=".service_locator.mx0UMmY.App\Controller\SecurityController"/>
       </call>
     </service>
+    <service id="App\Controller\SerializerController" class="App\Controller\SerializerController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\SerializerController"/>
+      </call>
+    </service>
     <service id="App\Controller\TransportController" class="App\Controller\TransportController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -6851,6 +6858,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SerializerController" class="App\Controller\SerializerController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SerializerController" class="App\Controller\SerializerController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\SerializerController" class="App\Controller\SerializerController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TransportController" class="App\Controller\TransportController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TransportController" class="App\Controller\TransportController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\TransportController" class="App\Controller\TransportController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -7419,6 +7429,39 @@
         <argument key="usersRepository" type="service_closure" id="App\Repository\UsersRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.wr9s5g4" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="normalizer" type="service_closure" id="serializer"/>
+      </argument>
+    </service>
+    <service id=".errored.AcBfDcj" class="App\Controller\Request"/>
+    <service id=".errored.3Lf_Za." class="App\Controller\EntityManagerInterface"/>
+    <service id=".service_locator.nblc3rD" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id=".errored.3Lf_Za."/>
+        <argument key="normalizer" type="service_closure" id="serializer"/>
+        <argument key="request" type="service_closure" id=".errored.AcBfDcj"/>
+      </argument>
+    </service>
+    <service id=".errored.q_764an" class="App\Controller\Request"/>
+    <service id=".service_locator.avSuyAD" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="Normalizer" type="service_closure" id="serializer"/>
+        <argument key="req" type="service_closure" id=".errored.q_764an"/>
+      </argument>
+    </service>
+    <service id=".errored.5kHlvWV" class="App\Controller\Request"/>
+    <service id=".errored.Y9aiQT9" class="App\Controller\Colis"/>
+    <service id=".service_locator.twUyKIx" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="colis" type="service_closure" id=".errored.Y9aiQT9"/>
+        <argument key="request" type="service_closure" id=".errored.5kHlvWV"/>
+      </argument>
+    </service>
     <service id=".service_locator.PKdMXit" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -7473,7 +7516,7 @@
         <argument key="vehicule" type="service_closure" id=".errored..service_locator.iVJ8gI9.App\Entity\Vehicule"/>
       </argument>
     </service>
-    <service id=".service_locator.crbz6Dh" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.wAhicGh" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\CategorieEventController::delete" type="service_closure" id=".service_locator.T_GcY.G"/>
@@ -7520,6 +7563,11 @@
         <argument key="App\Controller\SecurityController::forgotPassword" type="service_closure" id=".service_locator.RYu7BDn"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="App\Controller\SecurityController::newPassword" type="service_closure" id=".service_locator.EbrO3QW"/>
+        <argument key="App\Controller\SerializerController::Add" type="service_closure" id=".service_locator.nblc3rD"/>
+        <argument key="App\Controller\SerializerController::ColisID" type="service_closure" id=".service_locator.wr9s5g4"/>
+        <argument key="App\Controller\SerializerController::allColis" type="service_closure" id=".service_locator.wr9s5g4"/>
+        <argument key="App\Controller\SerializerController::delete" type="service_closure" id=".service_locator.twUyKIx"/>
+        <argument key="App\Controller\SerializerController::updateJson" type="service_closure" id=".service_locator.avSuyAD"/>
         <argument key="App\Controller\TransportController::delete" type="service_closure" id=".service_locator.CoH4_pD"/>
         <argument key="App\Controller\TransportController::edit" type="service_closure" id=".service_locator.CoH4_pD"/>
         <argument key="App\Controller\TransportController::index" type="service_closure" id=".service_locator.aKM6MDa"/>
@@ -7583,6 +7631,11 @@
         <argument key="App\Controller\SecurityController:forgotPassword" type="service_closure" id=".service_locator.RYu7BDn"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="App\Controller\SecurityController:newPassword" type="service_closure" id=".service_locator.EbrO3QW"/>
+        <argument key="App\Controller\SerializerController:Add" type="service_closure" id=".service_locator.nblc3rD"/>
+        <argument key="App\Controller\SerializerController:ColisID" type="service_closure" id=".service_locator.wr9s5g4"/>
+        <argument key="App\Controller\SerializerController:allColis" type="service_closure" id=".service_locator.wr9s5g4"/>
+        <argument key="App\Controller\SerializerController:delete" type="service_closure" id=".service_locator.twUyKIx"/>
+        <argument key="App\Controller\SerializerController:updateJson" type="service_closure" id=".service_locator.avSuyAD"/>
         <argument key="App\Controller\TransportController:delete" type="service_closure" id=".service_locator.CoH4_pD"/>
         <argument key="App\Controller\TransportController:edit" type="service_closure" id=".service_locator.CoH4_pD"/>
         <argument key="App\Controller\TransportController:index" type="service_closure" id=".service_locator.aKM6MDa"/>
@@ -7840,6 +7893,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.mx0UMmY" method="withContext"/>
     </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\SerializerController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\SerializerController"/>
+      <argument>App\Controller\SerializerController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
     <service id=".service_locator.mx0UMmY.App\Controller\TransportController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\TransportController"/>
       <argument>App\Controller\TransportController</argument>
@@ -8053,12 +8112,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.crbz6Dh"/>
+      <argument type="service" id=".service_locator.wAhicGh"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.crbz6Dh"/>
+      <argument type="service" id=".service_locator.wAhicGh"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -9058,7 +9117,7 @@
     <service id="Gregwar\CaptchaBundle\Controller\CaptchaController" alias="gregwar_captcha.controller" public="true"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.crbz6Dh"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.wAhicGh"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -9076,11 +9135,14 @@
     <service id=".service_locator.7kg.8qN" alias=".service_locator.UnjcfIq"/>
     <service id=".service_locator.28KGtpx" alias=".service_locator.gZIaKpL"/>
     <service id=".service_locator.aGtLM.g" alias=".service_locator.CT.Cplt"/>
+    <service id=".service_locator.GML7_o1" alias=".service_locator.nblc3rD"/>
+    <service id=".service_locator.qkd8C.4" alias=".service_locator.avSuyAD"/>
+    <service id=".service_locator.pcnBVcv" alias=".service_locator.twUyKIx"/>
     <service id=".service_locator.DMl9e1Q" alias=".service_locator.CoH4_pD"/>
     <service id=".service_locator..WQRx6E" alias=".service_locator.yRRNQrI"/>
     <service id=".service_locator.Ar0Pu3O" alias=".service_locator.cyg1ViB"/>
     <service id=".service_locator.gPjNq68" alias=".service_locator.iVJ8gI9"/>
-    <service id=".service_locator.360Ig6G" alias=".service_locator.crbz6Dh"/>
+    <service id=".service_locator.p3SS57I" alias=".service_locator.wAhicGh"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.l6ELYLY"/>
     <service id=".service_locator.jeCJN.8" alias=".service_locator.XmdMnLq"/>
     <service id=".service_locator.4hi2aOY" alias=".service_locator.bBRwv06"/>
@@ -9162,6 +9224,9 @@
     <service id=".service_locator.URfgn8g" alias=".service_locator.zFcJjKU"/>
     <service id=".service_locator.J7vXjyb" alias=".service_locator.RYu7BDn"/>
     <service id=".service_locator.T9Vmb_J" alias=".service_locator.EbrO3QW"/>
+    <service id=".service_locator.R192xRJ" alias=".service_locator.wr9s5g4"/>
+    <service id=".service_locator.ptfARv6" alias=".service_locator.nblc3rD"/>
+    <service id=".service_locator.kldd2Hs" alias=".service_locator.avSuyAD"/>
     <service id=".service_locator.1Q654_7" alias=".service_locator.PKdMXit"/>
     <service id=".service_locator.Txevc5V" alias=".service_locator.CoH4_pD"/>
     <service id=".service_locator.DoCD.2o" alias=".service_locator.riGN6sa"/>

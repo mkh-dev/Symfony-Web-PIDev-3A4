@@ -192,6 +192,18 @@ return [[
 '[C]App%5CController%5CSecurityController%23newPassword' => 1,
 'App%5CController%5CSecurityController%24session' => 0,
 '[C]App%5CController%5CSecurityController%24session' => 1,
+'App%5CController%5CSerializerController' => 0,
+'[C]App%5CController%5CSerializerController' => 1,
+'App%5CController%5CSerializerController%23allColis' => 0,
+'[C]App%5CController%5CSerializerController%23allColis' => 1,
+'App%5CController%5CSerializerController%23ColisID' => 0,
+'[C]App%5CController%5CSerializerController%23ColisID' => 1,
+'App%5CController%5CSerializerController%23Add' => 0,
+'[C]App%5CController%5CSerializerController%23Add' => 1,
+'App%5CController%5CSerializerController%23updateJson' => 0,
+'[C]App%5CController%5CSerializerController%23updateJson' => 1,
+'App%5CController%5CSerializerController%23delete' => 0,
+'[C]App%5CController%5CSerializerController%23delete' => 1,
 'App%5CController%5CTransportController' => 0,
 '[C]App%5CController%5CTransportController' => 1,
 'App%5CController%5CTransportController%23index' => 0,
@@ -1108,7 +1120,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1682838918,
+1 => 1683185082,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [

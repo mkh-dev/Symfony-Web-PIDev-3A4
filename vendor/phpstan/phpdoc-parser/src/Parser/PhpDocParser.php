@@ -142,11 +142,8 @@ class PhpDocParser
 				if ($tokensArray[$endIndex][Lexer::TYPE_OFFSET] === Lexer::TOKEN_HORIZONTAL_WS) {
 					$endIndex--;
 				}
-<<<<<<< HEAD
-=======
 			} elseif ($tokensArray[$endIndex][Lexer::TYPE_OFFSET] === Lexer::TOKEN_PHPDOC_EOL) {
 				$endIndex--;
->>>>>>> MalekBranch
 			}
 
 			$tag->setAttribute(Ast\Attribute::START_INDEX, $startIndex);
