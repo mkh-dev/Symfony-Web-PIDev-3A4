@@ -1007,6 +1007,7 @@ return array(
     'App\\Controller\\Reservation2Controller' => $baseDir . '/src/Controller/Reservation2Controller.php',
     'App\\Controller\\ReservationController' => $baseDir . '/src/Controller/ReservationController.php',
     'App\\Controller\\SecurityController' => $baseDir . '/src/Controller/SecurityController.php',
+    'App\\Controller\\SerializerController' => $baseDir . '/src/Controller/SerializerController.php',
     'App\\Controller\\TransportController' => $baseDir . '/src/Controller/TransportController.php',
     'App\\Controller\\UsersController' => $baseDir . '/src/Controller/UsersController.php',
     'App\\Controller\\VehiculeController' => $baseDir . '/src/Controller/VehiculeController.php',
