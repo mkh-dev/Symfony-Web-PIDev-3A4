@@ -3,7 +3,11 @@
         'name' => '__root__',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
+<<<<<<< HEAD
         'reference' => '9fcdd5c9531134bcd1ace57accc6b13c855c1840',
+=======
+        'reference' => '220058769372481280d66ccdc942ccf47f39f8d3',
+>>>>>>> MalekBranch
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +17,11 @@
         '__root__' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
+<<<<<<< HEAD
             'reference' => '9fcdd5c9531134bcd1ace57accc6b13c855c1840',
+=======
+            'reference' => '220058769372481280d66ccdc942ccf47f39f8d3',
+>>>>>>> MalekBranch
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -181,6 +189,24 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'gregwar/captcha' => array(
+            'pretty_version' => 'v1.2.0',
+            'version' => '1.2.0.0',
+            'reference' => '6e5b61b66ac89885b505153f4ef9a74ffa5b3074',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../gregwar/captcha',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'gregwar/captcha-bundle' => array(
+            'pretty_version' => 'v2.2.0',
+            'version' => '2.2.0.0',
+            'reference' => '2b55ba41fd890f1a94d30e53a530c344bf12d6a5',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../gregwar/captcha-bundle',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'knplabs/knp-components' => array(
             'pretty_version' => 'v3.6.0',
             'version' => '3.6.0.0',
@@ -245,9 +271,15 @@
             'dev_requirement' => false,
         ),
         'phpstan/phpdoc-parser' => array(
+<<<<<<< HEAD
             'pretty_version' => '1.20.1',
             'version' => '1.20.1.0',
             'reference' => '57f6787f0bb6431905a18aa7caea25dcd2bd59e0',
+=======
+            'pretty_version' => '1.20.3',
+            'version' => '1.20.3.0',
+            'reference' => '6c04009f6cae6eda2f040745b6b846080ef069c2',
+>>>>>>> MalekBranch
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpstan/phpdoc-parser',
             'aliases' => array(),

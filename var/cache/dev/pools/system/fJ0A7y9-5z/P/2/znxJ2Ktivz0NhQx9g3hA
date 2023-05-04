@@ -1,3 +1,7 @@
 <?php //%5BC%5DApp%255CEntity%255CProduit
 
+<<<<<<< HEAD:var/cache/dev/pools/system/fJ0A7y9-5z/P/2/znxJ2Ktivz0NhQx9g3hA
 return [PHP_INT_MAX, 1682176636];
+=======
+return [PHP_INT_MAX, 1682838918];
+>>>>>>> MalekBranch:var/cache/dev/pools/system/Gxwlszbj8-/P/2/znxJ2Ktivz0NhQx9g3hA

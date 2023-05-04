@@ -39,16 +39,16 @@ class SecurityController extends AbstractController
         $lastUsername = $authenticationUtils->getLastUsername();
         if ($this->getUser()) {
             $userrole = $this->getUser()->getUserrole();
-            if ($userrole == 'Administrateur') {
+            if ($userrole == 'ROLE_ADMINISTRATEUR') {
                 return $this->redirectToRoute('app_users_index');
-            } elseif ($userrole == 'Organisateur') {
+            } elseif ($userrole == 'ROLE_ORGANISATEUR') {
                 return $this->redirectToRoute('organisateur_homepage');
-            } elseif ($userrole == 'Transporteur') {
+            } elseif ($userrole == 'ROLE_TRANSPORTEUR') {
                 return $this->redirectToRoute('transporteur_homepage');
-            } elseif ($userrole == 'Partenaire') {
+            } elseif ($userrole == 'ROLE_PARTENAIRE') {
                 return $this->redirectToRoute('partenaire_homepage');
             }
-            elseif ($userrole == 'Utilisateur') {
+            elseif ($userrole == 'ROLE_UTILISATEUR') {
                 return $this->redirectToRoute('login_utilisateur');
             }
         }
@@ -136,52 +136,39 @@ public function codePassword(Request $request): Response
 }
 
 
-
 /**
  * @Route("/new-password", name="app_new_password")
  */
-public function newPassword(Request $request, UsersRepository $usersRepository, UserPasswordEncoderInterface $passwordEncoder): Response
+public function newPassword(Request $request, UserPasswordEncoderInterface $passwordEncoder, UsersRepository $usersRepository): Response
 {
     $email = $request->query->get('email');
-    $session = $request->getSession();
-    $code = $session->get('reset_code');
-
-    if ($code === null) {
-        $this->addFlash('danger', 'Code de réinitialisation invalide ou expiré.');
-
-        return $this->redirectToRoute('app_forgot_password');
-    }
+    $user = $usersRepository->findOneBy(['email' => $email]);
 
     if ($request->isMethod('POST')) {
-        $submittedCode = $request->request->get('code');
+        // Get the submitted password
         $password = $request->request->get('password');
-        $confirmPassword = $request->request->get('confirm_password');
+        $passwordConfirm = $request->request->get('password_confirm');
 
-        if ($submittedCode === $code) {
-            $user = $usersRepository->findOneBy(['email' => $email]);
-            if (!$user) {
-                throw $this->createNotFoundException('Utilisateur non trouvé.');
-            }
+        if ($password !== $passwordConfirm) {
+            // Les deux mots de passe ne correspondent pas, retourner une erreur
+            $this->addFlash('error', 'Les mots de passe ne correspondent pas.');
 
-            if ($password !== $confirmPassword) {
-                $this->addFlash('danger', 'Les deux mots de passe ne correspondent pas.');
-
-                return $this->redirectToRoute('app_new_password', ['email' => $email]);
-            }
-
-            $encodedPassword = $passwordEncoder->encodePassword($user, $password);
-            $user->setPassword($encodedPassword);
-            $this->getDoctrine()->getManager()->flush();
-
-            $this->addFlash('success', 'Votre mot de passe a été réinitialisé.');
-
-            return $this->redirectToRoute('app_login');
-        } else {
-            $this->addFlash('danger', 'Code de réinitialisation incorrect.');
-
-            return $this->redirectToRoute('app_code_password', ['email' => $email]);
+            return $this->redirectToRoute('app_new_password', ['email' => $email]);
         }
+
+        // Encode the password
+        $encodedPassword = $passwordEncoder->encodePassword($user, $password);
+
+        // Set the new password
+        $user->setPassword($encodedPassword);
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($user);
+        $entityManager->flush();
+
+        // Redirect to the login page
+        return $this->redirectToRoute('app_login');
     }
+
     return $this->render('security/new_password.html.twig', [
         'email' => $email,
     ]);

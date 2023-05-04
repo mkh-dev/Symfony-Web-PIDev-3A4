@@ -171,7 +171,7 @@ https://templatemo.com/tm-583-festava-live
                                 <label for=\"email\">Adresse e-mail:</label>
                                 <input type=\"email\" id=\"email\" name=\"email\" class=\"form-control\" required>
                             </div>
-                            <button type=\"submit\" class=\"btn btn-primary\">Envoyer le code de réinitialisation</button>
+                            <center> <button type=\"submit\" class=\"btn btn-primary\">Envoyer le code de réinitialisation</button></center>
                         </form>
                     </div>
                 </div>
@@ -466,7 +466,7 @@ https://templatemo.com/tm-583-festava-live
                                 <label for=\"email\">Adresse e-mail:</label>
                                 <input type=\"email\" id=\"email\" name=\"email\" class=\"form-control\" required>
                             </div>
-                            <button type=\"submit\" class=\"btn btn-primary\">Envoyer le code de réinitialisation</button>
+                            <center> <button type=\"submit\" class=\"btn btn-primary\">Envoyer le code de réinitialisation</button></center>
                         </form>
                     </div>
                 </div>

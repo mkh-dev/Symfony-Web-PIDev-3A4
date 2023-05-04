@@ -10,8 +10,8 @@ class ComposerStaticInitb93dd86d36839ac9bb2761cc594c0902
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
-        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
+        '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
@@ -115,6 +115,11 @@ class ComposerStaticInitb93dd86d36839ac9bb2761cc594c0902
         array (
             'Knp\\Component\\' => 14,
             'Knp\\Bundle\\PaginatorBundle\\' => 27,
+        ),
+        'G' => 
+        array (
+            'Gregwar\\CaptchaBundle\\' => 22,
+            'Gregwar\\' => 8,
         ),
         'E' => 
         array (
@@ -436,6 +441,14 @@ class ComposerStaticInitb93dd86d36839ac9bb2761cc594c0902
         'Knp\\Bundle\\PaginatorBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/knplabs/knp-paginator-bundle/src',
+        ),
+        'Gregwar\\CaptchaBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gregwar/captcha-bundle',
+        ),
+        'Gregwar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar',
         ),
         'Egulias\\EmailValidator\\' => 
         array (
@@ -2807,6 +2820,19 @@ class ComposerStaticInitb93dd86d36839ac9bb2761cc594c0902
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/Warning.php',
+        'Gregwar\\CaptchaBundle\\Controller\\CaptchaController' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Controller/CaptchaController.php',
+        'Gregwar\\CaptchaBundle\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/gregwar/captcha-bundle/DependencyInjection/Configuration.php',
+        'Gregwar\\CaptchaBundle\\DependencyInjection\\GregwarCaptchaExtension' => __DIR__ . '/..' . '/gregwar/captcha-bundle/DependencyInjection/GregwarCaptchaExtension.php',
+        'Gregwar\\CaptchaBundle\\Generator\\CaptchaGenerator' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Generator/CaptchaGenerator.php',
+        'Gregwar\\CaptchaBundle\\Generator\\ImageFileHandler' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Generator/ImageFileHandler.php',
+        'Gregwar\\CaptchaBundle\\GregwarCaptchaBundle' => __DIR__ . '/..' . '/gregwar/captcha-bundle/GregwarCaptchaBundle.php',
+        'Gregwar\\CaptchaBundle\\Type\\CaptchaType' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Type/CaptchaType.php',
+        'Gregwar\\CaptchaBundle\\Validator\\CaptchaValidator' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Validator/CaptchaValidator.php',
+        'Gregwar\\Captcha\\CaptchaBuilder' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/CaptchaBuilder.php',
+        'Gregwar\\Captcha\\CaptchaBuilderInterface' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/CaptchaBuilderInterface.php',
+        'Gregwar\\Captcha\\ImageFileHandler' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/ImageFileHandler.php',
+        'Gregwar\\Captcha\\PhraseBuilder' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/PhraseBuilder.php',
+        'Gregwar\\Captcha\\PhraseBuilderInterface' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/PhraseBuilderInterface.php',
         'IntlDateFormatter' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/IntlDateFormatter.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Knp\\Bundle\\PaginatorBundle\\Definition\\AbstractPaginatorAware' => __DIR__ . '/..' . '/knplabs/knp-paginator-bundle/src/Definition/AbstractPaginatorAware.php',

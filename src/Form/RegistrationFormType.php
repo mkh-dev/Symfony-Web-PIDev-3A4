@@ -17,6 +17,7 @@ use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Regex;
 use Symfony\Component\Validator\Constraints\LessThan;
+use Gregwar\CaptchaBundle\Type\CaptchaType;
 
 class RegistrationFormType extends AbstractType
 {
@@ -49,16 +50,17 @@ class RegistrationFormType extends AbstractType
 
             ->add('userrole', ChoiceType::class, [
                 'choices' => [
-                    'Organisateur' => 'Organisateur',
-                    'Partenaire' => 'Partenaire',
-                    'Transporteur' => 'Transporteur',
-                    'Utilisateur' => 'Utilisateur',
+                    'Organisateur' => 'ROLE_ORGANISATEUR',
+                    'Partenaire' => 'ROLE_PARTENAIRE',
+                    'Transporteur' => 'ROLE_TRANSPORTEUR',
+                    'Utilisateur' => 'ROLE_UTILISATEUR',
                 ],
             ])
             
             ->add('password', PasswordType::class)
-                
-            
+
+            ->add('captcha', CaptchaType::class)
+
         ;
     }
 

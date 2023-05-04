@@ -161,44 +161,17 @@ https://templatemo.com/tm-583-festava-live
     <div class=\"container\">
         <div class=\"row\">
             <div class=\"col-md-6 mx-auto\">
-                <h2 class=\"mb-4\">Nouveau mot de passe</h2>
-";
-        // line 108
-        if ((array_key_exists("error", $context) && twig_test_iterable((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 108, $this->source); })())))) {
-            // line 109
-            echo "    ";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 109, $this->source); })()));
-            foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-                // line 110
-                echo "        <div class=\"alert alert-danger\">";
-                echo twig_escape_filter($this->env, $context["message"], "html", null, true);
-                echo "</div>
-    ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-        } elseif ((        // line 112
-array_key_exists("error", $context) && twig_get_attribute($this->env, $this->source, ($context["error"] ?? null), "messageKey", [], "any", true, true, false, 112))) {
-            // line 113
-            echo "    <div class=\"alert alert-danger\">";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 113, $this->source); })()), "messageKey", [], "any", false, false, false, 113), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 113, $this->source); })()), "messageData", [], "any", false, false, false, 113), "security"), "html", null, true);
-            echo "</div>
-";
-        }
-        // line 115
-        echo "
                 <form method=\"post\" class=\"custom-form ticket-form mb-5 mb-lg-0\">
+                    <center><h3 class=\"mb-4\">Nouveau mot de passe</h3></center>
                     <div class=\"form-group\">
                         <label for=\"password\">Nouveau mot de passe</label>
                         <input type=\"password\" id=\"password\" name=\"password\" class=\"form-control\" required>
                     </div>
                     <div class=\"form-group\">
-                        <label for=\"confirm_password\">Confirmer le nouveau mot de passe</label>
-                        <input type=\"password\" id=\"confirm_password\" name=\"confirm_password\" class=\"form-control\" required>
+                        <label for=\"password_confirm\">Confirmer le mot de passe</label>
+                        <input type=\"password\" id=\"password_confirm\" name=\"password_confirm\" class=\"form-control\" required>
                     </div>
-                    <button type=\"submit\" class=\"btn btn-primary\">Enregistrer</button>
+                    <center><button type=\"submit\" class=\"btn btn-primary\">Valider</button></center>
                 </form>
             </div>
         </div>
@@ -334,19 +307,19 @@ T e m p l a t e M o
 -->
     <!-- JAVASCRIPT FILES -->
     <script src=\"";
-        // line 260
+        // line 252
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.min.js"), "html", null, true);
         echo "\" ></script>
     <script src=\"";
-        // line 261
+        // line 253
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 262
+        // line 254
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.sticky.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 263
+        // line 255
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -370,7 +343,7 @@ T e m p l a t e M o
 
     public function getDebugInfo()
     {
-        return array (  350 => 263,  346 => 262,  342 => 261,  338 => 260,  191 => 115,  185 => 113,  183 => 112,  174 => 110,  169 => 109,  167 => 108,  152 => 96,  111 => 58,  75 => 25,  70 => 23,  65 => 21,  56 => 15,  40 => 1,);
+        return array (  323 => 255,  319 => 254,  315 => 253,  311 => 252,  152 => 96,  111 => 58,  75 => 25,  70 => 23,  65 => 21,  56 => 15,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -481,25 +454,17 @@ https://templatemo.com/tm-583-festava-live
     <div class=\"container\">
         <div class=\"row\">
             <div class=\"col-md-6 mx-auto\">
-                <h2 class=\"mb-4\">Nouveau mot de passe</h2>
-{% if error is defined and error is iterable %}
-    {% for message in error %}
-        <div class=\"alert alert-danger\">{{ message }}</div>
-    {% endfor %}
-{% elseif error is defined and error.messageKey is defined %}
-    <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-{% endif %}
-
                 <form method=\"post\" class=\"custom-form ticket-form mb-5 mb-lg-0\">
+                    <center><h3 class=\"mb-4\">Nouveau mot de passe</h3></center>
                     <div class=\"form-group\">
                         <label for=\"password\">Nouveau mot de passe</label>
                         <input type=\"password\" id=\"password\" name=\"password\" class=\"form-control\" required>
                     </div>
                     <div class=\"form-group\">
-                        <label for=\"confirm_password\">Confirmer le nouveau mot de passe</label>
-                        <input type=\"password\" id=\"confirm_password\" name=\"confirm_password\" class=\"form-control\" required>
+                        <label for=\"password_confirm\">Confirmer le mot de passe</label>
+                        <input type=\"password\" id=\"password_confirm\" name=\"password_confirm\" class=\"form-control\" required>
                     </div>
-                    <button type=\"submit\" class=\"btn btn-primary\">Enregistrer</button>
+                    <center><button type=\"submit\" class=\"btn btn-primary\">Valider</button></center>
                 </form>
             </div>
         </div>

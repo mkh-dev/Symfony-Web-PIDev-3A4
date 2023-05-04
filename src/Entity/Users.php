@@ -8,6 +8,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use App\Repository\UsersRepository;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: UsersRepository::class)]
 #[ORM\Table(name: "users")]
@@ -17,9 +18,11 @@ class Users implements UserInterface
     #[ORM\Id]
     #[ORM\GeneratedValue(strategy: "IDENTITY")]
     #[ORM\Column(type: "integer")]
+    #[Groups("users")]
     private ?int $id = null;
 
     #[ORM\Column(type: "string", length: 255)]
+    #[Groups("users")]
     #[Assert\NotBlank(message: "Le prénom est obligatoire")]
     #[Assert\Regex(
         pattern: "/^[a-zA-Z]+$/",
@@ -28,6 +31,7 @@ class Users implements UserInterface
     private string $prenom;
 
     #[ORM\Column(type: "string", length: 255)]
+    #[Groups("users")]
     #[Assert\NotBlank(message: "Le nom est obligatoire")]
     #[Assert\Regex(
         pattern: "/^[a-zA-Z]+$/",
@@ -37,16 +41,20 @@ class Users implements UserInterface
 
     #[ORM\Column(type: "string", length: 255)]
     #[Assert\NotBlank(message: "L'email est obligatoire")]
+    #[Groups("users")]
     #[Assert\Email(message: "L'email '{{ value }}' n'est pas valide.")]
     private string $email;
 
+    
     #[ORM\Column(type: "date")]
-    #[Assert\NotBlank(message: "La date de naissance est obligatoire")]
+    #[Assert\NotBlank(message: "La date de naissance est obligatoire.")]
+    #[Groups("users")]
     #[Assert\LessThanOrEqual("today", message: "La date de naissance ne peut pas être dans le futur.")]
     #[LessThan("-18 years", message: "Vous devez avoir au moins 18 ans pour vous inscrire.")]
     private \DateTimeInterface $datenaissance;
     
     #[ORM\Column(type: "string", length: 20)]
+    #[Groups("users")]
     #[Assert\NotBlank(message: "Le numéro de téléphone est obligatoire")]
     #[Assert\Regex(
         pattern: '/^[0-9]{8}$/',
@@ -55,10 +63,12 @@ class Users implements UserInterface
     private string $numtel;
 
     #[ORM\Column(type: "string", length: 255)]
+    #[Groups("users")]
     private string $userrole;
 
     #[ORM\Column(type: "string", length: 255)]
     #[Assert\NotBlank(message: "Le mot de passe est obligatoire")]
+    #[Groups("users")]
     #[Assert\Regex(
         pattern: "/^(?=.*[a-zA-Z])(?=.*\d).*$/",
         message: "Le mot de passe doit contenir au moins une lettre et un chiffre"
@@ -71,6 +81,7 @@ class Users implements UserInterface
     private string $password;
 
     #[ORM\Column(type: 'boolean')]
+    #[Groups("users")]
     private $isVerified = false;
 
 
@@ -214,10 +225,4 @@ class Users implements UserInterface
     {
         return $this->isVerified;
     }
-
-
-    
-
-    
-    
 }

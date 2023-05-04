@@ -1,3 +1,7 @@
 <?php //%5BC%5DApp%255CKernel%2523getConfigDir
 
+<<<<<<< HEAD:var/cache/dev/pools/system/fJ0A7y9-5z/K/X/B2qDUbiN1ZsmegnJAvHg
 return [PHP_INT_MAX, 1682176636];
+=======
+return [PHP_INT_MAX, 1682838918];
+>>>>>>> MalekBranch:var/cache/dev/pools/system/Gxwlszbj8-/K/X/B2qDUbiN1ZsmegnJAvHg

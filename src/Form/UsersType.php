@@ -9,6 +9,15 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
+use Symfony\Component\Validator\Constraints\IsTrue;
+use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Regex;
+use Symfony\Component\Validator\Constraints\LessThan;
+
 
 
 
@@ -21,23 +30,24 @@ class UsersType extends AbstractType
             ->add('nom')
             ->add('email')
             ->add('datenaissance', DateType::class, [
-                'years' => range(date('Y')-100, date('Y')),
-                'widget' => 'choice',
-                'format' => 'dd-MM-yyyy',
+                'label' => 'Date de naissance',
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd'
             ])
             
             ->add('numtel')
             ->add('userrole', ChoiceType::class, [
                 'choices' => [
-                    'Organisateur' => 'Organisateur',
-                    'Partenaire' => 'Partenaire',
-                    'Transporteur' => 'Transporteur',
-                    'Utilisateur' => 'Utilisateur',
+                    'Organisateur' => 'ROLE_ORGANISATEUR',
+                    'Partenaire' => 'ROLE_PARTENAIRE',
+                    'Transporteur' => 'ROLE_TRANSPORTEUR',
+                    'Utilisateur' => 'ROLE_UTILISATEUR',
                 ],
             ])
             
             ->add('password', PasswordType::class)
 
+         
         ;
     }
 

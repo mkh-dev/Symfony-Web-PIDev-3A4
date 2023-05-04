@@ -1,11 +1,19 @@
-<h1>Hi! Please confirm your email!</h1>
+<h3>Bonjour,</h3>
 
 <p>
-    Please confirm your email address by clicking the following link: <br><br>
-    <a href="{{ signedUrl|raw }}">Confirm my Email</a>.
-    This link will expire in {{ expiresAtMessageKey|trans(expiresAtMessageData, 'VerifyEmailBundle') }}.
+Nous vous remercions de vous être inscrit à Evento ! Votre compte a été créé avec succès.
+<br>
+Veuillez cliquer sur le lien ci-dessous pour confirmer votre adresse e-mail et activer votre compte :<br><br>
+    <a href="{{ signedUrl|raw }}">Confirmer mon e-mail</a>.
+    Ce lien expirera dans {{ expiresAtMessageKey|trans(expiresAtMessageData, 'VerifyEmailBundle') }}.
+   
+
 </p>
-
+<br>
+<p>  Si vous avez des questions ou des préoccupations, n'hésitez pas à nous contacter. </p>
+<br>
 <p>
-    Cheers!
+    Cordialement,
+<br><br>
+L'équipe Evento
 </p>

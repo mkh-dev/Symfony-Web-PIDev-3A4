@@ -11,6 +11,11 @@
 
     <title>Evento</title>
 
+   
+<script type="text/javascript" src="{{ asset('bundles/gregwarcaptchabundle/js/captcha.js') }}"></script>
+
+
+
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="icon" href="{{asset('front/images/tab.png')}}">
@@ -55,7 +60,7 @@ https://templatemo.com/tm-583-festava-live
 
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{ path('app_front') }}">
                     <img src="{{asset('front/images/logo.png')}}" alt="Logo de Evento" style="width: 13%; margin-top: -5px;">
                     Evento
                 </a>
@@ -70,27 +75,27 @@ https://templatemo.com/tm-583-festava-live
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_1">Accueil</a>
+                            <a class="nav-link click-scroll" href="{{ path('app_front') }}">Accueil</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_2">À propos</a>
+                            <a class="nav-link click-scroll" href="{{ path('app_front') }}">À propos</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_3">Artistes</a>
+                            <a class="nav-link click-scroll" href="{{ path('app_front') }}">Artistes</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_4">Événement</a>
+                            <a class="nav-link click-scroll" href="{{ path('app_front') }}">Événement</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_5">Abonnement</a>
+                            <a class="nav-link click-scroll" href="{{ path('app_front') }}">Abonnement</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html#section_6">Contact</a>
+                            <a class="nav-link click-scroll" href="{{ path('app_front') }}">Contact</a>
                         </li>
                     </ul>
 
@@ -111,9 +116,9 @@ https://templatemo.com/tm-583-festava-live
             {% endfor %}
             <form class="custom-form ticket-form mb-5 mb-lg-0" method="POST" action="{{ path('app_register') }}">
             {{ form_start(registrationForm,{'attr': {'novalidate': 'novalidate'}} ) }}
-                <h2 class="text-center mb-4">Inscription</h2>
+                <h3 class="text-center mb-4">Rejoignez Evento</h3>
                 <div class="form-group">
-                    <label for="prenom">Prenom:</label>
+                    <label for="prenom">Prénom:</label>
                     {{ form_widget(registrationForm.prenom, {'attr': {'class': 'form-control', 'placeholder': 'Entrez votre prénom', 'required': 'required'}}) }}
                 </div>
                 <div class="form-group">
@@ -133,7 +138,7 @@ https://templatemo.com/tm-583-festava-live
                     {{ form_widget(registrationForm.numtel, {'attr': {'class': 'form-control', 'placeholder': 'Entrez votre numéro de téléphone', 'required': 'required'}}) }}
                 </div>
                 <div class="form-group">
-                    <label for="userrole">Role:</label>
+                    <label for="userrole">Rôle:</label>
                     {{ form_widget(registrationForm.userrole, {'attr': {'class': 'form-control', 'required': 'required'}}) }}
                 </div>
  <div class="form-group">
@@ -142,14 +147,24 @@ https://templatemo.com/tm-583-festava-live
 </div>
 
 
-
                 <div class="form-group form-check">
                     {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'form-check-input', 'required': 'required'}}) }}
-                    <label class="form-check-label" for="agreeTerms">J'accepte les conditions d'utilisation.</label>
+                    <label class="form-check-label"for="agreeTerms" style="margin-top: -0.5px;">J'accepte les conditions d'utilisation.</label>
                 </div>
+
+                <div class="form-group" style="margin-left:12px;">
+    {{ form_widget(registrationForm.captcha) }}
+</div>
+<br><br>
+
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary">S'inscrire</button>
+                    <br><br>
+
+   Vous avez déjà un compte ? <a href="{{ path('app_login') }}"> Connectez-vous</a>
+</div>
                 </div>
+                
                 {{ form_end(registrationForm) }}
             </form>
         </div>

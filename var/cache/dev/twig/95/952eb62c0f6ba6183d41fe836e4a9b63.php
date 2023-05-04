@@ -112,7 +112,10 @@ https://templatemo.com/tm-583-festava-live
 
         <nav class=\"navbar navbar-expand-lg\">
             <div class=\"container\">
-                <a class=\"navbar-brand\" href=\"index.html\">
+                <a class=\"navbar-brand\" href=\"";
+        // line 61
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_front");
+        echo "\">
                     <img src=\"";
         // line 62
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/logo.png"), "html", null, true);
@@ -800,7 +803,7 @@ T e m p l a t e M o
 
     public function getDebugInfo()
     {
-        return array (  780 => 673,  776 => 672,  772 => 671,  768 => 670,  764 => 669,  760 => 668,  464 => 375,  450 => 364,  436 => 353,  422 => 342,  369 => 292,  336 => 262,  300 => 229,  264 => 196,  231 => 166,  162 => 100,  125 => 66,  118 => 62,  81 => 28,  76 => 26,  71 => 24,  66 => 22,  56 => 15,  40 => 1,);
+        return array (  783 => 673,  779 => 672,  775 => 671,  771 => 670,  767 => 669,  763 => 668,  467 => 375,  453 => 364,  439 => 353,  425 => 342,  372 => 292,  339 => 262,  303 => 229,  267 => 196,  234 => 166,  165 => 100,  128 => 66,  121 => 62,  117 => 61,  81 => 28,  76 => 26,  71 => 24,  66 => 22,  56 => 15,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -865,7 +868,7 @@ https://templatemo.com/tm-583-festava-live
 
         <nav class=\"navbar navbar-expand-lg\">
             <div class=\"container\">
-                <a class=\"navbar-brand\" href=\"index.html\">
+                <a class=\"navbar-brand\" href=\"{{ path('app_front') }}\">
                     <img src=\"{{asset('front/images/logo.png')}}\" alt=\"Logo de Evento\" style=\"width: 13%; margin-top: -5px;\">
                     Evento
                 </a>

@@ -1056,6 +1056,18 @@ return [[
 '[C]Doctrine%5CORM%5CPersisters%5CEntity%5CSingleTablePersister%23generateFilterConditionSQL' => 1,
 'Doctrine%5CORM%5CPersisters%5CEntity%5CSingleTablePersister%23getSQLResultCasing' => 0,
 '[C]Doctrine%5CORM%5CPersisters%5CEntity%5CSingleTablePersister%23getSQLResultCasing' => 1,
+'Gregwar%5CCaptchaBundle%5CController%5CCaptchaController' => 0,
+'[C]Gregwar%5CCaptchaBundle%5CController%5CCaptchaController' => 1,
+'Gregwar%5CCaptchaBundle%5CController%5CCaptchaController%23__construct' => 0,
+'[C]Gregwar%5CCaptchaBundle%5CController%5CCaptchaController%23__construct' => 1,
+'Gregwar%5CCaptchaBundle%5CController%5CCaptchaController%23generateCaptchaAction' => 0,
+'[C]Gregwar%5CCaptchaBundle%5CController%5CCaptchaController%23generateCaptchaAction' => 1,
+'Gregwar%5CCaptchaBundle%5CController%5CCaptchaController%23error' => 0,
+'[C]Gregwar%5CCaptchaBundle%5CController%5CCaptchaController%23error' => 1,
+'Gregwar%5CCaptchaBundle%5CController%5CCaptchaController%24captchaGenerator' => 0,
+'[C]Gregwar%5CCaptchaBundle%5CController%5CCaptchaController%24captchaGenerator' => 1,
+'Gregwar%5CCaptchaBundle%5CController%5CCaptchaController%24config' => 0,
+'[C]Gregwar%5CCaptchaBundle%5CController%5CCaptchaController%24config' => 1,
 'Symfony%5CBundle%5CFrameworkBundle%5CController%5CRedirectController' => 0,
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CRedirectController' => 1,
 'Symfony%5CBundle%5CFrameworkBundle%5CController%5CRedirectController%23__construct' => 0,
@@ -1096,7 +1108,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1682176637,
+1 => 1682838918,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [

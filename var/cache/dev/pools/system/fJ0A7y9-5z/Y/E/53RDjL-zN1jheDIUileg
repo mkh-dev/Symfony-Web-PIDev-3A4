@@ -1,3 +1,7 @@
 <?php //%5BC%5DApp%255CController%255CUsersController%2523show
 
+<<<<<<< HEAD:var/cache/dev/pools/system/fJ0A7y9-5z/Y/E/53RDjL-zN1jheDIUileg
 return [PHP_INT_MAX, 1682176634];
+=======
+return [PHP_INT_MAX, 1682838917];
+>>>>>>> MalekBranch:var/cache/dev/pools/system/Gxwlszbj8-/Y/E/53RDjL-zN1jheDIUileg

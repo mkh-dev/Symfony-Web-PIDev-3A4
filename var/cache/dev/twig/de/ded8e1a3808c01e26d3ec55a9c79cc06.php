@@ -103,7 +103,7 @@ body {
 }
 .table-title {        
 \tpadding-bottom: 15px;
-\tbackground: #e9ad19;
+\tbackground: #000000;
 \tcolor: #fff;
 \tpadding: 16px 30px;
 \tmin-width: 100%;
@@ -178,6 +178,10 @@ table.table td a:hover {
 table.table td a.edit {
 \tcolor: #FFC107;
 }
+
+table.table td a.show {
+\tcolor: black;
+}
 table.table td a.delete {
 \tcolor: #F44336;
 }
@@ -212,7 +216,7 @@ table.table .avatar {
 \tcolor: #666;
 }\t
 .pagination li.active a, .pagination li.active a.page-link {
-\tbackground: #e9ad19;
+\tbackground: black;
 }
 .pagination li.active a:hover {        
 \tbackground: #ffbf1c;
@@ -345,14 +349,14 @@ table.table .avatar {
 
     }
 
-    // line 276
+    // line 280
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 277
+        // line 281
         echo "
 
 <div class=\"flex h-screen bg-gray-50 dark:bg-gray-900\" :class=\"{ 'overflow-hidden': isSideMenuOpen }\">
@@ -362,57 +366,49 @@ table.table .avatar {
       <div class=\"py-4 text-gray-500 dark:text-gray-400\">
         
         <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"";
-        // line 285
+        // line 289
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login_home");
         echo "\">
           <img src=\"";
-        // line 286
+        // line 290
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/evento.png"), "html", null, true);
         echo "\" alt=\"Evento\" width=\"30\" height=\"40\" style=\"position: absolute; top: 0; left: 3%; transform: translateY(10%);\">
         </a>
         <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"";
-        // line 288
+        // line 292
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login_home");
         echo "\" style=\"position: absolute; top: 15px; left: 4%;\">
           EVENTO
         </a>
         
         
-         <ul class=\"mt-6\">
-          <li class=\"relative px-6 py-3\">
-            <span class=\"absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg\"
-              aria-hidden=\"true\"></span>
-            <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\"
-              href=\"";
-        // line 298
+      <ul class=\"mt-6\">
+  <li class=\"relative px-6 py-3\">
+    <span class=\"absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg\" aria-hidden=\"true\"></span>
+    <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\" href=\"";
+        // line 300
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
         echo "\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                <path
-                  d=\"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\">
-                </path>
-              </svg>
-              <span class=\"ml-4\">Utilisateurs</span>
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <li class=\"relative px-6 py-3\" >
-            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
-              href=\"";
-        // line 312
+      <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
+        <path d=\"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\"></path>
+      </svg>
+      <span class=\"ml-4\">Utilisateurs</span>
+    </a>
+  </li>
+  <li class=\"relative px-6 py-3\" style=\"padding-top: 5px;\">
+    <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\" href=\"";
+        // line 308
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_index");
         echo "\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" style=\"color: black;\">
-                <path
-                  d=\"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01\">
-                </path>
-              </svg>
-              <span class=\"ml-4\" style=\"color: black;\">Réclamations</span>
-            </a>
-          </li>
+      <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" style=\"color: black;\">
+        <path d=\"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01\"></path>
+      </svg>
+      <span class=\"ml-4\" style=\"color: black;\">Réclamations</span>
+    </a>
+  </li>
+</ul>
+
+
  
   
 
@@ -442,7 +438,7 @@ table.table .avatar {
 
             <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\"
               href=\"";
-        // line 350
+        // line 346
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -459,7 +455,7 @@ table.table .avatar {
           <li class=\"relative px-6 py-3\">
             <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
               href=\"";
-        // line 364
+        // line 360
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -502,7 +498,7 @@ table.table .avatar {
               </div>
               <input
                 class=\"w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input\"
-                type=\"text\" placeholder=\"Search for projects\" aria-label=\"Search\" />
+                type=\"text\" placeholder=\"Rechercher\" aria-label=\"Search\" />
             </div>
           </div>
           <ul class=\"flex items-center flex-shrink-0 space-x-6\">
@@ -577,7 +573,10 @@ table.table .avatar {
               <button class=\"align-middle rounded-full focus:shadow-outline-purple focus:outline-none\"
                 @click=\"toggleProfileMenu\" @keydown.escape=\"closeProfileMenu\" aria-label=\"Account\" aria-haspopup=\"true\">
                 <img class=\"object-cover w-8 h-8 rounded-full\"
-                  src=\"https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82\"
+                  src=\"";
+        // line 476
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/user.png"), "html", null, true);
+        echo "\"
                   alt=\"\" aria-hidden=\"true\" />
               </button>
               <template x-if=\"isProfileMenuOpen\">
@@ -586,27 +585,26 @@ table.table .avatar {
                   class=\"absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700\"
                   aria-label=\"submenu\">
                   <li class=\"flex\">
-                    <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
-                      href=\"#\" style=\"color: black;\">
-                      
-                         ";
-        // line 492
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 492, $this->source); })()), "user", [], "any", false, false, false, 492)) {
+                   <span class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\" style=\"color: black;\">
+    ";
+        // line 486
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 486, $this->source); })()), "user", [], "any", false, false, false, 486)) {
             echo "              
-                          Vous êtes connecté en tant que ";
-            // line 493
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 493, $this->source); })()), "user", [], "any", false, false, false, 493), "userIdentifier", [], "any", false, false, false, 493), "html", null, true);
+        Vous êtes actuellement connecté en tant que ";
+            // line 487
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 487, $this->source); })()), "user", [], "any", false, false, false, 487), "userIdentifier", [], "any", false, false, false, 487), "html", null, true);
             echo "
-                    ";
+    ";
         }
-        // line 494
+        // line 488
         echo " 
-                    </a>
+</span>
+
                   </li> 
                      <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
                       href=\"";
-        // line 499
+        // line 494
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\">
                       <svg style=\"color: black;\" class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
@@ -631,7 +629,6 @@ table.table .avatar {
       <main class=\"h-full overflow-y-auto\">
 
       
-
 <div class=\"container-xl\">
 \t<div class=\"table-responsive\">
 \t\t<div class=\"table-wrapper\">
@@ -642,9 +639,9 @@ table.table .avatar {
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"col-sm-6\">
 \t\t\t\t\t\t<a href=\"";
-        // line 532
+        // line 526
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_new");
-        echo "\" class=\"btn btn-dark\" ><i class=\"material-icons\">&#xE147;</i> <span>Ajouter Un Nouveau Utilisateur</span></a>
+        echo "\" class=\"btn btn-warning\" ><i class=\"material-icons\">&#xE147;</i> <span>Ajouter Un Nouveau Utilisateur</span></a>
 \t\t\t\t\t\t
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -664,17 +661,30 @@ table.table .avatar {
 \t\t\t\t\t\t<th>Date de naissance</th>
 \t\t\t\t\t\t<th>Numéro de téléphone</th>
             <th>Rôle</th>
-            <th>Actions</th>
+            <th style=\"width:140px;\">Actions</th>
 \t\t\t\t\t</tr>
 \t\t\t\t</thead>
 \t\t\t\t<tbody>
            ";
-        // line 556
+        // line 550
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 556, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 550, $this->source); })()));
         $context['_iterated'] = false;
+        $context['loop'] = [
+          'parent' => $context['_parent'],
+          'index0' => 0,
+          'index'  => 1,
+          'first'  => true,
+        ];
+        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
+            $length = count($context['_seq']);
+            $context['loop']['revindex0'] = $length - 1;
+            $context['loop']['revindex'] = $length;
+            $context['loop']['length'] = $length;
+            $context['loop']['last'] = 1 === $length;
+        }
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 557
+            // line 551
             echo "\t\t\t\t\t<tr>
 \t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t<span class=\"custom-checkbox\">
@@ -683,42 +693,73 @@ table.table .avatar {
 \t\t\t\t\t\t\t</span>
 \t\t\t\t\t\t</td>
                 <td>";
-            // line 564
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "prenom", [], "any", false, false, false, 564), "html", null, true);
+            // line 558
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "prenom", [], "any", false, false, false, 558), "html", null, true);
             echo "</td>
                 <td>";
-            // line 565
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nom", [], "any", false, false, false, 565), "html", null, true);
+            // line 559
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nom", [], "any", false, false, false, 559), "html", null, true);
             echo "</td>
                 <td>";
-            // line 566
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 566), "html", null, true);
+            // line 560
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 560), "html", null, true);
             echo "</td>
                 <td>";
-            // line 567
-            ((twig_get_attribute($this->env, $this->source, $context["user"], "datenaissance", [], "any", false, false, false, 567)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "datenaissance", [], "any", false, false, false, 567), "Y-m-d"), "html", null, true))) : (print ("")));
+            // line 561
+            ((twig_get_attribute($this->env, $this->source, $context["user"], "datenaissance", [], "any", false, false, false, 561)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "datenaissance", [], "any", false, false, false, 561), "Y-m-d"), "html", null, true))) : (print ("")));
             echo "</td>
                 <td>";
-            // line 568
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "numtel", [], "any", false, false, false, 568), "html", null, true);
+            // line 562
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "numtel", [], "any", false, false, false, 562), "html", null, true);
             echo "</td>
                 <td>";
-            // line 569
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "userrole", [], "any", false, false, false, 569), "html", null, true);
+            // line 563
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "userrole", [], "any", false, false, false, 563), "html", null, true);
             echo "</td>             
 \t\t\t\t\t\t<td>
+              <a href=\"";
+            // line 565
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_show", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 565)]), "html", null, true);
+            echo "\" class=\"show\"><i class=\"material-icons title=\"Show\">&#xE8F4;</i></a>
 \t\t\t\t\t\t\t<a href=\"";
-            // line 571
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 571)]), "html", null, true);
+            // line 566
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 566)]), "html", null, true);
             echo "\" class=\"edit\"><i class=\"material-icons\"  title=\"Edit\">&#xE254;</i></a>
-\t\t\t\t\t\t\t<a href=\"#deleteEmployeeModal\" class=\"delete\" data-toggle=\"modal\"><i class=\"material-icons\" data-toggle=\"tooltip\" title=\"Delete\">&#xE872;</i></a>
+\t\t\t\t\t\t\t<a href=\"";
+            // line 567
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 567)]), "html", null, true);
+            echo "\" class=\"delete\" onclick=\"event.preventDefault(); if(confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?')){document.getElementById('delete-form-";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 567), "html", null, true);
+            echo "').submit();}\">
+    <i class=\"material-icons\" title=\"Delete\">&#xE872;</i>
+</a>
+<form id=\"delete-form-";
+            // line 570
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 570), "html", null, true);
+            echo "\" method=\"post\" action=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 570)]), "html", null, true);
+            echo "\" style=\"display: none;\">
+    ";
+            // line 571
+            echo twig_include($this->env, $context, "users/_delete_form.html.twig");
+            echo "
+</form>
+
 \t\t\t\t\t\t</td>
 \t\t\t\t\t</tr>
           ";
             $context['_iterated'] = true;
+            ++$context['loop']['index0'];
+            ++$context['loop']['index'];
+            $context['loop']['first'] = false;
+            if (isset($context['loop']['length'])) {
+                --$context['loop']['revindex0'];
+                --$context['loop']['revindex'];
+                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
+            }
         }
         if (!$context['_iterated']) {
-            // line 576
+            // line 577
             echo "            <tr>
                 <td>Aucun enregistrement trouvé</td>
             </tr>
@@ -727,42 +768,32 @@ table.table .avatar {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 580
+        // line 581
         echo "\t\t\t\t</tbody>
 \t\t\t</table>
 \t\t\t<div class=\"clearfix\">
 \t\t\t\t<div class=\"pagination\">
     ";
-        // line 584
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 584, $this->source); })()));
+        // line 585
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 585, $this->source); })()));
         echo "
 </div>
 \t\t</div>
 \t</div>        
 </div>
+<a href=\"https://dashboard.tawk.to/#/chat\" target=\"_blank\">
+    <img src=\"";
+        // line 591
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/live-chat.png"), "html", null, true);
+        echo "\" alt=\"Logo de Evento\" style=\"width:55px; position:fixed; bottom:20px; right:30px;\">
+</a>
 
-<!-- Delete Modal HTML -->
-<div id=\"deleteEmployeeModal\" class=\"modal fade\">
-\t<div class=\"modal-dialog\">
-\t\t<div class=\"modal-content\">
-\t\t\t<form>
-\t\t\t\t<div class=\"modal-header\">\t\t\t\t\t\t
-\t\t\t\t\t<h4 class=\"modal-title\">Delete Employee</h4>
-\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"modal-body\">\t\t\t\t\t
-\t\t\t\t\t<p>Are you sure you want to delete these Records?</p>
-\t\t\t\t\t<p class=\"text-warning\"><small>This action cannot be undone.</small></p>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t<input type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" value=\"Cancel\">
-\t\t\t\t\t<input type=\"submit\" class=\"btn btn-danger\" value=\"Delete\">
-\t\t\t\t</div>
-\t\t\t</form>
-\t\t</div>
-\t</div>
-</div>
+
 </main>
+
+
+
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -781,7 +812,7 @@ table.table .avatar {
 
     public function getDebugInfo()
     {
-        return array (  737 => 584,  731 => 580,  722 => 576,  712 => 571,  707 => 569,  703 => 568,  699 => 567,  695 => 566,  691 => 565,  687 => 564,  678 => 557,  673 => 556,  646 => 532,  610 => 499,  603 => 494,  598 => 493,  594 => 492,  463 => 364,  446 => 350,  405 => 312,  388 => 298,  375 => 288,  370 => 286,  366 => 285,  356 => 277,  349 => 276,  74 => 7,  67 => 6,  54 => 3,  37 => 1,);
+        return array (  787 => 591,  778 => 585,  772 => 581,  763 => 577,  744 => 571,  738 => 570,  730 => 567,  726 => 566,  722 => 565,  717 => 563,  713 => 562,  709 => 561,  705 => 560,  701 => 559,  697 => 558,  688 => 551,  670 => 550,  643 => 526,  608 => 494,  600 => 488,  595 => 487,  591 => 486,  578 => 476,  459 => 360,  442 => 346,  401 => 308,  390 => 300,  379 => 292,  374 => 290,  370 => 289,  360 => 281,  353 => 280,  74 => 7,  67 => 6,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -822,7 +853,7 @@ body {
 }
 .table-title {        
 \tpadding-bottom: 15px;
-\tbackground: #e9ad19;
+\tbackground: #000000;
 \tcolor: #fff;
 \tpadding: 16px 30px;
 \tmin-width: 100%;
@@ -897,6 +928,10 @@ table.table td a:hover {
 table.table td a.edit {
 \tcolor: #FFC107;
 }
+
+table.table td a.show {
+\tcolor: black;
+}
 table.table td a.delete {
 \tcolor: #F44336;
 }
@@ -931,7 +966,7 @@ table.table .avatar {
 \tcolor: #666;
 }\t
 .pagination li.active a, .pagination li.active a.page-link {
-\tbackground: #e9ad19;
+\tbackground: black;
 }
 .pagination li.active a:hover {        
 \tbackground: #ffbf1c;
@@ -1078,35 +1113,27 @@ table.table .avatar {
         </a>
         
         
-         <ul class=\"mt-6\">
-          <li class=\"relative px-6 py-3\">
-            <span class=\"absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg\"
-              aria-hidden=\"true\"></span>
-            <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\"
-              href=\"{{ path('app_users_index') }}\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                <path
-                  d=\"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\">
-                </path>
-              </svg>
-              <span class=\"ml-4\">Utilisateurs</span>
-            </a>
-          </li>
-        </ul>
-        <ul>
-          <li class=\"relative px-6 py-3\" >
-            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
-              href=\"{{ path('app_reclamations_index') }}\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" style=\"color: black;\">
-                <path
-                  d=\"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01\">
-                </path>
-              </svg>
-              <span class=\"ml-4\" style=\"color: black;\">Réclamations</span>
-            </a>
-          </li>
+      <ul class=\"mt-6\">
+  <li class=\"relative px-6 py-3\">
+    <span class=\"absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg\" aria-hidden=\"true\"></span>
+    <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\" href=\"{{ path('app_users_index') }}\">
+      <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
+        <path d=\"M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6\"></path>
+      </svg>
+      <span class=\"ml-4\">Utilisateurs</span>
+    </a>
+  </li>
+  <li class=\"relative px-6 py-3\" style=\"padding-top: 5px;\">
+    <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\" href=\"{{ path('app_reclamations_index') }}\">
+      <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" style=\"color: black;\">
+        <path d=\"M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01\"></path>
+      </svg>
+      <span class=\"ml-4\" style=\"color: black;\">Réclamations</span>
+    </a>
+  </li>
+</ul>
+
+
  
   
 
@@ -1190,7 +1217,7 @@ table.table .avatar {
               </div>
               <input
                 class=\"w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input\"
-                type=\"text\" placeholder=\"Search for projects\" aria-label=\"Search\" />
+                type=\"text\" placeholder=\"Rechercher\" aria-label=\"Search\" />
             </div>
           </div>
           <ul class=\"flex items-center flex-shrink-0 space-x-6\">
@@ -1265,7 +1292,7 @@ table.table .avatar {
               <button class=\"align-middle rounded-full focus:shadow-outline-purple focus:outline-none\"
                 @click=\"toggleProfileMenu\" @keydown.escape=\"closeProfileMenu\" aria-label=\"Account\" aria-haspopup=\"true\">
                 <img class=\"object-cover w-8 h-8 rounded-full\"
-                  src=\"https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82\"
+                  src=\"{{asset('back/img/user.png')}}\"
                   alt=\"\" aria-hidden=\"true\" />
               </button>
               <template x-if=\"isProfileMenuOpen\">
@@ -1274,13 +1301,12 @@ table.table .avatar {
                   class=\"absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700\"
                   aria-label=\"submenu\">
                   <li class=\"flex\">
-                    <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
-                      href=\"#\" style=\"color: black;\">
-                      
-                         {% if app.user %}              
-                          Vous êtes connecté en tant que {{ app.user.userIdentifier }}
-                    {% endif %} 
-                    </a>
+                   <span class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\" style=\"color: black;\">
+    {% if app.user %}              
+        Vous êtes actuellement connecté en tant que {{ app.user.userIdentifier }}
+    {% endif %} 
+</span>
+
                   </li> 
                      <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
@@ -1307,7 +1333,6 @@ table.table .avatar {
       <main class=\"h-full overflow-y-auto\">
 
       
-
 <div class=\"container-xl\">
 \t<div class=\"table-responsive\">
 \t\t<div class=\"table-wrapper\">
@@ -1317,7 +1342,7 @@ table.table .avatar {
 \t\t\t\t\t\t<h2> <b>Liste des Utilisateurs</b></h2>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"col-sm-6\">
-\t\t\t\t\t\t<a href=\"{{ path('app_users_new') }}\" class=\"btn btn-dark\" ><i class=\"material-icons\">&#xE147;</i> <span>Ajouter Un Nouveau Utilisateur</span></a>
+\t\t\t\t\t\t<a href=\"{{ path('app_users_new') }}\" class=\"btn btn-warning\" ><i class=\"material-icons\">&#xE147;</i> <span>Ajouter Un Nouveau Utilisateur</span></a>
 \t\t\t\t\t\t
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -1337,7 +1362,7 @@ table.table .avatar {
 \t\t\t\t\t\t<th>Date de naissance</th>
 \t\t\t\t\t\t<th>Numéro de téléphone</th>
             <th>Rôle</th>
-            <th>Actions</th>
+            <th style=\"width:140px;\">Actions</th>
 \t\t\t\t\t</tr>
 \t\t\t\t</thead>
 \t\t\t\t<tbody>
@@ -1356,8 +1381,15 @@ table.table .avatar {
                 <td>{{ user.numtel }}</td>
                 <td>{{ user.userrole }}</td>             
 \t\t\t\t\t\t<td>
+              <a href=\"{{ path('app_users_show', {'id': user.id}) }}\" class=\"show\"><i class=\"material-icons title=\"Show\">&#xE8F4;</i></a>
 \t\t\t\t\t\t\t<a href=\"{{ path('app_users_edit', {'id': user.id}) }}\" class=\"edit\"><i class=\"material-icons\"  title=\"Edit\">&#xE254;</i></a>
-\t\t\t\t\t\t\t<a href=\"#deleteEmployeeModal\" class=\"delete\" data-toggle=\"modal\"><i class=\"material-icons\" data-toggle=\"tooltip\" title=\"Delete\">&#xE872;</i></a>
+\t\t\t\t\t\t\t<a href=\"{{ path('app_users_delete', {'id': user.id}) }}\" class=\"delete\" onclick=\"event.preventDefault(); if(confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?')){document.getElementById('delete-form-{{ user.id }}').submit();}\">
+    <i class=\"material-icons\" title=\"Delete\">&#xE872;</i>
+</a>
+<form id=\"delete-form-{{ user.id }}\" method=\"post\" action=\"{{ path('app_users_delete', {'id': user.id}) }}\" style=\"display: none;\">
+    {{ include('users/_delete_form.html.twig') }}
+</form>
+
 \t\t\t\t\t\t</td>
 \t\t\t\t\t</tr>
           {% else %}
@@ -1374,29 +1406,16 @@ table.table .avatar {
 \t\t</div>
 \t</div>        
 </div>
+<a href=\"https://dashboard.tawk.to/#/chat\" target=\"_blank\">
+    <img src=\"{{asset('back/img/live-chat.png')}}\" alt=\"Logo de Evento\" style=\"width:55px; position:fixed; bottom:20px; right:30px;\">
+</a>
 
-<!-- Delete Modal HTML -->
-<div id=\"deleteEmployeeModal\" class=\"modal fade\">
-\t<div class=\"modal-dialog\">
-\t\t<div class=\"modal-content\">
-\t\t\t<form>
-\t\t\t\t<div class=\"modal-header\">\t\t\t\t\t\t
-\t\t\t\t\t<h4 class=\"modal-title\">Delete Employee</h4>
-\t\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"modal-body\">\t\t\t\t\t
-\t\t\t\t\t<p>Are you sure you want to delete these Records?</p>
-\t\t\t\t\t<p class=\"text-warning\"><small>This action cannot be undone.</small></p>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"modal-footer\">
-\t\t\t\t\t<input type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" value=\"Cancel\">
-\t\t\t\t\t<input type=\"submit\" class=\"btn btn-danger\" value=\"Delete\">
-\t\t\t\t</div>
-\t\t\t</form>
-\t\t</div>
-\t</div>
-</div>
+
 </main>
+
+
+
+
 {% endblock %}
 ", "users/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\users\\index.html.twig");
     }

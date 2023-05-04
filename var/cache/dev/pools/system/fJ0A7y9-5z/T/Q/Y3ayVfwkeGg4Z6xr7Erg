@@ -1,3 +1,7 @@
 <?php //%5BC%5DApp%255CEntity%255CCategorieEvent
 
+<<<<<<< HEAD:var/cache/dev/pools/system/fJ0A7y9-5z/T/Q/Y3ayVfwkeGg4Z6xr7Erg
 return [PHP_INT_MAX, 1682176636];
+=======
+return [PHP_INT_MAX, 1682838918];
+>>>>>>> MalekBranch:var/cache/dev/pools/system/Gxwlszbj8-/T/Q/Y3ayVfwkeGg4Z6xr7Erg

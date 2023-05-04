@@ -50,7 +50,7 @@ class __TwigTemplate_92aa75ba55176f43bff0a9574c5e8c91 extends Template
                 // line 21
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath((isset($context["route"]) || array_key_exists("route", $context) ? $context["route"] : (function () { throw new RuntimeError('Variable "route" does not exist.', 21, $this->source); })()), twig_array_merge((isset($context["query"]) || array_key_exists("query", $context) ? $context["query"] : (function () { throw new RuntimeError('Variable "query" does not exist.', 21, $this->source); })()), [(isset($context["pageParameterName"]) || array_key_exists("pageParameterName", $context) ? $context["pageParameterName"] : (function () { throw new RuntimeError('Variable "pageParameterName" does not exist.', 21, $this->source); })()) => (isset($context["previous"]) || array_key_exists("previous", $context) ? $context["previous"] : (function () { throw new RuntimeError('Variable "previous" does not exist.', 21, $this->source); })())])), "html", null, true);
                 echo "\">&laquo;&nbsp;";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("label_previous", [], "KnpPaginatorBundle"), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("Précédant", [], "KnpPaginatorBundle"), "html", null, true);
                 echo "</a>
         </li>
     ";
@@ -59,7 +59,7 @@ class __TwigTemplate_92aa75ba55176f43bff0a9574c5e8c91 extends Template
                 echo "        <li class=\"disabled page-item\">
             <a class=\"page-link\">&laquo;&nbsp;";
                 // line 25
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("label_previous", [], "KnpPaginatorBundle"), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("Précédant", [], "KnpPaginatorBundle"), "html", null, true);
                 echo "</a>
         </li>
     ";
@@ -188,7 +188,7 @@ class __TwigTemplate_92aa75ba55176f43bff0a9574c5e8c91 extends Template
                 // line 76
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath((isset($context["route"]) || array_key_exists("route", $context) ? $context["route"] : (function () { throw new RuntimeError('Variable "route" does not exist.', 76, $this->source); })()), twig_array_merge((isset($context["query"]) || array_key_exists("query", $context) ? $context["query"] : (function () { throw new RuntimeError('Variable "query" does not exist.', 76, $this->source); })()), [(isset($context["pageParameterName"]) || array_key_exists("pageParameterName", $context) ? $context["pageParameterName"] : (function () { throw new RuntimeError('Variable "pageParameterName" does not exist.', 76, $this->source); })()) => (isset($context["next"]) || array_key_exists("next", $context) ? $context["next"] : (function () { throw new RuntimeError('Variable "next" does not exist.', 76, $this->source); })())])), "html", null, true);
                 echo "\">";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("label_next", [], "KnpPaginatorBundle"), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("Suivant", [], "KnpPaginatorBundle"), "html", null, true);
                 echo "&nbsp;&raquo;</a>
         </li>
     ";
@@ -197,7 +197,7 @@ class __TwigTemplate_92aa75ba55176f43bff0a9574c5e8c91 extends Template
                 echo "        <li class=\"disabled page-item\">
             <a class=\"page-link\">";
                 // line 80
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("label_next", [], "KnpPaginatorBundle"), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("Suivant", [], "KnpPaginatorBundle"), "html", null, true);
                 echo "&nbsp;&raquo;</a>
         </li>
     ";
@@ -248,11 +248,11 @@ class __TwigTemplate_92aa75ba55176f43bff0a9574c5e8c91 extends Template
 
     {% if previous is defined %}
         <li class=\"page-item\">
-            <a class=\"page-link\" rel=\"prev\" href=\"{{ path(route, query|merge({(pageParameterName): previous})) }}\">&laquo;&nbsp;{{ 'label_previous'|trans([], 'KnpPaginatorBundle') }}</a>
+            <a class=\"page-link\" rel=\"prev\" href=\"{{ path(route, query|merge({(pageParameterName): previous})) }}\">&laquo;&nbsp;{{ 'Précédant'|trans([], 'KnpPaginatorBundle') }}</a>
         </li>
     {% else %}
         <li class=\"disabled page-item\">
-            <a class=\"page-link\">&laquo;&nbsp;{{ 'label_previous'|trans([], 'KnpPaginatorBundle') }}</a>
+            <a class=\"page-link\">&laquo;&nbsp;{{ 'Précédant'|trans([], 'KnpPaginatorBundle') }}</a>
         </li>
     {% endif %}
 
@@ -303,11 +303,11 @@ class __TwigTemplate_92aa75ba55176f43bff0a9574c5e8c91 extends Template
 
     {% if next is defined %}
         <li class=\"page-item\">
-            <a class=\"page-link\" rel=\"next\" href=\"{{ path(route, query|merge({(pageParameterName): next})) }}\">{{ 'label_next'|trans([], 'KnpPaginatorBundle') }}&nbsp;&raquo;</a>
+            <a class=\"page-link\" rel=\"next\" href=\"{{ path(route, query|merge({(pageParameterName): next})) }}\">{{ 'Suivant'|trans([], 'KnpPaginatorBundle') }}&nbsp;&raquo;</a>
         </li>
     {% else %}
         <li class=\"disabled page-item\">
-            <a class=\"page-link\">{{ 'label_next'|trans([], 'KnpPaginatorBundle') }}&nbsp;&raquo;</a>
+            <a class=\"page-link\">{{ 'Suivant'|trans([], 'KnpPaginatorBundle') }}&nbsp;&raquo;</a>
         </li>
     {% endif %}
     </ul>
