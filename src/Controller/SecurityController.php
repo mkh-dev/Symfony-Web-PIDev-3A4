@@ -42,11 +42,11 @@ class SecurityController extends AbstractController
             if ($userrole == 'ROLE_ADMINISTRATEUR') {
                 return $this->redirectToRoute('app_users_index');
             } elseif ($userrole == 'ROLE_ORGANISATEUR') {
-                return $this->redirectToRoute('organisateur_homepage');
+                return $this->redirectToRoute('app_evenement_back');
             } elseif ($userrole == 'ROLE_TRANSPORTEUR') {
-                return $this->redirectToRoute('transporteur_homepage');
+                return $this->redirectToRoute('app_transport_back');
             } elseif ($userrole == 'ROLE_PARTENAIRE') {
-                return $this->redirectToRoute('partenaire_homepage');
+                return $this->redirectToRoute('app_produit_index');
             }
             elseif ($userrole == 'ROLE_UTILISATEUR') {
                 return $this->redirectToRoute('login_utilisateur');

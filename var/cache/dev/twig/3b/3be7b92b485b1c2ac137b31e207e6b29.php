@@ -297,15 +297,35 @@ class __TwigTemplate_1e6b819dd084255efdd4625152a9d2c6 extends Template
                   class=\"absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700\"
                   aria-label=\"submenu\">
                   <li class=\"flex\">
+                   <span class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\" style=\"color: black;\">
+    ";
+        // line 220
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 220, $this->source); })()), "user", [], "any", false, false, false, 220)) {
+            echo "              
+        Vous êtes actuellement connecté en tant que ";
+            // line 221
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 221, $this->source); })()), "user", [], "any", false, false, false, 221), "userIdentifier", [], "any", false, false, false, 221), "html", null, true);
+            echo "
+    ";
+        }
+        // line 222
+        echo " 
+</span>
+
+                  </li> 
+                     <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
-                      href=\"#\">
-                      <svg class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
+                      href=\"";
+        // line 228
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+        echo "\">
+                      <svg style=\"color: black;\" class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
                         stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
                         <path
                           d=\"M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1\">
                         </path>
                       </svg>
-                      <span>Log out</span>
+                        <span style=\"color: black;\">Logout</span>
                     </a>
                   </li>
                 </ul>
@@ -370,7 +390,7 @@ td img {
 
 </style>
     <a href=\"";
-        // line 291
+        // line 299
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_new");
         echo "\" style=\"float: right;\"><img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/plus.png"), "html", null, true);
@@ -393,9 +413,9 @@ td img {
         </thead>
         <tbody>
        ";
-        // line 309
+        // line 317
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 309, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 317, $this->source); })()));
         $context['_iterated'] = false;
         $context['loop'] = [
           'parent' => $context['_parent'],
@@ -411,45 +431,45 @@ td img {
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 310
+            // line 318
             echo "            <tr>
                 <td>";
-            // line 311
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 311), "html", null, true);
+            // line 319
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 319), "html", null, true);
             echo "</td>
                 <td>";
-            // line 312
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nomProd", [], "any", false, false, false, 312), "html", null, true);
+            // line 320
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nomProd", [], "any", false, false, false, 320), "html", null, true);
             echo "</td>
                 <td>";
-            // line 313
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 313), "html", null, true);
+            // line 321
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 321), "html", null, true);
             echo "</td>
                 <td>";
-            // line 314
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 314), "html", null, true);
+            // line 322
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 322), "html", null, true);
             echo "</td>
                 <td>";
-            // line 315
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "quantite", [], "any", false, false, false, 315), "html", null, true);
+            // line 323
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "quantite", [], "any", false, false, false, 323), "html", null, true);
             echo "</td>
                 <td>";
-            // line 316
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nomPart", [], "any", false, false, false, 316), "html", null, true);
+            // line 324
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nomPart", [], "any", false, false, false, 324), "html", null, true);
             echo "</td>
 <td>
   ";
-            // line 318
-            if (twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 318)) {
-                // line 319
+            // line 326
+            if (twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 326)) {
+                // line 327
                 echo "    <img src=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/produits/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 319))), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/produits/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 327))), "html", null, true);
                 echo "\" alt=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nomProd", [], "any", false, false, false, 319), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nomProd", [], "any", false, false, false, 327), "html", null, true);
                 echo "\">
   ";
             }
-            // line 321
+            // line 329
             echo "</td>
                 
                 
@@ -459,8 +479,8 @@ td img {
 
                   
                   <a href=\"";
-            // line 329
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_show", ["idProd" => twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 329)]), "html", null, true);
+            // line 337
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_show", ["idProd" => twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 337)]), "html", null, true);
             echo "\" \"><img src=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/chercher.png"), "html", null, true);
             echo "\" alt=\"Afficher le produit\" style=\"width:20px; height:20px;\"></a>
@@ -468,12 +488,12 @@ td img {
 
                   
                    ";
-            // line 333
+            // line 341
             echo twig_include($this->env, $context, "produit/_delete_form.html.twig");
             echo "
                   <a href=\"";
-            // line 334
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_edit", ["idProd" => twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 334)]), "html", null, true);
+            // line 342
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_edit", ["idProd" => twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 342)]), "html", null, true);
             echo "\" \"><img src=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/crayon.png"), "html", null, true);
             echo "\" alt=\"Modifier le produit\" style=\"width:20px; height:20px;\"></a>
@@ -499,7 +519,7 @@ td img {
             }
         }
         if (!$context['_iterated']) {
-            // line 346
+            // line 354
             echo "            <tr>
                 <td colspan=\"9\">no records found</td>
             </tr>
@@ -508,7 +528,7 @@ td img {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 350
+        // line 358
         echo "        </tbody>
     </table>
 
@@ -550,7 +570,7 @@ s0.parentNode.insertBefore(s1,s0);
 
     public function getDebugInfo()
     {
-        return array (  512 => 350,  503 => 346,  476 => 334,  472 => 333,  463 => 329,  453 => 321,  445 => 319,  443 => 318,  438 => 316,  434 => 315,  430 => 314,  426 => 313,  422 => 312,  418 => 311,  415 => 310,  397 => 309,  374 => 291,  174 => 94,  157 => 80,  116 => 42,  99 => 28,  84 => 16,  73 => 7,  66 => 6,  53 => 3,  36 => 1,);
+        return array (  532 => 358,  523 => 354,  496 => 342,  492 => 341,  483 => 337,  473 => 329,  465 => 327,  463 => 326,  458 => 324,  454 => 323,  450 => 322,  446 => 321,  442 => 320,  438 => 319,  435 => 318,  417 => 317,  394 => 299,  320 => 228,  312 => 222,  307 => 221,  303 => 220,  174 => 94,  157 => 80,  116 => 42,  99 => 28,  84 => 16,  73 => 7,  66 => 6,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -773,15 +793,23 @@ s0.parentNode.insertBefore(s1,s0);
                   class=\"absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700\"
                   aria-label=\"submenu\">
                   <li class=\"flex\">
+                   <span class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\" style=\"color: black;\">
+    {% if app.user %}              
+        Vous êtes actuellement connecté en tant que {{ app.user.userIdentifier }}
+    {% endif %} 
+</span>
+
+                  </li> 
+                     <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
-                      href=\"#\">
-                      <svg class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
+                      href=\"{{ path('app_logout') }}\">
+                      <svg style=\"color: black;\" class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
                         stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
                         <path
                           d=\"M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1\">
                         </path>
                       </svg>
-                      <span>Log out</span>
+                        <span style=\"color: black;\">Logout</span>
                     </a>
                   </li>
                 </ul>

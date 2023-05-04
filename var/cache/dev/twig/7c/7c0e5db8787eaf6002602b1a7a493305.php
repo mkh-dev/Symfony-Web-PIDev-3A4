@@ -70,95 +70,368 @@ class __TwigTemplate_0d1a6b2cda7ec36540cf69caff2d0f33 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Evenement index</h1>
+        echo "
+    <main>
 
-    <table class=\"table\">
-        <thead>
-            <tr>
-                <th>IdEvent</th>
-                <th>NomEvent</th>
-                <th>DescriptionEvent</th>
-                <th>DateDebutEvent</th>
-                <th>DateFinEvent</th>
-                <th>LieuEvent</th>
-                <th>BudgetEvent</th>
-                <th>Image</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        ";
-        // line 23
+        <header class=\"site-header\">
+            <div class=\"container\">
+                <div class=\"row\">
+
+                    <div class=\"col-lg-12 col-12 d-flex flex-wrap\">
+                        <p class=\"d-flex me-4 mb-0\">
+                            <i class=\"bi-person custom-icon me-2\" style=\"color: black;\"></i>
+                            <strong class=\"text-dark\">Bienvenue dans Evento</strong>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+
+        <nav class=\"navbar navbar-expand-lg\">
+            <div class=\"container\">
+                <a class=\"navbar-brand\" href=\"index.html\">
+                    <img src=\"";
+        // line 28
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/logo.png"), "html", null, true);
+        echo "\" alt=\"Logo de Evento\" style=\"width: 13%; margin-top: -5px;\">
+                    Evento
+                </a>
+
+                <a href=\"";
+        // line 32
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+        echo "\" class=\"btn custom-btn d-lg-none ms-auto me-4\">Se Connecter</a>
+
+                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\"
+                        aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                    <span class=\"navbar-toggler-icon\"></span>
+                </button>
+
+                <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+                    <ul class=\"navbar-nav align-items-lg-center ms-auto me-lg-5\">
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"#section_1\">Accueil</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"#section_2\">À propos</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"#section_3\">Artistes</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a href=\"";
+        // line 54
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_transport_index");
+        echo "\" class=\"nav-link click-scroll\">Événement</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"#section_5\">Abonnement</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"#section_6\">Contact</a>
+                        </li>
+                    </ul>
+
+                    <a href=\"";
+        // line 66
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/login.html.twig"), "html", null, true);
+        echo "\" class=\"btn custom-btn d-lg-block d-none\">Se Connecter</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <section class=\"hero-section\" id=\"section_1\">
+            <div class=\"section-overlay\"></div>
+
+            <div class=\"container d-flex justify-content-center align-items-center\">
+                <div class=\"row\">
+
+                    <div class=\"col-12 mt-auto mb-5 text-center\">
+                        <small>Evento Présente</small>
+
+                        <h1 class=\"text-white mb-5\">Night Live 2023</h1>
+
+                        <a class=\"btn custom-btn smoothscroll\" href=\"#section_2\">C'est parti</a>
+                    </div>
+
+                    <div class=\"col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center\">
+                        <div class=\"date-wrap\">
+                            <h5 class=\"text-white\">
+                                <i class=\"custom-icon bi-clock me-2\"></i>
+                                10 - 12, Nov 2023
+                            </h5>
+                        </div>
+
+                        <div class=\"location-wrap mx-auto py-3 py-lg-0\">
+                            <h5 class=\"text-white\">
+                                <i class=\"custom-icon bi-geo-alt me-2\"></i>
+                                Billionaire, Gammarth
+                            </h5>
+                        </div>
+
+                        <div class=\"social-share\">
+                            <ul class=\"social-icon d-flex align-items-center justify-content-center\">
+                                <span class=\"text-white me-3\">Partagé:</span>
+
+                                <li class=\"social-icon-item\">
+                                    <a href=\"#\" class=\"social-icon-link\">
+                                        <span class=\"bi-facebook\"></span>
+                                    </a>
+                                </li>
+
+                                <li class=\"social-icon-item\">
+                                    <a href=\"#\" class=\"social-icon-link\">
+                                        <span class=\"bi-twitter\"></span>
+                                    </a>
+                                </li>
+
+                                <li class=\"social-icon-item\">
+                                    <a href=\"#\" class=\"social-icon-link\">
+                                        <span class=\"bi-instagram\"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=\"video-wrap\">
+                <video autoplay=\"\" loop=\"\" muted=\"\" class=\"custom-video\" poster=\"\">
+                    <source src=\"";
+        // line 130
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/video/pexels-2022395.mp4"), "html", null, true);
+        echo "\" type=\"video/mp4\">
+
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+        <section class=\"schedule-section section-padding\" id=\"section_4\">
+            <div class=\"container\">
+                <div class=\"row\">
+
+                    <div class=\"col-12 text-center\">
+                        <h2 class=\"text-white mb-4\">Nos événements</h1>
+
+                            <div class=\"table-responsive\">
+
+
+
+
+                                <div class=\"carousel-container\">
+                                    <div class=\"carousel\">
+                                        <!--debut-->
+                                        ";
+        // line 159
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["evenements"]) || array_key_exists("evenements", $context) ? $context["evenements"] : (function () { throw new RuntimeError('Variable "evenements" does not exist.', 23, $this->source); })()));
-        $context['_iterated'] = false;
+        $context['_seq'] = twig_ensure_traversable((isset($context["evenements"]) || array_key_exists("evenements", $context) ? $context["evenements"] : (function () { throw new RuntimeError('Variable "evenements" does not exist.', 159, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["evenement"]) {
-            // line 24
-            echo "            <tr>
-                <td>";
-            // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "idEvent", [], "any", false, false, false, 25), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "nomEvent", [], "any", false, false, false, 26), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "descriptionEvent", [], "any", false, false, false, 27), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 28
-            ((twig_get_attribute($this->env, $this->source, $context["evenement"], "dateDebutEvent", [], "any", false, false, false, 28)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "dateDebutEvent", [], "any", false, false, false, 28), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
-            echo "</td>
-                <td>";
-            // line 29
-            ((twig_get_attribute($this->env, $this->source, $context["evenement"], "dateFinEvent", [], "any", false, false, false, 29)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "dateFinEvent", [], "any", false, false, false, 29), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
-            echo "</td>
-                <td>";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "lieuEvent", [], "any", false, false, false, 30), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "budgetEvent", [], "any", false, false, false, 31), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "image", [], "any", false, false, false, 32), "html", null, true);
-            echo "</td>
-                <td>
-                    <a href=\"";
-            // line 34
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_evenement_show", ["idEvent" => twig_get_attribute($this->env, $this->source, $context["evenement"], "idEvent", [], "any", false, false, false, 34)]), "html", null, true);
-            echo "\">show</a>
-                    <a href=\"";
-            // line 35
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_evenement_edit", ["idEvent" => twig_get_attribute($this->env, $this->source, $context["evenement"], "idEvent", [], "any", false, false, false, 35)]), "html", null, true);
-            echo "\">edit</a>
-                </td>
-            </tr>
-        ";
-            $context['_iterated'] = true;
-        }
-        if (!$context['_iterated']) {
-            // line 39
-            echo "            <tr>
-                <td colspan=\"9\">no records found</td>
-            </tr>
-        ";
+            // line 160
+            echo "                                        <div class=\"card-container\">
+                                            <div class=\"card\">
+
+                                                <div class=\"card-content\">
+                                                    <h3>";
+            // line 164
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "nomEvent", [], "any", false, false, false, 164), "html", null, true);
+            echo " <br/> El Maestro</h3>
+                                                    <p>Date Debut: ";
+            // line 165
+            ((twig_get_attribute($this->env, $this->source, $context["evenement"], "dateDebutEvent", [], "any", false, false, false, 165)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "dateDebutEvent", [], "any", false, false, false, 165), "Y-m-d"), "html", null, true))) : (print ("")));
+            echo "</p>
+                                                    <p>Date Fin: ";
+            // line 166
+            ((twig_get_attribute($this->env, $this->source, $context["evenement"], "dateDebutEvent", [], "any", false, false, false, 166)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "dateDebutEvent", [], "any", false, false, false, 166), "Y-m-d"), "html", null, true))) : (print ("")));
+            echo "</p>
+                                                    <p>Location: ";
+            // line 167
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "lieuEvent", [], "any", false, false, false, 167), "html", null, true);
+            echo "</p>
+                                                    <p>Prix: ";
+            // line 168
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "prix", [], "any", false, false, false, 168), "html", null, true);
+            echo "</p>
+                                                    <p>Capacite: ";
+            // line 169
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "capacite", [], "any", false, false, false, 169), "html", null, true);
+            echo "</p>
+                                                    <p>Description: ";
+            // line 170
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["evenement"], "descriptionEvent", [], "any", false, false, false, 170), "html", null, true);
+            echo "</p>
+                                                    <a href=\"#\" class=\"btn\">Réserver</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--debut-->
+                                        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['evenement'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 43
-        echo "        </tbody>
-    </table>
+        // line 178
+        echo "
+                                    </div>
+                                    <div class=\"buttons-container\">
+                                        <button id=\"prev-btn\" class=\"btn\">Prev</button>
+                                        <button id=\"next-btn\" class=\"btn\">Next</button>
+                                    </div>
+                                </div>
 
-    <a href=\"";
-        // line 46
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_evenement_new");
-        echo "\">Create new</a>
+
+
+
+
+
+
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+    </main>
+
+
+    <footer class=\"site-footer\">
+        <div class=\"site-footer-top\">
+            <div class=\"container\">
+                <div class=\"row\">
+
+                    <div class=\"col-lg-6 col-12\">
+                        <h2 class=\"text-white mb-lg-0\">Evento</h2>
+                    </div>
+
+                    <div class=\"col-lg-6 col-12 d-flex justify-content-lg-end align-items-center\">
+                        <ul class=\"social-icon d-flex justify-content-lg-end\">
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-twitter\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-apple\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-instagram\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-youtube\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-pinterest\"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=\"container\">
+            <div class=\"row\">
+
+                <div class=\"col-lg-6 col-12 mb-4 pb-2\">
+                    <h5 class=\"site-footer-title mb-3\">Liens</h5>
+
+                    <ul class=\"site-footer-links\">
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Accueil</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">À propos</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Artistes</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Événement</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Abonnement</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class=\"col-lg-3 col-md-6 col-12 mb-4 mb-lg-0\">
+                    <h5 class=\"site-footer-title mb-3\">Tu as une question ?</h5>
+
+                    <p class=\"text-white d-flex mb-1\">
+                        <a href=\"tel: 090-080-0760\" class=\"site-footer-link\">
+                            090-080-0760
+                        </a>
+                    </p>
+
+                    <p class=\"text-white d-flex\">
+                        <a href=\"mailto:pidevtestapp@gmail.com\" class=\"site-footer-link\">
+                            pidevtestapp@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class=\"col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0\">
+                    <h5 class=\"site-footer-title mb-3\">Location</h5>
+
+                    <p class=\"text-white d-flex mt-3 mb-2\">
+                        18, rue de l'Usine - ZI Aéroport Charguia II 2035 Ariana </p>
+
+                    <a class=\"link-fx-1 color-contrast-higher mt-3\" href=\"#\">
+                        <span>Notre carte</span>
+                        <svg class=\"icon\" viewBox=\"0 0 32 32\" aria-hidden=\"true\">
+                            <g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                <circle cx=\"16\" cy=\"16\" r=\"15.5\"></circle>
+                                <line x1=\"10\" y1=\"18\" x2=\"16\" y2=\"12\"></line>
+                                <line x1=\"16\" y1=\"12\" x2=\"22\" y2=\"18\"></line>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -177,7 +450,7 @@ class __TwigTemplate_0d1a6b2cda7ec36540cf69caff2d0f33 extends Template
 
     public function getDebugInfo()
     {
-        return array (  160 => 46,  155 => 43,  146 => 39,  137 => 35,  133 => 34,  128 => 32,  124 => 31,  120 => 30,  116 => 29,  112 => 28,  108 => 27,  104 => 26,  100 => 25,  97 => 24,  92 => 23,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  291 => 178,  277 => 170,  273 => 169,  269 => 168,  265 => 167,  261 => 166,  257 => 165,  253 => 164,  247 => 160,  243 => 159,  211 => 130,  144 => 66,  129 => 54,  104 => 32,  97 => 28,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -187,48 +460,323 @@ class __TwigTemplate_0d1a6b2cda7ec36540cf69caff2d0f33 extends Template
 {% block title %}Evenement index{% endblock %}
 
 {% block body %}
-    <h1>Evenement index</h1>
 
-    <table class=\"table\">
-        <thead>
-            <tr>
-                <th>IdEvent</th>
-                <th>NomEvent</th>
-                <th>DescriptionEvent</th>
-                <th>DateDebutEvent</th>
-                <th>DateFinEvent</th>
-                <th>LieuEvent</th>
-                <th>BudgetEvent</th>
-                <th>Image</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for evenement in evenements %}
-            <tr>
-                <td>{{ evenement.idEvent }}</td>
-                <td>{{ evenement.nomEvent }}</td>
-                <td>{{ evenement.descriptionEvent }}</td>
-                <td>{{ evenement.dateDebutEvent ? evenement.dateDebutEvent|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ evenement.dateFinEvent ? evenement.dateFinEvent|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ evenement.lieuEvent }}</td>
-                <td>{{ evenement.budgetEvent }}</td>
-                <td>{{ evenement.image }}</td>
-                <td>
-                    <a href=\"{{ path('app_evenement_show', {'idEvent': evenement.idEvent}) }}\">show</a>
-                    <a href=\"{{ path('app_evenement_edit', {'idEvent': evenement.idEvent}) }}\">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan=\"9\">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <main>
 
-    <a href=\"{{ path('app_evenement_new') }}\">Create new</a>
+        <header class=\"site-header\">
+            <div class=\"container\">
+                <div class=\"row\">
+
+                    <div class=\"col-lg-12 col-12 d-flex flex-wrap\">
+                        <p class=\"d-flex me-4 mb-0\">
+                            <i class=\"bi-person custom-icon me-2\" style=\"color: black;\"></i>
+                            <strong class=\"text-dark\">Bienvenue dans Evento</strong>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+
+        <nav class=\"navbar navbar-expand-lg\">
+            <div class=\"container\">
+                <a class=\"navbar-brand\" href=\"index.html\">
+                    <img src=\"{{asset('front/images/logo.png')}}\" alt=\"Logo de Evento\" style=\"width: 13%; margin-top: -5px;\">
+                    Evento
+                </a>
+
+                <a href=\"{{ path('app_login') }}\" class=\"btn custom-btn d-lg-none ms-auto me-4\">Se Connecter</a>
+
+                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\"
+                        aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                    <span class=\"navbar-toggler-icon\"></span>
+                </button>
+
+                <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+                    <ul class=\"navbar-nav align-items-lg-center ms-auto me-lg-5\">
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"#section_1\">Accueil</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"#section_2\">À propos</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"#section_3\">Artistes</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a href=\"{{ path('app_transport_index')}}\" class=\"nav-link click-scroll\">Événement</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"#section_5\">Abonnement</a>
+                        </li>
+
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link click-scroll\" href=\"#section_6\">Contact</a>
+                        </li>
+                    </ul>
+
+                    <a href=\"{{asset('front/login.html.twig')}}\" class=\"btn custom-btn d-lg-block d-none\">Se Connecter</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <section class=\"hero-section\" id=\"section_1\">
+            <div class=\"section-overlay\"></div>
+
+            <div class=\"container d-flex justify-content-center align-items-center\">
+                <div class=\"row\">
+
+                    <div class=\"col-12 mt-auto mb-5 text-center\">
+                        <small>Evento Présente</small>
+
+                        <h1 class=\"text-white mb-5\">Night Live 2023</h1>
+
+                        <a class=\"btn custom-btn smoothscroll\" href=\"#section_2\">C'est parti</a>
+                    </div>
+
+                    <div class=\"col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center\">
+                        <div class=\"date-wrap\">
+                            <h5 class=\"text-white\">
+                                <i class=\"custom-icon bi-clock me-2\"></i>
+                                10 - 12, Nov 2023
+                            </h5>
+                        </div>
+
+                        <div class=\"location-wrap mx-auto py-3 py-lg-0\">
+                            <h5 class=\"text-white\">
+                                <i class=\"custom-icon bi-geo-alt me-2\"></i>
+                                Billionaire, Gammarth
+                            </h5>
+                        </div>
+
+                        <div class=\"social-share\">
+                            <ul class=\"social-icon d-flex align-items-center justify-content-center\">
+                                <span class=\"text-white me-3\">Partagé:</span>
+
+                                <li class=\"social-icon-item\">
+                                    <a href=\"#\" class=\"social-icon-link\">
+                                        <span class=\"bi-facebook\"></span>
+                                    </a>
+                                </li>
+
+                                <li class=\"social-icon-item\">
+                                    <a href=\"#\" class=\"social-icon-link\">
+                                        <span class=\"bi-twitter\"></span>
+                                    </a>
+                                </li>
+
+                                <li class=\"social-icon-item\">
+                                    <a href=\"#\" class=\"social-icon-link\">
+                                        <span class=\"bi-instagram\"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=\"video-wrap\">
+                <video autoplay=\"\" loop=\"\" muted=\"\" class=\"custom-video\" poster=\"\">
+                    <source src=\"{{asset('front/video/pexels-2022395.mp4')}}\" type=\"video/mp4\">
+
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+        <section class=\"schedule-section section-padding\" id=\"section_4\">
+            <div class=\"container\">
+                <div class=\"row\">
+
+                    <div class=\"col-12 text-center\">
+                        <h2 class=\"text-white mb-4\">Nos événements</h1>
+
+                            <div class=\"table-responsive\">
+
+
+
+
+                                <div class=\"carousel-container\">
+                                    <div class=\"carousel\">
+                                        <!--debut-->
+                                        {% for evenement in evenements %}
+                                        <div class=\"card-container\">
+                                            <div class=\"card\">
+
+                                                <div class=\"card-content\">
+                                                    <h3>{{ evenement.nomEvent }} <br/> El Maestro</h3>
+                                                    <p>Date Debut: {{ evenement.dateDebutEvent ? evenement.dateDebutEvent|date('Y-m-d') : '' }}</p>
+                                                    <p>Date Fin: {{ evenement.dateDebutEvent ? evenement.dateDebutEvent|date('Y-m-d') : '' }}</p>
+                                                    <p>Location: {{ evenement.lieuEvent }}</p>
+                                                    <p>Prix: {{ evenement.prix }}</p>
+                                                    <p>Capacite: {{ evenement.capacite }}</p>
+                                                    <p>Description: {{ evenement.descriptionEvent }}</p>
+                                                    <a href=\"#\" class=\"btn\">Réserver</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--debut-->
+                                        {% endfor %}
+
+                                    </div>
+                                    <div class=\"buttons-container\">
+                                        <button id=\"prev-btn\" class=\"btn\">Prev</button>
+                                        <button id=\"next-btn\" class=\"btn\">Next</button>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+    </main>
+
+
+    <footer class=\"site-footer\">
+        <div class=\"site-footer-top\">
+            <div class=\"container\">
+                <div class=\"row\">
+
+                    <div class=\"col-lg-6 col-12\">
+                        <h2 class=\"text-white mb-lg-0\">Evento</h2>
+                    </div>
+
+                    <div class=\"col-lg-6 col-12 d-flex justify-content-lg-end align-items-center\">
+                        <ul class=\"social-icon d-flex justify-content-lg-end\">
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-twitter\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-apple\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-instagram\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-youtube\"></span>
+                                </a>
+                            </li>
+
+                            <li class=\"social-icon-item\">
+                                <a href=\"#\" class=\"social-icon-link\">
+                                    <span class=\"bi-pinterest\"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=\"container\">
+            <div class=\"row\">
+
+                <div class=\"col-lg-6 col-12 mb-4 pb-2\">
+                    <h5 class=\"site-footer-title mb-3\">Liens</h5>
+
+                    <ul class=\"site-footer-links\">
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Accueil</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">À propos</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Artistes</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Événement</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Abonnement</a>
+                        </li>
+
+                        <li class=\"site-footer-link-item\">
+                            <a href=\"#\" class=\"site-footer-link\">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class=\"col-lg-3 col-md-6 col-12 mb-4 mb-lg-0\">
+                    <h5 class=\"site-footer-title mb-3\">Tu as une question ?</h5>
+
+                    <p class=\"text-white d-flex mb-1\">
+                        <a href=\"tel: 090-080-0760\" class=\"site-footer-link\">
+                            090-080-0760
+                        </a>
+                    </p>
+
+                    <p class=\"text-white d-flex\">
+                        <a href=\"mailto:pidevtestapp@gmail.com\" class=\"site-footer-link\">
+                            pidevtestapp@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class=\"col-lg-3 col-md-6 col-11 mb-4 mb-lg-0 mb-md-0\">
+                    <h5 class=\"site-footer-title mb-3\">Location</h5>
+
+                    <p class=\"text-white d-flex mt-3 mb-2\">
+                        18, rue de l'Usine - ZI Aéroport Charguia II 2035 Ariana </p>
+
+                    <a class=\"link-fx-1 color-contrast-higher mt-3\" href=\"#\">
+                        <span>Notre carte</span>
+                        <svg class=\"icon\" viewBox=\"0 0 32 32\" aria-hidden=\"true\">
+                            <g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\">
+                                <circle cx=\"16\" cy=\"16\" r=\"15.5\"></circle>
+                                <line x1=\"10\" y1=\"18\" x2=\"16\" y2=\"12\"></line>
+                                <line x1=\"16\" y1=\"12\" x2=\"22\" y2=\"18\"></line>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
 {% endblock %}
-", "evenement/index.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\evenement\\index.html.twig");
+", "evenement/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\evenement\\index.html.twig");
     }
 }

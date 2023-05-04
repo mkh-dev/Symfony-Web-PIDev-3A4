@@ -77,7 +77,7 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
 ";
         // line 35
         $this->displayBlock('menu', $context, $blocks);
-        // line 281
+        // line 266
         echo "
 
 
@@ -86,9 +86,9 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
       <main class=\"h-full overflow-y-auto\">
         <div class=\"container px-6 mx-auto grid\">
           ";
-        // line 288
+        // line 273
         $this->displayBlock('body', $context, $blocks);
-        // line 291
+        // line 276
         echo "        </div>
       </main>
 
@@ -313,7 +313,7 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
           <div class=\"flex justify-center flex-1 lg:mr-32\">
             <div class=\"relative w-full max-w-xl mr-6 focus-within:text-purple-500\">
               <div class=\"absolute inset-y-0 flex items-center pl-2\">
-                <svg class=\"w-4 h-4\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 20 20\">
+                <svg class=\"w-4 h-4\" aria-hidden=\"true\"  fill=\"#efae06\"viewBox=\"0 0 20 20\">
                   <path fill-rule=\"evenodd\"
                     d=\"M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z\"
                     clip-rule=\"evenodd\"></path>
@@ -405,44 +405,41 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
                   src=\"https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82\"
                   alt=\"\" aria-hidden=\"true\" />
               </button>
-              <template x-if=\"isProfileMenuOpen\">
+               <template x-if=\"isProfileMenuOpen\">
                 <ul x-transition:leave=\"transition ease-in duration-150\" x-transition:leave-start=\"opacity-100\"
                   x-transition:leave-end=\"opacity-0\" @click.away=\"closeProfileMenu\" @keydown.escape=\"closeProfileMenu\"
                   class=\"absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700\"
                   aria-label=\"submenu\">
                   <li class=\"flex\">
+                   <span class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\" style=\"color: black;\">
+    ";
+        // line 240
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 240, $this->source); })()), "user", [], "any", false, false, false, 240)) {
+            echo "              
+        Vous êtes actuellement connecté en tant que ";
+            // line 241
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 241, $this->source); })()), "user", [], "any", false, false, false, 241), "userIdentifier", [], "any", false, false, false, 241), "html", null, true);
+            echo "
+    ";
+        }
+        // line 242
+        echo " 
+</span>
+
+                  </li> 
+                     <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
-                      href=\"#\">
-                      <svg class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
-                        stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                        <path d=\"M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z\"></path>
-                      </svg>
-                      <span>Profile</span>
-                    </a>
-                  </li>
-                  <li class=\"flex\">
-                    <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
-                      href=\"#\">
-                      <svg class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
-                        stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                        <path
-                          d=\"M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z\">
-                        </path>
-                        <path d=\"M15 12a3 3 0 11-6 0 3 3 0 016 0z\"></path>
-                      </svg>
-                      <span>Settings</span>
-                    </a>
-                  </li>
-                  <li class=\"flex\">
-                    <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
-                      href=\"#\">
-                      <svg class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
+                      href=\"";
+        // line 248
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+        echo "\">
+                      <svg style=\"color: black;\" class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
                         stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
                         <path
                           d=\"M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1\">
                         </path>
                       </svg>
-                      <span>Log out</span>
+                        <span style=\"color: black;\">Logout</span>
                     </a>
                   </li>
                 </ul>
@@ -458,14 +455,14 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
 
     }
 
-    // line 288
+    // line 273
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 289
+        // line 274
         echo "
           ";
         
@@ -480,7 +477,7 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
 
     public function getDebugInfo()
     {
-        return array (  469 => 289,  462 => 288,  293 => 118,  273 => 100,  257 => 87,  242 => 75,  229 => 65,  210 => 49,  200 => 42,  192 => 36,  185 => 35,  176 => 29,  172 => 28,  168 => 27,  164 => 26,  159 => 25,  152 => 24,  143 => 21,  139 => 20,  135 => 19,  130 => 18,  123 => 17,  110 => 14,  92 => 291,  90 => 288,  81 => 281,  79 => 35,  73 => 31,  71 => 24,  68 => 23,  66 => 17,  60 => 14,  45 => 1,);
+        return array (  466 => 274,  459 => 273,  434 => 248,  426 => 242,  421 => 241,  417 => 240,  293 => 118,  273 => 100,  257 => 87,  242 => 75,  229 => 65,  210 => 49,  200 => 42,  192 => 36,  185 => 35,  176 => 29,  172 => 28,  168 => 27,  164 => 26,  159 => 25,  152 => 24,  143 => 21,  139 => 20,  135 => 19,  130 => 18,  123 => 17,  110 => 14,  92 => 276,  90 => 273,  81 => 266,  79 => 35,  73 => 31,  71 => 24,  68 => 23,  66 => 17,  60 => 14,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -625,7 +622,7 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
           <div class=\"flex justify-center flex-1 lg:mr-32\">
             <div class=\"relative w-full max-w-xl mr-6 focus-within:text-purple-500\">
               <div class=\"absolute inset-y-0 flex items-center pl-2\">
-                <svg class=\"w-4 h-4\" aria-hidden=\"true\" fill=\"currentColor\" viewBox=\"0 0 20 20\">
+                <svg class=\"w-4 h-4\" aria-hidden=\"true\"  fill=\"#efae06\"viewBox=\"0 0 20 20\">
                   <path fill-rule=\"evenodd\"
                     d=\"M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z\"
                     clip-rule=\"evenodd\"></path>
@@ -717,44 +714,29 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
                   src=\"https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82\"
                   alt=\"\" aria-hidden=\"true\" />
               </button>
-              <template x-if=\"isProfileMenuOpen\">
+               <template x-if=\"isProfileMenuOpen\">
                 <ul x-transition:leave=\"transition ease-in duration-150\" x-transition:leave-start=\"opacity-100\"
                   x-transition:leave-end=\"opacity-0\" @click.away=\"closeProfileMenu\" @keydown.escape=\"closeProfileMenu\"
                   class=\"absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700\"
                   aria-label=\"submenu\">
                   <li class=\"flex\">
+                   <span class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\" style=\"color: black;\">
+    {% if app.user %}              
+        Vous êtes actuellement connecté en tant que {{ app.user.userIdentifier }}
+    {% endif %} 
+</span>
+
+                  </li> 
+                     <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
-                      href=\"#\">
-                      <svg class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
-                        stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                        <path d=\"M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z\"></path>
-                      </svg>
-                      <span>Profile</span>
-                    </a>
-                  </li>
-                  <li class=\"flex\">
-                    <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
-                      href=\"#\">
-                      <svg class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
-                        stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                        <path
-                          d=\"M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z\">
-                        </path>
-                        <path d=\"M15 12a3 3 0 11-6 0 3 3 0 016 0z\"></path>
-                      </svg>
-                      <span>Settings</span>
-                    </a>
-                  </li>
-                  <li class=\"flex\">
-                    <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
-                      href=\"#\">
-                      <svg class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
+                      href=\"{{ path('app_logout') }}\">
+                      <svg style=\"color: black;\" class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
                         stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
                         <path
                           d=\"M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1\">
                         </path>
                       </svg>
-                      <span>Log out</span>
+                        <span style=\"color: black;\">Logout</span>
                     </a>
                   </li>
                 </ul>
@@ -786,6 +768,6 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
 
 </body>
 
-</html>", "back/backbase.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\back\\backbase.html.twig");
+</html>", "back/backbase.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\back\\backbase.html.twig");
     }
 }

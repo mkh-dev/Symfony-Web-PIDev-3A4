@@ -4408,6 +4408,76 @@
         </argument>
         <argument>null</argument>
       </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.o9pxlOr"/>
+        <argument type="collection">
+          <argument>ROLE_UTILISATEUR</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.jIU_H3n"/>
+        <argument type="collection">
+          <argument>ROLE_UTILISATEUR</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.6.hlXti"/>
+        <argument type="collection">
+          <argument>ROLE_UTILISATEUR</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.l6v1sML"/>
+        <argument type="collection">
+          <argument>ROLE_PARTENAIRE</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.ahw4Q4D"/>
+        <argument type="collection">
+          <argument>ROLE_PARTENAIRE</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.VSYqaw4"/>
+        <argument type="collection">
+          <argument>ROLE_TRANSPORTEUR</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.O8D.WHG"/>
+        <argument type="collection">
+          <argument>ROLE_TRANSPORTEUR</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.B3gJg4v"/>
+        <argument type="collection">
+          <argument>ROLE_TRANSPORTEUR</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.EujTYIF"/>
+        <argument type="collection">
+          <argument>ROLE_TRANSPORTEUR</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.xsYoDVx"/>
+        <argument type="collection">
+          <argument>ROLE_ORGANISATEUR</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
     </service>
     <service id="security.context_listener" class="Symfony\Component\Security\Http\Firewall\ContextListener">
       <tag name="monolog.logger" channel="security"/>
@@ -4955,6 +5025,36 @@
     </service>
     <service id=".security.request_matcher.n7K7cE4" class="Symfony\Component\HttpFoundation\RequestMatcher">
       <argument>^/utilisateur</argument>
+    </service>
+    <service id=".security.request_matcher.o9pxlOr" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/reservation</argument>
+    </service>
+    <service id=".security.request_matcher.jIU_H3n" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/facture</argument>
+    </service>
+    <service id=".security.request_matcher.6.hlXti" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/abonnement</argument>
+    </service>
+    <service id=".security.request_matcher.l6v1sML" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/produit</argument>
+    </service>
+    <service id=".security.request_matcher.ahw4Q4D" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/categorie/prod</argument>
+    </service>
+    <service id=".security.request_matcher.VSYqaw4" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/transport/back</argument>
+    </service>
+    <service id=".security.request_matcher.O8D.WHG" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/vehicule/back</argument>
+    </service>
+    <service id=".security.request_matcher.B3gJg4v" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/calendrier</argument>
+    </service>
+    <service id=".security.request_matcher.EujTYIF" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/transport/back/transportStats</argument>
+    </service>
+    <service id=".security.request_matcher.xsYoDVx" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/evenement/back</argument>
     </service>
     <service id="security.command.user_password_encoder" class="Symfony\Bundle\SecurityBundle\Command\UserPasswordEncoderCommand">
       <tag name="console.command" command="security:encode-password"/>
