@@ -34,7 +34,7 @@ class __TwigTemplate_5a9cd409cbeda8ca2576e8bd85c94f55 extends Template
     protected function doGetParent(array $context)
     {
         // line 1
-        return "base.html.twig";
+        return "base2.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -43,7 +43,7 @@ class __TwigTemplate_5a9cd409cbeda8ca2576e8bd85c94f55 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "users/new.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "users/new.html.twig", 1);
+        $this->parent = $this->loadTemplate("base2.html.twig", "users/new.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -122,7 +122,7 @@ class __TwigTemplate_5a9cd409cbeda8ca2576e8bd85c94f55 extends Template
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends 'base2.html.twig' %}
 
 {% block title %}Ajouter Utilisateurs{% endblock %}
 
@@ -139,8 +139,6 @@ class __TwigTemplate_5a9cd409cbeda8ca2576e8bd85c94f55 extends Template
 </div>
 
 
-{% endblock %}
-
-", "users/new.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\users\\new.html.twig");
+{% endblock %}", "users/new.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\users\\new.html.twig");
     }
 }
