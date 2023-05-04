@@ -7,9 +7,8 @@
         "php": ">=7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "cmen/google-charts-bundle": "^5.0",
-        
         "api-platform/core": "^2.7",
+        "cmen/google-charts-bundle": "^5.0",
         "doctrine/annotations": "^2.0",
         "doctrine/doctrine-bundle": "^2.9",
         "doctrine/doctrine-migrations-bundle": "^3.2",
@@ -30,6 +29,7 @@
         "symfony/form": "5.4.*",
         "symfony/framework-bundle": "5.4.*",
         "symfony/google-mailer": "5.4.*",
+        "symfony/intl": "5.4.*",
         "symfony/mailer": "5.4.*",
         "symfony/property-access": "5.4.*",
         "symfony/property-info": "5.4.*",
