@@ -1352,6 +1352,7 @@ table.table .avatar {
 <<<<<<< HEAD
 {% endblock %}
 ", "users/show.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\users\\show.html.twig");
+<<<<<<< HEAD
 =======
   </div>
  
@@ -1377,5 +1378,7 @@ s0.parentNode.insertBefore(s1,s0);
 
 {% endblock %}", "users/show.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\users\\show.html.twig");
 >>>>>>> MalekBranch
+=======
+>>>>>>> RymBranch
     }
 }

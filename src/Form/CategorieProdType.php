@@ -14,6 +14,8 @@ class CategorieProdType extends AbstractType
         $builder
             ->add('catProd')
         ;
+        $builder->get('catProd')->setRequired(false);
+
     }
 
     public function configureOptions(OptionsResolver $resolver): void

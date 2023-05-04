@@ -13,6 +13,7 @@ app_users_list:
   path: /users
   controller: App\Controller\UsersController::index
 
-
- 
-
+triProd:
+    path: /produits/tri
+    controller: 'App\Http\Controllers\ProduitsController@triProd'
+    methods: GET

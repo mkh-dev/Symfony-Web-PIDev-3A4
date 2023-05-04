@@ -96,6 +96,7 @@ Veuillez cliquer sur le lien ci-dessous pour confirmer votre adresse e-mail et a
    
 
 </p>
+<<<<<<< HEAD
 <br>
 <p>  Si vous avez des questions ou des préoccupations, n'hésitez pas à nous contacter. </p>
 <br>
@@ -104,6 +105,8 @@ Veuillez cliquer sur le lien ci-dessous pour confirmer votre adresse e-mail et a
 <br><br>
 L'équipe Evento
 </p>
+=======
+>>>>>>> RymBranch
 ", "registration/confirmation_email.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\registration\\confirmation_email.html.twig");
     }
 }

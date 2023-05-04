@@ -1404,9 +1404,12 @@ table.table .avatar {
 <<<<<<< HEAD
         
 ", "reclamations/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\reclamations\\index.html.twig");
+<<<<<<< HEAD
 =======
 
 ", "reclamations/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\reclamations\\index.html.twig");
 >>>>>>> MalekBranch
+=======
+>>>>>>> RymBranch
     }
 }
