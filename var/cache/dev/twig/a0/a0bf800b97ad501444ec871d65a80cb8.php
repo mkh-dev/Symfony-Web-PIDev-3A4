@@ -160,6 +160,10 @@ https://templatemo.com/tm-583-festava-live
                         <li class=\"nav-item\">
                             <a class=\"nav-link click-scroll\" href=\"#section_4\">Événement</a>
                         </li>
+                        <a href=\"";
+        // line 94
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("produit_front");
+        echo "\" style=\"color: white; display: inline-block;\">Produits</a>
 
                         <li class=\"nav-item\">
                             <a class=\"nav-link click-scroll\" href=\"#section_5\">Abonnement</a>
@@ -171,7 +175,7 @@ https://templatemo.com/tm-583-festava-live
                     </ul>
 
                  <a href=\"";
-        // line 104
+        // line 105
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\" class=\"btn custom-btn d-lg-block d-none\">Déconnexion</a>
 
@@ -240,7 +244,7 @@ https://templatemo.com/tm-583-festava-live
             <div class=\"video-wrap\">
                 <video autoplay=\"\" loop=\"\" muted=\"\" class=\"custom-video\" poster=\"\">
                     <source src=\"";
-        // line 170
+        // line 171
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/video/pexels-2022395.mp4"), "html", null, true);
         echo "\" type=\"video/mp4\">
 
@@ -273,7 +277,7 @@ https://templatemo.com/tm-583-festava-live
                     <div class=\"col-lg-6 col-12\">
                         <div class=\"about-text-wrap\">
                             <img src=\"";
-        // line 200
+        // line 201
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/pexels-alexander-suhorucov-6457579.jpg"), "html", null, true);
         echo "\" class=\"about-image img-fluid\">
 
@@ -309,7 +313,7 @@ https://templatemo.com/tm-583-festava-live
                         <div class=\"artists-thumb\">
                             <div class=\"artists-image-wrap\">
                                 <img src=\"";
-        // line 233
+        // line 234
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/artists/joecalih-UmTZqmMvQcw-unsplash.jpg"), "html", null, true);
         echo "\"
                                     class=\"artists-image img-fluid\">
@@ -345,7 +349,7 @@ https://templatemo.com/tm-583-festava-live
                         <div class=\"artists-thumb\">
                             <div class=\"artists-image-wrap\">
                                 <img src=\"";
-        // line 266
+        // line 267
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/artists/abstral-official-bdlMO9z5yco-unsplash.jpg"), "html", null, true);
         echo "\"
                                     class=\"artists-image img-fluid\">
@@ -378,7 +382,7 @@ https://templatemo.com/tm-583-festava-live
 
                         <div class=\"artists-thumb\">
                             <img src=\"";
-        // line 296
+        // line 297
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/artists/soundtrap-rAT6FJ6wltE-unsplash.jpg"), "html", null, true);
         echo "\"
                                 class=\"artists-image img-fluid\">
@@ -431,7 +435,7 @@ https://templatemo.com/tm-583-festava-live
                                       <div class=\"card-container\">
                                         <div class=\"card\">
                                           <img src=\"";
-        // line 346
+        // line 347
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/artists/Couverture-Bassem-13-Avril-2023-01.jpg"), "html", null, true);
         echo "\" alt=\"Event Image\">
                                           <div class=\"card-content\">
@@ -445,7 +449,7 @@ https://templatemo.com/tm-583-festava-live
                                       <div class=\"card-container\">
                                         <div class=\"card\">
                                           <img src=\"";
-        // line 357
+        // line 358
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/artists/Couverture-Ahmed-Jelmem-11-Avril-2023-01.jpg"), "html", null, true);
         echo "\" alt=\"Event Image\">
                                           <div class=\"card-content\">
@@ -459,7 +463,7 @@ https://templatemo.com/tm-583-festava-live
                                       <div class=\"card-container\">
                                         <div class=\"card\">
                                           <img src=\"";
-        // line 368
+        // line 369
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/artists/C866770A-C91A-4F1F-BE6E-462470D168C8-1024x495.jpeg"), "html", null, true);
         echo "\" alt=\"Event Image\">
                                           <div class=\"card-content\">
@@ -473,7 +477,7 @@ https://templatemo.com/tm-583-festava-live
                                       <div class=\"card-container\">
                                         <div class=\"card\">
                                           <img src=\"";
-        // line 379
+        // line 380
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/artists/77826f92-295c-4106-bb0d-61bd4b9768f9-1024x553.jpg"), "html", null, true);
         echo "\" alt=\"Event Image\">
                                           <div class=\"card-content\">
@@ -769,27 +773,27 @@ T e m p l a t e M o
 
     <!-- JAVASCRIPT FILES -->
     <script src=\"";
-        // line 672
+        // line 673
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 673
+        // line 674
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/carousel.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 674
+        // line 675
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 675
+        // line 676
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.sticky.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 676
+        // line 677
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/click-scroll.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 677
+        // line 678
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -813,7 +817,7 @@ T e m p l a t e M o
 
     public function getDebugInfo()
     {
-        return array (  793 => 677,  789 => 676,  785 => 675,  781 => 674,  777 => 673,  773 => 672,  477 => 379,  463 => 368,  449 => 357,  435 => 346,  382 => 296,  349 => 266,  313 => 233,  277 => 200,  244 => 170,  175 => 104,  138 => 70,  131 => 66,  115 => 52,  110 => 51,  106 => 50,  81 => 28,  76 => 26,  71 => 24,  66 => 22,  56 => 15,  40 => 1,);
+        return array (  797 => 678,  793 => 677,  789 => 676,  785 => 675,  781 => 674,  777 => 673,  481 => 380,  467 => 369,  453 => 358,  439 => 347,  386 => 297,  353 => 267,  317 => 234,  281 => 201,  248 => 171,  179 => 105,  165 => 94,  138 => 70,  131 => 66,  115 => 52,  110 => 51,  106 => 50,  81 => 28,  76 => 26,  71 => 24,  66 => 22,  56 => 15,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -911,6 +915,7 @@ https://templatemo.com/tm-583-festava-live
                         <li class=\"nav-item\">
                             <a class=\"nav-link click-scroll\" href=\"#section_4\">Événement</a>
                         </li>
+                        <a href=\"{{ path('produit_front')}}\" style=\"color: white; display: inline-block;\">Produits</a>
 
                         <li class=\"nav-item\">
                             <a class=\"nav-link click-scroll\" href=\"#section_5\">Abonnement</a>

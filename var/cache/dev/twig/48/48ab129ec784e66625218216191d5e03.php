@@ -124,36 +124,7 @@ class __TwigTemplate_a23b15237bb09147f41060510eed1f45 extends Template
               <span class=\"ml-4\">Forms</span>
             </a>
           </li>
-          <li class=\"relative px-6 py-3\">
-            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
-              href=\"";
-        // line 54
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_index");
-        echo "\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                <path
-                  d=\"M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10\">
-                </path>
-              </svg>
-              <span class=\"ml-4\">Cards</span>
-            </a>
-          </li>
-          <li class=\"relative px-6 py-3\">
-            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
-              href=\"";
-        // line 66
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("charts.html"), "html", null, true);
-        echo "\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                <path d=\"M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z\"></path>
-                <path d=\"M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z\"></path>
-              </svg>
-              <span class=\"ml-4\">Charts</span>
-            </a>
-          </li>
-
+         
         </ul>
         <div class=\"px-6 my-6\">
       </div>
@@ -180,7 +151,7 @@ class __TwigTemplate_a23b15237bb09147f41060510eed1f45 extends Template
 
             <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\"
               href=\"";
-        // line 101
+        // line 78
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -197,7 +168,7 @@ class __TwigTemplate_a23b15237bb09147f41060510eed1f45 extends Template
           <li class=\"relative px-6 py-3\">
             <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
               href=\"";
-        // line 115
+        // line 92
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -209,35 +180,7 @@ class __TwigTemplate_a23b15237bb09147f41060510eed1f45 extends Template
               <span class=\"ml-4\">Forms</span>
             </a>
           </li>
-          <li class=\"relative px-6 py-3\">
-            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
-              href=\"";
-        // line 127
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("cards.html"), "html", null, true);
-        echo "\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                <path
-                  d=\"M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10\">
-                </path>
-              </svg>
-              <span class=\"ml-4\">Cards</span>
-            </a>
-          </li>
-          <li class=\"relative px-6 py-3\">
-            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
-              href=\"";
-        // line 139
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("charts.html"), "html", null, true);
-        echo "\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                <path d=\"M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z\"></path>
-                <path d=\"M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z\"></path>
-              </svg>
-              <span class=\"ml-4\">Charts</span>
-            </a>
-          </li>
+         
          
         </ul>
 
@@ -418,7 +361,7 @@ td img {
 }
 </style>
     <a href=\"";
-        // line 327
+        // line 282
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categorie_prod_new");
         echo "\" style=\"float: right;\"><img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/plus.png"), "html", null, true);
@@ -436,9 +379,9 @@ td img {
         </thead>
         <tbody>
         ";
-        // line 340
+        // line 295
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categorie_prods"]) || array_key_exists("categorie_prods", $context) ? $context["categorie_prods"] : (function () { throw new RuntimeError('Variable "categorie_prods" does not exist.', 340, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["categorie_prods"]) || array_key_exists("categorie_prods", $context) ? $context["categorie_prods"] : (function () { throw new RuntimeError('Variable "categorie_prods" does not exist.', 295, $this->source); })()));
         $context['_iterated'] = false;
         $context['loop'] = [
           'parent' => $context['_parent'],
@@ -454,33 +397,33 @@ td img {
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["categorie_prod"]) {
-            // line 341
+            // line 296
             echo "            <tr>
                 <td>";
-            // line 342
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "idCatProd", [], "any", false, false, false, 342), "html", null, true);
+            // line 297
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "idCatProd", [], "any", false, false, false, 297), "html", null, true);
             echo "</td>
                 <td>";
-            // line 343
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "catProd", [], "any", false, false, false, 343), "html", null, true);
+            // line 298
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "catProd", [], "any", false, false, false, 298), "html", null, true);
             echo "</td>
 
                 <td>
 
                   <div style=\"display: flex; justify-content: space-between;\">
                   <a href=\"";
-            // line 348
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categorie_prod_show", ["idCatProd" => twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "idCatProd", [], "any", false, false, false, 348)]), "html", null, true);
+            // line 303
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categorie_prod_show", ["idCatProd" => twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "idCatProd", [], "any", false, false, false, 303)]), "html", null, true);
             echo "\" \"><img src=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/chercher.png"), "html", null, true);
             echo "\" alt=\"Afficher le produit\" style=\"width:20px; height:20px;\"></a>
                   ";
-            // line 349
+            // line 304
             echo twig_include($this->env, $context, "categorie_prod/_delete_form.html.twig");
             echo "
                   <a href=\"";
-            // line 350
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categorie_prod_edit", ["idCatProd" => twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "idCatProd", [], "any", false, false, false, 350)]), "html", null, true);
+            // line 305
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categorie_prod_edit", ["idCatProd" => twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "idCatProd", [], "any", false, false, false, 305)]), "html", null, true);
             echo "\" \"><img src=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/crayon.png"), "html", null, true);
             echo "\" alt=\"Modifier le produit\" style=\"width:20px; height:20px;\"></a>
@@ -501,7 +444,7 @@ td img {
             }
         }
         if (!$context['_iterated']) {
-            // line 357
+            // line 312
             echo "            <tr>
                 <td colspan=\"9\">no records found</td>
             </tr>
@@ -510,7 +453,7 @@ td img {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categorie_prod'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 361
+        // line 316
         echo "        </tbody>
     </table>
 
@@ -535,7 +478,7 @@ td img {
 
     public function getDebugInfo()
     {
-        return array (  514 => 361,  505 => 357,  483 => 350,  479 => 349,  473 => 348,  465 => 343,  461 => 342,  458 => 341,  440 => 340,  422 => 327,  231 => 139,  216 => 127,  201 => 115,  184 => 101,  146 => 66,  131 => 54,  116 => 42,  99 => 28,  84 => 16,  73 => 7,  66 => 6,  53 => 3,  36 => 1,);
+        return array (  457 => 316,  448 => 312,  426 => 305,  422 => 304,  416 => 303,  408 => 298,  404 => 297,  401 => 296,  383 => 295,  365 => 282,  172 => 92,  155 => 78,  116 => 42,  99 => 28,  84 => 16,  73 => 7,  66 => 6,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -591,30 +534,7 @@ td img {
               <span class=\"ml-4\">Forms</span>
             </a>
           </li>
-          <li class=\"relative px-6 py-3\">
-            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
-              href=\"{{ path('app_reclamations_index') }}\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                <path
-                  d=\"M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10\">
-                </path>
-              </svg>
-              <span class=\"ml-4\">Cards</span>
-            </a>
-          </li>
-          <li class=\"relative px-6 py-3\">
-            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
-              href=\"{{asset('charts.html')}}\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                <path d=\"M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z\"></path>
-                <path d=\"M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z\"></path>
-              </svg>
-              <span class=\"ml-4\">Charts</span>
-            </a>
-          </li>
-
+         
         </ul>
         <div class=\"px-6 my-6\">
       </div>
@@ -664,29 +584,7 @@ td img {
               <span class=\"ml-4\">Forms</span>
             </a>
           </li>
-          <li class=\"relative px-6 py-3\">
-            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
-              href=\"{{asset('cards.html')}}\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                <path
-                  d=\"M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10\">
-                </path>
-              </svg>
-              <span class=\"ml-4\">Cards</span>
-            </a>
-          </li>
-          <li class=\"relative px-6 py-3\">
-            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
-              href=\"{{asset('charts.html')}}\">
-              <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
-                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
-                <path d=\"M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z\"></path>
-                <path d=\"M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z\"></path>
-              </svg>
-              <span class=\"ml-4\">Charts</span>
-            </a>
-          </li>
+         
          
         </ul>
 
@@ -908,6 +806,6 @@ td img {
   </div>
 {% endblock %}
 
-      ", "categorie_prod/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\categorie_prod\\index.html.twig");
+      ", "categorie_prod/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\categorie_prod\\index.html.twig");
     }
 }
