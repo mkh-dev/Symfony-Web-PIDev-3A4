@@ -18,11 +18,11 @@ class Users implements UserInterface
     #[ORM\Id]
     #[ORM\GeneratedValue(strategy: "IDENTITY")]
     #[ORM\Column(type: "integer")]
-    #[Groups("users")]
+    #[Groups("user")]
     private ?int $id = null;
 
     #[ORM\Column(type: "string", length: 255)]
-    #[Groups("users")]
+    #[Groups("user")]
     #[Assert\NotBlank(message: "Le prénom est obligatoire")]
     #[Assert\Regex(
         pattern: "/^[a-zA-Z]+$/",
@@ -31,7 +31,7 @@ class Users implements UserInterface
     private string $prenom;
 
     #[ORM\Column(type: "string", length: 255)]
-    #[Groups("users")]
+    #[Groups("user")]
     #[Assert\NotBlank(message: "Le nom est obligatoire")]
     #[Assert\Regex(
         pattern: "/^[a-zA-Z]+$/",
@@ -41,20 +41,20 @@ class Users implements UserInterface
 
     #[ORM\Column(type: "string", length: 255)]
     #[Assert\NotBlank(message: "L'email est obligatoire")]
-    #[Groups("users")]
+    #[Groups("user")]
     #[Assert\Email(message: "L'email '{{ value }}' n'est pas valide.")]
     private string $email;
 
     
     #[ORM\Column(type: "date")]
     #[Assert\NotBlank(message: "La date de naissance est obligatoire.")]
-    #[Groups("users")]
+    #[Groups("user")]
     #[Assert\LessThanOrEqual("today", message: "La date de naissance ne peut pas être dans le futur.")]
     #[LessThan("-18 years", message: "Vous devez avoir au moins 18 ans pour vous inscrire.")]
     private \DateTimeInterface $datenaissance;
     
     #[ORM\Column(type: "string", length: 20)]
-    #[Groups("users")]
+    #[Groups("user")]
     #[Assert\NotBlank(message: "Le numéro de téléphone est obligatoire")]
     #[Assert\Regex(
         pattern: '/^[0-9]{8}$/',
@@ -63,12 +63,12 @@ class Users implements UserInterface
     private string $numtel;
 
     #[ORM\Column(type: "string", length: 255)]
-    #[Groups("users")]
+    #[Groups("user")]
     private string $userrole;
 
     #[ORM\Column(type: "string", length: 255)]
     #[Assert\NotBlank(message: "Le mot de passe est obligatoire")]
-    #[Groups("users")]
+    #[Groups("user")]
     #[Assert\Regex(
         pattern: "/^(?=.*[a-zA-Z])(?=.*\d).*$/",
         message: "Le mot de passe doit contenir au moins une lettre et un chiffre"
@@ -81,7 +81,7 @@ class Users implements UserInterface
     private string $password;
 
     #[ORM\Column(type: 'boolean')]
-    #[Groups("users")]
+    #[Groups("user")]
     private $isVerified = false;
 
 
