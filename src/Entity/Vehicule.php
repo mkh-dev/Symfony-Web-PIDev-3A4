@@ -3,9 +3,10 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\VehiculeRepository;
 
 #[ORM\Table(name: "vehicule")]
-#[ORM\Entity]
+#[ORM\Entity(repositoryClass:VehiculeRepository::class)]
 class Vehicule
 {
     #[ORM\Id]
@@ -24,6 +25,10 @@ class Vehicule
 
     #[ORM\Column(name: "Disponibilite", type: "string", length: 255)]
     private string $disponibilite;
+
+    #[ORM\ManyToOne(inversedBy: 'vehicule')]
+    #[ORM\JoinColumn(name:"idTransport", referencedColumnName:"id_transport")]
+    private ?Transport $transport = null ;
 
     public function getIdVehicule(): ?int
     {
@@ -74,6 +79,18 @@ class Vehicule
     public function setDisponibilite(string $disponibilite): self
     {
         $this->disponibilite = $disponibilite;
+
+        return $this;
+    }
+
+    public function getTransport(): ?Transport
+    {
+        return $this->transport;
+    }
+
+    public function setTransport(?Transport $transport): self
+    {
+        $this->transport = $transport;
 
         return $this;
     }

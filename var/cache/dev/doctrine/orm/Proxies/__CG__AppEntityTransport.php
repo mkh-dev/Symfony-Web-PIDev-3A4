@@ -67,10 +67,10 @@ class Transport extends \App\Entity\Transport implements \Doctrine\ORM\Proxy\Pro
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'idTransport', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'typeTransport', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'dateDepart', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'heureDepart', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'lieuDepart', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'lieuArriver', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'prixTransport'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'idTransport', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'typeTransport', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'dateDepart', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'heureDepart', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'lieuDepart', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'lieuArriver', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'textColor', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'backColor', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'borderColor', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'prixTransport', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'tabVehicule'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'idTransport', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'typeTransport', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'dateDepart', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'heureDepart', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'lieuDepart', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'lieuArriver', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'prixTransport'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'idTransport', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'typeTransport', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'dateDepart', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'heureDepart', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'lieuDepart', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'lieuArriver', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'textColor', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'backColor', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'borderColor', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'prixTransport', '' . "\0" . 'App\\Entity\\Transport' . "\0" . 'tabVehicule'];
     }
 
     /**
@@ -322,6 +322,105 @@ class Transport extends \App\Entity\Transport implements \Doctrine\ORM\Proxy\Pro
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPrixTransport', [$prixTransport]);
 
         return parent::setPrixTransport($prixTransport);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getTabVehicule(): \Doctrine\Common\Collections\Collection
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTabVehicule', []);
+
+        return parent::getTabVehicule();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addTabVehicule(\App\Entity\Vehicule $tabVehicule): \App\Entity\Transport
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addTabVehicule', [$tabVehicule]);
+
+        return parent::addTabVehicule($tabVehicule);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeTabVehicule(\App\Entity\Vehicule $tabVehicule): \App\Entity\Transport
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeTabVehicule', [$tabVehicule]);
+
+        return parent::removeTabVehicule($tabVehicule);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getTextColor(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTextColor', []);
+
+        return parent::getTextColor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setTextColor(string $textColor): \App\Entity\Transport
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setTextColor', [$textColor]);
+
+        return parent::setTextColor($textColor);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getBackColor(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getBackColor', []);
+
+        return parent::getBackColor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setBackColor(string $backColor): \App\Entity\Transport
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setBackColor', [$backColor]);
+
+        return parent::setBackColor($backColor);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getBorderColor(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getBorderColor', []);
+
+        return parent::getBorderColor();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setBorderColor(string $borderColor): \App\Entity\Transport
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setBorderColor', [$borderColor]);
+
+        return parent::setBorderColor($borderColor);
     }
 
 }

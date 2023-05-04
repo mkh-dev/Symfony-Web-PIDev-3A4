@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Table(name: 'evenement')]
 #[ORM\Index(name: 'id_cat_event', columns: ['id_cat_event'])]
@@ -17,9 +18,11 @@ class Evenement
     private ?int $idEvent = null;
 
     #[ORM\Column(name: 'nom_event', type: 'string', length: 255, nullable: false)]
+    #[Assert\NotBlank(message:" Remplire nom")]
     private string $nomEvent;
 
     #[ORM\Column(name: 'description_event', type: 'string', length: 255, nullable: false)]
+    #[Assert\NotBlank(message:" Entrez une description")]
     private string $descriptionEvent;
 
     #[ORM\Column(name: 'date_debut_event', type: 'datetime', nullable: false, options: ['default' => 'CURRENT_TIMESTAMP'])]
@@ -45,6 +48,12 @@ class Evenement
     #[ORM\JoinColumn(name: 'id_transport', referencedColumnName: 'id_transport')]
     private ?Transport $idTransport = null;
 
+
+    #[ORM\Column]
+    private ?float $prix = null;
+
+    #[ORM\Column]
+    private ?int $capacite = null;
     public function getIdEvent(): ?int
     {
         return $this->idEvent;
@@ -104,10 +113,10 @@ class Evenement
     }
 
     public function setLieuEvent(string $lieuEvent): self
-{
-$this->lieuEvent = $lieuEvent;
-return $this;
-}
+    {
+        $this->lieuEvent = $lieuEvent;
+        return $this;
+    }
 
 
     public function getBudgetEvent(): ?int
@@ -157,9 +166,29 @@ return $this;
 
         return $this;
     }
-    public function __toString() 
+
+    public function getPrix(): ?float
     {
-        return (string) $this->idEvent; 
+        return $this->prix;
+    }
+
+    public function setPrix(float $prix): self
+    {
+        $this->prix = $prix;
+
+        return $this;
+    }
+
+    public function getCapacite(): ?int
+    {
+        return $this->capacite;
+    }
+
+    public function setCapacite(int $capacite): self
+    {
+        $this->capacite = $capacite;
+
+        return $this;
     }
 }
    

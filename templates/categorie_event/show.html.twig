@@ -1,11 +1,106 @@
-{% extends 'base.html.twig' %}
+{% extends 'back/backbase.html.twig' %}
 
 {% block title %}CategorieEvent{% endblock %}
 
 {% block body %}
-    <h1>CategorieEvent</h1>
 
-    <table class="table">
+    <style>
+        .tableM {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: white;
+            border-collapse: collapse;
+        }
+
+        .tableM th,
+        .tableM td {
+            padding: 0.75rem;
+            vertical-align: top;
+            border-top: 1px solid white;
+        }
+
+        .tableM thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid white;
+        }
+
+        .tableM tbody + tbody {
+            border-top: 2px solid white;
+        }
+
+        .tableM-sm th,
+        .tableM-sm td {
+            padding: 0.3rem;
+        }
+
+        .tableM-bordered {
+            border: 1px solid white;
+        }
+
+        .tableM-bordered th,
+        .tableM-bordered td {
+            border: 1px solid white;
+        }
+
+        .tableM-hover tbody tr:hover {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.075);
+        }
+
+        .tableM-primary,
+        .tableM-primary > th,
+        .tableM-primary > td {
+            background-color: #b8daff;
+            color: #fff;
+        }
+
+        .tableM-primary th,
+        .tableM-primary td,
+        .tableM-primary thead th,
+        .tableM-primary tbody + tbody {
+            border-color: #7abaff;
+        }
+
+        .tableM-hover .table-primary:hover {
+            background-color: #9fcdff;
+        }
+
+        .myTitle {
+            font-size: 2em; /* Taille de la police */
+            font-weight: bold; /* Gras */
+            text-align: center; /* Alignement du texte */
+            text-transform: uppercase; /* Mise en majuscules */
+            color: orange; /* Couleur du texte */
+            margin-top: 20px; /* Marge supérieure */
+            margin-bottom: 20px; /* Marge inférieure */
+        }
+
+
+        .boutton {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: orange;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .boutton:hover {
+            background-color: #ff8c00;
+        }
+
+
+
+
+    </style>
+
+    <h1 class="myTitle">Categorie Event</h1>
+
+    <table class="tableM">
         <tbody>
             <tr>
                 <th>IdCatEvent</th>
@@ -17,10 +112,10 @@
             </tr>
         </tbody>
     </table>
-
-    <a href="{{ path('app_categorie_event_index') }}">back to list</a>
-
-    <a href="{{ path('app_categorie_event_edit', {'idCatEvent': categorie_event.idCatEvent}) }}">edit</a>
+<br>
+    <a href="{{ path('app_categorie_event_index') }}" class="boutton">back to list</a>
+<br>
+    <a href="{{ path('app_categorie_event_edit', {'idCatEvent': categorie_event.idCatEvent}) }}" class="boutton">edit</a>
 
     {{ include('categorie_event/_delete_form.html.twig') }}
 {% endblock %}
