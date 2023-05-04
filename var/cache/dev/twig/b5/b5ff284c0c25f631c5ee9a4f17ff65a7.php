@@ -1416,7 +1416,6 @@ table.table .avatar {
 
 
 
-{% endblock %}
-", "users/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\users\\index.html.twig");
+{% endblock %}", "users/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\users\\index.html.twig");
     }
 }
