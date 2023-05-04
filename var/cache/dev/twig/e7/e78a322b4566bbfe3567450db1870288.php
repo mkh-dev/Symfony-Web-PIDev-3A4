@@ -40,6 +40,7 @@ class __TwigTemplate_a3d09d376e50b15679ec9594d1616735 extends Template
         echo "
 <style>
     /* Style pour la boîte de confirmation de suppression */
+    
     .delete-confirm-box {
         position: fixed;
         top: 50%;
@@ -92,20 +93,20 @@ class __TwigTemplate_a3d09d376e50b15679ec9594d1616735 extends Template
 
 
 ";
-        // line 56
+        // line 57
         echo "<form id=\"delete-form-";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 56, $this->source); })()), "idProd", [], "any", false, false, false, 56), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 57, $this->source); })()), "idProd", [], "any", false, false, false, 57), "html", null, true);
         echo "\" method=\"post\" action=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_delete", ["idProd" => twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 56, $this->source); })()), "idProd", [], "any", false, false, false, 56)]), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_delete", ["idProd" => twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 57, $this->source); })()), "idProd", [], "any", false, false, false, 57)]), "html", null, true);
         echo "\" style=\"display: none;\">
     <input type=\"hidden\" name=\"_token\" value=\"";
-        // line 57
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 57, $this->source); })()), "idProd", [], "any", false, false, false, 57))), "html", null, true);
+        // line 58
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 58, $this->source); })()), "idProd", [], "any", false, false, false, 58))), "html", null, true);
         echo "\">
 </form>
 <button type=\"button\" onclick=\"confirmDelete('";
-        // line 59
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 59, $this->source); })()), "idProd", [], "any", false, false, false, 59), "html", null, true);
+        // line 60
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 60, $this->source); })()), "idProd", [], "any", false, false, false, 60), "html", null, true);
         echo "')\" style=\"background:none; border:none; padding:0;\"><img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/traverser.png"), "html", null, true);
         echo "\" alt=\"Supprimer le produit\" style=\"width: 20px; height: 20px;\"></button>
@@ -150,7 +151,7 @@ class __TwigTemplate_a3d09d376e50b15679ec9594d1616735 extends Template
 
     public function getDebugInfo()
     {
-        return array (  108 => 59,  103 => 57,  96 => 56,  40 => 1,);
+        return array (  109 => 60,  104 => 58,  97 => 57,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -158,6 +159,7 @@ class __TwigTemplate_a3d09d376e50b15679ec9594d1616735 extends Template
         return new Source("
 <style>
     /* Style pour la boîte de confirmation de suppression */
+    
     .delete-confirm-box {
         position: fixed;
         top: 50%;

@@ -16,11 +16,11 @@ class ProduitType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-        ->add('nomProd', null, ['label' => 'Product Name'])
+        ->add('nomProd', null, ['label' => 'Nom du produit'])
         ->add('description', null, ['label' => 'Description'])
-        ->add('prix', null, ['label' => 'Price'])
-        ->add('quantite', null, ['label' => 'Quantity'])
-        ->add('nomPart', null, ['label' => 'Supplier Name'])
+        ->add('prix', null, ['label' => 'Prix'])
+        ->add('quantite', null, ['label' => 'Quantité'])
+        ->add('nomPart', null, ['label' => 'Nom du fournisseur'])
         ->add('image', null, ['label' => 'Image'])
         ->add('photo', FileType::class, [
             'label' => 'Image',
@@ -45,7 +45,7 @@ class ProduitType extends AbstractType
                 ])
             ],
         ])
-        ->add('idCatProd', null, ['label' => 'Product Category'])
+        ->add('idCatProd', null, ['label' => 'Catégorie Produit'])
 
         
         ;

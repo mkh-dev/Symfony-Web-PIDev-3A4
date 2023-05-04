@@ -117,23 +117,23 @@ class __TwigTemplate_12185f03df9283b0815223906ed74d5b extends Template
 
 ";
         // line 78
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 78, $this->source); })()), "nomProd", [], "any", false, false, false, 78), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Product name"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 78, $this->source); })()), "nomProd", [], "any", false, false, false, 78), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Nom de produit"]]);
         echo "
 ";
         // line 79
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 79, $this->source); })()), "description", [], "any", false, false, false, 79), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Product description"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 79, $this->source); })()), "description", [], "any", false, false, false, 79), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Description de produit"]]);
         echo "
 ";
         // line 80
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 80, $this->source); })()), "prix", [], "any", false, false, false, 80), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Product price"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 80, $this->source); })()), "prix", [], "any", false, false, false, 80), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Prix de produit"]]);
         echo "
 ";
         // line 81
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 81, $this->source); })()), "quantite", [], "any", false, false, false, 81), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Product quantity"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 81, $this->source); })()), "quantite", [], "any", false, false, false, 81), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Quantité de produit"]]);
         echo "
 ";
         // line 82
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 82, $this->source); })()), "nomPart", [], "any", false, false, false, 82), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Partner name"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 82, $this->source); })()), "nomPart", [], "any", false, false, false, 82), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Nom de fournisseur"]]);
         echo "
 ";
         // line 83
@@ -253,11 +253,11 @@ class __TwigTemplate_12185f03df9283b0815223906ed74d5b extends Template
   }
 </style>
 
-{{ form_row(form.nomProd, {'attr': {'class': 'form-control', 'placeholder': 'Product name'}}) }}
-{{ form_row(form.description, {'attr': {'class': 'form-control', 'placeholder': 'Product description'}}) }}
-{{ form_row(form.prix, {'attr': {'class': 'form-control', 'placeholder': 'Product price'}}) }}
-{{ form_row(form.quantite, {'attr': {'class': 'form-control', 'placeholder': 'Product quantity'}}) }}
-{{ form_row(form.nomPart, {'attr': {'class': 'form-control', 'placeholder': 'Partner name'}}) }}
+{{ form_row(form.nomProd, {'attr': {'class': 'form-control', 'placeholder': 'Nom de produit'}}) }}
+{{ form_row(form.description, {'attr': {'class': 'form-control', 'placeholder': 'Description de produit'}}) }}
+{{ form_row(form.prix, {'attr': {'class': 'form-control', 'placeholder': 'Prix de produit'}}) }}
+{{ form_row(form.quantite, {'attr': {'class': 'form-control', 'placeholder': 'Quantité de produit'}}) }}
+{{ form_row(form.nomPart, {'attr': {'class': 'form-control', 'placeholder': 'Nom de fournisseur'}}) }}
 {{ form_row(form.image, {'attr': {'class': 'form-control'}}) }}
 {{ form_row(form.idCatProd, {'attr': {'class': 'form-control'}}) }}
 <br>

@@ -120,7 +120,7 @@ class __TwigTemplate_dc0eb0e7d923d24588ec543918908de0 extends Template
 
 ";
         // line 79
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 79, $this->source); })()), "catProd", [], "any", false, false, false, 79), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Category name"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 79, $this->source); })()), "catProd", [], "any", false, false, false, 79), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Nom de catégorie"]]);
         echo "
 
 <br>
@@ -128,7 +128,7 @@ class __TwigTemplate_dc0eb0e7d923d24588ec543918908de0 extends Template
 <div class=\"button-container\">
   <button class=\"my-button-class center-button\">";
         // line 84
-        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 84, $this->source); })()), "Save")) : ("Save")), "html", null, true);
+        echo twig_escape_filter($this->env, ((array_key_exists("button_label", $context)) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 84, $this->source); })()), "Enregistrer")) : ("Enregistrer")), "html", null, true);
         echo "</button>
 </div>
 ";
@@ -236,12 +236,12 @@ class __TwigTemplate_dc0eb0e7d923d24588ec543918908de0 extends Template
   }
 </style>
 
-{{ form_row(form.catProd, {'attr': {'class': 'form-control', 'placeholder': 'Category name'}}) }}
+{{ form_row(form.catProd, {'attr': {'class': 'form-control', 'placeholder': 'Nom de catégorie'}}) }}
 
 <br>
 
 <div class=\"button-container\">
-  <button class=\"my-button-class center-button\">{{ button_label|default('Save') }}</button>
+  <button class=\"my-button-class center-button\">{{ button_label|default('Enregistrer') }}</button>
 </div>
 {{ form_end(form) }}
 ", "categorie_prod/_form.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\categorie_prod\\_form.html.twig");
