@@ -176,8 +176,8 @@ https://templatemo.com/tm-583-festava-live
 
                  <a href=\"";
         // line 105
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-        echo "\" class=\"btn custom-btn d-lg-block d-none\">Déconnexion</a>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_facture_index");
+        echo "\" class=\"btn custom-btn d-lg-block d-none\">Votre Compte</a>
 
 
                 </div>
@@ -926,7 +926,7 @@ https://templatemo.com/tm-583-festava-live
                         </li>
                     </ul>
 
-                 <a href=\"{{ path('app_logout') }}\" class=\"btn custom-btn d-lg-block d-none\">Déconnexion</a>
+                 <a href=\"{{ path('app_facture_index') }}\" class=\"btn custom-btn d-lg-block d-none\">Votre Compte</a>
 
 
                 </div>

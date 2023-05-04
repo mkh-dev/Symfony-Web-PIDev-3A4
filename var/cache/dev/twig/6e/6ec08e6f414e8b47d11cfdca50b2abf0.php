@@ -789,6 +789,8 @@ T e m p l a t e M o
 
 </body>
 
+
+
 </html>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -1488,6 +1490,8 @@ T e m p l a t e M o
     <script src=\"{{asset('front/js/custom.js')}}\"></script>
 
 </body>
+
+
 
 </html>", "front/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\front\\index.html.twig");
     }
