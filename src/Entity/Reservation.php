@@ -3,20 +3,26 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use App\Repository\ReservationRepository;
+
 
 #[ORM\Table(name: "reservation")]
 #[ORM\Index(name: "idUser", columns: ["idUser"])]
 #[ORM\Index(name: "idEvent", columns: ["idEvent"])]
 
-#[ORM\Entity]
+#[ORM\Entity(repositoryClass:ReservationRepository::class)]
 class Reservation
 {
-    #[ORM\Column(type: "integer")]
     #[ORM\Id]
+    #[ORM\Column(name: "numRes",type: "integer")]
     #[ORM\GeneratedValue(strategy: "IDENTITY")]
-    private ?int $numRes = null;
+    private ?int $numres = null;
 
     #[ORM\Column(type: "integer")]
+    #[Assert\NotBlank(message:"il faut indiquer le nombre de places")]
+    #[Assert\Positive(message:"il faut une valeur positive ")]
+    #[Assert\LessThanOrEqual(10,message:"il est interdit de réserver plus que 10 places ")]
     private ?int $nbplaces = null;
 
     #[ORM\ManyToOne(targetEntity: "Evenement")]
@@ -29,9 +35,9 @@ class Reservation
     
     private ?Users $iduser = null;
 
-    public function getNumRes(): ?int
+    public function getNumres(): ?int
     {
-        return $this->numRes;
+        return $this->numres;
     }
 
     public function getNbplaces(): ?int
@@ -69,4 +75,10 @@ class Reservation
 
         return $this;
     }
+    public function __toString() 
+    {
+        return (string) $this->numres; 
+    }
+
+
 }

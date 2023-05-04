@@ -6,6 +6,7 @@ use App\Entity\Facture;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Gregwar\CaptchaBundle\Type\CaptchaType;
 
 class FactureType extends AbstractType
 {
@@ -15,6 +16,7 @@ class FactureType extends AbstractType
             ->add('netAPayer')
             ->add('reservation')
             ->add('user')
+            ->add('captcha', CaptchaType::class);
         ;
     }
 

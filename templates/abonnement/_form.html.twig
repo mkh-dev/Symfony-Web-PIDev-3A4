@@ -1,0 +1,84 @@
+
+<style>
+.my-form {
+    background-color: #f5f5f5;
+    border: 2px solid #ddd;
+    padding: 10px;
+}
+.my-form button {
+    background-color: #F1C40F;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px #888888;
+    transition: all 0.2s ease-in-out;
+    margin-top: 20px;
+}
+.my-form button:hover {
+    background-color: #e6b800;
+    transform: translateY(-2px);
+}
+.my-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.my-form input[type=text], 
+.my-form input[type=email], 
+.my-form textarea {
+    width: 10%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+}
+.my-form input[type=text]:focus, 
+.my-form input[type=email]:focus, 
+.my-form textarea:focus {
+    border: 1px solid #F1C40F;
+    box-shadow: 0px 0px 10px #F1C40F;
+    outline: none;
+}
+/* Set a max-height of 200px for the textarea */
+.my-form textarea {
+    max-height: 200px;
+}
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px #f5f5f5;
+}
+
+
+
+    .btnd {
+        background-color: #F1C40F;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+margin-top: 25px;   
+margin-left: 45px;  }
+
+    .btnd:hover {
+        background-color: #E6B90F;
+        cursor: pointer;
+    }
+
+
+</style>
+
+
+
+{{ form_start(form, {'attr': {'class': 'my-form', 'novalidate': 'novalidate'}}) }}
+
+    {{ form_widget(form) }}
+
+    <button class="btnd">{{ button_label|default('Enregistrer') }}</button>
+{{ form_end(form) }}

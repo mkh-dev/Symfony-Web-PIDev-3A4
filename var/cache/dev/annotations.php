@@ -62,6 +62,20 @@ return [[
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%23addLink' => 1,
 'Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 0,
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 1,
+'App%5CController%5CAbonnementController' => 0,
+'[C]App%5CController%5CAbonnementController' => 1,
+'App%5CController%5CAbonnementController%23index' => 0,
+'[C]App%5CController%5CAbonnementController%23index' => 1,
+'App%5CController%5CAbonnementController%23new' => 0,
+'[C]App%5CController%5CAbonnementController%23new' => 1,
+'App%5CController%5CAbonnementController%23show' => 0,
+'[C]App%5CController%5CAbonnementController%23show' => 1,
+'App%5CController%5CAbonnementController%23edit' => 0,
+'[C]App%5CController%5CAbonnementController%23edit' => 1,
+'App%5CController%5CAbonnementController%23delete' => 0,
+'[C]App%5CController%5CAbonnementController%23delete' => 1,
+'App%5CController%5CAbonnementController%23exportToPdf' => 0,
+'[C]App%5CController%5CAbonnementController%23exportToPdf' => 1,
 'App%5CController%5CCategorieEventController' => 0,
 '[C]App%5CController%5CCategorieEventController' => 1,
 'App%5CController%5CCategorieEventController%23index' => 0,
@@ -216,18 +230,6 @@ return [[
 '[C]App%5CController%5CSecurityController%23newPassword' => 1,
 'App%5CController%5CSecurityController%24session' => 0,
 '[C]App%5CController%5CSecurityController%24session' => 1,
-'App%5CController%5CSerializerController' => 0,
-'[C]App%5CController%5CSerializerController' => 1,
-'App%5CController%5CSerializerController%23allColis' => 0,
-'[C]App%5CController%5CSerializerController%23allColis' => 1,
-'App%5CController%5CSerializerController%23ColisID' => 0,
-'[C]App%5CController%5CSerializerController%23ColisID' => 1,
-'App%5CController%5CSerializerController%23Add' => 0,
-'[C]App%5CController%5CSerializerController%23Add' => 1,
-'App%5CController%5CSerializerController%23updateJson' => 0,
-'[C]App%5CController%5CSerializerController%23updateJson' => 1,
-'App%5CController%5CSerializerController%23delete' => 0,
-'[C]App%5CController%5CSerializerController%23delete' => 1,
 'App%5CController%5CTransportController' => 0,
 '[C]App%5CController%5CTransportController' => 1,
 'App%5CController%5CTransportController%23index' => 0,
@@ -252,6 +254,16 @@ return [[
 '[C]App%5CController%5CUsersController%23edit' => 1,
 'App%5CController%5CUsersController%23delete' => 0,
 '[C]App%5CController%5CUsersController%23delete' => 1,
+'App%5CController%5CUsersMobileController' => 0,
+'[C]App%5CController%5CUsersMobileController' => 1,
+'App%5CController%5CUsersMobileController%23usersmobile' => 12,
+'[C]App%5CController%5CUsersMobileController%23usersmobile' => 1,
+'App%5CController%5CUsersMobileController%23newusers' => 13,
+'[C]App%5CController%5CUsersMobileController%23newusers' => 1,
+'App%5CController%5CUsersMobileController%23SupprimerUsers' => 14,
+'[C]App%5CController%5CUsersMobileController%23SupprimerUsers' => 1,
+'App%5CController%5CUsersMobileController%23updateUsers' => 15,
+'[C]App%5CController%5CUsersMobileController%23updateUsers' => 1,
 'App%5CController%5CVehiculeController' => 0,
 '[C]App%5CController%5CVehiculeController' => 1,
 'App%5CController%5CVehiculeController%23index' => 0,
@@ -264,6 +276,54 @@ return [[
 '[C]App%5CController%5CVehiculeController%23edit' => 1,
 'App%5CController%5CVehiculeController%23delete' => 0,
 '[C]App%5CController%5CVehiculeController%23delete' => 1,
+'App%5CEntity%5CAbonnement' => 0,
+'[C]App%5CEntity%5CAbonnement' => 1,
+'App%5CEntity%5CAbonnement%23getId' => 0,
+'[C]App%5CEntity%5CAbonnement%23getId' => 1,
+'App%5CEntity%5CAbonnement%23isRenouvellement' => 0,
+'[C]App%5CEntity%5CAbonnement%23isRenouvellement' => 1,
+'App%5CEntity%5CAbonnement%23setRenouvellement' => 0,
+'[C]App%5CEntity%5CAbonnement%23setRenouvellement' => 1,
+'App%5CEntity%5CAbonnement%23getDateExpire' => 0,
+'[C]App%5CEntity%5CAbonnement%23getDateExpire' => 1,
+'App%5CEntity%5CAbonnement%23setDateExpire' => 0,
+'[C]App%5CEntity%5CAbonnement%23setDateExpire' => 1,
+'App%5CEntity%5CAbonnement%23getIdUser' => 0,
+'[C]App%5CEntity%5CAbonnement%23getIdUser' => 1,
+'App%5CEntity%5CAbonnement%23setIdUser' => 0,
+'[C]App%5CEntity%5CAbonnement%23setIdUser' => 1,
+'App%5CEntity%5CAbonnement%23getPrix' => 0,
+'[C]App%5CEntity%5CAbonnement%23getPrix' => 1,
+'App%5CEntity%5CAbonnement%23setPrix' => 0,
+'[C]App%5CEntity%5CAbonnement%23setPrix' => 1,
+'App%5CEntity%5CAbonnement%23getPlafond' => 0,
+'[C]App%5CEntity%5CAbonnement%23getPlafond' => 1,
+'App%5CEntity%5CAbonnement%23setPlafond' => 0,
+'[C]App%5CEntity%5CAbonnement%23setPlafond' => 1,
+'App%5CEntity%5CAbonnement%23getType' => 0,
+'[C]App%5CEntity%5CAbonnement%23getType' => 1,
+'App%5CEntity%5CAbonnement%23setType' => 0,
+'[C]App%5CEntity%5CAbonnement%23setType' => 1,
+'App%5CEntity%5CAbonnement%23getCurrency' => 0,
+'[C]App%5CEntity%5CAbonnement%23getCurrency' => 1,
+'App%5CEntity%5CAbonnement%23setCurrency' => 0,
+'[C]App%5CEntity%5CAbonnement%23setCurrency' => 1,
+'App%5CEntity%5CAbonnement%24id' => 0,
+'[C]App%5CEntity%5CAbonnement%24id' => 1,
+'App%5CEntity%5CAbonnement%24renouvellement' => 0,
+'[C]App%5CEntity%5CAbonnement%24renouvellement' => 1,
+'App%5CEntity%5CAbonnement%24dateExpire' => 0,
+'[C]App%5CEntity%5CAbonnement%24dateExpire' => 1,
+'App%5CEntity%5CAbonnement%24idUser' => 0,
+'[C]App%5CEntity%5CAbonnement%24idUser' => 1,
+'App%5CEntity%5CAbonnement%24prix' => 0,
+'[C]App%5CEntity%5CAbonnement%24prix' => 1,
+'App%5CEntity%5CAbonnement%24plafond' => 0,
+'[C]App%5CEntity%5CAbonnement%24plafond' => 1,
+'App%5CEntity%5CAbonnement%24type' => 0,
+'[C]App%5CEntity%5CAbonnement%24type' => 1,
+'App%5CEntity%5CAbonnement%24currency' => 0,
+'[C]App%5CEntity%5CAbonnement%24currency' => 1,
 'App%5CEntity%5CCategorieEvent' => 0,
 '[C]App%5CEntity%5CCategorieEvent' => 1,
 'App%5CEntity%5CCategorieEvent%23getIdCatEvent' => 0,
@@ -366,6 +426,8 @@ return [[
 '[C]App%5CEntity%5CFacture%23getUser' => 1,
 'App%5CEntity%5CFacture%23setUser' => 0,
 '[C]App%5CEntity%5CFacture%23setUser' => 1,
+'App%5CEntity%5CFacture%23__toString' => 0,
+'[C]App%5CEntity%5CFacture%23__toString' => 1,
 'App%5CEntity%5CFacture%24id' => 0,
 '[C]App%5CEntity%5CFacture%24id' => 1,
 'App%5CEntity%5CFacture%24netAPayer' => 0,
@@ -496,8 +558,8 @@ return [[
 '[C]App%5CEntity%5CReclamations%24message' => 1,
 'App%5CEntity%5CReservation' => 0,
 '[C]App%5CEntity%5CReservation' => 1,
-'App%5CEntity%5CReservation%23getNumRes' => 0,
-'[C]App%5CEntity%5CReservation%23getNumRes' => 1,
+'App%5CEntity%5CReservation%23getNumres' => 0,
+'[C]App%5CEntity%5CReservation%23getNumres' => 1,
 'App%5CEntity%5CReservation%23getNbplaces' => 0,
 '[C]App%5CEntity%5CReservation%23getNbplaces' => 1,
 'App%5CEntity%5CReservation%23setNbplaces' => 0,
@@ -510,8 +572,10 @@ return [[
 '[C]App%5CEntity%5CReservation%23getIduser' => 1,
 'App%5CEntity%5CReservation%23setIduser' => 0,
 '[C]App%5CEntity%5CReservation%23setIduser' => 1,
-'App%5CEntity%5CReservation%24numRes' => 0,
-'[C]App%5CEntity%5CReservation%24numRes' => 1,
+'App%5CEntity%5CReservation%23__toString' => 0,
+'[C]App%5CEntity%5CReservation%23__toString' => 1,
+'App%5CEntity%5CReservation%24numres' => 0,
+'[C]App%5CEntity%5CReservation%24numres' => 1,
 'App%5CEntity%5CReservation%24nbplaces' => 0,
 '[C]App%5CEntity%5CReservation%24nbplaces' => 1,
 'App%5CEntity%5CReservation%24idevent' => 0,
@@ -1136,6 +1200,14 @@ return [[
 '[C]Doctrine%5CORM%5CPersisters%5CEntity%5CSingleTablePersister%23generateFilterConditionSQL' => 1,
 'Doctrine%5CORM%5CPersisters%5CEntity%5CSingleTablePersister%23getSQLResultCasing' => 0,
 '[C]Doctrine%5CORM%5CPersisters%5CEntity%5CSingleTablePersister%23getSQLResultCasing' => 1,
+'Endroid%5CQrCodeBundle%5CController%5CGenerateController' => 0,
+'[C]Endroid%5CQrCodeBundle%5CController%5CGenerateController' => 1,
+'Endroid%5CQrCodeBundle%5CController%5CGenerateController%23__construct' => 0,
+'[C]Endroid%5CQrCodeBundle%5CController%5CGenerateController%23__construct' => 1,
+'Endroid%5CQrCodeBundle%5CController%5CGenerateController%23__invoke' => 0,
+'[C]Endroid%5CQrCodeBundle%5CController%5CGenerateController%23__invoke' => 1,
+'Endroid%5CQrCodeBundle%5CController%5CGenerateController%24builderRegistry' => 0,
+'[C]Endroid%5CQrCodeBundle%5CController%5CGenerateController%24builderRegistry' => 1,
 'Gregwar%5CCaptchaBundle%5CController%5CCaptchaController' => 0,
 '[C]Gregwar%5CCaptchaBundle%5CController%5CCaptchaController' => 1,
 'Gregwar%5CCaptchaBundle%5CController%5CCaptchaController%23__construct' => 0,
@@ -1417,24 +1489,24 @@ return [[
 'Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorList%23create' => 0,
 '[C]Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorList%23create' => 1,
 'Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorList%23__toString' => 0,
-'[C]Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorList%23__toString' => 12,
+'[C]Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorList%23__toString' => 1,
 'Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorOptions' => 0,
-'[C]Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorOptions' => 12,
+'[C]Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorOptions' => 1,
 'Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorOptions%23create' => 0,
-'[C]Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorOptions%23create' => 12,
+'[C]Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorOptions%23create' => 1,
 'Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorPage' => 0,
-'[C]Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorPage' => 12,
+'[C]Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorPage' => 1,
 'Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorPage%23__construct' => 0,
-'[C]Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorPage%23__construct' => 12,
+'[C]Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorPage%23__construct' => 1,
 'Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorPage%23buildInstance' => 0,
-'[C]Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorPage%23buildInstance' => 12,
+'[C]Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorPage%23buildInstance' => 1,
 'Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorPage%23__toString' => 0,
-'[C]Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorPage%23__toString' => 12,
+'[C]Twilio%5CRest%5CVerify%5CV2%5CService%5CEntity%5CNewFactorPage%23__toString' => 1,
 
 ], [
 
 0 => [],
-1 => 1683204344,
+1 => 1683210837,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -1666,6 +1738,99 @@ return [[
         []
     );
 },
-12 => 1683204345,
+12 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/users_mobile',
+                ],
+                'name' => [
+                    'users_mobile',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+13 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/newusers_mobile/{prenom}/{nom}/{email}/{datenaissance}/{numtel}/{userrole}/{password}',
+                ],
+                'name' => [
+                    'newusers_mobile',
+                ],
+                'methods' => [
+                    [
+                        'GET',
+                        'POST',
+                    ],
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+14 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/SupprimerUsers',
+                ],
+                'name' => [
+                    'SupprimerUsers',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+15 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
+        ],
+        null,
+        [
+            'Symfony\\Component\\Routing\\Annotation\\Route' => [
+                'path' => [
+                    '/updateUsers',
+                ],
+                'name' => [
+                    'updateUsers',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
 
 ]];

@@ -157,5 +157,9 @@ return $this;
 
         return $this;
     }
+    public function __toString() 
+    {
+        return (string) $this->idEvent; 
+    }
 }
    

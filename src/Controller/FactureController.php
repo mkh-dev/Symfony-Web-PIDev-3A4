@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Controller;
-
+use Dompdf\Dompdf;
+use App\Repository\FactureRepository;
 use App\Entity\Facture;
 use App\Form\FactureType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -9,19 +10,35 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Endroid\QrCode\Builder\Builder;
+use Endroid\QrCode\ErrorCorrectionLevel\ErrorCorrectionLevelHigh;
+use Endroid\QrCode\Label\Alignment\LabelAlignmentCenter;
+use Endroid\QrCode\Label\Font\NotoSans;
+use Endroid\QrCode\Encoding\Encoding;
+use Endroid\QrCode\RoundBlockSizeMode\RoundBlockSizeModeMargin;
+use Endroid\QrCode\Writer\PngWriter;
+use Knp\Component\Pager\PaginatorInterface;
+
 
 #[Route('/facture')]
 class FactureController extends AbstractController
 {
     #[Route('/', name: 'app_facture_index', methods: ['GET'])]
-    public function index(EntityManagerInterface $entityManager): Response
-    {
-        $factures = $entityManager
-            ->getRepository(Facture::class)
-            ->findAll();
+    public function index( FactureRepository $FactureRepository , PaginatorInterface $paginator, Request $request): Response
 
+    { 
+        // Get all the abonnements from the repository
+        $factures = $FactureRepository->findAll();
+        
+        // Paginate the results
+        $pagination = $paginator->paginate(
+            $factures, // Query results
+            $request->query->getInt('page', 1), // Current page number
+            3 // Number of results per page
+        );
+        
         return $this->render('facture/index.html.twig', [
-            'factures' => $factures,
+            'factures' => $pagination,
         ]);
     }
 
