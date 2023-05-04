@@ -1,7 +1,3 @@
 <?php //%5BC%5DApp%255CKernel
 
-<<<<<<< HEAD
-return [PHP_INT_MAX, 1682176634];
-=======
-return [PHP_INT_MAX, 1682636234];
->>>>>>> RymBranch
+return [PHP_INT_MAX, 1683199980];

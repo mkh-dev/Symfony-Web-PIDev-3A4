@@ -21,6 +21,7 @@
       <parameter key="SymfonyCastsVerifyEmailBundle">SymfonyCasts\Bundle\VerifyEmail\SymfonyCastsVerifyEmailBundle</parameter>
       <parameter key="KnpPaginatorBundle">Knp\Bundle\PaginatorBundle\KnpPaginatorBundle</parameter>
       <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
+      <parameter key="GregwarCaptchaBundle">Gregwar\CaptchaBundle\GregwarCaptchaBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
@@ -70,6 +71,10 @@
       <parameter key="DoctrineFixturesBundle" type="collection">
         <parameter key="path">C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\doctrine\doctrine-fixtures-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\FixturesBundle</parameter>
+      </parameter>
+      <parameter key="GregwarCaptchaBundle" type="collection">
+        <parameter key="path">C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle</parameter>
+        <parameter key="namespace">Gregwar\CaptchaBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -137,6 +142,7 @@
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="data_collector.templates" type="collection"/>
     <parameter key="twig.form.resources" type="collection">
+      <parameter>@GregwarCaptcha/captcha.html.twig</parameter>
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
     <parameter key="twig.default_path">C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4/templates</parameter>
@@ -376,6 +382,47 @@
     <parameter key="knp_paginator.template.sortable">@KnpPaginator/Pagination/sortable_link.html.twig</parameter>
     <parameter key="knp_paginator.page_range">5</parameter>
     <parameter key="knp_paginator.page_limit">null</parameter>
+    <parameter key="gregwar_captcha.controller.class">Gregwar\CaptchaBundle\Controller\CaptchaController</parameter>
+    <parameter key="gregwar_captcha.captcha_type.class">Gregwar\CaptchaBundle\Type\CaptchaType</parameter>
+    <parameter key="gregwar_captcha.captcha_generator.class">Gregwar\CaptchaBundle\Generator\CaptchaGenerator</parameter>
+    <parameter key="gregwar_captcha.image_file_handler.class">Gregwar\CaptchaBundle\Generator\ImageFileHandler</parameter>
+    <parameter key="gregwar_captcha.captcha_builder.class">Gregwar\Captcha\CaptchaBuilder</parameter>
+    <parameter key="gregwar_captcha.phrase_builder.class">Gregwar\Captcha\PhraseBuilder</parameter>
+    <parameter key="gregwar_captcha.config" type="collection">
+      <parameter key="width">200</parameter>
+      <parameter key="height">50</parameter>
+      <parameter key="length">5</parameter>
+      <parameter key="font">C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle\DependencyInjection/../Generator/Font/captcha.ttf</parameter>
+      <parameter key="keep_value">false</parameter>
+      <parameter key="charset">abcdefhjkmnprstuvwxyz23456789</parameter>
+      <parameter key="as_file">false</parameter>
+      <parameter key="as_url">false</parameter>
+      <parameter key="reload">false</parameter>
+      <parameter key="image_folder">captcha</parameter>
+      <parameter key="web_path">C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4/public</parameter>
+      <parameter key="gc_freq">100</parameter>
+      <parameter key="expiration">60</parameter>
+      <parameter key="quality">50</parameter>
+      <parameter key="invalid_message">Bad code value</parameter>
+      <parameter key="bypass_code">null</parameter>
+      <parameter key="whitelist_key">captcha_whitelist_key</parameter>
+      <parameter key="humanity">0</parameter>
+      <parameter key="distortion">true</parameter>
+      <parameter key="max_front_lines">null</parameter>
+      <parameter key="max_behind_lines">null</parameter>
+      <parameter key="interpolation">true</parameter>
+      <parameter key="text_color" type="collection"/>
+      <parameter key="background_color" type="collection"/>
+      <parameter key="background_images" type="collection"/>
+      <parameter key="disabled">false</parameter>
+      <parameter key="ignore_all_effects">false</parameter>
+      <parameter key="session_key">captcha</parameter>
+    </parameter>
+    <parameter key="gregwar_captcha.config.image_folder">captcha</parameter>
+    <parameter key="gregwar_captcha.config.web_path">C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4/public</parameter>
+    <parameter key="gregwar_captcha.config.gc_freq">100</parameter>
+    <parameter key="gregwar_captcha.config.expiration">60</parameter>
+    <parameter key="gregwar_captcha.config.whitelist_key">captcha_whitelist_key</parameter>
     <parameter key="console.command.ids" type="collection"/>
   </parameters>
   <services>
@@ -468,6 +515,13 @@
       <argument type="service" id=".session.do-not-use"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.mx0UMmY.App\Controller\SecurityController"/>
+      </call>
+    </service>
+    <service id="App\Controller\SerializerController" class="App\Controller\SerializerController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\SerializerController"/>
       </call>
     </service>
     <service id="App\Controller\TransportController" class="App\Controller\TransportController" public="true" autowire="true" autoconfigure="true">
@@ -1207,6 +1261,7 @@
         <argument>Symfony\Component\Form\Extension\Core\Type</argument>
         <argument>App\Form</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
+        <argument></argument>
       </argument>
       <argument type="collection">
         <argument>App\Form\CategorieEventType</argument>
@@ -1226,6 +1281,7 @@
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ColorType</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type\EntityType</argument>
+        <argument>Gregwar\CaptchaBundle\Type\CaptchaType</argument>
       </argument>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Core\Type\TransformationFailureExtension</argument>
@@ -1722,6 +1778,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.ar.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ar.xliff</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.ar.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.ar.yml</argument>
           </argument>
           <argument key="az" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.az.xlf</argument>
@@ -1738,6 +1796,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\form/Resources/translations\validators.bg.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.bg.xliff</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.bg.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.bg.yml</argument>
           </argument>
           <argument key="bs" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.bs.xlf</argument>
@@ -1757,6 +1817,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.cs.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.cs.xliff</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.cs.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.cs.yml</argument>
           </argument>
           <argument key="cy" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.cy.xlf</argument>
@@ -1773,6 +1835,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.de.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.de.xliff</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.de.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.de.yml</argument>
           </argument>
           <argument key="el" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.el.xlf</argument>
@@ -1785,6 +1849,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.en.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.en.xliff</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.en.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.en.yml</argument>
           </argument>
           <argument key="es" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.es.xlf</argument>
@@ -1792,6 +1858,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.es.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.es.xliff</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.es.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.es.yml</argument>
           </argument>
           <argument key="et" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.et.xlf</argument>
@@ -1823,6 +1891,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.fr.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.fr.xliff</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.fr.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.fr.yml</argument>
           </argument>
           <argument key="gl" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.gl.xlf</argument>
@@ -1865,6 +1935,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.it.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.it.xliff</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.it.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.it.yml</argument>
           </argument>
           <argument key="ja" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.ja.xlf</argument>
@@ -1910,6 +1982,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle+intl-icu.nl.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.nl.xliff</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.nl.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.nl.yml</argument>
           </argument>
           <argument key="nn" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.nn.xlf</argument>
@@ -1928,6 +2002,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.pl.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.pl.xliff</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.pl.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.pl.yml</argument>
           </argument>
           <argument key="pt" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.pt.xlf</argument>
@@ -1940,6 +2016,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\form/Resources/translations\validators.pt_BR.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.pt_BR.xliff</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.pt_BR.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.pt_BR.yml</argument>
           </argument>
           <argument key="ro" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.ro.xlf</argument>
@@ -1947,6 +2025,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.ro.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ro.xliff</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.ro.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.ro.yml</argument>
           </argument>
           <argument key="ru" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.ru.xlf</argument>
@@ -1954,6 +2034,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.ru.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ru.xliff</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.ru.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.ru.yml</argument>
           </argument>
           <argument key="sk" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.sk.xlf</argument>
@@ -2003,6 +2085,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.tr.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.tr.xliff</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.tr.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.tr.yml</argument>
           </argument>
           <argument key="uk" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.uk.xlf</argument>
@@ -2010,6 +2094,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfonycasts\verify-email-bundle\src/Resources/translations\VerifyEmailBundle.uk.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.uk.xliff</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.uk.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.uk.yml</argument>
           </argument>
           <argument key="ur" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.ur.xlf</argument>
@@ -2030,6 +2116,8 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.zh_CN.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\form/Resources/translations\validators.zh_CN.xlf</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations\security.zh_CN.xlf</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\gregwar_captcha.zh_CN.yml</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations\validators.zh_CN.yml</argument>
           </argument>
           <argument key="zh_TW" type="collection">
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\validator/Resources/translations\validators.zh_TW.xlf</argument>
@@ -2052,6 +2140,7 @@
           <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations</argument>
           <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfonycasts\verify-email-bundle\src/Resources/translations</argument>
           <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations</argument>
+          <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations</argument>
           <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4/translations</argument>
           <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\framework-bundle/translations</argument>
           <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\twig-bundle/translations</argument>
@@ -2071,6 +2160,7 @@
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\security-core/Resources/translations</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfonycasts\verify-email-bundle\src/Resources/translations</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/translations</argument>
+            <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/translations</argument>
             <argument>translations</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\framework-bundle/translations</argument>
             <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\symfony\twig-bundle/translations</argument>
@@ -3501,7 +3591,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.p1LGeUF"/>
+      <argument type="service" id=".service_locator.XmdMnLq"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -3843,6 +3933,14 @@
       <call method="addPath">
         <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\knplabs\knp-paginator-bundle/templates</argument>
         <argument>!KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/views</argument>
+        <argument>GregwarCaptcha</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4\vendor\gregwar\captcha-bundle/Resources/views</argument>
+        <argument>!GregwarCaptcha</argument>
       </call>
       <call method="addPath">
         <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4/templates</argument>
@@ -4232,7 +4330,29 @@
         </service>
       </argument>
     </service>
-    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap"/>
+    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap">
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.a7qmmbC"/>
+        <argument type="collection">
+          <argument>ROLE_ADMINISTRATEUR</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.l4FyN7a"/>
+        <argument type="collection">
+          <argument>ROLE_ADMINISTRATEUR</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id=".security.request_matcher.n7K7cE4"/>
+        <argument type="collection">
+          <argument>ROLE_UTILISATEUR</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+    </service>
     <service id="security.context_listener" class="Symfony\Component\Security\Http\Firewall\ContextListener">
       <tag name="monolog.logger" channel="security"/>
       <argument type="service" id="security.untracked_token_storage"/>
@@ -4770,6 +4890,15 @@
         <argument key="security.firewall.map.context.dev" type="service_closure" id="security.firewall.map.context.dev"/>
         <argument key="security.firewall.map.context.main" type="service_closure" id="security.firewall.map.context.main"/>
       </argument>
+    </service>
+    <service id=".security.request_matcher.a7qmmbC" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/users</argument>
+    </service>
+    <service id=".security.request_matcher.l4FyN7a" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/reclamations</argument>
+    </service>
+    <service id=".security.request_matcher.n7K7cE4" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/utilisateur</argument>
     </service>
     <service id="security.command.user_password_encoder" class="Symfony\Bundle\SecurityBundle\Command\UserPasswordEncoderCommand">
       <tag name="console.command" command="security:encode-password"/>
@@ -6724,6 +6853,31 @@
     <service id="doctrine.fixtures.purger.orm_purger_factory" class="Doctrine\Bundle\FixturesBundle\Purger\ORMPurgerFactory">
       <tag name="doctrine.fixtures.purger_factory" alias="default"/>
     </service>
+    <service id="gregwar_captcha.controller" class="Gregwar\CaptchaBundle\Controller\CaptchaController" public="true" autowire="true">
+      <argument type="service" id="gregwar_captcha.generator"/>
+      <argument>%gregwar_captcha.config%</argument>
+    </service>
+    <service id="gregwar_captcha.type" class="Gregwar\CaptchaBundle\Type\CaptchaType" public="true">
+      <tag name="form.type" alias="captcha"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="gregwar_captcha.generator"/>
+      <argument type="service" id="translator.default"/>
+      <argument>%gregwar_captcha.config%</argument>
+    </service>
+    <service id="gregwar_captcha.generator" class="Gregwar\CaptchaBundle\Generator\CaptchaGenerator" public="true">
+      <argument type="service" id="router.default"/>
+      <argument type="service" id="gregwar_captcha.captcha_builder"/>
+      <argument type="service" id="gregwar_captcha.phrase_builder"/>
+      <argument type="service" id="gregwar_captcha.image_file_handler"/>
+    </service>
+    <service id="gregwar_captcha.image_file_handler" class="Gregwar\CaptchaBundle\Generator\ImageFileHandler" public="true">
+      <argument>captcha</argument>
+      <argument>C:\Users\rimbs\Desktop\pidev symfony\PI\Symfony-Web-PIDev-3A4/public</argument>
+      <argument>100</argument>
+      <argument>60</argument>
+    </service>
+    <service id="gregwar_captcha.captcha_builder" class="Gregwar\Captcha\CaptchaBuilder" public="true"/>
+    <service id="gregwar_captcha.phrase_builder" class="Gregwar\Captcha\PhraseBuilder" public="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CategorieEventController" class="App\Controller\CategorieEventController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CategorieEventController" class="App\Controller\CategorieEventController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\CategorieEventController" class="App\Controller\CategorieEventController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6760,6 +6914,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SerializerController" class="App\Controller\SerializerController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SerializerController" class="App\Controller\SerializerController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\SerializerController" class="App\Controller\SerializerController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TransportController" class="App\Controller\TransportController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TransportController" class="App\Controller\TransportController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\TransportController" class="App\Controller\TransportController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -7278,6 +7435,13 @@
         <argument key="normalizer" type="service_closure" id="serializer"/>
       </argument>
     </service>
+    <service id=".service_locator.Zhsi5nT" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="paginator" type="service_closure" id="knp_paginator"/>
+      </argument>
+    </service>
     <service id=".service_locator.oEfCGgo" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -7339,11 +7503,38 @@
         <argument key="usersRepository" type="service_closure" id="App\Repository\UsersRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.Obndqcx" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.EbrO3QW" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="passwordEncoder" type="service_closure" id="security.user_password_encoder.generic"/>
         <argument key="usersRepository" type="service_closure" id="App\Repository\UsersRepository"/>
+      </argument>
+    </service>
+    <service id=".errored.AcBfDcj" class="App\Controller\Request"/>
+    <service id=".errored.3Lf_Za." class="App\Controller\EntityManagerInterface"/>
+    <service id=".service_locator.nblc3rD" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id=".errored.3Lf_Za."/>
+        <argument key="normalizer" type="service_closure" id="serializer"/>
+        <argument key="request" type="service_closure" id=".errored.AcBfDcj"/>
+      </argument>
+    </service>
+    <service id=".errored.q_764an" class="App\Controller\Request"/>
+    <service id=".service_locator.avSuyAD" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="Normalizer" type="service_closure" id="serializer"/>
+        <argument key="req" type="service_closure" id=".errored.q_764an"/>
+      </argument>
+    </service>
+    <service id=".errored.5kHlvWV" class="App\Controller\Request"/>
+    <service id=".errored.Y9aiQT9" class="App\Controller\Colis"/>
+    <service id=".service_locator.twUyKIx" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="colis" type="service_closure" id=".errored.Y9aiQT9"/>
+        <argument key="request" type="service_closure" id=".errored.5kHlvWV"/>
       </argument>
     </service>
     <service id=".service_locator.PKdMXit" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -7359,17 +7550,25 @@
         <argument key="transport" type="service_closure" id=".errored..service_locator.CoH4_pD.App\Entity\Transport"/>
       </argument>
     </service>
-    <service id=".service_locator.Zhsi5nT" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.riGN6sa" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
-        <argument key="paginator" type="service_closure" id="knp_paginator"/>
+        <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
       </argument>
     </service>
     <service id=".service_locator.Sgq.tmb" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="user" type="service_closure" id=".errored..service_locator.Sgq.tmb.App\Entity\Users"/>
+      </argument>
+    </service>
+    <service id=".service_locator.yRRNQrI" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="user" type="service_closure" id=".errored..service_locator.yRRNQrI.App\Entity\Users"/>
+        <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
       </argument>
     </service>
     <service id=".service_locator.cyg1ViB" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -7392,7 +7591,7 @@
         <argument key="vehicule" type="service_closure" id=".errored..service_locator.iVJ8gI9.App\Entity\Vehicule"/>
       </argument>
     </service>
-    <service id=".service_locator.0pL7VRD" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.HaPoNEF" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\CategorieEventController::delete" type="service_closure" id=".service_locator.T_GcY.G"/>
@@ -7428,7 +7627,7 @@
         <argument key="App\Controller\ProduitMobileController::produitmobile" type="service_closure" id=".service_locator.wr9s5g4"/>
         <argument key="App\Controller\ReclamationsController::delete" type="service_closure" id=".service_locator.MHm6mei"/>
         <argument key="App\Controller\ReclamationsController::edit" type="service_closure" id=".service_locator.MHm6mei"/>
-        <argument key="App\Controller\ReclamationsController::index" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\ReclamationsController::index" type="service_closure" id=".service_locator.Zhsi5nT"/>
         <argument key="App\Controller\ReclamationsController::new" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\ReclamationsController::show" type="service_closure" id=".service_locator.oEfCGgo"/>
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.UnjcfIq"/>
@@ -7444,16 +7643,21 @@
         <argument key="App\Controller\ReservationController::show" type="service_closure" id=".service_locator.jtI7Unb"/>
         <argument key="App\Controller\SecurityController::forgotPassword" type="service_closure" id=".service_locator.RYu7BDn"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.zFcJjKU"/>
-        <argument key="App\Controller\SecurityController::newPassword" type="service_closure" id=".service_locator.Obndqcx"/>
+        <argument key="App\Controller\SecurityController::newPassword" type="service_closure" id=".service_locator.EbrO3QW"/>
+        <argument key="App\Controller\SerializerController::Add" type="service_closure" id=".service_locator.nblc3rD"/>
+        <argument key="App\Controller\SerializerController::ColisID" type="service_closure" id=".service_locator.wr9s5g4"/>
+        <argument key="App\Controller\SerializerController::allColis" type="service_closure" id=".service_locator.wr9s5g4"/>
+        <argument key="App\Controller\SerializerController::delete" type="service_closure" id=".service_locator.twUyKIx"/>
+        <argument key="App\Controller\SerializerController::updateJson" type="service_closure" id=".service_locator.avSuyAD"/>
         <argument key="App\Controller\TransportController::delete" type="service_closure" id=".service_locator.CoH4_pD"/>
         <argument key="App\Controller\TransportController::edit" type="service_closure" id=".service_locator.CoH4_pD"/>
         <argument key="App\Controller\TransportController::index" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\TransportController::new" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\TransportController::show" type="service_closure" id=".service_locator.PKdMXit"/>
         <argument key="App\Controller\UsersController::delete" type="service_closure" id=".service_locator.cyg1ViB"/>
-        <argument key="App\Controller\UsersController::edit" type="service_closure" id=".service_locator.cyg1ViB"/>
+        <argument key="App\Controller\UsersController::edit" type="service_closure" id=".service_locator.yRRNQrI"/>
         <argument key="App\Controller\UsersController::index" type="service_closure" id=".service_locator.Zhsi5nT"/>
-        <argument key="App\Controller\UsersController::new" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\UsersController::new" type="service_closure" id=".service_locator.riGN6sa"/>
         <argument key="App\Controller\UsersController::show" type="service_closure" id=".service_locator.Sgq.tmb"/>
         <argument key="App\Controller\VehiculeController::delete" type="service_closure" id=".service_locator.iVJ8gI9"/>
         <argument key="App\Controller\VehiculeController::edit" type="service_closure" id=".service_locator.iVJ8gI9"/>
@@ -7497,7 +7701,7 @@
         <argument key="App\Controller\ProduitMobileController:produitmobile" type="service_closure" id=".service_locator.wr9s5g4"/>
         <argument key="App\Controller\ReclamationsController:delete" type="service_closure" id=".service_locator.MHm6mei"/>
         <argument key="App\Controller\ReclamationsController:edit" type="service_closure" id=".service_locator.MHm6mei"/>
-        <argument key="App\Controller\ReclamationsController:index" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\ReclamationsController:index" type="service_closure" id=".service_locator.Zhsi5nT"/>
         <argument key="App\Controller\ReclamationsController:new" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\ReclamationsController:show" type="service_closure" id=".service_locator.oEfCGgo"/>
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.UnjcfIq"/>
@@ -7513,16 +7717,21 @@
         <argument key="App\Controller\ReservationController:show" type="service_closure" id=".service_locator.jtI7Unb"/>
         <argument key="App\Controller\SecurityController:forgotPassword" type="service_closure" id=".service_locator.RYu7BDn"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.zFcJjKU"/>
-        <argument key="App\Controller\SecurityController:newPassword" type="service_closure" id=".service_locator.Obndqcx"/>
+        <argument key="App\Controller\SecurityController:newPassword" type="service_closure" id=".service_locator.EbrO3QW"/>
+        <argument key="App\Controller\SerializerController:Add" type="service_closure" id=".service_locator.nblc3rD"/>
+        <argument key="App\Controller\SerializerController:ColisID" type="service_closure" id=".service_locator.wr9s5g4"/>
+        <argument key="App\Controller\SerializerController:allColis" type="service_closure" id=".service_locator.wr9s5g4"/>
+        <argument key="App\Controller\SerializerController:delete" type="service_closure" id=".service_locator.twUyKIx"/>
+        <argument key="App\Controller\SerializerController:updateJson" type="service_closure" id=".service_locator.avSuyAD"/>
         <argument key="App\Controller\TransportController:delete" type="service_closure" id=".service_locator.CoH4_pD"/>
         <argument key="App\Controller\TransportController:edit" type="service_closure" id=".service_locator.CoH4_pD"/>
         <argument key="App\Controller\TransportController:index" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\TransportController:new" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\TransportController:show" type="service_closure" id=".service_locator.PKdMXit"/>
         <argument key="App\Controller\UsersController:delete" type="service_closure" id=".service_locator.cyg1ViB"/>
-        <argument key="App\Controller\UsersController:edit" type="service_closure" id=".service_locator.cyg1ViB"/>
+        <argument key="App\Controller\UsersController:edit" type="service_closure" id=".service_locator.yRRNQrI"/>
         <argument key="App\Controller\UsersController:index" type="service_closure" id=".service_locator.Zhsi5nT"/>
-        <argument key="App\Controller\UsersController:new" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\UsersController:new" type="service_closure" id=".service_locator.riGN6sa"/>
         <argument key="App\Controller\UsersController:show" type="service_closure" id=".service_locator.Sgq.tmb"/>
         <argument key="App\Controller\VehiculeController:delete" type="service_closure" id=".service_locator.iVJ8gI9"/>
         <argument key="App\Controller\VehiculeController:edit" type="service_closure" id=".service_locator.iVJ8gI9"/>
@@ -7592,7 +7801,7 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.p1LGeUF" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.XmdMnLq" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\CategorieEventType" type="service_closure" id="App\Form\CategorieEventType"/>
@@ -7607,6 +7816,7 @@
         <argument key="App\Form\TransportType" type="service_closure" id="App\Form\TransportType"/>
         <argument key="App\Form\UsersType" type="service_closure" id="App\Form\UsersType"/>
         <argument key="App\Form\VehiculeType" type="service_closure" id="App\Form\VehiculeType"/>
+        <argument key="Gregwar\CaptchaBundle\Type\CaptchaType" type="service_closure" id="gregwar_captcha.type"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service_closure" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ColorType" type="service_closure" id="form.type.color"/>
@@ -7775,6 +7985,12 @@
     <service id=".service_locator.mx0UMmY.App\Controller\SecurityController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\SecurityController"/>
       <argument>App\Controller\SecurityController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\SerializerController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\SerializerController"/>
+      <argument>App\Controller\SerializerController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.mx0UMmY" method="withContext"/>
     </service>
@@ -7991,12 +8207,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.0pL7VRD"/>
+      <argument type="service" id=".service_locator.HaPoNEF"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.0pL7VRD"/>
+      <argument type="service" id=".service_locator.HaPoNEF"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -8076,6 +8292,7 @@
     <service id=".errored..service_locator.PKdMXit.App\Entity\Transport" class="App\Entity\Transport"/>
     <service id=".errored..service_locator.CoH4_pD.App\Entity\Transport" class="App\Entity\Transport"/>
     <service id=".errored..service_locator.Sgq.tmb.App\Entity\Users" class="App\Entity\Users"/>
+    <service id=".errored..service_locator.yRRNQrI.App\Entity\Users" class="App\Entity\Users"/>
     <service id=".errored..service_locator.cyg1ViB.App\Entity\Users" class="App\Entity\Users"/>
     <service id=".errored..service_locator.pB20uqv.App\Entity\Vehicule" class="App\Entity\Vehicule"/>
     <service id=".errored..service_locator.iVJ8gI9.App\Entity\Vehicule" class="App\Entity\Vehicule"/>
@@ -8994,9 +9211,10 @@
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default"/>
     <service id="SymfonyCasts\Bundle\VerifyEmail\VerifyEmailHelperInterface" alias="symfonycasts.verify_email.helper"/>
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
+    <service id="Gregwar\CaptchaBundle\Controller\CaptchaController" alias="gregwar_captcha.controller" public="true"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.0pL7VRD"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.HaPoNEF"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -9014,13 +9232,16 @@
     <service id=".service_locator.7kg.8qN" alias=".service_locator.UnjcfIq"/>
     <service id=".service_locator.28KGtpx" alias=".service_locator.gZIaKpL"/>
     <service id=".service_locator.aGtLM.g" alias=".service_locator.CT.Cplt"/>
-    <service id=".service_locator.EbrO3QW" alias=".service_locator.Obndqcx"/>
+    <service id=".service_locator.GML7_o1" alias=".service_locator.nblc3rD"/>
+    <service id=".service_locator.qkd8C.4" alias=".service_locator.avSuyAD"/>
+    <service id=".service_locator.pcnBVcv" alias=".service_locator.twUyKIx"/>
     <service id=".service_locator.DMl9e1Q" alias=".service_locator.CoH4_pD"/>
+    <service id=".service_locator..WQRx6E" alias=".service_locator.yRRNQrI"/>
     <service id=".service_locator.Ar0Pu3O" alias=".service_locator.cyg1ViB"/>
     <service id=".service_locator.gPjNq68" alias=".service_locator.iVJ8gI9"/>
-    <service id=".service_locator.0hz2Cjj" alias=".service_locator.0pL7VRD"/>
+    <service id=".service_locator.FlTt7sH" alias=".service_locator.HaPoNEF"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.l6ELYLY"/>
-    <service id=".service_locator.zSOfuvX" alias=".service_locator.p1LGeUF"/>
+    <service id=".service_locator.jeCJN.8" alias=".service_locator.XmdMnLq"/>
     <service id=".service_locator.4hi2aOY" alias=".service_locator.bBRwv06"/>
     <service id=".service_locator.O24_MAy" alias=".service_locator.yY.p4P7"/>
     <service id=".service_locator.0ghLsew" alias=".service_locator.mx0UMmY"/>
@@ -9092,6 +9313,7 @@
     <service id=".service_locator.vYpYubR" alias=".service_locator.iGUm1r8"/>
     <service id=".service_locator.Vst8F9m" alias=".service_locator.HkHf8J3"/>
     <service id=".service_locator.R192xRJ" alias=".service_locator.wr9s5g4"/>
+    <service id=".service_locator.i87CtER" alias=".service_locator.Zhsi5nT"/>
     <service id=".service_locator.rGX4QRF" alias=".service_locator.oEfCGgo"/>
     <service id=".service_locator.m2lNYrQ" alias=".service_locator.MHm6mei"/>
     <service id=".service_locator.PQVTo06" alias=".service_locator.UnjcfIq"/>
@@ -9101,11 +9323,14 @@
     <service id=".service_locator.lMUPSCL" alias=".service_locator.CT.Cplt"/>
     <service id=".service_locator.URfgn8g" alias=".service_locator.zFcJjKU"/>
     <service id=".service_locator.J7vXjyb" alias=".service_locator.RYu7BDn"/>
-    <service id=".service_locator.T9Vmb_J" alias=".service_locator.Obndqcx"/>
+    <service id=".service_locator.T9Vmb_J" alias=".service_locator.EbrO3QW"/>
+    <service id=".service_locator.ptfARv6" alias=".service_locator.nblc3rD"/>
+    <service id=".service_locator.kldd2Hs" alias=".service_locator.avSuyAD"/>
     <service id=".service_locator.1Q654_7" alias=".service_locator.PKdMXit"/>
     <service id=".service_locator.Txevc5V" alias=".service_locator.CoH4_pD"/>
-    <service id=".service_locator.i87CtER" alias=".service_locator.Zhsi5nT"/>
+    <service id=".service_locator.DoCD.2o" alias=".service_locator.riGN6sa"/>
     <service id=".service_locator.TdsUmlH" alias=".service_locator.Sgq.tmb"/>
+    <service id=".service_locator.O3DxOFX" alias=".service_locator.yRRNQrI"/>
     <service id=".service_locator.XuSPMDq" alias=".service_locator.cyg1ViB"/>
     <service id=".service_locator.9bJ6zHz" alias=".service_locator.pB20uqv"/>
     <service id=".service_locator.yYnJCZj" alias=".service_locator.iVJ8gI9"/>

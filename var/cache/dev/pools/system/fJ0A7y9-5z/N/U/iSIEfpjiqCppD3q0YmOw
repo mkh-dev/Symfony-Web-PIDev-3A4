@@ -1,15 +1,3 @@
 <?php //%5BC%5DSymfony%255CComponent%255CForm%255CForm%2524lockSetData
 
-<<<<<<< HEAD
-<<<<<<< HEAD:var/cache/dev/pools/system/fJ0A7y9-5z/N/U/iSIEfpjiqCppD3q0YmOw
-return [PHP_INT_MAX, 1682176637];
-=======
-return [PHP_INT_MAX, 1682838918];
->>>>>>> MalekBranch:var/cache/dev/pools/system/Gxwlszbj8-/N/U/iSIEfpjiqCppD3q0YmOw
-=======
-<<<<<<<< HEAD:var/cache/dev/pools/system/Gxwlszbj8-/N/U/iSIEfpjiqCppD3q0YmOw
-return [PHP_INT_MAX, 1683185083];
-========
-return [PHP_INT_MAX, 1682636235];
->>>>>>>> RymBranch:var/cache/dev/pools/system/fJ0A7y9-5z/N/U/iSIEfpjiqCppD3q0YmOw
->>>>>>> RymBranch
+return [PHP_INT_MAX, 1683199982];

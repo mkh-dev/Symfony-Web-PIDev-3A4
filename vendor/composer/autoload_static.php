@@ -1541,6 +1541,7 @@ class ComposerStaticInitb93dd86d36839ac9bb2761cc594c0902
         'App\\Controller\\FactureController' => __DIR__ . '/../..' . '/src/Controller/FactureController.php',
         'App\\Controller\\FrontController' => __DIR__ . '/../..' . '/src/Controller/FrontController.php',
         'App\\Controller\\ProduitController' => __DIR__ . '/../..' . '/src/Controller/ProduitController.php',
+        'App\\Controller\\ProduitMobileController' => __DIR__ . '/../..' . '/src/Controller/ProduitMobileController.php',
         'App\\Controller\\ReclamationsController' => __DIR__ . '/../..' . '/src/Controller/ReclamationsController.php',
         'App\\Controller\\RegistrationController' => __DIR__ . '/../..' . '/src/Controller/RegistrationController.php',
         'App\\Controller\\Reservation2Controller' => __DIR__ . '/../..' . '/src/Controller/Reservation2Controller.php',

@@ -3,11 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-<<<<<<< HEAD
-        'reference' => 'cfbbb33e5ddef5972e5744b63b560a5c4d760a38',
-=======
-        'reference' => 'caa8def4d384429905188e394da1152e27fb69c0',
->>>>>>> RymBranch
+        'reference' => 'c43f1fbce417f061b47be7b287590d0c86dff2aa',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -17,11 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-<<<<<<< HEAD
-            'reference' => 'cfbbb33e5ddef5972e5744b63b560a5c4d760a38',
-=======
-            'reference' => 'caa8def4d384429905188e394da1152e27fb69c0',
->>>>>>> RymBranch
+            'reference' => 'c43f1fbce417f061b47be7b287590d0c86dff2aa',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -109,9 +101,9 @@
             'dev_requirement' => false,
         ),
         'doctrine/doctrine-fixtures-bundle' => array(
-            'pretty_version' => '3.4.3',
-            'version' => '3.4.3.0',
-            'reference' => 'fd39829fed8f090ef6e185d33449d47c2fb59c9c',
+            'pretty_version' => '3.4.4',
+            'version' => '3.4.4.0',
+            'reference' => '9ec3139c52a42e94c9fd1e95f8d2bca94326edfb',
             'type' => 'symfony-bundle',
             'install_path' => __DIR__ . '/../doctrine/doctrine-fixtures-bundle',
             'aliases' => array(),
@@ -172,15 +164,9 @@
             'dev_requirement' => false,
         ),
         'doctrine/orm' => array(
-<<<<<<< HEAD
             'pretty_version' => '2.15.0',
             'version' => '2.15.0.0',
             'reference' => '7b5fafffbeb560e75adc349e71bf1e90463796d2',
-=======
-            'pretty_version' => '2.14.3',
-            'version' => '2.14.3.0',
-            'reference' => 'a64f315dfeae5e50b17f132626fd9e9b4ec8985d',
->>>>>>> RymBranch
             'type' => 'library',
             'install_path' => __DIR__ . '/../doctrine/orm',
             'aliases' => array(),
@@ -295,15 +281,9 @@
             'dev_requirement' => false,
         ),
         'phpstan/phpdoc-parser' => array(
-<<<<<<< HEAD
             'pretty_version' => '1.20.4',
             'version' => '1.20.4.0',
             'reference' => '7d568c87a9df9c5f7e8b5f075fc469aa8cb0a4cd',
-=======
-            'pretty_version' => '1.20.3',
-            'version' => '1.20.3.0',
-            'reference' => '6c04009f6cae6eda2f040745b6b846080ef069c2',
->>>>>>> RymBranch
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpstan/phpdoc-parser',
             'aliases' => array(),

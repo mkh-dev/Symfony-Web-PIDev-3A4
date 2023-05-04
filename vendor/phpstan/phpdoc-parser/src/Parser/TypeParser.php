@@ -549,7 +549,6 @@ class TypeParser
 			if ($tokens->tryConsumeTokenType(Lexer::TOKEN_IDENTIFIER)) {
 				$type = new Ast\Type\IdentifierTypeNode($currentTokenValue);
 
-<<<<<<< HEAD
 				if (!$tokens->isCurrentTokenType(Lexer::TOKEN_DOUBLE_COLON)) {
 					if ($tokens->isCurrentTokenType(Lexer::TOKEN_OPEN_ANGLE_BRACKET)) {
 						$type = $this->parseGeneric(
@@ -620,36 +619,6 @@ class TypeParser
 
 		if ($this->constExprParser === null) {
 			throw $exception;
-=======
-			if ($tokens->isCurrentTokenType(Lexer::TOKEN_OPEN_ANGLE_BRACKET)) {
-				$type = $this->parseGeneric(
-					$tokens,
-					$this->enrichWithAttributes(
-						$tokens,
-						$type,
-						$startLine,
-						$startIndex
-					)
-				);
-
-			} elseif (in_array($type->name, ['array', 'list'], true) && $tokens->isCurrentTokenType(Lexer::TOKEN_OPEN_CURLY_BRACKET) && !$tokens->isPrecededByHorizontalWhitespace()) {
-				$type = $this->parseArrayShape($tokens, $this->enrichWithAttributes(
-					$tokens,
-					$type,
-					$startLine,
-					$startIndex
-				), $type->name);
-			}
-		}
-
-		if ($tokens->isCurrentTokenType(Lexer::TOKEN_OPEN_SQUARE_BRACKET)) {
-			$type = $this->tryParseArrayOrOffsetAccess($tokens, $this->enrichWithAttributes(
-				$tokens,
-				$type,
-				$startLine,
-				$startIndex
-			));
->>>>>>> RymBranch
 		}
 
 		try {

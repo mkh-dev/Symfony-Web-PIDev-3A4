@@ -1002,6 +1002,7 @@ return array(
     'App\\Controller\\FactureController' => $baseDir . '/src/Controller/FactureController.php',
     'App\\Controller\\FrontController' => $baseDir . '/src/Controller/FrontController.php',
     'App\\Controller\\ProduitController' => $baseDir . '/src/Controller/ProduitController.php',
+    'App\\Controller\\ProduitMobileController' => $baseDir . '/src/Controller/ProduitMobileController.php',
     'App\\Controller\\ReclamationsController' => $baseDir . '/src/Controller/ReclamationsController.php',
     'App\\Controller\\RegistrationController' => $baseDir . '/src/Controller/RegistrationController.php',
     'App\\Controller\\Reservation2Controller' => $baseDir . '/src/Controller/Reservation2Controller.php',
