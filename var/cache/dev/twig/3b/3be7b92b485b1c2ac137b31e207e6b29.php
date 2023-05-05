@@ -84,7 +84,10 @@ class __TwigTemplate_1e6b819dd084255efdd4625152a9d2c6 extends Template
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/evento.png"), "html", null, true);
         echo "\" alt=\"Evento\" width=\"30\" height=\"40\" style=\"position: absolute; top: 0; left: 3%; transform: translateY(10%);\">
         </a>
-        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\" style=\"position: absolute; top: 15px; left: 4%;\">
+        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"";
+        // line 18
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login_home");
+        echo "\"  style=\"position: absolute; top: 15px; left: 4%;\">
           EVENTO
         </a>
         
@@ -570,7 +573,7 @@ s0.parentNode.insertBefore(s1,s0);
 
     public function getDebugInfo()
     {
-        return array (  532 => 358,  523 => 354,  496 => 342,  492 => 341,  483 => 337,  473 => 329,  465 => 327,  463 => 326,  458 => 324,  454 => 323,  450 => 322,  446 => 321,  442 => 320,  438 => 319,  435 => 318,  417 => 317,  394 => 299,  320 => 228,  312 => 222,  307 => 221,  303 => 220,  174 => 94,  157 => 80,  116 => 42,  99 => 28,  84 => 16,  73 => 7,  66 => 6,  53 => 3,  36 => 1,);
+        return array (  535 => 358,  526 => 354,  499 => 342,  495 => 341,  486 => 337,  476 => 329,  468 => 327,  466 => 326,  461 => 324,  457 => 323,  453 => 322,  449 => 321,  445 => 320,  441 => 319,  438 => 318,  420 => 317,  397 => 299,  323 => 228,  315 => 222,  310 => 221,  306 => 220,  177 => 94,  160 => 80,  119 => 42,  102 => 28,  89 => 18,  84 => 16,  73 => 7,  66 => 6,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -592,7 +595,7 @@ s0.parentNode.insertBefore(s1,s0);
         <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\">
           <img src=\"{{asset('back/img/evento.png')}}\" alt=\"Evento\" width=\"30\" height=\"40\" style=\"position: absolute; top: 0; left: 3%; transform: translateY(10%);\">
         </a>
-        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\" style=\"position: absolute; top: 15px; left: 4%;\">
+        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"{{ path('login_home') }}\"  style=\"position: absolute; top: 15px; left: 4%;\">
           EVENTO
         </a>
         
@@ -956,6 +959,6 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
 {% endblock %}
-", "produit/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\produit\\index.html.twig");
+", "produit/index.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\produit\\index.html.twig");
     }
 }
