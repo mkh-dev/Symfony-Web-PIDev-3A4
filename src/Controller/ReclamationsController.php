@@ -32,6 +32,24 @@ class ReclamationsController extends AbstractController
             ]);
     }
 
+    #[Route('/ReclamUsers', name: 'app_reclamationsusers_index', methods: ['GET'])]
+    public function reclams(EntityManagerInterface $entityManager, PaginatorInterface $paginator, Request $request): Response
+    {
+        $reclamations = $entityManager
+            ->getRepository(Reclamations::class)
+            ->findAll();
+
+            $pagination = $paginator->paginate(
+                $reclamations,
+                $request->query->getInt('page', 1),
+                5 // Nombre d'éléments par page
+            );
+        
+            return $this->render('reclamations/indexReclams.html.twig', [
+                'pagination' => $pagination,
+            ]);
+    }
+
     #[Route('/new', name: 'app_reclamations_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
@@ -47,6 +65,26 @@ class ReclamationsController extends AbstractController
         }
 
         return $this->renderForm('reclamations/new.html.twig', [
+            'reclamation' => $reclamation,
+            'form' => $form,
+        ]);
+    }
+
+    #[Route('/new', name: 'app_reclamationsusers_new', methods: ['GET', 'POST'])]
+    public function Reclamsnew(Request $request, EntityManagerInterface $entityManager): Response
+    {
+        $reclamation = new Reclamations();
+        $form = $this->createForm(ReclamationsType::class, $reclamation);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->persist($reclamation);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('app_reclamationsusers_index', [], Response::HTTP_SEE_OTHER);
+        }
+
+        return $this->renderForm('reclamations/newusers.html.twig', [
             'reclamation' => $reclamation,
             'form' => $form,
         ]);

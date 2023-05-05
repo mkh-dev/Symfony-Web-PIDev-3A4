@@ -38,6 +38,39 @@ class FrontController extends AbstractController
         ]);
     }
 
+    #[Route('/organisateur', name: 'login_organisateur')]
+    public function organisateur(): Response
+    {
+        return $this->render('front/organisateur.html.twig', [
+            'controller_name' => 'FrontController',
+        ]);
+    }
+
+    #[Route('/partenaire', name: 'login_partenaire')]
+    public function partenaire(): Response
+    {
+        return $this->render('front/partenaire.html.twig', [
+            'controller_name' => 'FrontController',
+        ]);
+    }
+
+    #[Route('/transporteur', name: 'login_transporteur')]
+    public function transporteur(): Response
+    {
+        return $this->render('front/transporteur.html.twig', [
+            'controller_name' => 'FrontController',
+        ]);
+    }
+
+    
+    #[Route('/administrateur', name: 'login_administrateur')]
+    public function administrateur(): Response
+    {
+        return $this->render('front/admin.html.twig', [
+            'controller_name' => 'FrontController',
+        ]);
+    }
+
     
     #[Route('/produit_front', name: 'produit_front')]
     public function produit(EntityManagerInterface $entityManager): Response

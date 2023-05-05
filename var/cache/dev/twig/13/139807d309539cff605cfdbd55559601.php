@@ -271,6 +271,19 @@ class __TwigTemplate_a93a4077339077b773f111eb3f0923c8 extends Template
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 214
         echo "
+<!--Start of Tawk.to Script-->
+<script type=\"text/javascript\">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement(\"script\"),s0=document.getElementsByTagName(\"script\")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6444190231ebfa0fe7f9cfee/1gupcdjg4';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -508,11 +521,20 @@ tr:nth-child(even){background-color: #f2f2f2} #}
     </div>
 {% endfor %}
 
+<!--Start of Tawk.to Script-->
+<script type=\"text/javascript\">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement(\"script\"),s0=document.getElementsByTagName(\"script\")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6444190231ebfa0fe7f9cfee/1gupcdjg4';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 {% endblock %}
-<<<<<<< Updated upstream
-", "back/transport/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\back\\transport\\index.html.twig");
-=======
-", "back/transport/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\back\\transport\\index.html.twig");
->>>>>>> Stashed changes
+", "back/transport/index.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\back\\transport\\index.html.twig");
     }
 }

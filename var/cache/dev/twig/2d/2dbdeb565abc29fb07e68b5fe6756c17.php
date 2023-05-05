@@ -103,7 +103,18 @@ https://templatemo.com/tm-583-festava-live
                     <div class=\"col-lg-12 col-12 d-flex flex-wrap\">
                         <p class=\"d-flex me-4 mb-0\">
                             <i class=\"bi-person custom-icon me-2\" style=\"color: black;\"></i>
-                            <strong class=\"text-dark\">Bienvenue dans Evento</strong>
+                            <strong class=\"text-dark\">Bienvenue dans Evento !  ";
+        // line 52
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 52, $this->source); })()), "user", [], "any", false, false, false, 52)) {
+            echo "              
+                          Vous êtes actuellement connecté en tant que ";
+            // line 53
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 53, $this->source); })()), "user", [], "any", false, false, false, 53), "userIdentifier", [], "any", false, false, false, 53), "html", null, true);
+            echo "
+                    ";
+        }
+        // line 54
+        echo " </strong>
                         </p>
                     </div>
 
@@ -116,14 +127,14 @@ https://templatemo.com/tm-583-festava-live
             <div class=\"container\">
                 <a class=\"navbar-brand\" href=\"index.html\">
                     <img src=\"";
-        // line 64
+        // line 66
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/images/logo.png"), "html", null, true);
         echo "\" alt=\"Logo de Evento\" style=\"width: 13%; margin-top: -5px;\">
                     Evento
                 </a>
 
                 <a href=\"";
-        // line 68
+        // line 70
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo "\" class=\"btn custom-btn d-lg-none ms-auto me-4\">Se Connecter</a>
 
@@ -151,7 +162,7 @@ https://templatemo.com/tm-583-festava-live
                         </li>
                 
                         <a href=\"";
-        // line 93
+        // line 95
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("produit_front");
         echo "\" style=\"color: white; display: inline-block;\">Produits</a>
 
@@ -168,7 +179,7 @@ https://templatemo.com/tm-583-festava-live
                     </ul>
 
                     <a href=\"";
-        // line 107
+        // line 109
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_index");
         echo "\" class=\"btn custom-btn d-lg-block d-none\">Votre Compte</a>
 
@@ -251,50 +262,50 @@ https://templatemo.com/tm-583-festava-live
           <div class=\"carousel-container\">
             <div class=\"carousel\" id=\"produits-carousel\">
               ";
-        // line 187
+        // line 189
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 187, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 189, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 188
+            // line 190
             echo "              <div class=\"card-container\">
                 <div tabindex=\"0\" class=\"card\">
                   <div style=\"text-align:center;\">
                     <img src=\"";
-            // line 191
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/produits/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 191))), "html", null, true);
+            // line 193
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/produits/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 193))), "html", null, true);
             echo "\" alt=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nomProd", [], "any", false, false, false, 191), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nomProd", [], "any", false, false, false, 193), "html", null, true);
             echo "\" style=\"width:200px;\">
                   </div>
                   <div class=\"card-content\">
                     <h3 style=\"font-size: 20px;\">";
-            // line 194
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "getNomProd", [], "method", false, false, false, 194), "html", null, true);
+            // line 196
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "getNomProd", [], "method", false, false, false, 196), "html", null, true);
             echo "</h3>
                     <p>";
-            // line 195
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "getDescription", [], "method", false, false, false, 195), "html", null, true);
+            // line 197
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "getDescription", [], "method", false, false, false, 197), "html", null, true);
             echo "</p>
                     <p>Prix: ";
-            // line 196
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "getPrix", [], "method", false, false, false, 196), "html", null, true);
+            // line 198
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "getPrix", [], "method", false, false, false, 198), "html", null, true);
             echo " DT</p>
                     <div class=\"like-dislike-buttons\" align:center>
                       <a href=\"";
-            // line 198
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_like", ["idProd" => twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 198)]), "html", null, true);
+            // line 200
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_like", ["idProd" => twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 200)]), "html", null, true);
             echo "\" class=\"like-image\"><img src=\"front/images/like.png\" alt=\"Like\"></a>
                       <span class=\"like-count\">";
-            // line 199
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nbLikes", [], "any", false, false, false, 199), "html", null, true);
+            // line 201
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nbLikes", [], "any", false, false, false, 201), "html", null, true);
             echo "</span>
                       <a href=\"";
-            // line 200
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_dislike", ["idProd" => twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 200)]), "html", null, true);
+            // line 202
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_dislike", ["idProd" => twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 202)]), "html", null, true);
             echo "\" class=\"dislike-image\"><img src=\"front/images/dislike.png\" alt=\"Dislike\"></a>
                       <span class=\"dislike-count\">";
-            // line 201
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nbDislikes", [], "any", false, false, false, 201), "html", null, true);
+            // line 203
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nbDislikes", [], "any", false, false, false, 203), "html", null, true);
             echo "</span>
                     </div>
                   </div>
@@ -305,7 +316,7 @@ https://templatemo.com/tm-583-festava-live
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 207
+        // line 209
         echo "            </div>
             <br>
             
@@ -393,7 +404,7 @@ https://templatemo.com/tm-583-festava-live
                                 imageDiv.style.textAlign = 'center';
                                 var image = document.createElement('img');
                                 image.setAttribute('src', \"";
-        // line 293
+        // line 295
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/produits/"), "html", null, true);
         echo "\" + produit.image);
                                 image.setAttribute('alt', produit.nomProd);
@@ -428,7 +439,7 @@ https://templatemo.com/tm-583-festava-live
                 }
             };
             xhr.open('GET', \"";
-        // line 325
+        // line 327
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rechercherParPrix");
         echo "?prixMin=\" + 0 + \"&prixMax=\" + priceFilter);
             xhr.send();
@@ -474,7 +485,7 @@ https://templatemo.com/tm-583-festava-live
                         imageDiv.style.textAlign = 'center';
                         var image = document.createElement('img');
                         image.setAttribute('src', \"";
-        // line 368
+        // line 370
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/produits/"), "html", null, true);
         echo "\" + produit.image);
                         image.setAttribute('alt', produit.nomProd);
@@ -508,7 +519,7 @@ https://templatemo.com/tm-583-festava-live
             }
         };
         xhr.open('GET', \"";
-        // line 399
+        // line 401
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rechercherParNom");
         echo "?term=\" + searchTerm);
         xhr.send();
@@ -647,27 +658,27 @@ T e m p l a t e M o
 
     <!-- JAVASCRIPT FILES -->
     <script src=\"";
-        // line 535
+        // line 537
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 536
+        // line 538
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/carousel.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 537
+        // line 539
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 538
+        // line 540
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/jquery.sticky.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 539
+        // line 541
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/click-scroll.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 540
+        // line 542
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("front/js/custom.js"), "html", null, true);
         echo "\"></script>
 
@@ -691,7 +702,7 @@ T e m p l a t e M o
 
     public function getDebugInfo()
     {
-        return array (  671 => 540,  667 => 539,  663 => 538,  659 => 537,  655 => 536,  651 => 535,  512 => 399,  478 => 368,  432 => 325,  397 => 293,  309 => 207,  297 => 201,  293 => 200,  289 => 199,  285 => 198,  280 => 196,  276 => 195,  272 => 194,  264 => 191,  259 => 188,  255 => 187,  172 => 107,  155 => 93,  127 => 68,  120 => 64,  81 => 28,  76 => 26,  71 => 24,  66 => 22,  56 => 15,  40 => 1,);
+        return array (  682 => 542,  678 => 541,  674 => 540,  670 => 539,  666 => 538,  662 => 537,  523 => 401,  489 => 370,  443 => 327,  408 => 295,  320 => 209,  308 => 203,  304 => 202,  300 => 201,  296 => 200,  291 => 198,  287 => 197,  283 => 196,  275 => 193,  270 => 190,  266 => 189,  183 => 109,  166 => 95,  138 => 70,  131 => 66,  117 => 54,  112 => 53,  108 => 52,  81 => 28,  76 => 26,  71 => 24,  66 => 22,  56 => 15,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -747,7 +758,9 @@ https://templatemo.com/tm-583-festava-live
                     <div class=\"col-lg-12 col-12 d-flex flex-wrap\">
                         <p class=\"d-flex me-4 mb-0\">
                             <i class=\"bi-person custom-icon me-2\" style=\"color: black;\"></i>
-                            <strong class=\"text-dark\">Bienvenue dans Evento</strong>
+                            <strong class=\"text-dark\">Bienvenue dans Evento !  {% if app.user %}              
+                          Vous êtes actuellement connecté en tant que {{ app.user.userIdentifier }}
+                    {% endif %} </strong>
                         </p>
                     </div>
 

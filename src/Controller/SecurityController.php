@@ -40,13 +40,13 @@ class SecurityController extends AbstractController
         if ($this->getUser()) {
             $userrole = $this->getUser()->getUserrole();
             if ($userrole == 'ROLE_ADMINISTRATEUR') {
-                return $this->redirectToRoute('app_users_index');
+                return $this->redirectToRoute('login_administrateur');
             } elseif ($userrole == 'ROLE_ORGANISATEUR') {
-                return $this->redirectToRoute('app_evenement_back');
+                return $this->redirectToRoute('login_organisateur');
             } elseif ($userrole == 'ROLE_TRANSPORTEUR') {
-                return $this->redirectToRoute('app_transport_back');
+                return $this->redirectToRoute('login_transporteur');
             } elseif ($userrole == 'ROLE_PARTENAIRE') {
-                return $this->redirectToRoute('app_produit_index');
+                return $this->redirectToRoute('login_partenaire');
             }
             elseif ($userrole == 'ROLE_UTILISATEUR') {
                 return $this->redirectToRoute('login_utilisateur');

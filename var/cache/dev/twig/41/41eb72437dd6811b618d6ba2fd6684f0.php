@@ -286,6 +286,6 @@ class __TwigTemplate_773864a16fbfce8d2cf4bbc45e943699 extends Template
         {% endif %}
     </div>
 {% endif %}
-", "knp_pagination/sliding.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\knp_pagination\\sliding.html.twig");
+", "knp_pagination/sliding.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\knp_pagination\\sliding.html.twig");
     }
 }

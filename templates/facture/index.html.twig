@@ -119,7 +119,7 @@ a.create-new-button:hover {
         <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#">
           <img src="{{asset('back/img/evento.png')}}" alt="Evento" width="30" height="40" style="position: absolute; top: 0; left: 3%; transform: translateY(10%);">
         </a>
-        <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="#" style="position: absolute; top: 15px; left: 4%;">
+        <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="{{ path('login_home') }}" style="position: absolute; top: 15px; left: 4%;">
           EVENTO
         </a>
         
@@ -165,7 +165,24 @@ a.create-new-button:hover {
               <span class="ml-4">Mes abonnements</span>
             </a>
           </li>
+          <li class="relative px-6 py-3">
+            <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+              href="{{ path('app_reclamationsusers_index') }}">
+              
+<svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                  d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
+                </path>
+              </svg>
+
+
+              <span class="ml-4">Mes réclamations</span>
+            </a>
+          </li>
           
+
+
 
         </ul>
         <div class="px-6 my-6">

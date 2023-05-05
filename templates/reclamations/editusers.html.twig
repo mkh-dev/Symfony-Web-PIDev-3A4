@@ -1,0 +1,17 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Edit Reclamations{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    
+{% endblock %}
+
+{% block body %}
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+        {{ include('reclamations/_formusers.html.twig', {'button_label': 'Valider'}) }}
+
+        </div>
+</div>
+{% endblock %}

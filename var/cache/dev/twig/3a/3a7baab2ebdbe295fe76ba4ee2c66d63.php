@@ -127,10 +127,6 @@ class __TwigTemplate_43bdf6104e53ce1fbc71cc9c6931871b extends Template
 
 
 {% endblock %}
-<<<<<<< Updated upstream
-", "back/transport/statistique.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\back\\transport\\statistique.html.twig");
-=======
-", "back/transport/statistique.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\back\\transport\\statistique.html.twig");
->>>>>>> Stashed changes
+", "back/transport/statistique.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\back\\transport\\statistique.html.twig");
     }
 }
