@@ -127,6 +127,24 @@ class __TwigTemplate_1e6b819dd084255efdd4625152a9d2c6 extends Template
               <span class=\"ml-4\">Catégories</span>
             </a>
           </li>
+           <li class=\"relative px-6 py-3\">
+            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
+              href=\"";
+        // line 54
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamationsusers_index");
+        echo "\">
+              
+<svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
+                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
+                <path
+                  d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\">
+                </path>
+              </svg>
+
+
+              <span class=\"ml-4\">Mes réclamations</span>
+            </a>
+          </li>
           
           
 
@@ -156,7 +174,7 @@ class __TwigTemplate_1e6b819dd084255efdd4625152a9d2c6 extends Template
 
             <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\"
               href=\"";
-        // line 80
+        // line 95
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_users_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -173,7 +191,7 @@ class __TwigTemplate_1e6b819dd084255efdd4625152a9d2c6 extends Template
           <li class=\"relative px-6 py-3\">
             <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
               href=\"";
-        // line 94
+        // line 109
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -302,16 +320,16 @@ class __TwigTemplate_1e6b819dd084255efdd4625152a9d2c6 extends Template
                   <li class=\"flex\">
                    <span class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\" style=\"color: black;\">
     ";
-        // line 220
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 220, $this->source); })()), "user", [], "any", false, false, false, 220)) {
+        // line 235
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 235, $this->source); })()), "user", [], "any", false, false, false, 235)) {
             echo "              
         Vous êtes actuellement connecté en tant que ";
-            // line 221
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 221, $this->source); })()), "user", [], "any", false, false, false, 221), "userIdentifier", [], "any", false, false, false, 221), "html", null, true);
+            // line 236
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 236, $this->source); })()), "user", [], "any", false, false, false, 236), "userIdentifier", [], "any", false, false, false, 236), "html", null, true);
             echo "
     ";
         }
-        // line 222
+        // line 237
         echo " 
 </span>
 
@@ -319,7 +337,7 @@ class __TwigTemplate_1e6b819dd084255efdd4625152a9d2c6 extends Template
                      <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
                       href=\"";
-        // line 228
+        // line 243
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\">
                       <svg style=\"color: black;\" class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
@@ -393,7 +411,7 @@ td img {
 
 </style>
     <a href=\"";
-        // line 299
+        // line 314
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_new");
         echo "\" style=\"float: right;\"><img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/plus.png"), "html", null, true);
@@ -416,9 +434,9 @@ td img {
         </thead>
         <tbody>
        ";
-        // line 317
+        // line 332
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 317, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 332, $this->source); })()));
         $context['_iterated'] = false;
         $context['loop'] = [
           'parent' => $context['_parent'],
@@ -434,45 +452,45 @@ td img {
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 318
+            // line 333
             echo "            <tr>
                 <td>";
-            // line 319
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 319), "html", null, true);
+            // line 334
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 334), "html", null, true);
             echo "</td>
                 <td>";
-            // line 320
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nomProd", [], "any", false, false, false, 320), "html", null, true);
+            // line 335
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nomProd", [], "any", false, false, false, 335), "html", null, true);
             echo "</td>
                 <td>";
-            // line 321
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 321), "html", null, true);
+            // line 336
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 336), "html", null, true);
             echo "</td>
                 <td>";
-            // line 322
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 322), "html", null, true);
+            // line 337
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 337), "html", null, true);
             echo "</td>
                 <td>";
-            // line 323
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "quantite", [], "any", false, false, false, 323), "html", null, true);
+            // line 338
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "quantite", [], "any", false, false, false, 338), "html", null, true);
             echo "</td>
                 <td>";
-            // line 324
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nomPart", [], "any", false, false, false, 324), "html", null, true);
+            // line 339
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nomPart", [], "any", false, false, false, 339), "html", null, true);
             echo "</td>
 <td>
   ";
-            // line 326
-            if (twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 326)) {
-                // line 327
+            // line 341
+            if (twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 341)) {
+                // line 342
                 echo "    <img src=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/produits/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 327))), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/produits/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 342))), "html", null, true);
                 echo "\" alt=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nomProd", [], "any", false, false, false, 327), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nomProd", [], "any", false, false, false, 342), "html", null, true);
                 echo "\">
   ";
             }
-            // line 329
+            // line 344
             echo "</td>
                 
                 
@@ -482,8 +500,8 @@ td img {
 
                   
                   <a href=\"";
-            // line 337
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_show", ["idProd" => twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 337)]), "html", null, true);
+            // line 352
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_show", ["idProd" => twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 352)]), "html", null, true);
             echo "\" \"><img src=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/chercher.png"), "html", null, true);
             echo "\" alt=\"Afficher le produit\" style=\"width:20px; height:20px;\"></a>
@@ -491,12 +509,12 @@ td img {
 
                   
                    ";
-            // line 341
+            // line 356
             echo twig_include($this->env, $context, "produit/_delete_form.html.twig");
             echo "
                   <a href=\"";
-            // line 342
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_edit", ["idProd" => twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 342)]), "html", null, true);
+            // line 357
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_edit", ["idProd" => twig_get_attribute($this->env, $this->source, $context["produit"], "idProd", [], "any", false, false, false, 357)]), "html", null, true);
             echo "\" \"><img src=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/crayon.png"), "html", null, true);
             echo "\" alt=\"Modifier le produit\" style=\"width:20px; height:20px;\"></a>
@@ -522,7 +540,7 @@ td img {
             }
         }
         if (!$context['_iterated']) {
-            // line 354
+            // line 369
             echo "            <tr>
                 <td colspan=\"9\">no records found</td>
             </tr>
@@ -531,7 +549,7 @@ td img {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 358
+        // line 373
         echo "        </tbody>
     </table>
 
@@ -573,7 +591,7 @@ s0.parentNode.insertBefore(s1,s0);
 
     public function getDebugInfo()
     {
-        return array (  535 => 358,  526 => 354,  499 => 342,  495 => 341,  486 => 337,  476 => 329,  468 => 327,  466 => 326,  461 => 324,  457 => 323,  453 => 322,  449 => 321,  445 => 320,  441 => 319,  438 => 318,  420 => 317,  397 => 299,  323 => 228,  315 => 222,  310 => 221,  306 => 220,  177 => 94,  160 => 80,  119 => 42,  102 => 28,  89 => 18,  84 => 16,  73 => 7,  66 => 6,  53 => 3,  36 => 1,);
+        return array (  553 => 373,  544 => 369,  517 => 357,  513 => 356,  504 => 352,  494 => 344,  486 => 342,  484 => 341,  479 => 339,  475 => 338,  471 => 337,  467 => 336,  463 => 335,  459 => 334,  456 => 333,  438 => 332,  415 => 314,  341 => 243,  333 => 237,  328 => 236,  324 => 235,  195 => 109,  178 => 95,  134 => 54,  119 => 42,  102 => 28,  89 => 18,  84 => 16,  73 => 7,  66 => 6,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -627,6 +645,21 @@ s0.parentNode.insertBefore(s1,s0);
                 </path>
               </svg>
               <span class=\"ml-4\">Catégories</span>
+            </a>
+          </li>
+           <li class=\"relative px-6 py-3\">
+            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
+              href=\"{{ path('app_reclamationsusers_index') }}\">
+              
+<svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
+                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
+                <path
+                  d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\">
+                </path>
+              </svg>
+
+
+              <span class=\"ml-4\">Mes réclamations</span>
             </a>
           </li>
           

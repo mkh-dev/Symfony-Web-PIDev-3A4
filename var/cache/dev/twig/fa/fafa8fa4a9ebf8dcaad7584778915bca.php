@@ -260,6 +260,25 @@ a.create-new-button:hover {
               <span class=\"ml-4\">Mes Abonnements </span>
             </a>
           </li>
+
+           <li class=\"relative px-6 py-3\">
+            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
+              href=\"";
+        // line 169
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamationsusers_index");
+        echo "\">
+              
+<svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
+                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
+                <path
+                  d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\">
+                </path>
+              </svg>
+
+
+              <span class=\"ml-4\">Mes réclamations</span>
+            </a>
+          </li>
        
 
         </ul>
@@ -288,7 +307,7 @@ a.create-new-button:hover {
 
             <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\"
              href=\"";
-        // line 193
+        // line 209
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_facture_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -305,7 +324,7 @@ a.create-new-button:hover {
           <li class=\"relative px-6 py-3\">
             <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
               href=\"";
-        // line 207
+        // line 223
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -320,7 +339,7 @@ a.create-new-button:hover {
           <li class=\"relative px-6 py-3\">
             <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
               href=\"";
-        // line 219
+        // line 235
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_abonnement_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -484,59 +503,59 @@ a.create-new-button:hover {
 \t\t\t</thead>
 \t\t\t<tbody>
 \t\t\t";
-        // line 380
+        // line 396
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["abonnements"]) || array_key_exists("abonnements", $context) ? $context["abonnements"] : (function () { throw new RuntimeError('Variable "abonnements" does not exist.', 380, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["abonnements"]) || array_key_exists("abonnements", $context) ? $context["abonnements"] : (function () { throw new RuntimeError('Variable "abonnements" does not exist.', 396, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["abonnement"]) {
-            // line 381
+            // line 397
             echo "\t\t\t\t<tr>
 \t\t\t\t\t<td>";
-            // line 382
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 382), "html", null, true);
+            // line 398
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 398), "html", null, true);
             echo "</td>
 \t\t\t\t\t<td>";
-            // line 383
-            ((twig_get_attribute($this->env, $this->source, $context["abonnement"], "type", [], "any", false, false, false, 383)) ? (print (twig_escape_filter($this->env, twig_join_filter(twig_get_attribute($this->env, $this->source, $context["abonnement"], "type", [], "any", false, false, false, 383), ", "), "html", null, true))) : (print ("")));
+            // line 399
+            ((twig_get_attribute($this->env, $this->source, $context["abonnement"], "type", [], "any", false, false, false, 399)) ? (print (twig_escape_filter($this->env, twig_join_filter(twig_get_attribute($this->env, $this->source, $context["abonnement"], "type", [], "any", false, false, false, 399), ", "), "html", null, true))) : (print ("")));
             echo "</td>
 \t\t\t\t\t<td>";
-            // line 384
-            echo ((twig_get_attribute($this->env, $this->source, $context["abonnement"], "renouvellement", [], "any", false, false, false, 384)) ? ("Yes") : ("No"));
+            // line 400
+            echo ((twig_get_attribute($this->env, $this->source, $context["abonnement"], "renouvellement", [], "any", false, false, false, 400)) ? ("Yes") : ("No"));
             echo "</td>
 \t\t\t\t\t<td>";
-            // line 385
-            ((twig_get_attribute($this->env, $this->source, $context["abonnement"], "dateExpire", [], "any", false, false, false, 385)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "dateExpire", [], "any", false, false, false, 385), "Y-m-d"), "html", null, true))) : (print ("")));
+            // line 401
+            ((twig_get_attribute($this->env, $this->source, $context["abonnement"], "dateExpire", [], "any", false, false, false, 401)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "dateExpire", [], "any", false, false, false, 401), "Y-m-d"), "html", null, true))) : (print ("")));
             echo "</td>
 \t\t\t\t\t<td>";
-            // line 386
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "prix", [], "any", false, false, false, 386), "html", null, true);
+            // line 402
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "prix", [], "any", false, false, false, 402), "html", null, true);
             echo "</td>
           <td>";
-            // line 387
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "currency", [], "any", false, false, false, 387), "html", null, true);
+            // line 403
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "currency", [], "any", false, false, false, 403), "html", null, true);
             echo "</td>
 
 \t\t\t\t\t<td>";
-            // line 389
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "plafond", [], "any", false, false, false, 389), "html", null, true);
+            // line 405
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["abonnement"], "plafond", [], "any", false, false, false, 405), "html", null, true);
             echo "</td>
 \t\t\t\t\t<td>
           \t<a href=\"";
-            // line 391
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("exportpdf", ["id" => twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 391)]), "html", null, true);
+            // line 407
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("exportpdf", ["id" => twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 407)]), "html", null, true);
             echo "\" class=\" create-new-button \"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-filetype-pdf\" viewBox=\"0 0 16 16\">
   <path fill-rule=\"evenodd\" d=\"M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z\"/>
 </svg>  </a>
 
 \t\t\t\t\t\t<a href=\"";
-            // line 395
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_abonnement_show", ["id" => twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 395)]), "html", null, true);
+            // line 411
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_abonnement_show", ["id" => twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 411)]), "html", null, true);
             echo "\" class=\"show-button\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-search\" viewBox=\"0 0 16 16\">
   <path d=\"M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z\"/>
 </svg> </a>
 \t\t\t\t\t\t<a href=\"";
-            // line 398
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_abonnement_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 398)]), "html", null, true);
+            // line 414
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_abonnement_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["abonnement"], "id", [], "any", false, false, false, 414)]), "html", null, true);
             echo "\" class=\"edit-button\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-pencil-square\" viewBox=\"0 0 16 16\">
   <path d=\"M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z\"/>
   <path fill-rule=\"evenodd\" d=\"M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z\"/>
@@ -547,7 +566,7 @@ a.create-new-button:hover {
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 405
+            // line 421
             echo "\t\t\t\t<tr>
 \t\t\t\t\t<td colspan=\"7\">aucun abonnement</td>
 \t\t\t\t</tr>
@@ -556,17 +575,17 @@ a.create-new-button:hover {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['abonnement'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 409
+        // line 425
         echo "
 \t\t\t</tbody>
 \t\t</table>
       ";
-        // line 412
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["abonnements"]) || array_key_exists("abonnements", $context) ? $context["abonnements"] : (function () { throw new RuntimeError('Variable "abonnements" does not exist.', 412, $this->source); })()), "knp_pagination/sliding.html.twig");
+        // line 428
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["abonnements"]) || array_key_exists("abonnements", $context) ? $context["abonnements"] : (function () { throw new RuntimeError('Variable "abonnements" does not exist.', 428, $this->source); })()), "knp_pagination/sliding.html.twig");
         echo "
 
 \t\t<a href=\"";
-        // line 414
+        // line 430
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_abonnement_new");
         echo "\"class=\"create-new-button\">Ajouter un abonnement</a>
 \t</main>
@@ -601,7 +620,7 @@ s0.parentNode.insertBefore(s1,s0);
 
     public function getDebugInfo()
     {
-        return array (  570 => 414,  565 => 412,  560 => 409,  551 => 405,  539 => 398,  533 => 395,  526 => 391,  521 => 389,  516 => 387,  512 => 386,  508 => 385,  504 => 384,  500 => 383,  496 => 382,  493 => 381,  488 => 380,  324 => 219,  309 => 207,  292 => 193,  252 => 156,  235 => 142,  218 => 128,  207 => 120,  202 => 118,  193 => 111,  186 => 110,  173 => 108,  61 => 3,  54 => 2,  37 => 1,);
+        return array (  589 => 430,  584 => 428,  579 => 425,  570 => 421,  558 => 414,  552 => 411,  545 => 407,  540 => 405,  535 => 403,  531 => 402,  527 => 401,  523 => 400,  519 => 399,  515 => 398,  512 => 397,  507 => 396,  343 => 235,  328 => 223,  311 => 209,  268 => 169,  252 => 156,  235 => 142,  218 => 128,  207 => 120,  202 => 118,  193 => 111,  186 => 110,  173 => 108,  61 => 3,  54 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -769,6 +788,22 @@ a.create-new-button:hover {
                 </path>
               </svg>
               <span class=\"ml-4\">Mes Abonnements </span>
+            </a>
+          </li>
+
+           <li class=\"relative px-6 py-3\">
+            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
+              href=\"{{ path('app_reclamationsusers_index') }}\">
+              
+<svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
+                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
+                <path
+                  d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\">
+                </path>
+              </svg>
+
+
+              <span class=\"ml-4\">Mes réclamations</span>
             </a>
           </li>
        

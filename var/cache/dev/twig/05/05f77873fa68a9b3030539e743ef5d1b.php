@@ -505,7 +505,7 @@ a.create-new-button:hover {
 \t\t\t\t\t<div class=\"col-sm-6\">
 \t\t\t\t\t\t<a href=\"";
         // line 393
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamationsusers_new");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_new");
         echo "\" class=\"btn btn-warning\" ><i class=\"material-icons\">&#xE147;</i> <span>Ajouter Une Nouvelle Réclamation</span></a>
 \t\t\t\t\t\t
 \t\t\t\t\t</div>
@@ -575,15 +575,15 @@ a.create-new-button:hover {
 \t\t\t\t\t\t<td>
               <a href=\"";
             // line 429
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamationsusers_show", ["id" => twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 429)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_show", ["id" => twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 429)]), "html", null, true);
             echo "\" class=\"show\"><i class=\"material-icons title=\"Show\">&#xE8F4;</i></a>
 \t\t\t\t\t\t\t<a href=\"";
             // line 430
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamationsusers_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 430)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 430)]), "html", null, true);
             echo "\" class=\"edit\"><i class=\"material-icons\"  title=\"Edit\">&#xE254;</i></a>
 \t\t\t\t\t\t\t<a href=\"";
             // line 431
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamationsusers_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 431)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamations_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 431)]), "html", null, true);
             echo "\" class=\"delete\" onclick=\"event.preventDefault(); if(confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?')){document.getElementById('delete-form-";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reclamation"], "id", [], "any", false, false, false, 431), "html", null, true);
             echo "').submit();}\">
@@ -1064,7 +1064,7 @@ a.create-new-button:hover {
 \t\t\t\t\t\t<h2> <b>Liste des Réclamations</b></h2>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"col-sm-6\">
-\t\t\t\t\t\t<a href=\"{{ path('app_reclamationsusers_new') }}\" class=\"btn btn-warning\" ><i class=\"material-icons\">&#xE147;</i> <span>Ajouter Une Nouvelle Réclamation</span></a>
+\t\t\t\t\t\t<a href=\"{{ path('app_reclamations_new') }}\" class=\"btn btn-warning\" ><i class=\"material-icons\">&#xE147;</i> <span>Ajouter Une Nouvelle Réclamation</span></a>
 \t\t\t\t\t\t
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -1100,9 +1100,9 @@ a.create-new-button:hover {
                 <td>{{ reclamation.message }}</td>
            
 \t\t\t\t\t\t<td>
-              <a href=\"{{ path('app_reclamationsusers_show', {'id': reclamation.id}) }}\" class=\"show\"><i class=\"material-icons title=\"Show\">&#xE8F4;</i></a>
-\t\t\t\t\t\t\t<a href=\"{{ path('app_reclamationsusers_edit', {'id':  reclamation.id}) }}\" class=\"edit\"><i class=\"material-icons\"  title=\"Edit\">&#xE254;</i></a>
-\t\t\t\t\t\t\t<a href=\"{{ path('app_reclamationsusers_delete', {'id': reclamation.id}) }}\" class=\"delete\" onclick=\"event.preventDefault(); if(confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?')){document.getElementById('delete-form-{{ reclamation.id }}').submit();}\">
+              <a href=\"{{ path('app_reclamations_show', {'id': reclamation.id}) }}\" class=\"show\"><i class=\"material-icons title=\"Show\">&#xE8F4;</i></a>
+\t\t\t\t\t\t\t<a href=\"{{ path('app_reclamations_edit', {'id':  reclamation.id}) }}\" class=\"edit\"><i class=\"material-icons\"  title=\"Edit\">&#xE254;</i></a>
+\t\t\t\t\t\t\t<a href=\"{{ path('app_reclamations_delete', {'id': reclamation.id}) }}\" class=\"delete\" onclick=\"event.preventDefault(); if(confirm('Êtes-vous sûr de bien vouloir supprimer cet élément?')){document.getElementById('delete-form-{{ reclamation.id }}').submit();}\">
     <i class=\"material-icons\" title=\"Delete\">&#xE872;</i>
 </a>
 <form id=\"delete-form-{{ reclamation.id }}\" method=\"post\" action=\"{{ path('app_reclamations_delete', {'id': reclamation.id}) }}\" style=\"display: none;\">

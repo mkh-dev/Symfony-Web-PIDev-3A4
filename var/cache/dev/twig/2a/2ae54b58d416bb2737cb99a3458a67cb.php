@@ -77,7 +77,7 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
 ";
         // line 35
         $this->displayBlock('menu', $context, $blocks);
-        // line 266
+        // line 280
         echo "
 
 
@@ -86,9 +86,9 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
       <main class=\"h-full overflow-y-auto\">
         <div class=\"container px-6 mx-auto grid\">
           ";
-        // line 273
+        // line 287
         $this->displayBlock('body', $context, $blocks);
-        // line 276
+        // line 290
         echo "        </div>
       </main>
 
@@ -279,7 +279,24 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
               <span class=\"ml-4\">Statistique</span>
             </a>
           </li>
+      <li class=\"relative px-6 py-3\">
+            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
+              href=\"";
+        // line 110
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamationsusers_index");
+        echo "\">
+              
+<svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
+                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
+                <path
+                  d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\">
+                </path>
+              </svg>
 
+
+              <span class=\"ml-4\">Mes réclamations</span>
+            </a>
+          </li>
 
           <li class=\"relative px-6 py-3\">
             
@@ -289,7 +306,7 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
       </div>
     </aside>
    ";
-        // line 118
+        // line 132
         echo "
 
        <!-- Mobile sidebar -->
@@ -413,16 +430,16 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
                   <li class=\"flex\">
                    <span class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\" style=\"color: black;\">
     ";
-        // line 240
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 240, $this->source); })()), "user", [], "any", false, false, false, 240)) {
+        // line 254
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 254, $this->source); })()), "user", [], "any", false, false, false, 254)) {
             echo "              
         Vous êtes actuellement connecté en tant que ";
-            // line 241
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 241, $this->source); })()), "user", [], "any", false, false, false, 241), "userIdentifier", [], "any", false, false, false, 241), "html", null, true);
+            // line 255
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 255, $this->source); })()), "user", [], "any", false, false, false, 255), "userIdentifier", [], "any", false, false, false, 255), "html", null, true);
             echo "
     ";
         }
-        // line 242
+        // line 256
         echo " 
 </span>
 
@@ -430,7 +447,7 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
                      <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
                       href=\"";
-        // line 248
+        // line 262
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\">
                       <svg style=\"color: black;\" class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
@@ -455,14 +472,14 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
 
     }
 
-    // line 273
+    // line 287
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 274
+        // line 288
         echo "
           ";
         
@@ -477,7 +494,7 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
 
     public function getDebugInfo()
     {
-        return array (  466 => 274,  459 => 273,  434 => 248,  426 => 242,  421 => 241,  417 => 240,  293 => 118,  273 => 100,  257 => 87,  242 => 75,  229 => 65,  210 => 49,  200 => 42,  192 => 36,  185 => 35,  176 => 29,  172 => 28,  168 => 27,  164 => 26,  159 => 25,  152 => 24,  143 => 21,  139 => 20,  135 => 19,  130 => 18,  123 => 17,  110 => 14,  92 => 276,  90 => 273,  81 => 266,  79 => 35,  73 => 31,  71 => 24,  68 => 23,  66 => 17,  60 => 14,  45 => 1,);
+        return array (  483 => 288,  476 => 287,  451 => 262,  443 => 256,  438 => 255,  434 => 254,  310 => 132,  286 => 110,  273 => 100,  257 => 87,  242 => 75,  229 => 65,  210 => 49,  200 => 42,  192 => 36,  185 => 35,  176 => 29,  172 => 28,  168 => 27,  164 => 26,  159 => 25,  152 => 24,  143 => 21,  139 => 20,  135 => 19,  130 => 18,  123 => 17,  110 => 14,  92 => 290,  90 => 287,  81 => 280,  79 => 35,  73 => 31,  71 => 24,  68 => 23,  66 => 17,  60 => 14,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -589,7 +606,21 @@ class __TwigTemplate_9b00a557c1fc4359876e03f2fc36ff58 extends Template
               <span class=\"ml-4\">Statistique</span>
             </a>
           </li>
+      <li class=\"relative px-6 py-3\">
+            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
+              href=\"{{ path('app_reclamationsusers_index') }}\">
+              
+<svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
+                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
+                <path
+                  d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\">
+                </path>
+              </svg>
 
+
+              <span class=\"ml-4\">Mes réclamations</span>
+            </a>
+          </li>
 
           <li class=\"relative px-6 py-3\">
             

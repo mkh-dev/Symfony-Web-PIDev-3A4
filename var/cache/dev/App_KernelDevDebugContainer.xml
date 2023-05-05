@@ -4400,7 +4400,7 @@
           <argument>ROLE_PARTENAIRE</argument>
           <argument>ROLE_ORGANISATEUR</argument>
           <argument>ROLE_TRANSPORTEUR</argument>
-          <argument>ROLE_ADMIN</argument>
+          <argument>ROLE_ADMINISTRATEUR</argument>
           <argument>ROLE_UTILISATEUR</argument>
         </argument>
         <argument>null</argument>
@@ -7914,7 +7914,7 @@
         <argument key="vehicule" type="service_closure" id=".errored..service_locator.iVJ8gI9.App\Entity\Vehicule"/>
       </argument>
     </service>
-    <service id=".service_locator.cH3xl4I" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.382uGJp" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AbonnementController::delete" type="service_closure" id=".service_locator.VhSGKsA"/>
@@ -7952,12 +7952,11 @@
         <argument key="App\Controller\ProduitController::show" type="service_closure" id=".service_locator.iGUm1r8"/>
         <argument key="App\Controller\ProduitMobileController::newproduit" type="service_closure" id=".service_locator.wr9s5g4"/>
         <argument key="App\Controller\ProduitMobileController::produitmobile" type="service_closure" id=".service_locator.wr9s5g4"/>
-        <argument key="App\Controller\ReclamationsController::Reclamsnew" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\ReclamationsController::delete" type="service_closure" id=".service_locator.MHm6mei"/>
         <argument key="App\Controller\ReclamationsController::edit" type="service_closure" id=".service_locator.MHm6mei"/>
         <argument key="App\Controller\ReclamationsController::index" type="service_closure" id=".service_locator.Zhsi5nT"/>
+        <argument key="App\Controller\ReclamationsController::indexReclams" type="service_closure" id=".service_locator.Zhsi5nT"/>
         <argument key="App\Controller\ReclamationsController::new" type="service_closure" id=".service_locator.aKM6MDa"/>
-        <argument key="App\Controller\ReclamationsController::reclams" type="service_closure" id=".service_locator.Zhsi5nT"/>
         <argument key="App\Controller\ReclamationsController::show" type="service_closure" id=".service_locator.oEfCGgo"/>
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.UnjcfIq"/>
         <argument key="App\Controller\Reservation2Controller::delete" type="service_closure" id=".service_locator.gZIaKpL"/>
@@ -8040,12 +8039,11 @@
         <argument key="App\Controller\ProduitController:show" type="service_closure" id=".service_locator.iGUm1r8"/>
         <argument key="App\Controller\ProduitMobileController:newproduit" type="service_closure" id=".service_locator.wr9s5g4"/>
         <argument key="App\Controller\ProduitMobileController:produitmobile" type="service_closure" id=".service_locator.wr9s5g4"/>
-        <argument key="App\Controller\ReclamationsController:Reclamsnew" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\ReclamationsController:delete" type="service_closure" id=".service_locator.MHm6mei"/>
         <argument key="App\Controller\ReclamationsController:edit" type="service_closure" id=".service_locator.MHm6mei"/>
         <argument key="App\Controller\ReclamationsController:index" type="service_closure" id=".service_locator.Zhsi5nT"/>
+        <argument key="App\Controller\ReclamationsController:indexReclams" type="service_closure" id=".service_locator.Zhsi5nT"/>
         <argument key="App\Controller\ReclamationsController:new" type="service_closure" id=".service_locator.aKM6MDa"/>
-        <argument key="App\Controller\ReclamationsController:reclams" type="service_closure" id=".service_locator.Zhsi5nT"/>
         <argument key="App\Controller\ReclamationsController:show" type="service_closure" id=".service_locator.oEfCGgo"/>
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.UnjcfIq"/>
         <argument key="App\Controller\Reservation2Controller:delete" type="service_closure" id=".service_locator.gZIaKpL"/>
@@ -8575,12 +8573,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.cH3xl4I"/>
+      <argument type="service" id=".service_locator.382uGJp"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.cH3xl4I"/>
+      <argument type="service" id=".service_locator.382uGJp"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -9586,7 +9584,7 @@
     <service id="Endroid\QrCode\Builder\BuilderInterface $defaultQrCodeBuilder" alias="endroid_qr_code.default_builder"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.cH3xl4I"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.382uGJp"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -9610,7 +9608,7 @@
     <service id=".service_locator..WQRx6E" alias=".service_locator.yRRNQrI"/>
     <service id=".service_locator.Ar0Pu3O" alias=".service_locator.cyg1ViB"/>
     <service id=".service_locator.gPjNq68" alias=".service_locator.iVJ8gI9"/>
-    <service id=".service_locator.R1n4BaV" alias=".service_locator.cH3xl4I"/>
+    <service id=".service_locator.FSsoWoH" alias=".service_locator.382uGJp"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.l6ELYLY"/>
     <service id=".service_locator.p2o3L_J" alias=".service_locator.uleoPsN"/>
     <service id=".service_locator.4hi2aOY" alias=".service_locator.bBRwv06"/>

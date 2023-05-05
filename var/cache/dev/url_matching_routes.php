@@ -37,11 +37,8 @@ return [
         '/updateProduit' => [[['_route' => 'updateProduit', '_controller' => 'App\\Controller\\ProduitMobileController::updateProduit'], null, null, null, false, false, null]],
         '/produit_mobile_stat' => [[['_route' => 'produit_mobile_stat', '_controller' => 'App\\Controller\\ProduitMobileController::StatAction'], null, ['GET' => 0], null, false, false, null]],
         '/reclamations' => [[['_route' => 'app_reclamations_index', '_controller' => 'App\\Controller\\ReclamationsController::index'], null, ['GET' => 0], null, true, false, null]],
-        '/reclamations/ReclamUsers' => [[['_route' => 'app_reclamationsusers_index', '_controller' => 'App\\Controller\\ReclamationsController::reclams'], null, ['GET' => 0], null, false, false, null]],
-        '/reclamations/new' => [
-            [['_route' => 'app_reclamations_new', '_controller' => 'App\\Controller\\ReclamationsController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null],
-            [['_route' => 'app_reclamationsusers_new', '_controller' => 'App\\Controller\\ReclamationsController::Reclamsnew'], null, ['GET' => 0, 'POST' => 1], null, false, false, null],
-        ],
+        '/reclamations/Reclams' => [[['_route' => 'app_reclamationsusers_index', '_controller' => 'App\\Controller\\ReclamationsController::indexReclams'], null, ['GET' => 0], null, false, false, null]],
+        '/reclamations/new' => [[['_route' => 'app_reclamations_new', '_controller' => 'App\\Controller\\ReclamationsController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/verify/email' => [[['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null]],
         '/reservation2' => [[['_route' => 'app_reservation2_index', '_controller' => 'App\\Controller\\Reservation2Controller::index'], null, ['GET' => 0], null, true, false, null]],

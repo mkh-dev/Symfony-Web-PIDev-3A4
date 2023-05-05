@@ -204,7 +204,10 @@ a.create-new-button:hover {
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/evento.png"), "html", null, true);
         echo "\" alt=\"Evento\" width=\"30\" height=\"40\" style=\"position: absolute; top: 0; left: 3%; transform: translateY(10%);\">
         </a>
-        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\" style=\"position: absolute; top: 15px; left: 4%;\">
+        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"";
+        // line 124
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login_home");
+        echo "\" style=\"position: absolute; top: 15px; left: 4%;\">
           EVENTO
         </a>
         
@@ -259,6 +262,24 @@ a.create-new-button:hover {
               <span class=\"ml-4\">Mes abonnements</span>
             </a>
           </li>
+                <li class=\"relative px-6 py-3\">
+            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
+              href=\"";
+        // line 172
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamationsusers_index");
+        echo "\">
+              
+<svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
+                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
+                <path
+                  d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\">
+                </path>
+              </svg>
+
+
+              <span class=\"ml-4\">Mes réclamations</span>
+            </a>
+          </li>
           
 
         </ul>
@@ -287,7 +308,7 @@ a.create-new-button:hover {
 
             <a class=\"inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100\"
              href=\"";
-        // line 197
+        // line 212
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_facture_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -304,7 +325,7 @@ a.create-new-button:hover {
           <li class=\"relative px-6 py-3\">
             <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
               href=\"";
-        // line 211
+        // line 226
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -319,7 +340,7 @@ a.create-new-button:hover {
           <li class=\"relative px-6 py-3\">
             <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
               href=\"";
-        // line 223
+        // line 238
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_abonnement_index");
         echo "\">
               <svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
@@ -331,7 +352,7 @@ a.create-new-button:hover {
               <span class=\"ml-4\">Mes abonnements</span>
             </a>
           </li>
-        
+
          
         </ul>
 
@@ -448,16 +469,16 @@ a.create-new-button:hover {
                   <li class=\"flex\">
                    <span class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\" style=\"color: black;\">
     ";
-        // line 349
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 349, $this->source); })()), "user", [], "any", false, false, false, 349)) {
+        // line 364
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 364, $this->source); })()), "user", [], "any", false, false, false, 364)) {
             echo "              
         Vous êtes actuellement connecté en tant que ";
-            // line 350
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 350, $this->source); })()), "user", [], "any", false, false, false, 350), "userIdentifier", [], "any", false, false, false, 350), "html", null, true);
+            // line 365
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 365, $this->source); })()), "user", [], "any", false, false, false, 365), "userIdentifier", [], "any", false, false, false, 365), "html", null, true);
             echo "
     ";
         }
-        // line 351
+        // line 366
         echo " 
 </span>
 
@@ -465,7 +486,7 @@ a.create-new-button:hover {
                      <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
                       href=\"";
-        // line 357
+        // line 372
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
         echo "\">
                       <svg style=\"color: black;\" class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
@@ -501,31 +522,31 @@ a.create-new-button:hover {
         </thead>
         <tbody>
         ";
-        // line 390
+        // line 405
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["reservations"]) || array_key_exists("reservations", $context) ? $context["reservations"] : (function () { throw new RuntimeError('Variable "reservations" does not exist.', 390, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["reservations"]) || array_key_exists("reservations", $context) ? $context["reservations"] : (function () { throw new RuntimeError('Variable "reservations" does not exist.', 405, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["reservation"]) {
-            // line 391
+            // line 406
             echo "            <tr>
                 <td>";
-            // line 392
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reservation"], "numres", [], "any", false, false, false, 392), "html", null, true);
+            // line 407
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reservation"], "numres", [], "any", false, false, false, 407), "html", null, true);
             echo "</td>
                 <td>";
-            // line 393
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reservation"], "nbplaces", [], "any", false, false, false, 393), "html", null, true);
+            // line 408
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["reservation"], "nbplaces", [], "any", false, false, false, 408), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 395
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_show", ["numres" => twig_get_attribute($this->env, $this->source, $context["reservation"], "numres", [], "any", false, false, false, 395)]), "html", null, true);
+            // line 410
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_show", ["numres" => twig_get_attribute($this->env, $this->source, $context["reservation"], "numres", [], "any", false, false, false, 410)]), "html", null, true);
             echo "\" class=\"show-button\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-search\" viewBox=\"0 0 16 16\">
   <path d=\"M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z\"/>
 </svg></a>
                     <a href=\"";
-            // line 398
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_edit", ["numres" => twig_get_attribute($this->env, $this->source, $context["reservation"], "numres", [], "any", false, false, false, 398)]), "html", null, true);
+            // line 413
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_edit", ["numres" => twig_get_attribute($this->env, $this->source, $context["reservation"], "numres", [], "any", false, false, false, 413)]), "html", null, true);
             echo "\" class=\"edit-button\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-pencil-square\" viewBox=\"0 0 16 16\">
   <path d=\"M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z\"/>
   <path fill-rule=\"evenodd\" d=\"M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z\"/>
@@ -537,7 +558,7 @@ a.create-new-button:hover {
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 406
+            // line 421
             echo "            <tr>
                 <td colspan=\"3\">aucune reservation</td>
             </tr>
@@ -546,16 +567,16 @@ a.create-new-button:hover {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['reservation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 410
+        // line 425
         echo "        </tbody>
     </table>
       ";
-        // line 412
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["reservations"]) || array_key_exists("reservations", $context) ? $context["reservations"] : (function () { throw new RuntimeError('Variable "reservations" does not exist.', 412, $this->source); })()), "knp_pagination/sliding.html.twig");
+        // line 427
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["reservations"]) || array_key_exists("reservations", $context) ? $context["reservations"] : (function () { throw new RuntimeError('Variable "reservations" does not exist.', 427, $this->source); })()), "knp_pagination/sliding.html.twig");
         echo "
 
     <a href=\"";
-        // line 414
+        // line 429
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reservation_new");
         echo "\" class=\"create-new-button\">Ajouter une nouvelle réservation</a>
        </main>
@@ -590,7 +611,7 @@ s0.parentNode.insertBefore(s1,s0);
 
     public function getDebugInfo()
     {
-        return array (  559 => 414,  554 => 412,  550 => 410,  541 => 406,  528 => 398,  522 => 395,  517 => 393,  513 => 392,  510 => 391,  505 => 390,  469 => 357,  461 => 351,  456 => 350,  452 => 349,  323 => 223,  308 => 211,  291 => 197,  251 => 160,  236 => 148,  217 => 132,  204 => 122,  193 => 113,  186 => 112,  173 => 109,  61 => 5,  54 => 4,  37 => 1,);
+        return array (  580 => 429,  575 => 427,  571 => 425,  562 => 421,  549 => 413,  543 => 410,  538 => 408,  534 => 407,  531 => 406,  526 => 405,  490 => 372,  482 => 366,  477 => 365,  473 => 364,  344 => 238,  329 => 226,  312 => 212,  269 => 172,  254 => 160,  239 => 148,  220 => 132,  209 => 124,  204 => 122,  193 => 113,  186 => 112,  173 => 109,  61 => 5,  54 => 4,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -718,7 +739,7 @@ a.create-new-button:hover {
         <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\">
           <img src=\"{{asset('back/img/evento.png')}}\" alt=\"Evento\" width=\"30\" height=\"40\" style=\"position: absolute; top: 0; left: 3%; transform: translateY(10%);\">
         </a>
-        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\" style=\"position: absolute; top: 15px; left: 4%;\">
+        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"{{ path('login_home') }}\" style=\"position: absolute; top: 15px; left: 4%;\">
           EVENTO
         </a>
         
@@ -762,6 +783,21 @@ a.create-new-button:hover {
                 </path>
               </svg>
               <span class=\"ml-4\">Mes abonnements</span>
+            </a>
+          </li>
+                <li class=\"relative px-6 py-3\">
+            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
+              href=\"{{ path('app_reclamationsusers_index') }}\">
+              
+<svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
+                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
+                <path
+                  d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\">
+                </path>
+              </svg>
+
+
+              <span class=\"ml-4\">Mes réclamations</span>
             </a>
           </li>
           
@@ -827,7 +863,7 @@ a.create-new-button:hover {
               <span class=\"ml-4\">Mes abonnements</span>
             </a>
           </li>
-        
+
          
         </ul>
 
@@ -1024,6 +1060,6 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
 {% endblock %}
-", "reservation/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\reservation\\index.html.twig");
+", "reservation/index.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\reservation\\index.html.twig");
     }
 }
