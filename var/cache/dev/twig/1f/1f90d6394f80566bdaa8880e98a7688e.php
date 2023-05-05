@@ -692,6 +692,6 @@ s0.parentNode.insertBefore(s1,s0);
 
 
 
-", "categorie_prod/edit.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\categorie_prod\\edit.html.twig");
+", "categorie_prod/edit.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\categorie_prod\\edit.html.twig");
     }
 }

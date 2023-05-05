@@ -1244,6 +1244,6 @@ T e m p l a t e M o
 
 </body>
 
-</html>", "front/produit.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\front\\produit.html.twig");
+</html>", "front/produit.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\front\\produit.html.twig");
     }
 }

@@ -265,6 +265,6 @@ class __TwigTemplate_4048dc21f39565fec9e3ef878791db86 extends Template
 <div class=\"button-container\">
   <button class=\"my-button-class center-button\">{{ button_label|default('Save') }}</button>
 </div>
-{{ form_end(form) }}", "produit/_form.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\produit\\_form.html.twig");
+{{ form_end(form) }}", "produit/_form.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\produit\\_form.html.twig");
     }
 }

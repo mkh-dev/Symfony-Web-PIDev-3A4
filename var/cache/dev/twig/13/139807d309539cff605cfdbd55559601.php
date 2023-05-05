@@ -509,6 +509,10 @@ tr:nth-child(even){background-color: #f2f2f2} #}
 {% endfor %}
 
 {% endblock %}
+<<<<<<< Updated upstream
 ", "back/transport/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\back\\transport\\index.html.twig");
+=======
+", "back/transport/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\back\\transport\\index.html.twig");
+>>>>>>> Stashed changes
     }
 }
