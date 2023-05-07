@@ -15,7 +15,7 @@ use Symfony\Component\Serializer\Serializer;
 class UtilisateurApiController extends AbstractController
 {
     /**
-     * @Route("/user/signup", name="app_register_mobile")
+     * @Route("user/signup", name="app_register_mobile")
      */
     public function signupAction(Request $request,  UserPasswordEncoderInterface $passwordEncoder)
     {
@@ -64,7 +64,7 @@ class UtilisateurApiController extends AbstractController
 
     
   /**
- * @Route("/user/signin", name="app_login_mobile")
+ * @Route("user/signin", name="app_login_mobile")
  */
 public function signinAction(Request $request)
 {
