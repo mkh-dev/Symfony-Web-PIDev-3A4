@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 
 #[ORM\Table(name: "reclamations")]
@@ -12,24 +13,29 @@ class Reclamations
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
+    #[Groups("reclams")]
     #[ORM\Column(type: "integer")]
     private ?int $id = null;
 
     #[ORM\Column(type: "string", length: 255, nullable: true)]
     #[Assert\NotBlank(message: 'Le prénom est obligatoire.')]
+    #[Groups("reclams")]
     private ?string $prenom = null;
 
     #[ORM\Column(type: "string", length: 255, nullable: true)]
     #[Assert\NotBlank(message: 'Le nom est obligatoire.')]
+    #[Groups("reclams")]
     private ?string $nom = null;
 
     #[ORM\Column(type: "string", length: 255, nullable: true)]
     #[Assert\Email(message: 'Le format de l\'email est invalide.')]
     #[Assert\NotBlank(message: 'L\'email est obligatoire.')]
+    #[Groups("reclams")]
     private ?string $email = null;
 
     #[ORM\Column(type: "string", length: 255)]
     #[Assert\NotBlank(message: 'Le champ message est obligatoire.')]
+    #[Groups("reclams")]
     private string $message;
 
     public function getId(): ?int

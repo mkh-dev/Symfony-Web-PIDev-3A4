@@ -39,6 +39,9 @@ return [
         '/reclamations' => [[['_route' => 'app_reclamations_index', '_controller' => 'App\\Controller\\ReclamationsController::index'], null, ['GET' => 0], null, true, false, null]],
         '/reclamations/Reclams' => [[['_route' => 'app_reclamationsusers_index', '_controller' => 'App\\Controller\\ReclamationsController::indexReclams'], null, ['GET' => 0], null, false, false, null]],
         '/reclamations/new' => [[['_route' => 'app_reclamations_new', '_controller' => 'App\\Controller\\ReclamationsController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/reclamations_mobile' => [[['_route' => 'reclamations_mobile', '_controller' => 'App\\Controller\\ReclamationsMobileController::reclamationsmobile'], null, null, null, false, false, null]],
+        '/SupprimerReclamations' => [[['_route' => 'SupprimerReclamations', '_controller' => 'App\\Controller\\ReclamationsMobileController::SupprimerReclamations'], null, null, null, false, false, null]],
+        '/updateReclamations' => [[['_route' => 'updateReclamations', '_controller' => 'App\\Controller\\ReclamationsMobileController::updateReclamations'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/verify/email' => [[['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null]],
         '/reservation2' => [[['_route' => 'app_reservation2_index', '_controller' => 'App\\Controller\\Reservation2Controller::index'], null, ['GET' => 0], null, true, false, null]],
@@ -116,64 +119,65 @@ return [
                 .')'
                 .'|/new(?'
                     .'|produit_mobile/([^/]++)/([^/]++)/([^/]++)/([^/]++)/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:585)'
-                    .'|users_mobile/([^/]++)/([^/]++)/([^/]++)/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:668)'
+                    .'|reclamations_mobile/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:648)'
+                    .'|users_mobile/([^/]++)/([^/]++)/([^/]++)/([^/]++)/([^/]++)/([^/]++)/([^/]++)(*:731)'
                 .')'
                 .'|/re(?'
                     .'|clamations/([^/]++)(?'
-                        .'|(*:705)'
-                        .'|/edit(*:718)'
-                        .'|(*:726)'
+                        .'|(*:768)'
+                        .'|/edit(*:781)'
+                        .'|(*:789)'
                     .')'
                     .'|servation(?'
                         .'|2/([^/]++)(?'
-                            .'|(*:760)'
-                            .'|/edit(*:773)'
-                            .'|(*:781)'
+                            .'|(*:823)'
+                            .'|/edit(*:836)'
+                            .'|(*:844)'
                         .')'
                         .'|/([^/]++)(?'
-                            .'|(*:802)'
-                            .'|/edit(*:815)'
-                            .'|(*:823)'
+                            .'|(*:865)'
+                            .'|/edit(*:878)'
+                            .'|(*:886)'
                         .')'
                     .')'
                 .')'
                 .'|/transport/([^/]++)/(?'
                     .'|front(?'
-                        .'|(*:865)'
+                        .'|(*:928)'
                         .'|/(?'
-                            .'|edit(*:881)'
-                            .'|new(*:892)'
+                            .'|edit(*:944)'
+                            .'|new(*:955)'
                         .')'
                     .')'
                     .'|back(?'
-                        .'|(*:909)'
-                        .'|/edit(*:922)'
-                        .'|(*:930)'
+                        .'|(*:972)'
+                        .'|/edit(*:985)'
+                        .'|(*:993)'
                     .')'
                 .')'
                 .'|/users/(?'
-                    .'|show/([^/]++)(*:963)'
+                    .'|show/([^/]++)(*:1026)'
                     .'|([^/]++)(?'
-                        .'|/edit(*:987)'
-                        .'|(*:995)'
+                        .'|/edit(*:1051)'
+                        .'|(*:1060)'
                     .')'
                 .')'
                 .'|/vehicule(?'
-                    .'|back/new([^/]++)(*:1033)'
-                    .'|front/new([^/]++)(*:1059)'
+                    .'|back/new([^/]++)(*:1099)'
+                    .'|front/new([^/]++)(*:1125)'
                     .'|/(?'
-                        .'|([^/]++)(*:1080)'
-                        .'|back/([^/]++)(*:1102)'
+                        .'|([^/]++)(*:1146)'
+                        .'|back/([^/]++)(*:1168)'
                         .'|([^/]++)(?'
                             .'|/edit(?'
-                                .'|(*:1130)'
+                                .'|(*:1196)'
                             .')'
-                            .'|(*:1140)'
+                            .'|(*:1206)'
                         .')'
                     .')'
                 .')'
-                .'|/qr\\-code/([^/]++)/([\\w\\W]+)(*:1180)'
-                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:1217)'
+                .'|/qr\\-code/([^/]++)/([\\w\\W]+)(*:1246)'
+                .'|/_error/(\\d+)(?:\\.([^/]++))?(*:1283)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -201,39 +205,40 @@ return [
         474 => [[['_route' => 'app_produit_dislike', '_controller' => 'App\\Controller\\ProduitController::dislike'], ['idProd'], ['POST' => 0], null, false, false, null]],
         483 => [[['_route' => 'app_produit_delete', '_controller' => 'App\\Controller\\ProduitController::delete'], ['idProd'], ['POST' => 0], null, false, true, null]],
         585 => [[['_route' => 'newproduit_mobile', '_controller' => 'App\\Controller\\ProduitMobileController::newproduit'], ['nomProd', 'description', 'prix', 'quantite', 'nomPart', 'image', 'nbLikes', 'nbDislikes'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        668 => [[['_route' => 'newusers_mobile', '_controller' => 'App\\Controller\\UsersMobileController::newusers'], ['prenom', 'nom', 'email', 'datenaissance', 'numtel', 'userrole', 'password'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        705 => [[['_route' => 'app_reclamations_show', '_controller' => 'App\\Controller\\ReclamationsController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        718 => [[['_route' => 'app_reclamations_edit', '_controller' => 'App\\Controller\\ReclamationsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        726 => [[['_route' => 'app_reclamations_delete', '_controller' => 'App\\Controller\\ReclamationsController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        760 => [[['_route' => 'app_reservation2_show', '_controller' => 'App\\Controller\\Reservation2Controller::show'], ['numres'], ['GET' => 0], null, false, true, null]],
-        773 => [[['_route' => 'app_reservation2_edit', '_controller' => 'App\\Controller\\Reservation2Controller::edit'], ['numres'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        781 => [[['_route' => 'app_reservation2_delete', '_controller' => 'App\\Controller\\Reservation2Controller::delete'], ['numres'], ['POST' => 0], null, false, true, null]],
-        802 => [[['_route' => 'app_reservation_show', '_controller' => 'App\\Controller\\ReservationController::show'], ['numres'], ['GET' => 0], null, false, true, null]],
-        815 => [[['_route' => 'app_reservation_edit', '_controller' => 'App\\Controller\\ReservationController::edit'], ['numres'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        823 => [[['_route' => 'app_reservation_delete', '_controller' => 'App\\Controller\\ReservationController::delete'], ['numres'], ['POST' => 0], null, false, true, null]],
-        865 => [[['_route' => 'app_transport_front_show', '_controller' => 'App\\Controller\\TransportController::show'], ['idTransport'], ['GET' => 0], null, false, false, null]],
-        881 => [[['_route' => 'app_transport_front_edit', '_controller' => 'App\\Controller\\TransportController::edit'], ['idTransport'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        892 => [[['_route' => 'app_transport_front_delete', '_controller' => 'App\\Controller\\TransportController::deleteA'], ['idTransport'], ['POST' => 0], null, false, false, null]],
-        909 => [[['_route' => 'app_transport_back_show', '_controller' => 'App\\Controller\\TransportController::showA'], ['idTransport'], ['GET' => 0], null, false, false, null]],
-        922 => [[['_route' => 'app_transport_back_edit', '_controller' => 'App\\Controller\\TransportController::editA'], ['idTransport'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        930 => [[['_route' => 'app_transport_back_delete', '_controller' => 'App\\Controller\\TransportController::delete'], ['idTransport'], ['POST' => 0], null, false, false, null]],
-        963 => [[['_route' => 'app_users_show', '_controller' => 'App\\Controller\\UsersController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        987 => [[['_route' => 'app_users_edit', '_controller' => 'App\\Controller\\UsersController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        995 => [[['_route' => 'app_users_delete', '_controller' => 'App\\Controller\\UsersController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        1033 => [[['_route' => 'app_vehicule_back_new', '_controller' => 'App\\Controller\\VehiculeController::new'], ['idTransport'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        1059 => [[['_route' => 'app_vehicule_front_new', '_controller' => 'App\\Controller\\VehiculeController::newv'], ['idTransport'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        1080 => [[['_route' => 'app_vehicule_show', '_controller' => 'App\\Controller\\VehiculeController::show'], ['idVehicule'], ['GET' => 0], null, false, true, null]],
-        1102 => [[['_route' => 'app_vehicule_b_show', '_controller' => 'App\\Controller\\VehiculeController::showBack'], ['idVehicule'], ['GET' => 0], null, false, true, null]],
-        1130 => [
+        648 => [[['_route' => 'newreclamations_mobile', '_controller' => 'App\\Controller\\ReclamationsMobileController::newreclamations'], ['prenom', 'nom', 'email', 'message'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        731 => [[['_route' => 'newusers_mobile', '_controller' => 'App\\Controller\\UsersMobileController::newusers'], ['prenom', 'nom', 'email', 'datenaissance', 'numtel', 'userrole', 'password'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        768 => [[['_route' => 'app_reclamations_show', '_controller' => 'App\\Controller\\ReclamationsController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        781 => [[['_route' => 'app_reclamations_edit', '_controller' => 'App\\Controller\\ReclamationsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        789 => [[['_route' => 'app_reclamations_delete', '_controller' => 'App\\Controller\\ReclamationsController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        823 => [[['_route' => 'app_reservation2_show', '_controller' => 'App\\Controller\\Reservation2Controller::show'], ['numres'], ['GET' => 0], null, false, true, null]],
+        836 => [[['_route' => 'app_reservation2_edit', '_controller' => 'App\\Controller\\Reservation2Controller::edit'], ['numres'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        844 => [[['_route' => 'app_reservation2_delete', '_controller' => 'App\\Controller\\Reservation2Controller::delete'], ['numres'], ['POST' => 0], null, false, true, null]],
+        865 => [[['_route' => 'app_reservation_show', '_controller' => 'App\\Controller\\ReservationController::show'], ['numres'], ['GET' => 0], null, false, true, null]],
+        878 => [[['_route' => 'app_reservation_edit', '_controller' => 'App\\Controller\\ReservationController::edit'], ['numres'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        886 => [[['_route' => 'app_reservation_delete', '_controller' => 'App\\Controller\\ReservationController::delete'], ['numres'], ['POST' => 0], null, false, true, null]],
+        928 => [[['_route' => 'app_transport_front_show', '_controller' => 'App\\Controller\\TransportController::show'], ['idTransport'], ['GET' => 0], null, false, false, null]],
+        944 => [[['_route' => 'app_transport_front_edit', '_controller' => 'App\\Controller\\TransportController::edit'], ['idTransport'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        955 => [[['_route' => 'app_transport_front_delete', '_controller' => 'App\\Controller\\TransportController::deleteA'], ['idTransport'], ['POST' => 0], null, false, false, null]],
+        972 => [[['_route' => 'app_transport_back_show', '_controller' => 'App\\Controller\\TransportController::showA'], ['idTransport'], ['GET' => 0], null, false, false, null]],
+        985 => [[['_route' => 'app_transport_back_edit', '_controller' => 'App\\Controller\\TransportController::editA'], ['idTransport'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        993 => [[['_route' => 'app_transport_back_delete', '_controller' => 'App\\Controller\\TransportController::delete'], ['idTransport'], ['POST' => 0], null, false, false, null]],
+        1026 => [[['_route' => 'app_users_show', '_controller' => 'App\\Controller\\UsersController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        1051 => [[['_route' => 'app_users_edit', '_controller' => 'App\\Controller\\UsersController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        1060 => [[['_route' => 'app_users_delete', '_controller' => 'App\\Controller\\UsersController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        1099 => [[['_route' => 'app_vehicule_back_new', '_controller' => 'App\\Controller\\VehiculeController::new'], ['idTransport'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        1125 => [[['_route' => 'app_vehicule_front_new', '_controller' => 'App\\Controller\\VehiculeController::newv'], ['idTransport'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        1146 => [[['_route' => 'app_vehicule_show', '_controller' => 'App\\Controller\\VehiculeController::show'], ['idVehicule'], ['GET' => 0], null, false, true, null]],
+        1168 => [[['_route' => 'app_vehicule_b_show', '_controller' => 'App\\Controller\\VehiculeController::showBack'], ['idVehicule'], ['GET' => 0], null, false, true, null]],
+        1196 => [
             [['_route' => 'app_vehicule_edit', '_controller' => 'App\\Controller\\VehiculeController::edit'], ['idVehicule'], ['GET' => 0, 'POST' => 1], null, false, false, null],
             [['_route' => 'app_vehicule_back_edit', '_controller' => 'App\\Controller\\VehiculeController::editB'], ['idVehicule'], ['GET' => 0, 'POST' => 1], null, false, false, null],
         ],
-        1140 => [
+        1206 => [
             [['_route' => 'app_vehicule_delete', '_controller' => 'App\\Controller\\VehiculeController::delete'], ['idVehicule'], ['POST' => 0], null, false, true, null],
             [['_route' => 'app_vehicule_back_delete', '_controller' => 'App\\Controller\\VehiculeController::deleteB'], ['idVehicule'], ['POST' => 0], null, false, true, null],
         ],
-        1180 => [[['_route' => 'qr_code_generate', '_controller' => 'Endroid\\QrCodeBundle\\Controller\\GenerateController'], ['builder', 'data'], null, null, false, true, null]],
-        1217 => [
+        1246 => [[['_route' => 'qr_code_generate', '_controller' => 'Endroid\\QrCodeBundle\\Controller\\GenerateController'], ['builder', 'data'], null, null, false, true, null]],
+        1283 => [
             [['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

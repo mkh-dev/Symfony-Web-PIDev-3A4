@@ -50,7 +50,6 @@ class Users implements UserInterface
     #[Assert\NotBlank(message: "La date de naissance est obligatoire.")]
     #[Groups("user")]
     #[Assert\LessThanOrEqual("today", message: "La date de naissance ne peut pas être dans le futur.")]
-    #[LessThan("-18 years", message: "Vous devez avoir au moins 18 ans pour vous inscrire.")]
     private \DateTimeInterface $datenaissance;
     
     #[ORM\Column(type: "string", length: 20)]
