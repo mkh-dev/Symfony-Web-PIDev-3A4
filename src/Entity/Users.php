@@ -50,7 +50,7 @@ class Users implements UserInterface
     #[Assert\NotBlank(message: "La date de naissance est obligatoire.")]
     #[Groups("user")]
     #[Assert\LessThanOrEqual("today", message: "La date de naissance ne peut pas être dans le futur.")]
-    private \DateTimeInterface $datenaissance;
+    private $datenaissance;
     
     #[ORM\Column(type: "string", length: 20)]
     #[Groups("user")]
@@ -126,17 +126,17 @@ class Users implements UserInterface
         return $this;
     }
 
-    public function getDatenaissance(): ?\DateTimeInterface
+    public function getDatenaissance()
     {
         return $this->datenaissance;
     }
-
-    public function setDatenaissance(\DateTimeInterface $datenaissance): self
+    
+    public function setDatenaissance($datenaissance)
     {
         $this->datenaissance = $datenaissance;
-
         return $this;
     }
+    
 
     public function getNumtel(): ?string
     {

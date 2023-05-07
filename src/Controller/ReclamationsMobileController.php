@@ -1,105 +1,146 @@
 <?php
 
+
 namespace App\Controller;
 
-use App\Entity\Reclamations;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
+ use App\Entity\Reclamations;
+ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+ use Symfony\Component\HttpFoundation\JsonResponse;
+ use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Serializer;
+ use Symfony\Component\Serializer\Serializer;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Component\Validator\Constraints\Json;
 
-
-class ReclamationsMobileController extends AbstractController
+class ReclamationsMobileController extends  AbstractController
 {
 
 
-    /**
-     * @Route("/reclamations_mobile", name="reclamations_mobile")
-     */    public function reclamationsmobile( NormalizerInterface  $normalizer)
-    {
-        $Hotel = $this->getDoctrine()->getRepository(Reclamations::class)->findAll();
-        $json = $normalizer->normalize($Hotel, "json", ['groups' => ['reclams','reclams']]);
-        return new JsonResponse($json);
-
-    }
-
-   
+    /******************Ajouter Reclamation*****************************************/
      /**
-     * @Route("/newreclamations_mobile/{prenom}/{nom}/{email}/{message}", name="newreclamations_mobile", methods={"GET","POST"})
-     */
-    public function newreclamations($prenom,$nom,$email,$message,NormalizerInterface  $normalizer )
-    {
+      * @Route("/addReclamation", name="add_reclamation")
+      * @Method("POST")
+      */
 
-        $reclams = new Reclamations();
-        
-        $reclams->setPrenom($prenom);
-        $reclams->setNom($nom);
-        $reclams->setEmail($email);
-        $reclams->setMessage($message);
+     public function ajouterReclamationAction(Request $request)
+     {
+         $reclamation = new Reclamations();
+         $prenom = $request->query->get("prenom");
+         $nom = $request->query->get("nom");
+         $email = $request->query->get("email");
+         $message = $request->query->get("message");
+         $em = $this->getDoctrine()->getManager();
+
+         $reclamation->setPrenom($prenom);
+         $reclamation->setNom($nom);
+         $reclamation->setEmail($email);
+         $reclamation->setMessage($message);
+
+         $em->persist($reclamation);
+         $em->flush();
+         $serializer = new Serializer([new ObjectNormalizer()]);
+         $formatted = $serializer->normalize($reclamation);
+         return new JsonResponse($formatted);
+
+     }
+
+     /******************Supprimer Reclamation*****************************************/
+
+     /**
+      * @Route("/deleteReclamation", name="delete_reclamation")
+      * @Method("DELETE")
+      */
+
+     public function deleteReclamationAction(Request $request) {
+         $id = $request->get("id");
+
+         $em = $this->getDoctrine()->getManager();
+         $reclamation = $em->getRepository(Reclamations::class)->find($id);
+         if($reclamation!=null ) {
+             $em->remove($reclamation);
+             $em->flush();
+
+             $serialize = new Serializer([new ObjectNormalizer()]);
+             $formatted = $serialize->normalize("Reclamation a ete supprimee avec success.");
+             return new JsonResponse($formatted);
+
+         }
+         return new JsonResponse("id reclamation invalide.");
 
 
+     }
 
-
-
-        $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->persist($reclams);
-        $entityManager->flush();
-        $json = $normalizer->normalize($reclams, "json", ['groups' => ['reclams']]);
-        return new JsonResponse($json);
-
-    }
-
-
-     
+    /******************Modifier Reclamation*****************************************/
     /**
-     * @Route("/SupprimerReclamations", name="SupprimerReclamations")
+     * @Route("/updateReclamation", name="update_reclamation")
+     * @Method("PUT")
      */
-    public function SupprimerReclamations(Request $request)
-    {
-
-        $idE = $request->get("id");
+    public function modifierReclamationAction(Request $request) {
         $em = $this->getDoctrine()->getManager();
-        $Hotel = $em->getRepository(Reclamations::class)->find($idE);
-        if($Hotel != null)
-        {
-            $em->remove($Hotel);
-            $em->flush();
-            $serializer = new Serializer([new ObjectNormalizer()]);
-            $formated = $serializer->normalize("Reclamation a ete supprimer avec succees ");
-            return new JsonResponse($formated);
-        }
+        $reclamation = $this->getDoctrine()->getManager()
+                        ->getRepository(Reclamations::class)
+                        ->find($request->get("id"));
 
-    }
+        $reclamation->setPrenom($request->get("prenom"));
+        $reclamation->setNom($request->get("nom"));
+        $reclamation->setEmail($request->get("email"));
+        $reclamation->setMessage($request->get("message"));
+ 
 
 
-       /**
-     * @Route("/updateReclamations", name="updateReclamations")
-     */
-    public function updateReclamations(Request $request) {
-        $em = $this->getDoctrine()->getManager();
-        $Hotel = $this->getDoctrine()->getManager()->getRepository(Reclamations::class)->find($request->get("id"));
-
-
-
-                
-        $Hotel->setPrenom($request->get("prenom"));
-        $Hotel->setNom($request->get("nom"));
-        $Hotel->setEmail($request->get("email"));
-        $Hotel->setMessage($request->get("message"));
-
-
-
-        $em->persist($Hotel);
+        $em->persist($reclamation);
         $em->flush();
         $serializer = new Serializer([new ObjectNormalizer()]);
-        $formatted = $serializer->normalize($Hotel);
+        $formatted = $serializer->normalize($reclamation);
         return new JsonResponse("Reclamation a ete modifiee avec success.");
 
     }
 
 
-}
+
+    /******************affichage Reclamation*****************************************/
+
+     /**
+      * @Route("/displayReclamations", name="display_reclamation")
+      */
+     public function allRecAction()
+     {
+
+         $reclamation = $this->getDoctrine()->getManager()->getRepository(Reclamations::class)->findAll();
+         $serializer = new Serializer([new ObjectNormalizer()]);
+         $formatted = $serializer->normalize($reclamation);
+
+         return new JsonResponse($formatted);
+
+     }
+
+
+     /******************Detail Reclamation*****************************************/
+
+     /**
+      * @Route("/detailReclamation", name="detail_reclamation")
+      * @Method("GET")
+      */
+/*
+     //Detail Reclamation
+     public function detailReclamationAction(Request $request)
+     {
+         $id = $request->get("id");
+
+         $em = $this->getDoctrine()->getManager();
+         $reclamation = $this->getDoctrine()->getManager()->getRepository(Reclamations::class)->find($id);
+         $encoder = new JsonEncoder();
+         $normalizer = new ObjectNormalizer();
+         $normalizer->setCircularReferenceHandler(function ($object) {
+             return $object->getMessage();
+         });
+         $serializer = new Serializer([$normalizer], [$encoder]);
+         $formatted = $serializer->normalize($reclamation);
+         return new JsonResponse($formatted);
+     }
+*/
+
+ }
