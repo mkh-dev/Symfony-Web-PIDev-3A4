@@ -15,6 +15,7 @@ use Endroid\QrCode\Writer\PngWriter;
 use App\Entity\Reservation;
 use App\Form\ReservationType;
 use App\Repository\ReservationRepository;
+use App\Repository\EventRepository;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -27,9 +28,9 @@ use Knp\Component\Pager\PaginatorInterface;
 class ReservationController extends AbstractController
 {
     #[Route('/', name: 'app_reservation_index', methods: ['GET'])]
-    public function index(ReservationRepository $ReservationRepository, PaginatorInterface $paginator, Request $request): Response
+    public function index(ReservationRepository $ReservationRepository,EventRepository $repoEvent, PaginatorInterface $paginator, Request $request): Response
     {
-           
+         
     // Get all the abonnements from the repository
     $reservations = $ReservationRepository->findAll();
     

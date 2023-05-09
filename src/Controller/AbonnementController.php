@@ -6,6 +6,7 @@ namespace App\Controller;
 
 
 use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 use Dompdf\Dompdf;
 use App\Entity\Abonnement;

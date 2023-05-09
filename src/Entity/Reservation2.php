@@ -17,7 +17,8 @@ class Reservation2
     #[ORM\GeneratedValue(strategy: "IDENTITY")]
     private ?int $numres = null;
 
-    #[ORM\Column(name: "idUser", type: "integer")]
+    #[ORM\ManyToOne(targetEntity: "Users")]
+    #[ORM\JoinColumn(name: "idUser", referencedColumnName: "id")]
     private ?int $iduser = null;
 
     #[ORM\Column(name: "nbPlaces", type: "integer")]

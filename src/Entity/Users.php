@@ -12,7 +12,7 @@ use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: UsersRepository::class)]
 #[ORM\Table(name: "users")]
-#[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
+//#[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
 class Users implements UserInterface
 {
     #[ORM\Id]
@@ -50,7 +50,7 @@ class Users implements UserInterface
     #[Assert\NotBlank(message: "La date de naissance est obligatoire.")]
     #[Groups("user")]
     #[Assert\LessThanOrEqual("today", message: "La date de naissance ne peut pas être dans le futur.")]
-    #[LessThan("-18 years", message: "Vous devez avoir au moins 18 ans pour vous inscrire.")]
+    //#[LessThan("-18 years", message: "Vous devez avoir au moins 18 ans pour vous inscrire.")]
     private \DateTimeInterface $datenaissance;
     
     #[ORM\Column(type: "string", length: 20)]

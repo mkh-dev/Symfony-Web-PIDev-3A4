@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Serializer\Annotation\Groups;
 
 use App\Repository\AbonnementRepository;
 use Doctrine\DBAL\Types\Types;
@@ -13,6 +14,8 @@ class Abonnement
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups("abonnements")]
+
     private ?int $id = null;
 
 
@@ -22,17 +25,21 @@ class Abonnement
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     #[Assert\NotBlank(message:"Il faut indiquer la date ")]
     #[Assert\GreaterThanOrEqual('+4320 hours ',message:"Il faut un minimum de 6 mois ")]
+    #[Groups("abonnements")]
+
     private ?\DateTimeInterface $dateExpire = null;
 
     #[ORM\ManyToOne(inversedBy: 'abonnements')]
-    
+    #[Groups("abonnements")]
 
-    private ?Users $idUser = null;
+
+    private ?int $idUser = null;
 
     #[ORM\Column]
     #[Assert\NotBlank(message:"Il faut indiquer le prix ")]
     #[Assert\Positive(message:"Il faut une valeur positive ")]
-    
+    #[Groups("abonnements")]
+
 
     private ?float $prix = null;
 
@@ -41,15 +48,20 @@ class Abonnement
     #[Assert\Positive(message:"Il faut une valeur positive ")]
     #[Assert\LessThanOrEqual(20,message:"Il faut pas dépasser un plafond de 20 réservation")]
     #[Assert\GreaterThanOrEqual(5,message:"Il faut un minimum de 5 réservations")]
+    #[Groups("abonnements")]
 
     private ?int $plafond = null;
 
     #[ORM\Column]
     #[Assert\NotBlank(message:"Il faut indiquer le type  ")]
+    #[Groups("abonnements")]
+
     private ?string $type = null;
 
     #[ORM\Column(length: 255)]
     #[Assert\Currency()]
+    #[Groups("abonnements")]
+
     private ?string $currency = null;
     
 
@@ -84,12 +96,12 @@ class Abonnement
         return $this;
     }
 
-    public function getIdUser(): ?Users
+    public function getIdUser(): ?int
     {
         return $this->idUser;
     }
 
-    public function setIdUser(?Users $idUser): self
+    public function setIdUser(int $idUser): self
     {
         $this->idUser = $idUser;
 

@@ -5,11 +5,13 @@ namespace App\Entity;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use App\Repository\EventRepository;
 
 #[ORM\Table(name: 'evenement')]
 #[ORM\Index(name: 'id_cat_event', columns: ['id_cat_event'])]
 #[ORM\Index(name: 'id_transport', columns: ['id_transport'])]
-#[ORM\Entity]
+
+#[ORM\Entity(repositoryClass:EventRepository::class)]
 class Evenement
 {
     #[ORM\Id]

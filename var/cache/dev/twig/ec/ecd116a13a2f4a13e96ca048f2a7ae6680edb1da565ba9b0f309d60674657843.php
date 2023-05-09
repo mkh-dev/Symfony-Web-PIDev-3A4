@@ -83,7 +83,10 @@ class __TwigTemplate_56dbe85025983545866c4559505ba92e2ea169877643db9fc523b8af76f
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/evento.png"), "html", null, true);
         echo "\" alt=\"Evento\" width=\"30\" height=\"40\" style=\"position: absolute; top: 0; left: 3%; transform: translateY(10%);\">
         </a>
-        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\" style=\"position: absolute; top: 15px; left: 4%;\">
+        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"";
+        // line 17
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login_home");
+        echo "\" style=\"position: absolute; top: 15px; left: 4%;\">
           EVENTO
         </a>
         
@@ -181,6 +184,25 @@ class __TwigTemplate_56dbe85025983545866c4559505ba92e2ea169877643db9fc523b8af76f
               <span class=\"ml-4\">Forms</span>
             </a>
           </li>
+
+           <li class=\"relative px-6 py-3\">
+            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
+              href=\"";
+        // line 106
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_reclamationsusers_index");
+        echo "\">
+              
+<svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
+                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
+                <path
+                  d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\">
+                </path>
+              </svg>
+
+
+              <span class=\"ml-4\">Mes réclamations</span>
+            </a>
+          </li>
          
          
         </ul>
@@ -290,21 +312,41 @@ class __TwigTemplate_56dbe85025983545866c4559505ba92e2ea169877643db9fc523b8af76f
                   src=\"https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82\"
                   alt=\"\" aria-hidden=\"true\" />
               </button>
-              <template x-if=\"isProfileMenuOpen\">
+          <template x-if=\"isProfileMenuOpen\">
                 <ul x-transition:leave=\"transition ease-in duration-150\" x-transition:leave-start=\"opacity-100\"
                   x-transition:leave-end=\"opacity-0\" @click.away=\"closeProfileMenu\" @keydown.escape=\"closeProfileMenu\"
                   class=\"absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700\"
                   aria-label=\"submenu\">
                   <li class=\"flex\">
+                   <span class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\" style=\"color: black;\">
+    ";
+        // line 235
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 235, $this->source); })()), "user", [], "any", false, false, false, 235)) {
+            echo "              
+        Vous êtes actuellement connecté en tant que ";
+            // line 236
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 236, $this->source); })()), "user", [], "any", false, false, false, 236), "userIdentifier", [], "any", false, false, false, 236), "html", null, true);
+            echo "
+    ";
+        }
+        // line 237
+        echo " 
+</span>
+
+                  </li> 
+                     <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
-                      href=\"#\">
-                      <svg class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
+                      href=\"";
+        // line 243
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+        echo "\">
+                      <svg style=\"color: black;\" class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
                         stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
                         <path
                           d=\"M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1\">
                         </path>
                       </svg>
-                      <span>Log out</span>
+                        <span style=\"color: black;\">Logout</span>
                     </a>
                   </li>
                 </ul>
@@ -362,7 +404,7 @@ td img {
 }
 </style>
     <a href=\"";
-        // line 283
+        // line 307
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categorie_prod_new");
         echo "\" style=\"float: right;\"><img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/plus.png"), "html", null, true);
@@ -380,9 +422,9 @@ td img {
         </thead>
         <tbody>
         ";
-        // line 296
+        // line 320
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categorie_prods"]) || array_key_exists("categorie_prods", $context) ? $context["categorie_prods"] : (function () { throw new RuntimeError('Variable "categorie_prods" does not exist.', 296, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["categorie_prods"]) || array_key_exists("categorie_prods", $context) ? $context["categorie_prods"] : (function () { throw new RuntimeError('Variable "categorie_prods" does not exist.', 320, $this->source); })()));
         $context['_iterated'] = false;
         $context['loop'] = [
           'parent' => $context['_parent'],
@@ -398,33 +440,33 @@ td img {
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["categorie_prod"]) {
-            // line 297
+            // line 321
             echo "            <tr>
                 <td>";
-            // line 298
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "idCatProd", [], "any", false, false, false, 298), "html", null, true);
+            // line 322
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "idCatProd", [], "any", false, false, false, 322), "html", null, true);
             echo "</td>
                 <td>";
-            // line 299
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "catProd", [], "any", false, false, false, 299), "html", null, true);
+            // line 323
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "catProd", [], "any", false, false, false, 323), "html", null, true);
             echo "</td>
 
                 <td>
 
                   <div style=\"display: flex; justify-content: space-between;\">
                   <a href=\"";
-            // line 304
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categorie_prod_show", ["idCatProd" => twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "idCatProd", [], "any", false, false, false, 304)]), "html", null, true);
+            // line 328
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categorie_prod_show", ["idCatProd" => twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "idCatProd", [], "any", false, false, false, 328)]), "html", null, true);
             echo "\" \"><img src=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/chercher.png"), "html", null, true);
             echo "\" alt=\"Afficher le produit\" style=\"width:20px; height:20px;\"></a>
                   ";
-            // line 305
+            // line 329
             echo twig_include($this->env, $context, "categorie_prod/_delete_form.html.twig");
             echo "
                   <a href=\"";
-            // line 306
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categorie_prod_edit", ["idCatProd" => twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "idCatProd", [], "any", false, false, false, 306)]), "html", null, true);
+            // line 330
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categorie_prod_edit", ["idCatProd" => twig_get_attribute($this->env, $this->source, $context["categorie_prod"], "idCatProd", [], "any", false, false, false, 330)]), "html", null, true);
             echo "\" \"><img src=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("back/img/crayon.png"), "html", null, true);
             echo "\" alt=\"Modifier le produit\" style=\"width:20px; height:20px;\"></a>
@@ -445,7 +487,7 @@ td img {
             }
         }
         if (!$context['_iterated']) {
-            // line 313
+            // line 337
             echo "            <tr>
                 <td colspan=\"9\">no records found</td>
             </tr>
@@ -454,7 +496,7 @@ td img {
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categorie_prod'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 317
+        // line 341
         echo "        </tbody>
     </table>
 
@@ -492,7 +534,7 @@ s0.parentNode.insertBefore(s1,s0);
 
     public function getDebugInfo()
     {
-        return array (  458 => 317,  449 => 313,  427 => 306,  423 => 305,  417 => 304,  409 => 299,  405 => 298,  402 => 297,  384 => 296,  366 => 283,  173 => 93,  156 => 79,  115 => 41,  98 => 27,  83 => 15,  73 => 7,  66 => 6,  53 => 3,  36 => 1,);
+        return array (  500 => 341,  491 => 337,  469 => 330,  465 => 329,  459 => 328,  451 => 323,  447 => 322,  444 => 321,  426 => 320,  408 => 307,  341 => 243,  333 => 237,  328 => 236,  324 => 235,  192 => 106,  176 => 93,  159 => 79,  118 => 41,  101 => 27,  88 => 17,  83 => 15,  73 => 7,  66 => 6,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -513,7 +555,7 @@ s0.parentNode.insertBefore(s1,s0);
         <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\">
           <img src=\"{{asset('back/img/evento.png')}}\" alt=\"Evento\" width=\"30\" height=\"40\" style=\"position: absolute; top: 0; left: 3%; transform: translateY(10%);\">
         </a>
-        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"#\" style=\"position: absolute; top: 15px; left: 4%;\">
+        <a class=\"ml-6 text-lg font-bold text-gray-800 dark:text-gray-200\" href=\"{{ path('login_home') }}\" style=\"position: absolute; top: 15px; left: 4%;\">
           EVENTO
         </a>
         
@@ -599,6 +641,22 @@ s0.parentNode.insertBefore(s1,s0);
               <span class=\"ml-4\">Forms</span>
             </a>
           </li>
+
+           <li class=\"relative px-6 py-3\">
+            <a class=\"inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200\"
+              href=\"{{ path('app_reclamationsusers_index') }}\">
+              
+<svg class=\"w-5 h-5\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\"
+                stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
+                <path
+                  d=\"M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\">
+                </path>
+              </svg>
+
+
+              <span class=\"ml-4\">Mes réclamations</span>
+            </a>
+          </li>
          
          
         </ul>
@@ -708,21 +766,29 @@ s0.parentNode.insertBefore(s1,s0);
                   src=\"https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82\"
                   alt=\"\" aria-hidden=\"true\" />
               </button>
-              <template x-if=\"isProfileMenuOpen\">
+          <template x-if=\"isProfileMenuOpen\">
                 <ul x-transition:leave=\"transition ease-in duration-150\" x-transition:leave-start=\"opacity-100\"
                   x-transition:leave-end=\"opacity-0\" @click.away=\"closeProfileMenu\" @keydown.escape=\"closeProfileMenu\"
                   class=\"absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700\"
                   aria-label=\"submenu\">
                   <li class=\"flex\">
+                   <span class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\" style=\"color: black;\">
+    {% if app.user %}              
+        Vous êtes actuellement connecté en tant que {{ app.user.userIdentifier }}
+    {% endif %} 
+</span>
+
+                  </li> 
+                     <li class=\"flex\">
                     <a class=\"inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200\"
-                      href=\"#\">
-                      <svg class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
+                      href=\"{{ path('app_logout') }}\">
+                      <svg style=\"color: black;\" class=\"w-4 h-4 mr-3\" aria-hidden=\"true\" fill=\"none\" stroke-linecap=\"round\"
                         stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">
                         <path
                           d=\"M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1\">
                         </path>
                       </svg>
-                      <span>Log out</span>
+                        <span style=\"color: black;\">Logout</span>
                     </a>
                   </li>
                 </ul>
