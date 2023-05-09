@@ -24,7 +24,7 @@ class Produit
     private ?int $idProd = null;
      
     #[ORM\Column(type: "string", length: 255)]
-    #[Assert\NotBlank(message: "Le nom de produit est obligatoire.")]
+    #[Assert\NotBlank(message: "The product name is required.")]
     #[Assert\Length(
         max: 255,
         maxMessage: "The product name should not exceed {{ limit }} characters"
@@ -33,7 +33,7 @@ class Produit
     private ?string $nomProd = null;
 
     #[ORM\Column(type: "text")]
-    #[Assert\NotBlank(message: "La description est obligatoire.")]
+    #[Assert\NotBlank(message: "The description is required.")]
     #[Assert\Length(
         max: 255,
         maxMessage: "The description should not exceed {{ limit }} characters"
@@ -42,29 +42,32 @@ class Produit
     private ?string $description = null;
 
     #[ORM\Column(type: "float", precision: 10, scale: 2)]
-    #[Assert\NotBlank(message: "Le prix est obligatoire.")]
-    #[Assert\PositiveOrZero(message: "Le produit doit etre un nombre positive. ")]
+    #[Assert\NotBlank(message: "The price is required.")]
+    #[Assert\PositiveOrZero(message: "The price must be a positive number ")]
     #[Groups("produits")]
     private ?float $prix = null;
 
     #[ORM\Column(type: "integer")]
-    #[Assert\NotBlank(message: "la quantité est obligatoire.")]
-    #[Assert\PositiveOrZero(message: "La quantité doit etre un nombre positive. ")]
+    #[Assert\NotBlank(message: "The quantity is required.")]
+    #[Assert\PositiveOrZero(message: "The quantity must be a positive number ")]
     #[Groups("produits")]
     private ?int $quantite = null;
 
     #[ORM\Column(type: "string", length: 255)]
-    #[Assert\NotBlank(message: "Le nom de partenaire est obligatoire.")]
+    #[Assert\NotBlank(message: "The partner name is required.")]
     #[Assert\Length(
         max: 255,
         maxMessage: "The partner name should not exceed {{ limit }} characters"
     )]
-    
+    #[Regex(
+        pattern: '/^[a-zA-ZÀ-ÖØ-öø-ÿ\-\s]+$/',
+        message: "The partner name should only contain letters, spaces or hyphens"
+    )]
     #[Groups("produits")]
     private ?string $nomPart = null;
 
     #[ORM\Column(type: "string", length: 255)]
-    #[Assert\NotBlank(message: "Veuillez ajouter l'image.")]
+    #[Assert\NotBlank(message: "Please upload the product image.")]
     #[Groups("produits")]
     private ?string $image = null;
 
