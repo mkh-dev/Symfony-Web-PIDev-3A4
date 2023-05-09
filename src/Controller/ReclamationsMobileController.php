@@ -124,6 +124,7 @@ class ReclamationsMobileController extends  AbstractController
       * @Route("/detailReclamation/{id}", name="detail_reclamation")
       * @Method("GET")
       */
+/*
      //Detail Reclamation
      public function detailReclamationAction(Request $request)
      {
@@ -140,5 +141,6 @@ class ReclamationsMobileController extends  AbstractController
          $formatted = $serializer->normalize($reclamation);
          return new JsonResponse($formatted);
      }
+*/
 
  }

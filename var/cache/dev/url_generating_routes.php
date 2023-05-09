@@ -61,7 +61,6 @@ return [
     'delete_reclamation' => [[], ['_controller' => 'App\\Controller\\ReclamationsMobileController::deleteReclamationAction'], [], [['text', '/deleteReclamation']], [], [], []],
     'update_reclamation' => [[], ['_controller' => 'App\\Controller\\ReclamationsMobileController::modifierReclamationAction'], [], [['text', '/updateReclamation']], [], [], []],
     'display_reclamation' => [[], ['_controller' => 'App\\Controller\\ReclamationsMobileController::allRecAction'], [], [['text', '/displayReclamations']], [], [], []],
-    'detail_reclamation' => [['id'], ['_controller' => 'App\\Controller\\ReclamationsMobileController::detailReclamationAction'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/detailReclamation']], [], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
     'app_verify_email' => [[], ['_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], [], [['text', '/verify/email']], [], [], []],
     'app_reservation2_index' => [[], ['_controller' => 'App\\Controller\\Reservation2Controller::index'], [], [['text', '/reservation2/']], [], [], []],
