@@ -214,4 +214,15 @@ class CategorieEvent extends \App\Entity\CategorieEvent implements \Doctrine\ORM
         return parent::setCatEvent($catEvent);
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString(): string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
+
+        return parent::__toString();
+    }
+
 }

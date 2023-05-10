@@ -542,6 +542,13 @@
         <argument type="service" id=".service_locator.mx0UMmY.App\Controller\ReservationController"/>
       </call>
     </service>
+    <service id="App\Controller\ReservationControllerMobile" class="App\Controller\ReservationControllerMobile" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\ReservationControllerMobile"/>
+      </call>
+    </service>
     <service id="App\Controller\SecurityController" class="App\Controller\SecurityController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -629,6 +636,10 @@
       <tag name="form.type"/>
     </service>
     <service id="App\Repository\AbonnementRepository" class="App\Repository\AbonnementRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\EventRepository" class="App\Repository\EventRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -5122,7 +5133,7 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true"/>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.D1CLjNB"/>
+      <argument type="service" id=".service_locator.IQ73M7t"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -7068,6 +7079,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ReservationController" class="App\Controller\ReservationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ReservationController" class="App\Controller\ReservationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ReservationController" class="App\Controller\ReservationController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ReservationControllerMobile" class="App\Controller\ReservationControllerMobile" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ReservationControllerMobile" class="App\Controller\ReservationControllerMobile" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ReservationControllerMobile" class="App\Controller\ReservationControllerMobile" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -7116,6 +7130,8 @@
     <service id=".abstract.instanceof.App\Form\VehiculeType" class="App\Form\VehiculeType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AbonnementRepository" class="App\Repository\AbonnementRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\AbonnementRepository" class="App\Repository\AbonnementRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\EventRepository" class="App\Repository\EventRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\EventRepository" class="App\Repository\EventRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\FactureRepository" class="App\Repository\FactureRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\FactureRepository" class="App\Repository\FactureRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProdLikeRepository" class="App\Repository\ProdLikeRepository" autowire="true" abstract="true"/>
@@ -7711,6 +7727,42 @@
         <argument key="reservation" type="service_closure" id=".errored..service_locator.CT.Cplt.App\Entity\Reservation"/>
       </argument>
     </service>
+    <service id=".service_locator.CnfB9pI" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="repo" type="service_closure" id="App\Repository\ReservationRepository"/>
+        <argument key="repoEvent" type="service_closure" id="App\Repository\EventRepository"/>
+        <argument key="serializer" type="service_closure" id="serializer"/>
+      </argument>
+    </service>
+    <service id=".service_locator.R.6.peX" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="normalizer" type="service_closure" id="serializer"/>
+        <argument key="repo" type="service_closure" id="App\Repository\ReservationRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.hT2Kv93" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="serializer" type="service_closure" id="serializer"/>
+      </argument>
+    </service>
+    <service id=".service_locator.WyTCnct" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="Normalizer" type="service_closure" id="serializer"/>
+        <argument key="doctrine" type="service_closure" id="doctrine"/>
+        <argument key="repoEvent" type="service_closure" id="App\Repository\EventRepository"/>
+        <argument key="repoU" type="service_closure" id="App\Repository\UsersRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.i9GOSYV" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="Normalizer" type="service_closure" id="serializer"/>
+      </argument>
+    </service>
     <service id=".service_locator.zFcJjKU" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -7791,7 +7843,7 @@
         <argument key="vehicule" type="service_closure" id=".errored..service_locator.iVJ8gI9.App\Entity\Vehicule"/>
       </argument>
     </service>
-    <service id=".service_locator.yNUcYQ1" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.nYBPcfk" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AbonnementController::delete" type="service_closure" id=".service_locator.VhSGKsA"/>
@@ -7846,6 +7898,12 @@
         <argument key="App\Controller\ReservationController::index" type="service_closure" id=".service_locator.OifERqR"/>
         <argument key="App\Controller\ReservationController::new" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\ReservationController::show" type="service_closure" id=".service_locator.kcphr5g"/>
+        <argument key="App\Controller\ReservationControllerMobile::deleteStudentJSON" type="service_closure" id=".service_locator.i9GOSYV"/>
+        <argument key="App\Controller\ReservationControllerMobile::getRes" type="service_closure" id=".service_locator.CnfB9pI"/>
+        <argument key="App\Controller\ReservationControllerMobile::getReservationByNumRes" type="service_closure" id=".service_locator.R.6.peX"/>
+        <argument key="App\Controller\ReservationControllerMobile::offresClient" type="service_closure" id=".service_locator.hT2Kv93"/>
+        <argument key="App\Controller\ReservationControllerMobile::updateReservationJSON" type="service_closure" id=".service_locator.WyTCnct"/>
+        <argument key="App\Controller\ReservationControllerMobile::updateStudentJSON" type="service_closure" id=".service_locator.WyTCnct"/>
         <argument key="App\Controller\SecurityController::forgotPassword" type="service_closure" id=".service_locator.RYu7BDn"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="App\Controller\SecurityController::newPassword" type="service_closure" id=".service_locator.EbrO3QW"/>
@@ -7934,6 +7992,12 @@
         <argument key="App\Controller\ReservationController:index" type="service_closure" id=".service_locator.OifERqR"/>
         <argument key="App\Controller\ReservationController:new" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\ReservationController:show" type="service_closure" id=".service_locator.kcphr5g"/>
+        <argument key="App\Controller\ReservationControllerMobile:deleteStudentJSON" type="service_closure" id=".service_locator.i9GOSYV"/>
+        <argument key="App\Controller\ReservationControllerMobile:getRes" type="service_closure" id=".service_locator.CnfB9pI"/>
+        <argument key="App\Controller\ReservationControllerMobile:getReservationByNumRes" type="service_closure" id=".service_locator.R.6.peX"/>
+        <argument key="App\Controller\ReservationControllerMobile:offresClient" type="service_closure" id=".service_locator.hT2Kv93"/>
+        <argument key="App\Controller\ReservationControllerMobile:updateReservationJSON" type="service_closure" id=".service_locator.WyTCnct"/>
+        <argument key="App\Controller\ReservationControllerMobile:updateStudentJSON" type="service_closure" id=".service_locator.WyTCnct"/>
         <argument key="App\Controller\SecurityController:forgotPassword" type="service_closure" id=".service_locator.RYu7BDn"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="App\Controller\SecurityController:newPassword" type="service_closure" id=".service_locator.EbrO3QW"/>
@@ -8085,10 +8149,11 @@
         <argument key="doctrine.orm.listeners.pdo_cache_adapter_doctrine_schema_subscriber" type="service_closure" id="doctrine.orm.listeners.pdo_cache_adapter_doctrine_schema_subscriber"/>
       </argument>
     </service>
-    <service id=".service_locator.D1CLjNB" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.IQ73M7t" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\AbonnementRepository" type="service_closure" id="App\Repository\AbonnementRepository"/>
+        <argument key="App\Repository\EventRepository" type="service_closure" id="App\Repository\EventRepository"/>
         <argument key="App\Repository\FactureRepository" type="service_closure" id="App\Repository\FactureRepository"/>
         <argument key="App\Repository\ProdLikeRepository" type="service_closure" id="App\Repository\ProdLikeRepository"/>
         <argument key="App\Repository\ProduitRepository" type="service_closure" id="App\Repository\ProduitRepository"/>
@@ -8230,6 +8295,12 @@
     <service id=".service_locator.mx0UMmY.App\Controller\ReservationController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\ReservationController"/>
       <argument>App\Controller\ReservationController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\ReservationControllerMobile" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ReservationControllerMobile"/>
+      <argument>App\Controller\ReservationControllerMobile</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.mx0UMmY" method="withContext"/>
     </service>
@@ -8464,12 +8535,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.yNUcYQ1"/>
+      <argument type="service" id=".service_locator.nYBPcfk"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.yNUcYQ1"/>
+      <argument type="service" id=".service_locator.nYBPcfk"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -9475,7 +9546,7 @@
     <service id="Endroid\QrCode\Builder\BuilderInterface $defaultQrCodeBuilder" alias="endroid_qr_code.default_builder"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.yNUcYQ1"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.nYBPcfk"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -9495,11 +9566,12 @@
     <service id=".service_locator.28KGtpx" alias=".service_locator.gZIaKpL"/>
     <service id=".service_locator.nloEKlO" alias=".service_locator.kcphr5g"/>
     <service id=".service_locator.aGtLM.g" alias=".service_locator.CT.Cplt"/>
+    <service id=".service_locator.5H8aZ1x" alias=".service_locator.WyTCnct"/>
     <service id=".service_locator.DMl9e1Q" alias=".service_locator.CoH4_pD"/>
     <service id=".service_locator..WQRx6E" alias=".service_locator.yRRNQrI"/>
     <service id=".service_locator.Ar0Pu3O" alias=".service_locator.cyg1ViB"/>
     <service id=".service_locator.gPjNq68" alias=".service_locator.iVJ8gI9"/>
-    <service id=".service_locator.cQXXttg" alias=".service_locator.yNUcYQ1"/>
+    <service id=".service_locator.CEjeDID" alias=".service_locator.nYBPcfk"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.l6ELYLY"/>
     <service id=".service_locator.p2o3L_J" alias=".service_locator.uleoPsN"/>
     <service id=".service_locator.4hi2aOY" alias=".service_locator.bBRwv06"/>
@@ -9588,6 +9660,11 @@
     <service id=".service_locator.cOe7XwD" alias=".service_locator.OifERqR"/>
     <service id=".service_locator.oqbUCeO" alias=".service_locator.kcphr5g"/>
     <service id=".service_locator.lMUPSCL" alias=".service_locator.CT.Cplt"/>
+    <service id=".service_locator.VFI2ZTq" alias=".service_locator.CnfB9pI"/>
+    <service id=".service_locator.griJbl1" alias=".service_locator.R.6.peX"/>
+    <service id=".service_locator.aTiBH86" alias=".service_locator.hT2Kv93"/>
+    <service id=".service_locator.TaAOco1" alias=".service_locator.WyTCnct"/>
+    <service id=".service_locator.5kp8gXO" alias=".service_locator.i9GOSYV"/>
     <service id=".service_locator.URfgn8g" alias=".service_locator.zFcJjKU"/>
     <service id=".service_locator.J7vXjyb" alias=".service_locator.RYu7BDn"/>
     <service id=".service_locator.T9Vmb_J" alias=".service_locator.EbrO3QW"/>

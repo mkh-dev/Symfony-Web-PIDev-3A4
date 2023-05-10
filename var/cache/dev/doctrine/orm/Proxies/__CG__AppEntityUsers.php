@@ -261,7 +261,7 @@ class Users extends \App\Entity\Users implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getDatenaissance(): ?\DateTimeInterface
+    public function getDatenaissance()
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getDatenaissance', []);
@@ -272,7 +272,7 @@ class Users extends \App\Entity\Users implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function setDatenaissance(\DateTimeInterface $datenaissance): \App\Entity\Users
+    public function setDatenaissance($datenaissance)
     {
 
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setDatenaissance', [$datenaissance]);
