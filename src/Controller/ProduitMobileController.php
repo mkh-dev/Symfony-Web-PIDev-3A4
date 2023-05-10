@@ -23,7 +23,8 @@ class ProduitMobileController extends AbstractController
 
   /**
      * @Route("/produit_mobile", name="produit_mobile")
-     */    public function produitmobile( NormalizerInterface  $normalizer)
+     */   
+     public function produitmobile( NormalizerInterface  $normalizer)
     {
         $Hotel = $this->getDoctrine()->getRepository(Produit::class)->findAll();
         $json = $normalizer->normalize($Hotel, "json", ['groups' => ['produits','produits']]);

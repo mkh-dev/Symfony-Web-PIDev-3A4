@@ -239,6 +239,10 @@ class __TwigTemplate_a43a4e3942b09bcce3bddcbd98c1016d extends Template
             confirmBox.remove();
         }
     }
+<<<<<<< Updated upstream
 </script>", "produit/_delete_form.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\produit\\_delete_form.html.twig");
+=======
+</script>", "produit/_delete_form.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\produit\\_delete_form.html.twig");
+>>>>>>> Stashed changes
     }
 }
