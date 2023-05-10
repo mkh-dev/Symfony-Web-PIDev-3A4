@@ -39,20 +39,20 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        - { path: ^/users, roles: ROLE_ADMINISTRATEUR }
-        - { path: ^/reclamations, roles: [ROLE_PARTENAIRE, ROLE_ORGANISATEUR , ROLE_TRANSPORTEUR , ROLE_ADMINISTRATEUR ,ROLE_UTILISATEUR] }
-        - { path: ^/utilisateur, roles: ROLE_UTILISATEUR }
-        - { path: ^/reservation, roles: ROLE_UTILISATEUR }
-        - { path: ^/facture, roles: ROLE_UTILISATEUR }
-        - { path: ^/abonnement, roles: ROLE_UTILISATEUR }
-        - { path: ^/produit, roles: ROLE_PARTENAIRE }
-        - { path: ^/produit_front, roles: [ROLE_PARTENAIRE, ROLE_ORGANISATEUR , ROLE_TRANSPORTEUR , ROLE_ADMIN ,ROLE_UTILISATEUR] }
-        - { path: ^/categorie/prod, roles: ROLE_PARTENAIRE }
-        - { path: ^/transport/back, roles: ROLE_TRANSPORTEUR }
-        - { path: ^/vehicule/back, roles: ROLE_TRANSPORTEUR  }
-        - { path: ^/calendrier, roles: ROLE_TRANSPORTEUR  }
-        - { path: ^/transport/back/transportStats, roles: ROLE_TRANSPORTEUR  }
-        - { path: ^/evenement/back, roles: ROLE_ORGANISATEUR  }
+        #- { path: ^/users, roles: ROLE_ADMINISTRATEUR }
+        #- { path: ^/reclamations, roles: [ROLE_PARTENAIRE, ROLE_ORGANISATEUR , ROLE_TRANSPORTEUR , ROLE_ADMINISTRATEUR ,ROLE_UTILISATEUR] }
+        #- { path: ^/utilisateur, roles: ROLE_UTILISATEUR }
+        #- { path: ^/reservation, roles: ROLE_UTILISATEUR }
+        #- { path: ^/facture, roles: ROLE_UTILISATEUR }
+        #- { path: ^/abonnement, roles: ROLE_UTILISATEUR }
+        #- { path: ^/produit, roles: ROLE_PARTENAIRE }
+        #- { path: ^/produit_front, roles: [ROLE_PARTENAIRE, ROLE_ORGANISATEUR , ROLE_TRANSPORTEUR , ROLE_ADMIN ,ROLE_UTILISATEUR] }
+        #- { path: ^/categorie/prod, roles: ROLE_PARTENAIRE }
+        #- { path: ^/transport/back, roles: ROLE_TRANSPORTEUR }
+        #- { path: ^/vehicule/back, roles: ROLE_TRANSPORTEUR  }
+        #- { path: ^/calendrier, roles: ROLE_TRANSPORTEUR  }
+        #- { path: ^/transport/back/transportStats, roles: ROLE_TRANSPORTEUR  }
+        #- { path: ^/evenement/back, roles: ROLE_ORGANISATEUR  }
 
 
    

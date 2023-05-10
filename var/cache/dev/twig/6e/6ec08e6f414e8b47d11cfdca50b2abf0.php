@@ -1493,6 +1493,6 @@ T e m p l a t e M o
 
 
 
-</html>", "front/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\front\\index.html.twig");
+</html>", "front/index.html.twig", "C:\\Users\\rimbs\\Desktop\\pidev symfony\\PI\\Symfony-Web-PIDev-3A4\\templates\\front\\index.html.twig");
     }
 }
