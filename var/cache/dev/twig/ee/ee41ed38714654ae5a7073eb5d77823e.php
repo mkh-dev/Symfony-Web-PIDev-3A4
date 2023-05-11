@@ -735,6 +735,6 @@ margin-left: 45px;
     </table>
     </main>
 {% endblock %}
-", "facture/edit.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\facture\\edit.html.twig");
+", "facture/edit.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\facture\\edit.html.twig");
     }
 }

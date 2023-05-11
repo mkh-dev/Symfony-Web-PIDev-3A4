@@ -56,7 +56,7 @@ class __TwigTemplate_09635d616b87c81df55d0ae3c3c466a9 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "CategorieEvent index";
+        echo "Hello CategorieEventController!";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -70,65 +70,29 @@ class __TwigTemplate_09635d616b87c81df55d0ae3c3c466a9 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>CategorieEvent index</h1>
+        echo "<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
 
-    <table class=\"table\">
-        <thead>
-            <tr>
-                <th>IdCatEvent</th>
-                <th>CatEvent</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        ";
+<div class=\"example-wrapper\">
+    <h1>Hello ";
+        // line 12
+        echo twig_escape_filter($this->env, (isset($context["controller_name"]) || array_key_exists("controller_name", $context) ? $context["controller_name"] : (function () { throw new RuntimeError('Variable "controller_name" does not exist.', 12, $this->source); })()), "html", null, true);
+        echo "! ✅</h1>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/Users/henri/OneDrive/Documents/GitHub/Symfony-Web-PIDev-3A4/src/Controller/CategorieEventController.php", 0), "html", null, true);
+        echo "\">src/Controller/CategorieEventController.php</a></code></li>
+        <li>Your template at <code><a href=\"";
         // line 17
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categorie_events"]) || array_key_exists("categorie_events", $context) ? $context["categorie_events"] : (function () { throw new RuntimeError('Variable "categorie_events" does not exist.', 17, $this->source); })()));
-        $context['_iterated'] = false;
-        foreach ($context['_seq'] as $context["_key"] => $context["categorie_event"]) {
-            // line 18
-            echo "            <tr>
-                <td>";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie_event"], "idCatEvent", [], "any", false, false, false, 19), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie_event"], "catEvent", [], "any", false, false, false, 20), "html", null, true);
-            echo "</td>
-                <td>
-                    <a href=\"";
-            // line 22
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categorie_event_show", ["idCatEvent" => twig_get_attribute($this->env, $this->source, $context["categorie_event"], "idCatEvent", [], "any", false, false, false, 22)]), "html", null, true);
-            echo "\">show</a>
-                    <a href=\"";
-            // line 23
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categorie_event_edit", ["idCatEvent" => twig_get_attribute($this->env, $this->source, $context["categorie_event"], "idCatEvent", [], "any", false, false, false, 23)]), "html", null, true);
-            echo "\">edit</a>
-                </td>
-            </tr>
-        ";
-            $context['_iterated'] = true;
-        }
-        if (!$context['_iterated']) {
-            // line 27
-            echo "            <tr>
-                <td colspan=\"3\">no records found</td>
-            </tr>
-        ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categorie_event'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 31
-        echo "        </tbody>
-    </table>
-
-    <a href=\"";
-        // line 34
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categorie_event_new");
-        echo "\">Create new</a>
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/Users/henri/OneDrive/Documents/GitHub/Symfony-Web-PIDev-3A4/templates/categorie_event/index.html.twig", 0), "html", null, true);
+        echo "\">templates/categorie_event/index.html.twig</a></code></li>
+    </ul>
+</div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -147,46 +111,31 @@ class __TwigTemplate_09635d616b87c81df55d0ae3c3c466a9 extends Template
 
     public function getDebugInfo()
     {
-        return array (  130 => 34,  125 => 31,  116 => 27,  107 => 23,  103 => 22,  98 => 20,  94 => 19,  91 => 18,  86 => 17,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  92 => 17,  88 => 16,  81 => 12,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}CategorieEvent index{% endblock %}
+{% block title %}Hello CategorieEventController!{% endblock %}
 
 {% block body %}
-    <h1>CategorieEvent index</h1>
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
 
-    <table class=\"table\">
-        <thead>
-            <tr>
-                <th>IdCatEvent</th>
-                <th>CatEvent</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for categorie_event in categorie_events %}
-            <tr>
-                <td>{{ categorie_event.idCatEvent }}</td>
-                <td>{{ categorie_event.catEvent }}</td>
-                <td>
-                    <a href=\"{{ path('app_categorie_event_show', {'idCatEvent': categorie_event.idCatEvent}) }}\">show</a>
-                    <a href=\"{{ path('app_categorie_event_edit', {'idCatEvent': categorie_event.idCatEvent}) }}\">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan=\"3\">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<div class=\"example-wrapper\">
+    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    <a href=\"{{ path('app_categorie_event_new') }}\">Create new</a>
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href=\"{{ 'C:/Users/henri/OneDrive/Documents/GitHub/Symfony-Web-PIDev-3A4/src/Controller/CategorieEventController.php'|file_link(0) }}\">src/Controller/CategorieEventController.php</a></code></li>
+        <li>Your template at <code><a href=\"{{ 'C:/Users/henri/OneDrive/Documents/GitHub/Symfony-Web-PIDev-3A4/templates/categorie_event/index.html.twig'|file_link(0) }}\">templates/categorie_event/index.html.twig</a></code></li>
+    </ul>
+</div>
 {% endblock %}
-", "categorie_event/index.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\categorie_event\\index.html.twig");
+", "categorie_event/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\categorie_event\\index.html.twig");
     }
 }

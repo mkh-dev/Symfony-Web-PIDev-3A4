@@ -160,6 +160,6 @@ margin-left: 45px;  }
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ facture.id) }}\">
     <button class=\"btnd\">Delete</button>
 </form>
-", "facture/_delete_form.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\facture\\_delete_form.html.twig");
+", "facture/_delete_form.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\facture\\_delete_form.html.twig");
     }
 }

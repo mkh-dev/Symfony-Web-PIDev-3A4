@@ -37,14 +37,36 @@ class __TwigTemplate_9d6818bcbe3e3788bc8d14e98cb623a3 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "categorie_event/_delete_form.html.twig"));
 
         // line 1
-        echo "<form method=\"post\" action=\"";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categorie_event_delete", ["idCatEvent" => twig_get_attribute($this->env, $this->source, (isset($context["categorie_event"]) || array_key_exists("categorie_event", $context) ? $context["categorie_event"] : (function () { throw new RuntimeError('Variable "categorie_event" does not exist.', 1, $this->source); })()), "idCatEvent", [], "any", false, false, false, 1)]), "html", null, true);
+        echo "<style>
+    .boutton {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: orange;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .boutton:hover {
+        background-color: #ff8c00;
+    }
+</style>
+
+
+<form method=\"post\" action=\"";
+        // line 21
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categorie_event_delete", ["idCatEvent" => twig_get_attribute($this->env, $this->source, (isset($context["categorie_event"]) || array_key_exists("categorie_event", $context) ? $context["categorie_event"] : (function () { throw new RuntimeError('Variable "categorie_event" does not exist.', 21, $this->source); })()), "idCatEvent", [], "any", false, false, false, 21)]), "html", null, true);
         echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_token\" value=\"";
-        // line 2
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["categorie_event"]) || array_key_exists("categorie_event", $context) ? $context["categorie_event"] : (function () { throw new RuntimeError('Variable "categorie_event" does not exist.', 2, $this->source); })()), "idCatEvent", [], "any", false, false, false, 2))), "html", null, true);
+        // line 22
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["categorie_event"]) || array_key_exists("categorie_event", $context) ? $context["categorie_event"] : (function () { throw new RuntimeError('Variable "categorie_event" does not exist.', 22, $this->source); })()), "idCatEvent", [], "any", false, false, false, 22))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Delete</button>
+    <br>
+    <button class=\"boutton\">Delete</button>
 </form>
 ";
         
@@ -64,15 +86,36 @@ class __TwigTemplate_9d6818bcbe3e3788bc8d14e98cb623a3 extends Template
 
     public function getDebugInfo()
     {
-        return array (  45 => 2,  40 => 1,);
+        return array (  66 => 22,  62 => 21,  40 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<form method=\"post\" action=\"{{ path('app_categorie_event_delete', {'idCatEvent': categorie_event.idCatEvent}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        return new Source("<style>
+    .boutton {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: orange;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .boutton:hover {
+        background-color: #ff8c00;
+    }
+</style>
+
+
+<form method=\"post\" action=\"{{ path('app_categorie_event_delete', {'idCatEvent': categorie_event.idCatEvent}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ categorie_event.idCatEvent) }}\">
-    <button class=\"btn\">Delete</button>
+    <br>
+    <button class=\"boutton\">Delete</button>
 </form>
-", "categorie_event/_delete_form.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\categorie_event\\_delete_form.html.twig");
+", "categorie_event/_delete_form.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\categorie_event\\_delete_form.html.twig");
     }
 }

@@ -160,6 +160,6 @@ margin-left: 45px;  }
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ reservation.numres) }}\">
     <button class=\"btnd\">Supprimer</button>
 </form>
-", "reservation/_delete_form.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\reservation\\_delete_form.html.twig");
+", "reservation/_delete_form.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\reservation\\_delete_form.html.twig");
     }
 }

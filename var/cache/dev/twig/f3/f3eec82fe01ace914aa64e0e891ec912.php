@@ -136,6 +136,6 @@ class __TwigTemplate_7a49ca369c6f615f8b02e65df26c9dc2 extends Template
     </ul>
 </div>
 {% endblock %}
-", "produit_mobile/index.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\produit_mobile\\index.html.twig");
+", "produit_mobile/index.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\produit_mobile\\index.html.twig");
     }
 }

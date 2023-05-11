@@ -320,6 +320,6 @@ class __TwigTemplate_c389723ccc91410bfc405450770d701e extends Template
         </ul>
     </nav>
 {% endif %}
-", "knp_pagination/bulma_pagination.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\knp_pagination\\bulma_pagination.html.twig");
+", "knp_pagination/bulma_pagination.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\knp_pagination\\bulma_pagination.html.twig");
     }
 }
