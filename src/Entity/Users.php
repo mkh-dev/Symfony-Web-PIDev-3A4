@@ -79,10 +79,6 @@ class Users implements UserInterface
     
     private string $password;
 
-    #[ORM\Column(type: 'boolean')]
-    #[Groups("user")]
-    private $isVerified = false;
-
 
     
     public function getId(): ?int
@@ -198,17 +194,7 @@ class Users implements UserInterface
     // if you store any sensitive information on the user, you should erase it here
 }
 
-    public function isVerified(): bool
-    {
-        return $this->isVerified;
-    }
 
-    public function setIsVerified(bool $isVerified): self
-    {
-        $this->isVerified = $isVerified;
-
-        return $this;
-    }
 
     public function __toString() 
     {
@@ -220,8 +206,5 @@ class Users implements UserInterface
         return (string) $this->getEmail();
     }
 
-    public function isIsVerified(): ?bool
-    {
-        return $this->isVerified;
-    }
+
 }

@@ -104,6 +104,6 @@ Veuillez cliquer sur le lien ci-dessous pour confirmer votre adresse e-mail et a
 <br><br>
 L'équipe Evento
 </p>
-", "registration/confirmation_email.html.twig", "C:\\Users\\henri\\OneDrive\\Documents\\GitHub\\Symfony-Web-PIDev-3A4\\templates\\registration\\confirmation_email.html.twig");
+", "registration/confirmation_email.html.twig", "C:\\Users\\MALEK-ADMIN\\Documents\\NetBeansProjects\\Symfony-Web-PIDev-3A4\\templates\\registration\\confirmation_email.html.twig");
     }
 }
